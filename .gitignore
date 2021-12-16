@@ -1,0 +1,6 @@
+founta_tweaks/Properties
+founta_tweaks/obj
+*.dll
+Modules
+.vs
+*.zip
