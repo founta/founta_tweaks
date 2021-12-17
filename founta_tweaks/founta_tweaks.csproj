@@ -247,6 +247,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoFountaTweaksSettings.cs" />
+    <Compile Include="CraftingTweaks.cs" />
     <Compile Include="ExpGainTweaks.cs" />
     <Compile Include="FountaTweaksSettings.cs" />
     <Compile Include="ExposeInternals.cs" />

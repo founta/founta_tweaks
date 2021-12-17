@@ -51,7 +51,6 @@ namespace FountaTweaks
     }
 
 
-
     /// <summary>
     /// /////////////////////////////////////////////////////////// Global perk modification enable/disable
     /// </summary>
@@ -136,72 +135,72 @@ namespace FountaTweaks
     /// /////////////////////////////////////////////////////////// PLAYER CLAN HERO EXP MODIFIERS
     /// </summary>
 
-    [SettingPropertyBool("Enable player clan hero exp modification", HintText = "This will impact all heros in the player character's clan except the player character", RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heros", IsMainToggle = true)]
+    [SettingPropertyBool("Enable player clan hero exp modification", HintText = "This will impact all heroes in the player character's clan except the player character", RequireRestart=false)]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heroes", IsMainToggle = true)]
     public bool PlayerClanExpChangeEnabled { get; set; } = false;
 
     [SettingPropertyFloatingInteger("Overall player clan hero exp gain modifier", 0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heros")]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heroes")]
     public float GeneralPlayerClanExpGainModifier { get; set; } = 1.0f;
 
     [SettingPropertyFloatingInteger("Player clan hero One Handed exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heroes/Specific")]
     public float OneHandedPlayerClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Player clan hero Two Handed exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heroes/Specific")]
     public float TwoHandedPlayerClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Player clan hero Polearm exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heroes/Specific")]
     public float PolearmPlayerClanExpGainModifier { get; set; } = 1.0f;
 
     [SettingPropertyFloatingInteger("Player clan hero Bow exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heroes/Specific")]
     public float BowPlayerClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Player clan hero Crossbow exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heroes/Specific")]
     public float CrossbowPlayerClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Player clan hero Throwing exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heroes/Specific")]
     public float ThrowingPlayerClanExpGainModifier { get; set; } = 1.0f;
 
     [SettingPropertyFloatingInteger("Player clan hero Riding exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heroes/Specific")]
     public float RidingPlayerClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Player clan hero Athletics exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heroes/Specific")]
     public float AthleticsPlayerClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Player clan hero Smithing exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heroes/Specific")]
     public float CraftingPlayerClanExpGainModifier { get; set; } = 1.0f;
 
     [SettingPropertyFloatingInteger("Player clan hero Tactics exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heroes/Specific")]
     public float TacticsPlayerClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Player clan hero Scouting exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heroes/Specific")]
     public float ScoutingPlayerClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Player clan hero Roguery exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heroes/Specific")]
     public float RogueryPlayerClanExpGainModifier { get; set; } = 1.0f;
 
     [SettingPropertyFloatingInteger("Player clan hero Leadership exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heroes/Specific")]
     public float LeadershipPlayerClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Player clan hero Charm exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heroes/Specific")]
     public float CharmPlayerClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Player clan hero Trade exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heroes/Specific")]
     public float TradePlayerClanExpGainModifier { get; set; } = 1.0f;
 
     [SettingPropertyFloatingInteger("Player clan hero Steward exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heroes/Specific")]
     public float StewardPlayerClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Player clan hero Medicine exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heroes/Specific")]
     public float MedicinePlayerClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Player clan hero Engineering exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heroes/Specific")]
     public float EngineeringPlayerClanExpGainModifier { get; set; } = 1.0f;
 
 
@@ -210,73 +209,90 @@ namespace FountaTweaks
     /// </summary>
 
 
-    [SettingPropertyBool("Enable hero exp modification for all other heros", HintText = "This will impact all heros other than the main player and the heros in the main player's clan", RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heros", IsMainToggle = true)]
+    [SettingPropertyBool("Enable hero exp modification for all other heroes", HintText = "This will impact all heroes other than the main player and the heroes in the main player's clan", RequireRestart=false)]
+    [SettingPropertyGroup("Experience Modifiers/Other heroes", IsMainToggle = true)]
     public bool OtherClanExpChangeEnabled { get; set; } = false;
 
     [SettingPropertyFloatingInteger("Overall outside clan hero exp gain modifier",0,10,RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heros")]
+    [SettingPropertyGroup("Experience Modifiers/Other heroes")]
     public float GeneralOtherClanExpGainModifier { get; set; } = 1.0f;
 
     [SettingPropertyFloatingInteger("Outside clan hero One Handed exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Other heroes/Specific")]
     public float OneHandedOtherClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Outside clan hero Two Handed exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Other heroes/Specific")]
     public float TwoHandedOtherClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Outside clan hero Polearm exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Other heroes/Specific")]
     public float PolearmOtherClanExpGainModifier { get; set; } = 1.0f;
 
     [SettingPropertyFloatingInteger("Outside clan hero Bow exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Other heroes/Specific")]
     public float BowOtherClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Outside clan hero Crossbow exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Other heroes/Specific")]
     public float CrossbowOtherClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Outside clan hero Throwing exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Other heroes/Specific")]
     public float ThrowingOtherClanExpGainModifier { get; set; } = 1.0f;
 
     [SettingPropertyFloatingInteger("Outside clan hero Riding exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Other heroes/Specific")]
     public float RidingOtherClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Outside clan hero Athletics exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Other heroes/Specific")]
     public float AthleticsOtherClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Outside clan hero Smithing exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Other heroes/Specific")]
     public float CraftingOtherClanExpGainModifier { get; set; } = 1.0f;
 
     [SettingPropertyFloatingInteger("Outside clan hero Tactics exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Other heroes/Specific")]
     public float TacticsOtherClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Outside clan hero Scouting exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Other heroes/Specific")]
     public float ScoutingOtherClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Outside clan hero Roguery exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Other heroes/Specific")]
     public float RogueryOtherClanExpGainModifier { get; set; } = 1.0f;
 
     [SettingPropertyFloatingInteger("Outside clan hero Leadership exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Other heroes/Specific")]
     public float LeadershipOtherClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Outside clan hero Charm exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Other heroes/Specific")]
     public float CharmOtherClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Outside clan hero Trade exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Other heroes/Specific")]
     public float TradeOtherClanExpGainModifier { get; set; } = 1.0f;
 
     [SettingPropertyFloatingInteger("Outside clan hero Steward exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Other heroes/Specific")]
     public float StewardOtherClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Outside clan hero Medicine exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Other heroes/Specific")]
     public float MedicineOtherClanExpGainModifier { get; set; } = 1.0f;
     [SettingPropertyFloatingInteger("Outside clan hero Engineering exp gain modifier",0,10, RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heros/Specific")]
+    [SettingPropertyGroup("Experience Modifiers/Other heroes/Specific")]
     public float EngineeringOtherClanExpGainModifier { get; set; } = 1.0f;
+
+
+    /// <summary>
+    /// /////////////////////////////////////////////////////////// Crafting modifications
+    /// </summary>
+
+    [SettingPropertyBool("Enable smelting tweaks", RequireRestart = false)]
+    [SettingPropertyGroup("Smelting", IsMainToggle = true)]
+    public bool CraftingTweaksEnabled { get; set; } = false;
+
+    [SettingPropertyFloatingInteger("Crafting stamina usage modifier", 0,1, RequireRestart = false)]
+    [SettingPropertyGroup("Smelting")]
+    public float CraftingStaminaUsageMultiplier { get; set; } = 1.0f;
+
+    [SettingPropertyBool("Smelting unlocks weapon parts", RequireRestart = false, HintText = "Smelting weapons with this enabled will unlock the weapon parts used in the smelted weapon")]
+    [SettingPropertyGroup("Smelting")]
+    public bool SmeltingUnlocksWeaponParts { get; set; } = false;
   }
 
 

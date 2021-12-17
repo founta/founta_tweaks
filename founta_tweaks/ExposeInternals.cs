@@ -35,6 +35,19 @@ namespace FountaTweaks
     {
       return;
     }
+
+    [HarmonyReversePatch]
+    [HarmonyPatch(typeof(CraftingCampaignBehavior), "EnsureParts")]
+    public static void EnsureParts(CraftingCampaignBehavior instance)
+    {
+      return;
+    }
+    [HarmonyReversePatch]
+    [HarmonyPatch(typeof(CraftingCampaignBehavior), "OpenPart")]
+    public static void OpenPart(CraftingCampaignBehavior instance, CraftingPiece selectedPiece, bool showNotification)
+    {
+      return;
+    }
   }
 
 
