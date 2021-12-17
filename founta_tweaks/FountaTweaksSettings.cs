@@ -51,6 +51,30 @@ namespace FountaTweaks
     }
 
     /// <summary>
+    /// /////////////////////////////////////////////////////////// tournament and arena tweak settings
+    /// </summary>
+
+    [SettingPropertyBool("Enable tournament tweaks", RequireRestart = false)]
+    [SettingPropertyGroup("Tournaments", IsMainToggle = true)]
+    public bool TournamentTweaksEnabled { get; set; } = false;
+
+    [SettingPropertyInteger("Tournament max bet amount", 0,99999, valueFormat: "0 Denars", RequireRestart = false)]
+    [SettingPropertyGroup("Tournaments", IsMainToggle = false)]
+    public int TournamentMaxBet { get; set; } = 150;
+
+    [SettingPropertyFloatingInteger("Tournament combat xp multiplier", 0, 1, RequireRestart = false)]
+    [SettingPropertyGroup("Tournaments", IsMainToggle = false)]
+    public float TournamentXpMultiplier { get; set; } = 0.33f;
+
+    [SettingPropertyBool("Enable arena tweaks", RequireRestart = false)]
+    [SettingPropertyGroup("Practice Arena", IsMainToggle = true)]
+    public bool ArenaTweaksEnabled { get; set; } = false;
+
+    [SettingPropertyFloatingInteger("Practice fight combat xp multiplier", 0, 1, RequireRestart = false)]
+    [SettingPropertyGroup("Practice Arena", IsMainToggle = false)]
+    public float ArenaXpMultiplier { get; set; } = 1.0f/16.0f;
+
+    /// <summary>
     /// /////////////////////////////////////////////////////////// skill tweak settings
     /// </summary>
     [SettingPropertyBool("Enable skill tweaks", RequireRestart = false)]
