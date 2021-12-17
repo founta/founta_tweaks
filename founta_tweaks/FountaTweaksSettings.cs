@@ -58,67 +58,67 @@ namespace FountaTweaks
     [SettingPropertyGroup("Experience Tweaks/Player", GroupOrder = 0)]
     public bool PlayerExpChangeEnabled { get; set; } = false;
 
-    [SettingPropertyBool("Overall player exp gain modifier")]
+    [SettingPropertyFloatingInteger("Overall player exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player")]
     public float GeneralPlayerExpGainModifier { get; set; } = 1.0f;
 
-    [SettingPropertyBool("Player One Handed exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player One Handed exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player/Specific")]
     public float OneHandedPlayerExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Two Handed exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Two Handed exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player/Specific")]
     public float TwoHandedPlayerExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Polearm exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Polearm exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player/Specific")]
     public float PolearmPlayerExpGainModifier { get; set; } = 1.0f;
 
-    [SettingPropertyBool("Player Bow exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Bow exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player/Specific")]
     public float BowPlayerExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Crossbow exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Crossbow exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player/Specific")]
     public float CrossbowPlayerExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Throwing exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Throwing exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player/Specific")]
     public float ThrowingPlayerExpGainModifier { get; set; } = 1.0f;
 
-    [SettingPropertyBool("Player Riding exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Riding exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player/Specific")]
     public float RidingPlayerExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Athletics exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Athletics exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player/Specific")]
     public float AthleticsPlayerExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Smithing exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Smithing exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player/Specific")]
     public float CraftingPlayerExpGainModifier { get; set; } = 1.0f;
 
-    [SettingPropertyBool("Player Tactics exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Tactics exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player/Specific")]
     public float TacticsPlayerExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Scouting exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Scouting exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player/Specific")]
     public float ScoutingPlayerExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Roguery exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Roguery exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player/Specific")]
     public float RogueryPlayerExpGainModifier { get; set; } = 1.0f;
 
-    [SettingPropertyBool("Player Leadership exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Leadership exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player/Specific")]
     public float LeadershipPlayerExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Charm exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Charm exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player/Specific")]
     public float CharmPlayerExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Trade exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Trade exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player/Specific")]
     public float TradePlayerExpGainModifier { get; set; } = 1.0f;
 
-    [SettingPropertyBool("Player Steward exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Steward exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player/Specific")]
     public float StewardPlayerExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Medicine exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Medicine exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player/Specific")]
     public float MedicinePlayerExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Engineering exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Engineering exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player/Specific")]
     public float EngineeringPlayerExpGainModifier { get; set; } = 1.0f;
 
@@ -131,67 +131,67 @@ namespace FountaTweaks
     [SettingPropertyGroup("Experience Tweaks/Player clan heros", GroupOrder = 1)]
     public bool PlayerClanExpChangeEnabled { get; set; } = false;
 
-    [SettingPropertyBool("Overall player exp gain modifier")]
+    [SettingPropertyFloatingInteger("Overall player exp gain modifier", 0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player clan heros")]
     public float GeneralPlayerClanExpGainModifier { get; set; } = 1.0f;
 
-    [SettingPropertyBool("Player One Handed exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player One Handed exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player clan heros/Specific")]
     public float OneHandedPlayerClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Two Handed exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Two Handed exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player clan heros/Specific")]
     public float TwoHandedPlayerClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Polearm exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Polearm exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player clan heros/Specific")]
     public float PolearmPlayerClanExpGainModifier { get; set; } = 1.0f;
 
-    [SettingPropertyBool("Player Bow exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Bow exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player clan heros/Specific")]
     public float BowPlayerClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Crossbow exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Crossbow exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player clan heros/Specific")]
     public float CrossbowPlayerClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Throwing exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Throwing exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player clan heros/Specific")]
     public float ThrowingPlayerClanExpGainModifier { get; set; } = 1.0f;
 
-    [SettingPropertyBool("Player Riding exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Riding exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player clan heros/Specific")]
     public float RidingPlayerClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Athletics exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Athletics exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player clan heros/Specific")]
     public float AthleticsPlayerClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Smithing exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Smithing exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player clan heros/Specific")]
     public float CraftingPlayerClanExpGainModifier { get; set; } = 1.0f;
 
-    [SettingPropertyBool("Player Tactics exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Tactics exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player clan heros/Specific")]
     public float TacticsPlayerClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Scouting exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Scouting exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player clan heros/Specific")]
     public float ScoutingPlayerClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Roguery exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Roguery exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player clan heros/Specific")]
     public float RogueryPlayerClanExpGainModifier { get; set; } = 1.0f;
 
-    [SettingPropertyBool("Player Leadership exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Leadership exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player clan heros/Specific")]
     public float LeadershipPlayerClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Charm exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Charm exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player clan heros/Specific")]
     public float CharmPlayerClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Trade exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Trade exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player clan heros/Specific")]
     public float TradePlayerClanExpGainModifier { get; set; } = 1.0f;
 
-    [SettingPropertyBool("Player Steward exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Steward exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player clan heros/Specific")]
     public float StewardPlayerClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Medicine exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Medicine exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player clan heros/Specific")]
     public float MedicinePlayerClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Engineering exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Engineering exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Player clan heros/Specific")]
     public float EngineeringPlayerClanExpGainModifier { get; set; } = 1.0f;
 
@@ -205,67 +205,67 @@ namespace FountaTweaks
     [SettingPropertyGroup("Experience Tweaks/Other heros", GroupOrder = 2)]
     public bool OtherClanExpChangeEnabled { get; set; } = false;
 
-    [SettingPropertyBool("Overall player exp gain modifier")]
+    [SettingPropertyFloatingInteger("Overall player exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Other heros")]
     public float GeneralOtherClanExpGainModifier { get; set; } = 1.0f;
 
-    [SettingPropertyBool("Player One Handed exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player One Handed exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Other heros/Specific")]
     public float OneHandedOtherClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Two Handed exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Two Handed exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Other heros/Specific")]
     public float TwoHandedOtherClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Polearm exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Polearm exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Other heros/Specific")]
     public float PolearmOtherClanExpGainModifier { get; set; } = 1.0f;
 
-    [SettingPropertyBool("Player Bow exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Bow exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Other heros/Specific")]
     public float BowOtherClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Crossbow exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Crossbow exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Other heros/Specific")]
     public float CrossbowOtherClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Throwing exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Throwing exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Other heros/Specific")]
     public float ThrowingOtherClanExpGainModifier { get; set; } = 1.0f;
 
-    [SettingPropertyBool("Player Riding exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Riding exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Other heros/Specific")]
     public float RidingOtherClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Athletics exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Athletics exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Other heros/Specific")]
     public float AthleticsOtherClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Smithing exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Smithing exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Other heros/Specific")]
     public float CraftingOtherClanExpGainModifier { get; set; } = 1.0f;
 
-    [SettingPropertyBool("Player Tactics exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Tactics exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Other heros/Specific")]
     public float TacticsOtherClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Scouting exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Scouting exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Other heros/Specific")]
     public float ScoutingOtherClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Roguery exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Roguery exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Other heros/Specific")]
     public float RogueryOtherClanExpGainModifier { get; set; } = 1.0f;
 
-    [SettingPropertyBool("Player Leadership exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Leadership exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Other heros/Specific")]
     public float LeadershipOtherClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Charm exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Charm exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Other heros/Specific")]
     public float CharmOtherClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Trade exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Trade exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Other heros/Specific")]
     public float TradeOtherClanExpGainModifier { get; set; } = 1.0f;
 
-    [SettingPropertyBool("Player Steward exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Steward exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Other heros/Specific")]
     public float StewardOtherClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Medicine exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Medicine exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Other heros/Specific")]
     public float MedicineOtherClanExpGainModifier { get; set; } = 1.0f;
-    [SettingPropertyBool("Player Engineering exp gain modifier")]
+    [SettingPropertyFloatingInteger("Player Engineering exp gain modifier",0,100)]
     [SettingPropertyGroup("Experience Tweaks/Other heros/Specific")]
     public float EngineeringOtherClanExpGainModifier { get; set; } = 1.0f;
   }
