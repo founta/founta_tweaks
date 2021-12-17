@@ -23,22 +23,8 @@ using HarmonyLib;
 
 namespace FountaTweaks
 {
-  public class AutoFountaTweaksSettings : AttributeGlobalSettings<AutoFountaTweaksSettings>
+  public abstract class AutoFountaTweaksSettings<T> : AttributeGlobalSettings<T> where T : AutoFountaTweaksSettings<T>, new()
   {
-    public override string Id => "FountaTweaks";
-    public override string DisplayName => "Founta's Tweaks";
-    
-    private string _version;
-    public string version { get => _version; }
-    public AutoFountaTweaksSettings() : base()
-    {
-      //read version from xml
-      XmlReader reader = XmlReader.Create("../../Modules/FountaTweaks/SubModule.xml");
-      reader.ReadToFollowing("Version");
-      reader.MoveToFirstAttribute();
-
-      this._version = reader.Value;
-    }
     private float _oh_Deflect_p = 20.000000f;
     private float _oh_Deflect_s = 30.000000f;
     private float _oh_Basher_p = 50.000000f;

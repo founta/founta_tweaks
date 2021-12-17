@@ -32,7 +32,7 @@ namespace FountaTweaks
     {
       base.OnBeforeInitialModuleScreenSetAsRoot();
 
-      InformationManager.DisplayMessage(new InformationMessage($"Founta's Tweaks {AutoFountaTweaksSettings.Instance.version} for Bannerlord 1.6.5"));
+      InformationManager.DisplayMessage(new InformationMessage($"Founta's Tweaks {FountaTweaksSettings.Instance.version} for Bannerlord 1.6.5"));
 
       if (harmony == null)
       {

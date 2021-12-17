@@ -3,8 +3,8 @@ def get_prop_str(sp, name, low, high, hint, groups):
            sp+'[SettingPropertyGroup("%s")]' % ('/'.join(groups))]
   return lines
 
-
-default_perk_init_all_code = r""""""
+with open("decompiled_code.txt", "r") as f:
+  default_perk_init_all_code = f.read()
 
 header = """using System;
 using System.Collections.Generic;
@@ -31,22 +31,8 @@ using HarmonyLib;
 
 namespace FountaTweaks
 {
-  public class AutoFountaTweaksSettings : AttributeGlobalSettings<AutoFountaTweaksSettings>
+  public abstract class AutoFountaTweaksSettings<T> : AttributeGlobalSettings<T> where T : AutoFountaTweaksSettings<T>, new()
   {
-    public override string Id => "FountaTweaks";
-    public override string DisplayName => "Founta's Tweaks";
-    
-    private string _version;
-    public string version { get => _version; }
-    public AutoFountaTweaksSettings() : base()
-    {
-      //read version from xml
-      XmlReader reader = XmlReader.Create("../../Modules/FountaTweaks/SubModule.xml");
-      reader.ReadToFollowing("Version");
-      reader.MoveToFirstAttribute();
-
-      this._version = reader.Value;
-    }
 """
 footer = "\n  }\n}"
 sp = "  "
@@ -164,7 +150,7 @@ for line in default_perk_init_all_code.splitlines():
     pass
   
   if primary_bonus is None:
-    print("perk %s is abnormal, skipping" % (perk_name))
+    print("perk %s:%s is abnormal, skipping" % (perk_tree, perk_name))
     continue
   
   do_secondary = True
