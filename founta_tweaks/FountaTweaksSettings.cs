@@ -51,6 +51,21 @@ namespace FountaTweaks
     }
 
     /// <summary>
+    /// /////////////////////////////////////////////////////////// skill tweak settings
+    /// </summary>
+    [SettingPropertyBool("Enable skill tweaks", RequireRestart = false)]
+    [SettingPropertyGroup("Skills", IsMainToggle = true)]
+    public bool SkillTweaksEnabled { get; set; } = false;
+
+    [SettingPropertyBool("Enable Roguery skill tweaks", RequireRestart = false)]
+    [SettingPropertyGroup("Skills/Roguery", IsMainToggle = true)]
+    public bool RogueryTweaksEnabled { get; set; } = false;
+
+    [SettingPropertyFloatingInteger("Disguise renown penalty multiplier", 0.0f,1.0f, RequireRestart = false, HintText = "The default penalty (minimum of 15%) will be multiplied by this value before being applied")]
+    [SettingPropertyGroup("Skills/Roguery", IsMainToggle = false)]
+    public float RogueryRenownDisguisePenaltyMultiplier { get; set; } = 1.0f;
+
+    /// <summary>
     /// /////////////////////////////////////////////////////////// Attribute gain settings
     /// </summary>
     [SettingPropertyBool("Enable focus and attribute point gain modifications", RequireRestart = false)]
