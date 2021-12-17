@@ -1,6 +1,14 @@
-def get_prop_str(sp, name, low, high, hint, groups):
-  lines = [sp+'[SettingPropertyFloatingInteger("%s", %ff, %ff, RequireRestart = false, HintText = %s)]' % (name, low, high, hint),
+def get_prop_str(sp, name, low, high, hint, groups, require_restart=False):
+  lines = [sp+'[SettingPropertyFloatingInteger("%s", %ff, %ff, RequireRestart=%s, HintText=%s)]' % (name, low, high, "true" if require_restart else "false", hint),
            sp+'[SettingPropertyGroup("%s")]' % ('/'.join(groups))]
+  return lines
+
+def get_bool_prop_str(sp, name, hint, groups, require_restart=False, ismaintoggle=True):
+  restart_str = "true" if require_restart else "false"
+  main_toggle_str = "true" if ismaintoggle else "false"
+
+  lines = [sp+'[SettingPropertyBool("%s", RequireRestart=%s, HintText = %s)]' % (name, restart_str, hint),
+           sp+'[SettingPropertyGroup("%s", IsMainToggle=%s)]' % ('/'.join(groups), main_toggle_str)]
   return lines
 
 with open("decompiled_code.txt", "r") as f:
@@ -37,6 +45,7 @@ namespace FountaTweaks
 footer = "\n  }\n}"
 sp = "  "
 
+mod_enable_disable = []
 class_members = []
 class_member_funcs = []
 set_all_lines = []
@@ -94,6 +103,14 @@ desc_replacements = {
 }
 
 dp = "DefaultPerks"
+
+#add options for disabling/enabling perk modifications for each skill
+enabled_suffix = "PerkModificationEnabled"
+for key in perk_tree_map:
+  skill_name = perk_tree_map[key]
+  mod_enable_disable += get_bool_prop_str(sp*2, "Enable %s perk modifications"%(skill_name), hint='""',
+                                          groups=["Perks",skill_name],require_restart=False, ismaintoggle=True)
+  mod_enable_disable += [sp*2+"public bool %s%s {get; set;} = false;" % (skill_name,enabled_suffix)]
 
 for line in default_perk_init_all_code.splitlines():
   line.replace(");", "")
@@ -232,7 +249,7 @@ for line in default_perk_init_all_code.splitlines():
     else:
       mem = perk_member_p
       func = "ExposeInternals.SetPrimaryBonus"
-    return [sp*3+"%s(%s,%s);" % (func,p,mem)]
+    return [sp*3+"if (%s%s) %s(%s,%s);" % (perk_tree, enabled_suffix, func,p,mem)]
   
   def get_access_str():
     return [sp*3+"ref PerkObject %s = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, \"%s\");" % (perk_var_name,perk_var_name)]
@@ -256,7 +273,7 @@ for line in default_perk_init_all_code.splitlines():
 
   class_member_funcs += getter_setter_func + ["\n"]
 
-class_contents = header + "\n".join(class_members) + "\n" + "\n".join(class_member_funcs) +\
+class_contents = header + "\n".join(class_members) + "\n" + "\n".join(mod_enable_disable) + "\n" + "\n".join(class_member_funcs) +\
                  "\n".join(get_whole_func("SetAll(ref DefaultPerks perk)", "void",[], set_all_lines)) + footer
 with open("founta_tweaks/AutoFountaTweaksSettings.cs", "w") as f:
   f.write(class_contents)

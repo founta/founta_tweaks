@@ -24,11 +24,12 @@ namespace FountaTweaks
 {
   //apply the user's saved perk settings (if any) right after normal perk initialization
   [HarmonyPatch(typeof(DefaultPerks), "InitializeAll")]
-  public class HideoutMapFactionPatch
+  public class InitializePerksPatch
   {
     static void Postfix(ref DefaultPerks __instance)
     {
-      FountaTweaksSettings.Instance.SetAll(ref __instance);
+      if (FountaTweaksSettings.Instance.PerkModificationEnabled)
+        FountaTweaksSettings.Instance.SetAll(ref __instance);
     }
   }
 
@@ -50,12 +51,20 @@ namespace FountaTweaks
     }
 
 
+
+    /// <summary>
+    /// /////////////////////////////////////////////////////////// Global perk modification enable/disable
+    /// </summary>
+    [SettingPropertyBool("Enable perk modification", RequireRestart = false)]
+    [SettingPropertyGroup("Perks", IsMainToggle = true)]
+    public bool PerkModificationEnabled { get; set; } = false;
+
     /// <summary>
     /// /////////////////////////////////////////////////////////// PLAYER EXP MODIFIERS
     /// </summary>
 
     [SettingPropertyBool("Enable player exp modification", RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player")]
+    [SettingPropertyGroup("Experience Modifiers/Player", IsMainToggle = true)]
     public bool PlayerExpChangeEnabled { get; set; } = false;
 
     [SettingPropertyFloatingInteger("Overall player exp gain modifier",0,10, RequireRestart=false)]
@@ -128,7 +137,7 @@ namespace FountaTweaks
     /// </summary>
 
     [SettingPropertyBool("Enable player clan hero exp modification", HintText = "This will impact all heros in the player character's clan except the player character", RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heros")]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heros", IsMainToggle = true)]
     public bool PlayerClanExpChangeEnabled { get; set; } = false;
 
     [SettingPropertyFloatingInteger("Overall player clan hero exp gain modifier", 0,10, RequireRestart=false)]
@@ -202,7 +211,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyBool("Enable hero exp modification for all other heros", HintText = "This will impact all heros other than the main player and the heros in the main player's clan", RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heros")]
+    [SettingPropertyGroup("Experience Modifiers/Other heros", IsMainToggle = true)]
     public bool OtherClanExpChangeEnabled { get; set; } = false;
 
     [SettingPropertyFloatingInteger("Overall outside clan hero exp gain modifier",0,10,RequireRestart=false)]
