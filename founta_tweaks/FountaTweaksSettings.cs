@@ -50,6 +50,65 @@ namespace FountaTweaks
       this._version = reader.Value;
     }
 
+    /// <summary>
+    /// /////////////////////////////////////////////////////////// Attribute gain settings
+    /// </summary>
+    [SettingPropertyBool("Enable focus and attribute point gain modifications", RequireRestart = false)]
+    [SettingPropertyGroup("Levelling", IsMainToggle = true)]
+    public bool AttributeModificationEnabled { get; set; } = false;
+    
+    [SettingPropertyBool("Player focus and attribute tweaks enabled", RequireRestart = false)]
+    [SettingPropertyGroup("Levelling/Player", IsMainToggle = true)]
+    public bool PlayerAttributeModificationEnabled { get; set; } = false;
+
+    [SettingPropertyInteger("Player focus point gain per level", 0, 10, RequireRestart = false)]
+    [SettingPropertyGroup("Levelling/Player")]
+    public int PlayerFocusPointsPerLevel { get; set; } = 1;
+    [SettingPropertyInteger("Player attribute point gain per level", 0, 10, RequireRestart = false, HintText = "How many attribute points to award the player on every level up")]
+    [SettingPropertyGroup("Levelling/Player")]
+    public int PlayerAttributePointsPerLevel { get; set; } = 0;
+    [SettingPropertyInteger("Player attribute point gain per two levels", 0, 10, RequireRestart = false, HintText = "How many attribute points to award the player on levels 0, 2, 4, and so on")]
+    [SettingPropertyGroup("Levelling/Player")]
+    public int PlayerAttributePointsPerTwoLevels { get; set; } = 0;
+    [SettingPropertyInteger("Player attribute point gain per three levels", 0, 10, RequireRestart = false, HintText = "How many attribute points to award the player on levels 0, 3, 6, and so on")]
+    [SettingPropertyGroup("Levelling/Player")]
+    public int PlayerAttributePointsPerThreeLevels { get; set; } = 1;
+
+
+    [SettingPropertyBool("Player clan hero focus and attribute tweaks enabled", RequireRestart = false)]
+    [SettingPropertyGroup("Levelling/Player clan heroes", IsMainToggle = true)]
+    public bool PlayerClanHeroAttributeModificationEnabled { get; set; } = false;
+
+    [SettingPropertyInteger("Player clan hero focus point gain per level", 0, 10, RequireRestart = false)]
+    [SettingPropertyGroup("Levelling/Player clan heroes")]
+    public int PlayerClanHeroFocusPointsPerLevel { get; set; } = 1;
+    [SettingPropertyInteger("Player clan hero attribute point gain per level", 0, 10, RequireRestart = false, HintText = "How many attribute points to award player clan heroes on every level up")]
+    [SettingPropertyGroup("Levelling/Player clan heroes")]
+    public int PlayerClanHeroAttributePointsPerLevel { get; set; } = 0;
+    [SettingPropertyInteger("Player clan hero attribute point gain per two levels", 0, 10, RequireRestart = false, HintText = "How many attribute points to award player clan heroes on levels 0, 2, 4, and so on")]
+    [SettingPropertyGroup("Levelling/Player clan heroes")]
+    public int PlayerClanHeroAttributePointsPerTwoLevels { get; set; } = 0;
+    [SettingPropertyInteger("Player clan hero attribute point gain per three levels", 0, 10, RequireRestart = false, HintText = "How many attribute points to award player clan heroes on levels 0, 3, 6, and so on")]
+    [SettingPropertyGroup("Levelling/Player clan heroes")]
+    public int PlayerClanHeroAttributePointsPerThreeLevels { get; set; } = 1;
+
+
+    [SettingPropertyBool("Other clan hero focus and attribute tweaks enabled", RequireRestart = false)]
+    [SettingPropertyGroup("Levelling/Other clan heroes", IsMainToggle = true)]
+    public bool OtherClanHeroAttributeModificationEnabled { get; set; } = false;
+
+    [SettingPropertyInteger("Other clan hero focus point gain per level", 0, 10, RequireRestart = false)]
+    [SettingPropertyGroup("Levelling/Other clan heroes")]
+    public int OtherClanHeroFocusPointsPerLevel { get; set; } = 1;
+    [SettingPropertyInteger("Other clan hero attribute point gain per level", 0, 10, RequireRestart = false, HintText = "How many attribute points to award other clan heroes on every level up")]
+    [SettingPropertyGroup("Levelling/Other clan heroes")]
+    public int OtherClanHeroAttributePointsPerLevel { get; set; } = 0;
+    [SettingPropertyInteger("Other clan hero attribute point gain per two levels", 0, 10, RequireRestart = false, HintText = "How many attribute points to award other clan heroes on levels 0, 2, 4, and so on")]
+    [SettingPropertyGroup("Levelling/Other clan heroes")]
+    public int OtherClanHeroAttributePointsPerTwoLevels { get; set; } = 0;
+    [SettingPropertyInteger("Other clan hero attribute point gain per three levels", 0, 10, RequireRestart = false, HintText = "How many attribute points to award other clan heroes on levels 0, 3, 6, and so on")]
+    [SettingPropertyGroup("Levelling/Other clan heroes")]
+    public int OtherClanHeroAttributePointsPerThreeLevels { get; set; } = 1;
 
     /// <summary>
     /// /////////////////////////////////////////////////////////// Global perk modification enable/disable
