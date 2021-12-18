@@ -170,6 +170,10 @@ for line in default_perk_init_all_code.splitlines():
     print("perk %s:%s is abnormal, skipping" % (perk_tree, perk_name))
     continue
   
+  mod_enable_disable += get_bool_prop_str(sp*2, "Enable %s modifications"%(perk_name), hint='""',
+                                          groups=["Perks",perk_tree,perk_disp_name],require_restart=False, ismaintoggle=True)
+  mod_enable_disable += [sp*2+"public bool %s%s {get; set;} = false;" % (perk_tree+perk_name,enabled_suffix)]
+  
   do_secondary = True
   if secondary_desc is None or secondary_bonus is None:
     do_secondary = False
@@ -249,7 +253,7 @@ for line in default_perk_init_all_code.splitlines():
     else:
       mem = perk_member_p
       func = "ExposeInternals.SetPrimaryBonus"
-    return [sp*3+"if (%s%s) %s(%s,%s);" % (perk_tree, enabled_suffix, func,p,mem)]
+    return [sp*3+"if (%s%s && %s%s) %s(%s,%s);" % (perk_tree, enabled_suffix, perk_tree+perk_name, enabled_suffix, func,p,mem)]
   
   def get_access_str():
     return [sp*3+"ref PerkObject %s = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, \"%s\");" % (perk_var_name,perk_var_name)]

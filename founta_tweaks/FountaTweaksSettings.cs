@@ -50,6 +50,63 @@ namespace FountaTweaks
       this._version = reader.Value;
     }
 
+
+    /// <summary>
+    /// /////////////////////////////////////////////////////////// ranged tweak settings
+    /// </summary>
+
+    [SettingPropertyBool("Enable ranged tweaks", RequireRestart = false)]
+    [SettingPropertyGroup("Ranged", IsMainToggle = true)]
+    public bool RangedTweaksEnabled { get; set; } = false;
+
+    [SettingPropertyBool("Arrow barrels fill throwing weapons", RequireRestart = false)]
+    [SettingPropertyGroup("Ranged")]
+    public bool ArrowBarrelRefillThrowing { get; set; } = false;
+
+    [SettingPropertyBool("Ammunition stack count tweaks", RequireRestart = false)]
+    [SettingPropertyGroup("Ranged/Stack count", IsMainToggle = true)]
+    public bool StackCountTweaksEnabled { get; set; } = false;
+
+    [SettingPropertyInteger("Additional arrow stack count",0,100, RequireRestart = false)]
+    [SettingPropertyGroup("Ranged/Stack count")]
+    public int ExtraArrowStackCount { get; set; } = 0;
+    [SettingPropertyInteger("Additional bolt stack count", 0, 100, RequireRestart = false)]
+    [SettingPropertyGroup("Ranged/Stack count")]
+    public int ExtraBoltStackCount { get; set; } = 0;
+    [SettingPropertyInteger("Additional javelin stack count", 0, 100, RequireRestart = false)]
+    [SettingPropertyGroup("Ranged/Stack count")]
+    public int ExtraJavelinStackCount { get; set; } = 0;
+    [SettingPropertyInteger("Additional throwing axe stack count", 0, 100, RequireRestart = false)]
+    [SettingPropertyGroup("Ranged/Stack count")]
+    public int ExtraThrowingAxeStackCount { get; set; } = 0;
+    [SettingPropertyInteger("Additional throwing knife stack count", 0, 100, RequireRestart = false)]
+    [SettingPropertyGroup("Ranged/Stack count")]
+    public int ExtraThrowingKnifeStackCount { get; set; } = 0;
+
+    /// <summary>
+    /// /////////////////////////////////////////////////////////// tournament and arena tweak settings
+    /// </summary>
+
+    [SettingPropertyBool("Enable tournament tweaks", RequireRestart = false)]
+    [SettingPropertyGroup("Tournaments", IsMainToggle = true)]
+    public bool TournamentTweaksEnabled { get; set; } = false;
+
+    [SettingPropertyInteger("Tournament max bet amount", 0,99999, valueFormat: "0 Denars", RequireRestart = false)]
+    [SettingPropertyGroup("Tournaments", IsMainToggle = false)]
+    public int TournamentMaxBet { get; set; } = 150;
+
+    [SettingPropertyFloatingInteger("Tournament combat xp multiplier", 0, 1, RequireRestart = false)]
+    [SettingPropertyGroup("Tournaments", IsMainToggle = false)]
+    public float TournamentXpMultiplier { get; set; } = 0.33f;
+
+    [SettingPropertyBool("Enable arena tweaks", RequireRestart = false)]
+    [SettingPropertyGroup("Practice Arena", IsMainToggle = true)]
+    public bool ArenaTweaksEnabled { get; set; } = false;
+
+    [SettingPropertyFloatingInteger("Practice fight combat xp multiplier", 0, 1, RequireRestart = false)]
+    [SettingPropertyGroup("Practice Arena", IsMainToggle = false)]
+    public float ArenaXpMultiplier { get; set; } = 1.0f/16.0f;
+
     /// <summary>
     /// /////////////////////////////////////////////////////////// skill tweak settings
     /// </summary>

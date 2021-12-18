@@ -247,6 +247,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoFountaTweaksSettings.cs" />
+    <Compile Include="RangedTweaks.cs" />
+    <Compile Include="TournamentArenaTweaks.cs" />
     <Compile Include="RogueryTweaks.cs" />
     <Compile Include="LevellingTweaks.cs" />
     <Compile Include="CraftingTweaks.cs" />

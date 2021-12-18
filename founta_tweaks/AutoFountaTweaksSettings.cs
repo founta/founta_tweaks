@@ -700,6 +700,972 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable OneHanded perk modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/OneHanded", IsMainToggle=true)]
     public bool OneHandedPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Deflect modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/OneHanded/{=fLaRz2SM}Deflect", IsMainToggle=true)]
+    public bool OneHandedDeflectPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Basher modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/OneHanded/{=6yEeYNRu}Basher", IsMainToggle=true)]
+    public bool OneHandedBasherPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ToBeBlunt modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/OneHanded/{=SJ69EYuI}To Be Blunt", IsMainToggle=true)]
+    public bool OneHandedToBeBluntPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SwiftStrike modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/OneHanded/{=ciELES5v}Swift Strike", IsMainToggle=true)]
+    public bool OneHandedSwiftStrikePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Cavalry modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/OneHanded/{=YVGtcLHF}Cavalry", IsMainToggle=true)]
+    public bool OneHandedCavalryPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ShieldBearer modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/OneHanded/{=vnG1q18y}Shield Bearer", IsMainToggle=true)]
+    public bool OneHandedShieldBearerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Trainer modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/OneHanded/{=3xuwVbfs}Trainer", IsMainToggle=true)]
+    public bool OneHandedTrainerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Duelist modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/OneHanded/{=XphY9cNV}Duelist", IsMainToggle=true)]
+    public bool OneHandedDuelistPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ShieldWall modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/OneHanded/{=nSwkI97I}Shieldwall", IsMainToggle=true)]
+    public bool OneHandedShieldWallPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ArrowCatcher modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/OneHanded/{=a94mkNNk}Arrow Catcher", IsMainToggle=true)]
+    public bool OneHandedArrowCatcherPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable MilitaryTradition modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/OneHanded/{=Fc7OsyZ8}Military Tradition", IsMainToggle=true)]
+    public bool OneHandedMilitaryTraditionPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable CorpsACorps modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/OneHanded/{=M3aNEkBJ}Corps-a-corps", IsMainToggle=true)]
+    public bool OneHandedCorpsACorpsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable StandUnited modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/OneHanded/{=d8qjwKza}Stand United", IsMainToggle=true)]
+    public bool OneHandedStandUnitedPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable LeadByExample modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/OneHanded/{=bOhbWapX}Lead by example", IsMainToggle=true)]
+    public bool OneHandedLeadByExamplePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SteelCoreShields modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/OneHanded/{=rSATpMpq}Steel Core Shields", IsMainToggle=true)]
+    public bool OneHandedSteelCoreShieldsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable FleetOfFoot modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/OneHanded/{=OtdkOGur}Fleet of Foot", IsMainToggle=true)]
+    public bool OneHandedFleetOfFootPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable DeadlyPurpose modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/OneHanded/{=xpGoduJq}Deadly Purpose", IsMainToggle=true)]
+    public bool OneHandedDeadlyPurposePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable UnwaveringDefense modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/OneHanded/{=yFbEDUyb}Unwavering Defense", IsMainToggle=true)]
+    public bool OneHandedUnwaveringDefensePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Prestige modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/OneHanded/{=DSKtsYPi}Prestige", IsMainToggle=true)]
+    public bool OneHandedPrestigePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ChinkInTheArmor modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/OneHanded/{=bBa0LB1D}Chink in the Armor", IsMainToggle=true)]
+    public bool OneHandedChinkInTheArmorPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable WayOfTheSword modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/OneHanded/{=nThmB3yB}Way of the Sword", IsMainToggle=true)]
+    public bool OneHandedWayOfTheSwordPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable StrongGrip modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/TwoHanded/{=xDQTgPf0}Strong Grip", IsMainToggle=true)]
+    public bool TwoHandedStrongGripPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable WoodChopper modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/TwoHanded/{=J7oh7Vin}Wood Chopper", IsMainToggle=true)]
+    public bool TwoHandedWoodChopperPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable OnTheEdge modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/TwoHanded/{=rkuAgPSA}On the Edge", IsMainToggle=true)]
+    public bool TwoHandedOnTheEdgePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable HeadBasher modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/TwoHanded/{=E5bgLJcs}Head Basher", IsMainToggle=true)]
+    public bool TwoHandedHeadBasherPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ShowOfStrength modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/TwoHanded/{=RlMqzqbS}Show of Strength", IsMainToggle=true)]
+    public bool TwoHandedShowOfStrengthPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable BaptisedInBlood modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/TwoHanded/{=miMZavW3}Baptised in Blood", IsMainToggle=true)]
+    public bool TwoHandedBaptisedInBloodPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable BeastSlayer modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/TwoHanded/{=NDtlE6PY}Beast Slayer", IsMainToggle=true)]
+    public bool TwoHandedBeastSlayerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ShieldBreaker modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/TwoHanded/{=bM9VX881}Shield breaker", IsMainToggle=true)]
+    public bool TwoHandedShieldBreakerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Berserker modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/TwoHanded/{=RssJTUpL}Berserker", IsMainToggle=true)]
+    public bool TwoHandedBerserkerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Confidence modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/TwoHanded/{=2jnsxsv5}Confidence", IsMainToggle=true)]
+    public bool TwoHandedConfidencePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ArrowDeflection modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/TwoHanded/{=MbRZSiuq}Arrow Deflection", IsMainToggle=true)]
+    public bool TwoHandedArrowDeflectionPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Terror modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/TwoHanded/{=nAlCj2m0}Terror", IsMainToggle=true)]
+    public bool TwoHandedTerrorPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Hope modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/TwoHanded/{=lPuk6bao}Hope", IsMainToggle=true)]
+    public bool TwoHandedHopePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable RecklessCharge modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/TwoHanded/{=ZGovl01w}Reckless Charge", IsMainToggle=true)]
+    public bool TwoHandedRecklessChargePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ThickHides modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/TwoHanded/{=j9OIuxxY}Thick Hides", IsMainToggle=true)]
+    public bool TwoHandedThickHidesPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable BladeMaster modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/TwoHanded/{=TtwAoHfw}Blade Master", IsMainToggle=true)]
+    public bool TwoHandedBladeMasterPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Vandal modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/TwoHanded/{=czCRxHZy}Vandal", IsMainToggle=true)]
+    public bool TwoHandedVandalPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable WayOfTheGreatAxe modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/TwoHanded/{=dbEb7iak}Way Of The Great Axe", IsMainToggle=true)]
+    public bool TwoHandedWayOfTheGreatAxePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Pikeman modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Polearm/{=IFqtwpb0}Pikeman", IsMainToggle=true)]
+    public bool PolearmPikemanPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Cavalry modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Polearm/{=YVGtcLHF}Cavalry", IsMainToggle=true)]
+    public bool PolearmCavalryPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Braced modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Polearm/{=dU7haWkI}Braced", IsMainToggle=true)]
+    public bool PolearmBracedPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable KeepAtBay modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Polearm/{=TaucWWCB}Keep at Bay", IsMainToggle=true)]
+    public bool PolearmKeepAtBayPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SwiftSwing modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Polearm/{=xM5aawCj}Swift Swing", IsMainToggle=true)]
+    public bool PolearmSwiftSwingPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable CleanThrust modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Polearm/{=PeaiNrSu}Clean Thrust", IsMainToggle=true)]
+    public bool PolearmCleanThrustPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Footwork modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Polearm/{=Yvk8a2tb}Footwork", IsMainToggle=true)]
+    public bool PolearmFootworkPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable HardKnock modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Polearm/{=8DTKXbKw}Hard Knock", IsMainToggle=true)]
+    public bool PolearmHardKnockPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SteedKiller modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Polearm/{=8POWjrr6}Steed Killer", IsMainToggle=true)]
+    public bool PolearmSteedKillerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Lancer modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Polearm/{=hchDYAKL}Lancer", IsMainToggle=true)]
+    public bool PolearmLancerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Skewer modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Polearm/{=o57z0zB9}Skewer", IsMainToggle=true)]
+    public bool PolearmSkewerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Guards modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Polearm/{=vquApOWo}Guards", IsMainToggle=true)]
+    public bool PolearmGuardsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable StandardBearer modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Polearm/{=Vv81gkWN}Standard Bearer", IsMainToggle=true)]
+    public bool PolearmStandardBearerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Phalanx modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Polearm/{=5vs3qlQ8}Phalanx", IsMainToggle=true)]
+    public bool PolearmPhalanxPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable GenerousRations modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Polearm/{=yBa95LU3}Generous Rations", IsMainToggle=true)]
+    public bool PolearmGenerousRationsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Drills modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Polearm/{=JpiQagYa}Drills", IsMainToggle=true)]
+    public bool PolearmDrillsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SureFooted modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Polearm/{=bdzt4TcN}Sure Footed", IsMainToggle=true)]
+    public bool PolearmSureFootedPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable UnstoppableForce modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Polearm/{=Jat5GFDi}Unstoppable Force", IsMainToggle=true)]
+    public bool PolearmUnstoppableForcePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable CounterWeight modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Polearm/{=BazrgEOj}Counterweight", IsMainToggle=true)]
+    public bool PolearmCounterWeightPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SharpenTheTip modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Polearm/{=ljduhdzj}Sharpen the Tip", IsMainToggle=true)]
+    public bool PolearmSharpenTheTipPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable WayOfTheSpear modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Polearm/{=YnimoRlg}Way of the Spear", IsMainToggle=true)]
+    public bool PolearmWayOfTheSpearPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable BowControl modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Bow/{=1zteHA7R}Bow Control", IsMainToggle=true)]
+    public bool BowBowControlPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable DeadAim modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Bow/{=FVLymWqW}Dead Aim", IsMainToggle=true)]
+    public bool BowDeadAimPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Bodkin modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Bow/{=PDM8MzCA}Bodkin", IsMainToggle=true)]
+    public bool BowBodkinPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable RangersSwiftness modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Bow/{=p12tSfCC}Ranger's Swiftness", IsMainToggle=true)]
+    public bool BowRangersSwiftnessPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable RapidFire modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Bow/{=Kc9oatmM}Rapid Fire", IsMainToggle=true)]
+    public bool BowRapidFirePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable QuickAdjustments modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Bow/{=nOZerIfl}Quick Adjustments", IsMainToggle=true)]
+    public bool BowQuickAdjustmentsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable MerryMen modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Bow/{=ssljPTUr}Merry Men", IsMainToggle=true)]
+    public bool BowMerryMenPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable MountedArchery modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Bow/{=WEUSMkCp}Mounted Archery", IsMainToggle=true)]
+    public bool BowMountedArcheryPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Trainer modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Bow/{=UE2X5rAy}Trainer", IsMainToggle=true)]
+    public bool BowTrainerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable StrongBows modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Bow/{=dqbbT5DK}Strong bows", IsMainToggle=true)]
+    public bool BowStrongBowsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Discipline modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Bow/{=D867vF71}Discipline", IsMainToggle=true)]
+    public bool BowDisciplinePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable HunterClan modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Bow/{=AAy1oX7z}Hunter Clan", IsMainToggle=true)]
+    public bool BowHunterClanPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SkirmishPhaseMaster modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Bow/{=oVdoauUE}Skirmish Phase Master", IsMainToggle=true)]
+    public bool BowSkirmishPhaseMasterPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable EagleEye modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Bow/{=lq67KjSY}Eagle Eye", IsMainToggle=true)]
+    public bool BowEagleEyePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable BullsEye modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Bow/{=QH77Weyq}Bulls Eye", IsMainToggle=true)]
+    public bool BowBullsEyePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable RenownedArcher modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Bow/{=aIKVpGvE}Renowned Archer", IsMainToggle=true)]
+    public bool BowRenownedArcherPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable HorseMaster modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Bow/{=dbUybDTG}Horse Master", IsMainToggle=true)]
+    public bool BowHorseMasterPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable DeepQuivers modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Bow/{=h83ZU95t}Deep Quivers", IsMainToggle=true)]
+    public bool BowDeepQuiversPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable QuickDraw modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Bow/{=vnJndBgT}Quick Draw", IsMainToggle=true)]
+    public bool BowQuickDrawPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Salvo modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Bow/{=ZDNI6n9s}Salvo", IsMainToggle=true)]
+    public bool BowSalvoPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Deadshot modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Bow/{=rsKhbZpJ}Deadshot", IsMainToggle=true)]
+    public bool BowDeadshotPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Piercer modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crossbow/{=v8RwzwqD}Piercer", IsMainToggle=true)]
+    public bool CrossbowPiercerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Marksmen modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crossbow/{=IUGVdu64}Marksmen", IsMainToggle=true)]
+    public bool CrossbowMarksmenPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Unhorser modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crossbow/{=75vJc53f}Unhorser", IsMainToggle=true)]
+    public bool CrossbowUnhorserPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable WindWinder modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crossbow/{=1bw2uw8H}Wind Winder", IsMainToggle=true)]
+    public bool CrossbowWindWinderPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable DonkeysSwiftness modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crossbow/{=uANbQUxg}Donkeys Swiftness", IsMainToggle=true)]
+    public bool CrossbowDonkeysSwiftnessPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Sheriff modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crossbow/{=leaowE4D}Sheriff", IsMainToggle=true)]
+    public bool CrossbowSheriffPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable PeasantLeader modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crossbow/{=2rPMYl7Y}Peasant Leader", IsMainToggle=true)]
+    public bool CrossbowPeasantLeaderPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable RenownMarksmen modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crossbow/{=ICkvftaM}Renown Marksmen", IsMainToggle=true)]
+    public bool CrossbowRenownMarksmenPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Fletcher modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crossbow/{=FA5QlTvm}Fletcher", IsMainToggle=true)]
+    public bool CrossbowFletcherPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Puncture modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crossbow/{=jjkJyKoy}Puncture", IsMainToggle=true)]
+    public bool CrossbowPuncturePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable LooseAndMove modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crossbow/{=SKUPHeAw}Loose and Move", IsMainToggle=true)]
+    public bool CrossbowLooseAndMovePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable DeftHands modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crossbow/{=NYHeygaj}Deft Hands", IsMainToggle=true)]
+    public bool CrossbowDeftHandsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable MountedCrossbowman modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crossbow/{=UZHvbYTr}Mounted Crossbowman", IsMainToggle=true)]
+    public bool CrossbowMountedCrossbowmanPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Steady modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crossbow/{=Ye9lbBr3}Steady", IsMainToggle=true)]
+    public bool CrossbowSteadyPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Sniper modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crossbow/{=aT0uYDuo}Sniper", IsMainToggle=true)]
+    public bool CrossbowSniperPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable HammerBolts modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crossbow/{=FjMS9Mbz}Hammer Bolts", IsMainToggle=true)]
+    public bool CrossbowHammerBoltsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Pavise modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crossbow/{=2667CwaK}Pavise", IsMainToggle=true)]
+    public bool CrossbowPavisePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Terror modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crossbow/{=nAlCj2m0}Terror", IsMainToggle=true)]
+    public bool CrossbowTerrorPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable PickedShots modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crossbow/{=nGWmyZCs}Picked Shots", IsMainToggle=true)]
+    public bool CrossbowPickedShotsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable MightyPull modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crossbow/{=ZFtyxzT5}Mighty Pull", IsMainToggle=true)]
+    public bool CrossbowMightyPullPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable QuickDraw modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Throwing/{=vnJndBgT}Quick Draw", IsMainToggle=true)]
+    public bool ThrowingQuickDrawPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ShieldBreaker modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Throwing/{=DeWp2GjP}Shield Breaker", IsMainToggle=true)]
+    public bool ThrowingShieldBreakerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Hunter modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Throwing/{=xnDWqYKW}Hunter", IsMainToggle=true)]
+    public bool ThrowingHunterPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable FlexibleFighter modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Throwing/{=mPPWRjCZ}Flexible Fighter", IsMainToggle=true)]
+    public bool ThrowingFlexibleFighterPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable MountedSkirmisher modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Throwing/{=l1I748Fn}Mounted Skirmisher", IsMainToggle=true)]
+    public bool ThrowingMountedSkirmisherPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable PerfectTechnique modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Throwing/{=BCoQgZvG}Perfect Technique", IsMainToggle=true)]
+    public bool ThrowingPerfectTechniquePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable RunningThrow modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Throwing/{=OcaW12fJ}Running Throw", IsMainToggle=true)]
+    public bool ThrowingRunningThrowPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable KnockOff modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Throwing/{=Gn3KBN8L}Knock Off", IsMainToggle=true)]
+    public bool ThrowingKnockOffPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable WellPrepared modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Throwing/{=bloxcikL}Well Prepared", IsMainToggle=true)]
+    public bool ThrowingWellPreparedPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Focus modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Throwing/{=throwingskillfocus}Focus", IsMainToggle=true)]
+    public bool ThrowingFocusPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable LastHit modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Throwing/{=IsHyjvSq}Last Hit", IsMainToggle=true)]
+    public bool ThrowingLastHitPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable HeadHunter modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Throwing/{=iARYMyuq}Head Hunter", IsMainToggle=true)]
+    public bool ThrowingHeadHunterPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ThrowingCompetitions modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Throwing/{=cC8iTtg5}Throwing Competitions", IsMainToggle=true)]
+    public bool ThrowingThrowingCompetitionsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Splinters modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Throwing/{=b6W74uyR}Splinters", IsMainToggle=true)]
+    public bool ThrowingSplintersPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Resourceful modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Throwing/{=w53LSPJ1}Resourceful", IsMainToggle=true)]
+    public bool ThrowingResourcefulPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable LongReach modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Throwing/{=9iLyu1kp}Long Reach", IsMainToggle=true)]
+    public bool ThrowingLongReachPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable WeakSpot modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Throwing/{=cPPLAz8l}Weak Spot", IsMainToggle=true)]
+    public bool ThrowingWeakSpotPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Impale modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Throwing/{=tYAYIRjr}Impale", IsMainToggle=true)]
+    public bool ThrowingImpalePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable UnstoppableForce modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Throwing/{=Jat5GFDi}Unstoppable Force", IsMainToggle=true)]
+    public bool ThrowingUnstoppableForcePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable FullSpeed modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Riding/{=kzy9Iduz}Full Speed", IsMainToggle=true)]
+    public bool RidingFullSpeedPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable NimbleSteed modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Riding/{=cXlnH1Jp}Nimble Steed", IsMainToggle=true)]
+    public bool RidingNimbleSteedPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable WellStraped modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Riding/{=3lfS4iCZ}Well Strapped", IsMainToggle=true)]
+    public bool RidingWellStrapedPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Veterinary modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Riding/{=ZaSmz64G}Veterinary", IsMainToggle=true)]
+    public bool RidingVeterinaryPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable NomadicTraditions modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Riding/{=PB5iowxh}Nomadic Traditions", IsMainToggle=true)]
+    public bool RidingNomadicTraditionsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable FilledToBrim modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Riding/{=frQX6OZv}Filled To Brim", IsMainToggle=true)]
+    public bool RidingFilledToBrimPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Sagittarius modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Riding/{=jbPZTSP4}Sagittarius", IsMainToggle=true)]
+    public bool RidingSagittariusPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SweepingWind modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Riding/{=gL7Ltjpc}Sweeping Wind", IsMainToggle=true)]
+    public bool RidingSweepingWindPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable MountedWarrior modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Riding/{=ixqTFMVA}Mounted Warrior", IsMainToggle=true)]
+    public bool RidingMountedWarriorPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable HorseArcher modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Riding/{=ugJfuabA}Horse Archer", IsMainToggle=true)]
+    public bool RidingHorseArcherPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Horde modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Riding/{=BdQMQW8t}Riding Horde", IsMainToggle=true)]
+    public bool RidingHordePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Breeder modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Riding/{=4Pbfs4rV}Breeder", IsMainToggle=true)]
+    public bool RidingBreederPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ThunderousCharge modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Riding/{=3MLtqFPt}Thunderous Charge", IsMainToggle=true)]
+    public bool RidingThunderousChargePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable AnnoyingBuzz modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Riding/{=Okibjv5n}Annoying Buzz", IsMainToggle=true)]
+    public bool RidingAnnoyingBuzzPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable MountedPatrols modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Riding/{=1z3oRPQu}Mounted Patrols", IsMainToggle=true)]
+    public bool RidingMountedPatrolsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable CavalryTactics modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Riding/{=ZMxAGDKU}Cavalry Tactics", IsMainToggle=true)]
+    public bool RidingCavalryTacticsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable DauntlessSteed modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Riding/{=eYzTvFEH}Dauntless Steed", IsMainToggle=true)]
+    public bool RidingDauntlessSteedPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ToughSteed modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Riding/{=vDNbHDfq}Tough Steed", IsMainToggle=true)]
+    public bool RidingToughSteedPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable TheWayOfTheSaddle modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Riding/{=HvYgMtXO}The Way Of The Saddle", IsMainToggle=true)]
+    public bool RidingTheWayOfTheSaddlePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable MorningExercise modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Athletics/{=ipwU1JT3}Morning Exercise", IsMainToggle=true)]
+    public bool AthleticsMorningExercisePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable WellBuilt modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Athletics/{=bigS7KHi}Well Built", IsMainToggle=true)]
+    public bool AthleticsWellBuiltPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable FormFittingArmor modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Athletics/{=tp3p7R8E}Form Fitting Armor", IsMainToggle=true)]
+    public bool AthleticsFormFittingArmorPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable HavingGoing modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Athletics/{=HqxV96aL}Having Going", IsMainToggle=true)]
+    public bool AthleticsHavingGoingPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Stamina modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Athletics/{=2lCLp5eo}Stamina", IsMainToggle=true)]
+    public bool AthleticsStaminaPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Powerful modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Athletics/{=UCpyo9hw}Powerful", IsMainToggle=true)]
+    public bool AthleticsPowerfulPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SurgingBlow modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Athletics/{=zrYFYDfj}Surging Blow", IsMainToggle=true)]
+    public bool AthleticsSurgingBlowPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Braced modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Athletics/{=dU7haWkI}Braced", IsMainToggle=true)]
+    public bool AthleticsBracedPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable WalkItOff modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Athletics/{=0pyLfrGZ}Walk It Off", IsMainToggle=true)]
+    public bool AthleticsWalkItOffPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable AGoodDaysRest modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Athletics/{=B7HwvV6L}A Good Days Rest", IsMainToggle=true)]
+    public bool AthleticsAGoodDaysRestPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable HealthyCitizens modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Athletics/{=LVeZLsbg}Healthy Citizens", IsMainToggle=true)]
+    public bool AthleticsHealthyCitizensPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Energetic modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Athletics/{=1YxFYg3s}Energetic", IsMainToggle=true)]
+    public bool AthleticsEnergeticPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Steady modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Athletics/{=Ye9lbBr3}Steady", IsMainToggle=true)]
+    public bool AthleticsSteadyPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Strong modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Athletics/{=d5aK6Sv0}Strong", IsMainToggle=true)]
+    public bool AthleticsStrongPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable StrongArms modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Athletics/{=qBKmIyYx}Strong Arms", IsMainToggle=true)]
+    public bool AthleticsStrongArmsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Spartan modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Athletics/{=PX0Xufmr}Spartan", IsMainToggle=true)]
+    public bool AthleticsSpartanPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable IgnorePain modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Athletics/{=AHtFRv5T}Ignore Pain", IsMainToggle=true)]
+    public bool AthleticsIgnorePainPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable MightyBlow modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Athletics/{=lbGa4ihC}Mighty Blow ", IsMainToggle=true)]
+    public bool AthleticsMightyBlowPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SharpenedEdge modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crafting/{=knWgaYdk}Sharpened Edge", IsMainToggle=true)]
+    public bool CraftingSharpenedEdgePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SharpenedTip modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crafting/{=aO2JSbSq}Sharpened Tip", IsMainToggle=true)]
+    public bool CraftingSharpenedTipPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable TightFormations modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Tactics/{=EX5cZDLH}Tight Formations", IsMainToggle=true)]
+    public bool TacticsTightFormationsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable LooseFormations modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Tactics/{=9y3X0MQg}Loose Formations", IsMainToggle=true)]
+    public bool TacticsLooseFormationsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable AsymmetricalWarfare modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Tactics/{=YkjPau1o}Asymmetrical Warfare", IsMainToggle=true)]
+    public bool TacticsAsymmetricalWarfarePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SmallUnitTactics modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Tactics/{=30hNRt3x}Small Unit Tactics", IsMainToggle=true)]
+    public bool TacticsSmallUnitTacticsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable HordeLeader modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Tactics/{=Vp8Pwou8}Horde Leader", IsMainToggle=true)]
+    public bool TacticsHordeLeaderPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable LawKeeper modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Tactics/{=zUK9JOlb}Law Keeper", IsMainToggle=true)]
+    public bool TacticsLawKeeperPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Coaching modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Tactics/{=afaCdojS}Coaching", IsMainToggle=true)]
+    public bool TacticsCoachingPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SwiftRegroup modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Tactics/{=nmJe4wN1}Swift Regroup", IsMainToggle=true)]
+    public bool TacticsSwiftRegroupPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable OnTheMarch modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Tactics/{=kolBffjD}On The March", IsMainToggle=true)]
+    public bool TacticsOnTheMarchPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable CallToArms modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Tactics/{=mUubYb7v}Call To Arms", IsMainToggle=true)]
+    public bool TacticsCallToArmsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable PickThemOfTheWalls modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Tactics/{=XQkY7jkL}Pick Them Of The Walls", IsMainToggle=true)]
+    public bool TacticsPickThemOfTheWallsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable MakeThemPay modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Tactics/{=8xxeNK0o}Make Them Pay", IsMainToggle=true)]
+    public bool TacticsMakeThemPayPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable EliteReserves modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Tactics/{=luDtfSN7}Elite Reserves", IsMainToggle=true)]
+    public bool TacticsEliteReservesPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Encirclement modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Tactics/{=EhaMPtRX}Encirclement", IsMainToggle=true)]
+    public bool TacticsEncirclementPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable PreBattleManeuvers modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Tactics/{=cHgLxbbc}Pre Battle Maneuvers", IsMainToggle=true)]
+    public bool TacticsPreBattleManeuversPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Besieged modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Tactics/{=ALC3Kzv9}Besieged", IsMainToggle=true)]
+    public bool TacticsBesiegedPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Counteroffensive modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Tactics/{=mn5tQhyp}Counter Offensive", IsMainToggle=true)]
+    public bool TacticsCounteroffensivePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Gensdarmes modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Tactics/{=CTEuBfU0}Gens d'armes", IsMainToggle=true)]
+    public bool TacticsGensdarmesPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable TacticalMastery modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Tactics/{=8rvpcb4k}Tactical Mastery", IsMainToggle=true)]
+    public bool TacticsTacticalMasteryPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable DayTraveler modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Scouting/{=6PSgX2BP}Day Traveler", IsMainToggle=true)]
+    public bool ScoutingDayTravelerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable NightRunner modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Scouting/{=B8Gq2ylh}Night Runner", IsMainToggle=true)]
+    public bool ScoutingNightRunnerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Pathfinder modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Scouting/{=d2qGHXyx}Pathfinder", IsMainToggle=true)]
+    public bool ScoutingPathfinderPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable WaterDiviner modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Scouting/{=gsz9DMNq}Water Diviner", IsMainToggle=true)]
+    public bool ScoutingWaterDivinerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ForestKin modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Scouting/{=0XuFh3cX}Forest Kin", IsMainToggle=true)]
+    public bool ScoutingForestKinPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable DesertBorn modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Scouting/{=TbBmjK8M}Desert Born", IsMainToggle=true)]
+    public bool ScoutingDesertBornPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ForcedMarch modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Scouting/{=jhZe9Mfo}Forced March", IsMainToggle=true)]
+    public bool ScoutingForcedMarchPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Unburdened modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Scouting/{=sA2OrT6l}Unburdened", IsMainToggle=true)]
+    public bool ScoutingUnburdenedPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Tracker modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Scouting/{=AoaabumE}Tracker", IsMainToggle=true)]
+    public bool ScoutingTrackerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Ranger modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Scouting/{=09gOOa0h}Ranger", IsMainToggle=true)]
+    public bool ScoutingRangerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Patrols modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Scouting/{=uKc4le8Q}Patrols", IsMainToggle=true)]
+    public bool ScoutingPatrolsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Foragers modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Scouting/{=LPxEDIk7}Foragers", IsMainToggle=true)]
+    public bool ScoutingForagersPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable BeastWhisperer modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Scouting/{=mrtDAhtL}Beast Whisperer", IsMainToggle=true)]
+    public bool ScoutingBeastWhispererPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable VillageNetwork modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Scouting/{=lYQAuYaH}Village Network", IsMainToggle=true)]
+    public bool ScoutingVillageNetworkPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable RumourNetwork modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Scouting/{=LwWyc6ou}Rumour Network", IsMainToggle=true)]
+    public bool ScoutingRumourNetworkPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable VantagePoint modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Scouting/{=EC2n5DBl}Vantage Point", IsMainToggle=true)]
+    public bool ScoutingVantagePointPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable KeenSight modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Scouting/{=3yVPrhXt}Keen Sight", IsMainToggle=true)]
+    public bool ScoutingKeenSightPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Rearguard modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Scouting/{=e4QAc5A6}Rearguard", IsMainToggle=true)]
+    public bool ScoutingRearguardPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable UncannyInsight modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Scouting/{=M9vC9mio}Uncanny Insight", IsMainToggle=true)]
+    public bool ScoutingUncannyInsightPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable NoRestForTheWicked modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Roguery/{=RyfFWmDs}No Rest for the Wicked", IsMainToggle=true)]
+    public bool RogueryNoRestForTheWickedPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SweetTalker modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Roguery/{=570wiYEe}Sweet Talker", IsMainToggle=true)]
+    public bool RoguerySweetTalkerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable TwoFaced modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Roguery/{=kg4Mx9j4}Two Faced", IsMainToggle=true)]
+    public bool RogueryTwoFacedPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable DeepPockets modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Roguery/{=by1b61pn}Deep Pockets", IsMainToggle=true)]
+    public bool RogueryDeepPocketsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable InBestLight modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Roguery/{=xoARIHde}In Best Light", IsMainToggle=true)]
+    public bool RogueryInBestLightPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable KnowHow modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Roguery/{=tvoN5ynt}Know-How", IsMainToggle=true)]
+    public bool RogueryKnowHowPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Promises modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Roguery/{=XZOtTuxA}Promises", IsMainToggle=true)]
+    public bool RogueryPromisesPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SlaveTrader modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Roguery/{=jNbTBxEW}Slave Trader", IsMainToggle=true)]
+    public bool RoguerySlaveTraderPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable WhiteLies modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Roguery/{=F51HfzZj}White Lies", IsMainToggle=true)]
+    public bool RogueryWhiteLiesPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SmugglerConnections modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Roguery/{=E8a2joMO}Smuggler Connections", IsMainToggle=true)]
+    public bool RoguerySmugglerConnectionsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable PartnersInCrime modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Roguery/{=2PVm7NON}Partners in Crime", IsMainToggle=true)]
+    public bool RogueryPartnersInCrimePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable OneOfTheFamily modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Roguery/{=oumTabhS}One of the Family", IsMainToggle=true)]
+    public bool RogueryOneOfTheFamilyPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Carver modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Roguery/{=7gZo2SY4}Carver", IsMainToggle=true)]
+    public bool RogueryCarverPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable RansomBroker modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Roguery/{=W2WXkiAh}Ransom Broker", IsMainToggle=true)]
+    public bool RogueryRansomBrokerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ArmsDealer modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Roguery/{=5bmlZ26b}Arms Dealer", IsMainToggle=true)]
+    public bool RogueryArmsDealerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable DirtyFighting modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Roguery/{=bb1hS9I4}Dirty Fighting", IsMainToggle=true)]
+    public bool RogueryDirtyFightingPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable DashAndSlash modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Roguery/{=w1B71sNj}Dash and Slash", IsMainToggle=true)]
+    public bool RogueryDashAndSlashPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable FleetFooted modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Roguery/{=yY5iDvAb}Fleet Footed", IsMainToggle=true)]
+    public bool RogueryFleetFootedPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable RogueExtraordinaire modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Roguery/{=U3cgqyUE}Rogue Extraordinaire", IsMainToggle=true)]
+    public bool RogueryRogueExtraordinairePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable CombatTips modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Leadership/{=Cb5s9HlD}Combat Tips", IsMainToggle=true)]
+    public bool LeadershipCombatTipsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable RaiseTheMeek modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Leadership/{=JGCtv8om}Raise The Meek", IsMainToggle=true)]
+    public bool LeadershipRaiseTheMeekPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable FerventAttacker modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Leadership/{=MhRF64eR}Fervent Attacker", IsMainToggle=true)]
+    public bool LeadershipFerventAttackerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable StoutDefender modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Leadership/{=YogcurDJ}Stout Defender", IsMainToggle=true)]
+    public bool LeadershipStoutDefenderPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Authority modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Leadership/{=CeCAMvkX}Authority", IsMainToggle=true)]
+    public bool LeadershipAuthorityPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable HeroicLeader modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Leadership/{=7aX2eh5x}Heroic Leader", IsMainToggle=true)]
+    public bool LeadershipHeroicLeaderPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable LoyaltyAndHonor modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Leadership/{=UJYaonYM}Loyalty and Honor", IsMainToggle=true)]
+    public bool LeadershipLoyaltyAndHonorPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable FamousCommander modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Leadership/{=FQkHkMhw}Famous Commander", IsMainToggle=true)]
+    public bool LeadershipFamousCommanderPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Presence modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Leadership/{=6RckjM4S}Presence", IsMainToggle=true)]
+    public bool LeadershipPresencePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable LeaderOfMasses modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Leadership/{=T5rM9XgO}Leader of the Masses", IsMainToggle=true)]
+    public bool LeadershipLeaderOfMassesPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable VeteransRespect modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Leadership/{=vWGQNcu5}Veteran's Respect", IsMainToggle=true)]
+    public bool LeadershipVeteransRespectPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable CitizenMilitia modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Leadership/{=vZtLm43v}Citizen Militia", IsMainToggle=true)]
+    public bool LeadershipCitizenMilitiaPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable InspiringLeader modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Leadership/{=kaEzJUTW}Inspiring Leader", IsMainToggle=true)]
+    public bool LeadershipInspiringLeaderPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable UpliftingSpirit modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Leadership/{=EbROfVJJ}Uplifting Spirit", IsMainToggle=true)]
+    public bool LeadershipUpliftingSpiritPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable MakeADifference modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Leadership/{=5uW9zKTN}Make a Difference", IsMainToggle=true)]
+    public bool LeadershipMakeADifferencePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable LeadByExample modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Leadership/{=WFFlp3Qi}Lead by Example", IsMainToggle=true)]
+    public bool LeadershipLeadByExamplePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable TrustedCommander modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Leadership/{=6ETg3maz}Trusted Commander", IsMainToggle=true)]
+    public bool LeadershipTrustedCommanderPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable WePledgeOurSwords modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Leadership/{=3GHIb7YX}We Pledge our Swords", IsMainToggle=true)]
+    public bool LeadershipWePledgeOurSwordsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable TalentMagnet modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Leadership/{=pFfqWRnf}Talent Magnet", IsMainToggle=true)]
+    public bool LeadershipTalentMagnetPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable UltimateLeader modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Leadership/{=FK3W0SKk}Ultimate Leader", IsMainToggle=true)]
+    public bool LeadershipUltimateLeaderPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Diplomacy modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/{=L7wn49Uz}Diplomacy", IsMainToggle=true)]
+    public bool CharmDiplomacyPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ShowYourScars modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/{=hNmz5OL8}Show Your Scars", IsMainToggle=true)]
+    public bool CharmShowYourScarsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ForgivableGrievances modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/{=l863hIyN}Forgivable Grievances", IsMainToggle=true)]
+    public bool CharmForgivableGrievancesPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable MeaningfulFavors modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/{=4hUEryJ6}Meaningful Favors", IsMainToggle=true)]
+    public bool CharmMeaningfulFavorsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable InBloom modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/{=ZlXSlx0p}In Bloom", IsMainToggle=true)]
+    public bool CharmInBloomPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable YoungAndRespectful modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/{=TpzZgFsA}Young and Respectful", IsMainToggle=true)]
+    public bool CharmYoungAndRespectfulPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable RespectfulOpposition modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/{=TIqdvtCL}Respectful Opposition", IsMainToggle=true)]
+    public bool CharmRespectfulOppositionPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable OurGloriousLeader modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/{=5HL8Iqdx}Our Glorious Leader", IsMainToggle=true)]
+    public bool CharmOurGloriousLeaderPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ProFamilia modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/{=NGDa8KpY}Pro Familia", IsMainToggle=true)]
+    public bool CharmProFamiliaPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Appraiser modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/{=b3PsxeiB}Appraiser", IsMainToggle=true)]
+    public bool TradeAppraiserPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable WholeSeller modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/{=lTNpxGoh}Whole Seller", IsMainToggle=true)]
+    public bool TradeWholeSellerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable CaravanMaster modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/{=5acLha5Q}Caravan Master", IsMainToggle=true)]
+    public bool TradeCaravanMasterPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable MarketDealer modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/{=InLGoUbB}Market Dealer", IsMainToggle=true)]
+    public bool TradeMarketDealerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable TravelingRumors modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/{=3j6Ec63l}Traveling Rumors", IsMainToggle=true)]
+    public bool TradeTravelingRumorsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable LocalConnection modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/{=mznjEwjC}Local Connection", IsMainToggle=true)]
+    public bool TradeLocalConnectionPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable DistributedGoods modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/{=nxkNY4YG}Distributed Goods", IsMainToggle=true)]
+    public bool TradeDistributedGoodsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Tollgates modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/{=JnSh4Fmz}Toll Gates", IsMainToggle=true)]
+    public bool TradeTollgatesPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ArtisanCommunity modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/{=8f8UGq46}Artisan Community", IsMainToggle=true)]
+    public bool TradeArtisanCommunityPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable GreatInvestor modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/{=g9qLrEb4}Great Investor", IsMainToggle=true)]
+    public bool TradeGreatInvestorPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable VillagerConnections modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/{=rHrIM4PI}Villager Connections", IsMainToggle=true)]
+    public bool TradeVillagerConnectionsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ContentTrades modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/{=FV4SWLQx}Content Trades", IsMainToggle=true)]
+    public bool TradeContentTradesPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable InsurancePlans modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/{=aYQybo4E}Insurance Plans", IsMainToggle=true)]
+    public bool TradeInsurancePlansPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable RapidDevelopment modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/{=u9oONz9o}Rapid Development", IsMainToggle=true)]
+    public bool TradeRapidDevelopmentPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable GranaryAccountant modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/{=TFy2VYtM}Granary Accountant", IsMainToggle=true)]
+    public bool TradeGranaryAccountantPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SwordForBarter modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/{=AIsDxCeG}Sword For Barter", IsMainToggle=true)]
+    public bool TradeSwordForBarterPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SelfMadeMan modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/{=uHJltZ5D}Self Made Man", IsMainToggle=true)]
+    public bool TradeSelfMadeManPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SilverTongue modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/{=5rDdJpJo}Silver Tongue", IsMainToggle=true)]
+    public bool TradeSilverTonguePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ManOfMeans modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/{=Jy2ap8L1}Man of Means", IsMainToggle=true)]
+    public bool TradeManOfMeansPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable TrickleDown modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/{=L4fz3Jdr}Trickle Down", IsMainToggle=true)]
+    public bool TradeTrickleDownPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Spartan modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/{=PX0Xufmr}Spartan", IsMainToggle=true)]
+    public bool StewardSpartanPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Frugal modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/{=eJIbMa8P}Frugal", IsMainToggle=true)]
+    public bool StewardFrugalPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SevenVeterans modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/{=2ryLuN2i}Seven Veterans", IsMainToggle=true)]
+    public bool StewardSevenVeteransPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable DrillSergant modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/{=L9k4bovO}Drill Sergeant", IsMainToggle=true)]
+    public bool StewardDrillSergantPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Sweatshops modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/{=jbAtOsIy}Sweatshops", IsMainToggle=true)]
+    public bool StewardSweatshopsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable StiffUpperLip modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/{=QUeJ4gc3}Stiff Upper Lip", IsMainToggle=true)]
+    public bool StewardStiffUpperLipPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable PaidInPromise modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/{=CPxbG7Zp}Paid in Promise", IsMainToggle=true)]
+    public bool StewardPaidInPromisePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable EfficientCampaigner modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/{=sC53NYcA}Efficient Campaigner", IsMainToggle=true)]
+    public bool StewardEfficientCampaignerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable GivingHands modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/{=VsqyzWYY}Giving Hands", IsMainToggle=true)]
+    public bool StewardGivingHandsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Logistician modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/{=U2buPiec}Logistician", IsMainToggle=true)]
+    public bool StewardLogisticianPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Relocation modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/{=R6dnhblo}Relocation", IsMainToggle=true)]
+    public bool StewardRelocationPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable AidCorps modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/{=4FdtVyj1}Aid Corps", IsMainToggle=true)]
+    public bool StewardAidCorpsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Gourmet modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/{=63lHFDSG}Gourmet", IsMainToggle=true)]
+    public bool StewardGourmetPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SoundReserves modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/{=O5dgeoss}Sound Reserves", IsMainToggle=true)]
+    public bool StewardSoundReservesPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ForcedLabor modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/{=cWyqiNrf}Forced Labor", IsMainToggle=true)]
+    public bool StewardForcedLaborPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Contractors modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/{=Pg5enC8c}Contractors", IsMainToggle=true)]
+    public bool StewardContractorsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ArenicosMules modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/{=qBx8UbUt}Arenicos' Mules", IsMainToggle=true)]
+    public bool StewardArenicosMulesPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ArenicosHorses modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/{=tbQ5bUzD}Arenicos' Horses", IsMainToggle=true)]
+    public bool StewardArenicosHorsesPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable UrbanDeveloper modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/{=KK8MBZj5}Urban Developer", IsMainToggle=true)]
+    public bool StewardUrbanDeveloperPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable MasterOfWarcraft modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/{=MM0ARhGh}Master of Warcraft", IsMainToggle=true)]
+    public bool StewardMasterOfWarcraftPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SelfMedication modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Medicine/{=TLGvIdJB}Self Medication", IsMainToggle=true)]
+    public bool MedicineSelfMedicationPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable PreventiveMedicine modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Medicine/{=wI393cla}Preventive Medicine", IsMainToggle=true)]
+    public bool MedicinePreventiveMedicinePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable TriageTent modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Medicine/{=EU4JjLqV}Triage Tent", IsMainToggle=true)]
+    public bool MedicineTriageTentPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable WalkItOff modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Medicine/{=0pyLfrGZ}Walk It Off", IsMainToggle=true)]
+    public bool MedicineWalkItOffPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Sledges modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Medicine/{=TyB6y5bh}Sledges", IsMainToggle=true)]
+    public bool MedicineSledgesPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable DoctorsOath modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Medicine/{=PAwDV08b}Doctors Oath", IsMainToggle=true)]
+    public bool MedicineDoctorsOathPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable BestMedicine modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Medicine/{=ei1JSeco}Best Medicine", IsMainToggle=true)]
+    public bool MedicineBestMedicinePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable GoodLogdings modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Medicine/{=RXo3edjn}Good Lodging", IsMainToggle=true)]
+    public bool MedicineGoodLogdingsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SiegeMedic modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Medicine/{=ObwbbEqE}Siege Medic", IsMainToggle=true)]
+    public bool MedicineSiegeMedicPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Veterinarian modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Medicine/{=DNPbZZPQ}Veterinarian", IsMainToggle=true)]
+    public bool MedicineVeterinarianPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable PristineStreets modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Medicine/{=72tbUfrz}Pristine Streets", IsMainToggle=true)]
+    public bool MedicinePristineStreetsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable BushDoctor modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Medicine/{=HGrsb7k2}Bush Doctor", IsMainToggle=true)]
+    public bool MedicineBushDoctorPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable PerfectHealth modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Medicine/{=cGuPMx4p}Perfect Health", IsMainToggle=true)]
+    public bool MedicinePerfectHealthPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable HealthAdvise modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Medicine/{=NxcvQlAk}Health Advice", IsMainToggle=true)]
+    public bool MedicineHealthAdvisePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable PhysicianOfPeople modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Medicine/{=5o6pSbCx}Physician of People", IsMainToggle=true)]
+    public bool MedicinePhysicianOfPeoplePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable CleanInfrastructure modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Medicine/{=CZ4y5NAf}Clean Infrastructure", IsMainToggle=true)]
+    public bool MedicineCleanInfrastructurePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable CheatDeath modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Medicine/{=cpg0oHZJ}Cheat Death", IsMainToggle=true)]
+    public bool MedicineCheatDeathPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable FortitudeTonic modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Medicine/{=ib2SMG9b}Fortitude Tonic", IsMainToggle=true)]
+    public bool MedicineFortitudeTonicPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable HelpingHands modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Medicine/{=KavZKNaa}Helping Hands", IsMainToggle=true)]
+    public bool MedicineHelpingHandsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable BattleHardened modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Medicine/{=oSbRD72H}Battle Hardened", IsMainToggle=true)]
+    public bool MedicineBattleHardenedPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Scaffolds modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Engineering/{=ekavTnTp}Scaffolds", IsMainToggle=true)]
+    public bool EngineeringScaffoldsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable TorsionEngines modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Engineering/{=57TDG2Ta}Torsion Engines", IsMainToggle=true)]
+    public bool EngineeringTorsionEnginesPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SiegeWorks modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Engineering/{=Nr1GPYSr}Siegeworks", IsMainToggle=true)]
+    public bool EngineeringSiegeWorksPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable PrisonArchitect modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Engineering/{=aPbpBJq5}Prison Architect", IsMainToggle=true)]
+    public bool EngineeringPrisonArchitectPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Carpenters modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Engineering/{=YwhAlz5n}Carpenters", IsMainToggle=true)]
+    public bool EngineeringCarpentersPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable MilitaryPlanner modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Engineering/{=mzDsT7lV}Military Planner", IsMainToggle=true)]
+    public bool EngineeringMilitaryPlannerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable WallBreaker modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Engineering/{=0wlWgIeL}Wall Breaker", IsMainToggle=true)]
+    public bool EngineeringWallBreakerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable DreadfulSieger modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Engineering/{=bIS4kqmf}Dreadful Besieger", IsMainToggle=true)]
+    public bool EngineeringDreadfulSiegerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Salvager modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Engineering/{=AgJAfEEZ}Salvager", IsMainToggle=true)]
+    public bool EngineeringSalvagerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Foreman modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Engineering/{=3ML4EkWY}Foreman", IsMainToggle=true)]
+    public bool EngineeringForemanPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SiegeEngineer modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Engineering/{=pFGhJxyN}Siege Engineer", IsMainToggle=true)]
+    public bool EngineeringSiegeEngineerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Battlements modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Engineering/{=hHHEW1HN}Battlements", IsMainToggle=true)]
+    public bool EngineeringBattlementsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable EngineeringGuilds modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Engineering/{=elKQc0O6}Engineering Guilds", IsMainToggle=true)]
+    public bool EngineeringEngineeringGuildsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Metallurgy modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Engineering/{=qjvDsu8u}Metallurgy", IsMainToggle=true)]
+    public bool EngineeringMetallurgyPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ImprovedTools modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Engineering/{=XixNAaD5}Improved Tools", IsMainToggle=true)]
+    public bool EngineeringImprovedToolsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Clockwork modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Engineering/{=Z9Rey6LC}Clockwork", IsMainToggle=true)]
+    public bool EngineeringClockworkPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ArchitecturalCommisions modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Engineering/{=KODafKT7}Architectural Commissions", IsMainToggle=true)]
+    public bool EngineeringArchitecturalCommisionsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=JKqsYaBj}One handed weapons you wield have their handling increased by 20%.")]
     [SettingPropertyGroup("Perks/OneHanded/{=fLaRz2SM}Deflect")]
     public float oh_Deflect_p {
@@ -8797,948 +9763,948 @@ namespace FountaTweaks
 
     public void SetAll(ref DefaultPerks perk) {
       ref PerkObject _oneHandedDeflect = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedDeflect");
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedDeflect,_oh_Deflect_p);
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedDeflect,_oh_Deflect_s);
+      if (OneHandedPerkModificationEnabled && OneHandedDeflectPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedDeflect,_oh_Deflect_p);
+      if (OneHandedPerkModificationEnabled && OneHandedDeflectPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedDeflect,_oh_Deflect_s);
       ref PerkObject _oneHandedBasher = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedBasher");
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedBasher,_oh_Basher_p);
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedBasher,_oh_Basher_s);
+      if (OneHandedPerkModificationEnabled && OneHandedBasherPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedBasher,_oh_Basher_p);
+      if (OneHandedPerkModificationEnabled && OneHandedBasherPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedBasher,_oh_Basher_s);
       ref PerkObject _oneHandedToBeBlunt = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedToBeBlunt");
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedToBeBlunt,_oh_ToBeBlunt_p);
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedToBeBlunt,_oh_ToBeBlunt_s);
+      if (OneHandedPerkModificationEnabled && OneHandedToBeBluntPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedToBeBlunt,_oh_ToBeBlunt_p);
+      if (OneHandedPerkModificationEnabled && OneHandedToBeBluntPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedToBeBlunt,_oh_ToBeBlunt_s);
       ref PerkObject _oneHandedSwiftStrike = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedSwiftStrike");
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedSwiftStrike,_oh_SwiftStrike_p);
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedSwiftStrike,_oh_SwiftStrike_s);
+      if (OneHandedPerkModificationEnabled && OneHandedSwiftStrikePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedSwiftStrike,_oh_SwiftStrike_p);
+      if (OneHandedPerkModificationEnabled && OneHandedSwiftStrikePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedSwiftStrike,_oh_SwiftStrike_s);
       ref PerkObject _oneHandedCavalry = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedCavalry");
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedCavalry,_oh_Cavalry_p);
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedCavalry,_oh_Cavalry_s);
+      if (OneHandedPerkModificationEnabled && OneHandedCavalryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedCavalry,_oh_Cavalry_p);
+      if (OneHandedPerkModificationEnabled && OneHandedCavalryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedCavalry,_oh_Cavalry_s);
       ref PerkObject _oneHandedShieldBearer = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedShieldBearer");
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedShieldBearer,_oh_ShieldBearer_p);
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedShieldBearer,_oh_ShieldBearer_s);
+      if (OneHandedPerkModificationEnabled && OneHandedShieldBearerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedShieldBearer,_oh_ShieldBearer_p);
+      if (OneHandedPerkModificationEnabled && OneHandedShieldBearerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedShieldBearer,_oh_ShieldBearer_s);
       ref PerkObject _oneHandedTrainer = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedTrainer");
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedTrainer,_oh_Trainer_p);
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedTrainer,_oh_Trainer_s);
+      if (OneHandedPerkModificationEnabled && OneHandedTrainerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedTrainer,_oh_Trainer_p);
+      if (OneHandedPerkModificationEnabled && OneHandedTrainerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedTrainer,_oh_Trainer_s);
       ref PerkObject _oneHandedDuelist = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedDuelist");
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedDuelist,_oh_Duelist_p);
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedDuelist,_oh_Duelist_s);
+      if (OneHandedPerkModificationEnabled && OneHandedDuelistPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedDuelist,_oh_Duelist_p);
+      if (OneHandedPerkModificationEnabled && OneHandedDuelistPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedDuelist,_oh_Duelist_s);
       ref PerkObject _oneHandedShieldWall = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedShieldWall");
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedShieldWall,_oh_ShieldWall_p);
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedShieldWall,_oh_ShieldWall_s);
+      if (OneHandedPerkModificationEnabled && OneHandedShieldWallPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedShieldWall,_oh_ShieldWall_p);
+      if (OneHandedPerkModificationEnabled && OneHandedShieldWallPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedShieldWall,_oh_ShieldWall_s);
       ref PerkObject _oneHandedArrowCatcher = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedArrowCatcher");
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedArrowCatcher,_oh_ArrowCatcher_p);
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedArrowCatcher,_oh_ArrowCatcher_s);
+      if (OneHandedPerkModificationEnabled && OneHandedArrowCatcherPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedArrowCatcher,_oh_ArrowCatcher_p);
+      if (OneHandedPerkModificationEnabled && OneHandedArrowCatcherPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedArrowCatcher,_oh_ArrowCatcher_s);
       ref PerkObject _oneHandedMilitaryTradition = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedMilitaryTradition");
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedMilitaryTradition,_oh_MilitaryTradition_p);
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedMilitaryTradition,_oh_MilitaryTradition_s);
+      if (OneHandedPerkModificationEnabled && OneHandedMilitaryTraditionPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedMilitaryTradition,_oh_MilitaryTradition_p);
+      if (OneHandedPerkModificationEnabled && OneHandedMilitaryTraditionPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedMilitaryTradition,_oh_MilitaryTradition_s);
       ref PerkObject _oneHandedCorpsACorps = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedCorpsACorps");
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedCorpsACorps,_oh_CorpsACorps_p);
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedCorpsACorps,_oh_CorpsACorps_s);
+      if (OneHandedPerkModificationEnabled && OneHandedCorpsACorpsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedCorpsACorps,_oh_CorpsACorps_p);
+      if (OneHandedPerkModificationEnabled && OneHandedCorpsACorpsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedCorpsACorps,_oh_CorpsACorps_s);
       ref PerkObject _oneHandedStandUnited = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedStandUnited");
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedStandUnited,_oh_StandUnited_p);
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedStandUnited,_oh_StandUnited_s);
+      if (OneHandedPerkModificationEnabled && OneHandedStandUnitedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedStandUnited,_oh_StandUnited_p);
+      if (OneHandedPerkModificationEnabled && OneHandedStandUnitedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedStandUnited,_oh_StandUnited_s);
       ref PerkObject _oneHandedLeadByExample = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedLeadByExample");
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedLeadByExample,_oh_LeadByExample_p);
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedLeadByExample,_oh_LeadByExample_s);
+      if (OneHandedPerkModificationEnabled && OneHandedLeadByExamplePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedLeadByExample,_oh_LeadByExample_p);
+      if (OneHandedPerkModificationEnabled && OneHandedLeadByExamplePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedLeadByExample,_oh_LeadByExample_s);
       ref PerkObject _oneHandedSteelCoreShields = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedSteelCoreShields");
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedSteelCoreShields,_oh_SteelCoreShields_p);
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedSteelCoreShields,_oh_SteelCoreShields_s);
+      if (OneHandedPerkModificationEnabled && OneHandedSteelCoreShieldsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedSteelCoreShields,_oh_SteelCoreShields_p);
+      if (OneHandedPerkModificationEnabled && OneHandedSteelCoreShieldsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedSteelCoreShields,_oh_SteelCoreShields_s);
       ref PerkObject _oneHandedFleetOfFoot = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedFleetOfFoot");
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedFleetOfFoot,_oh_FleetOfFoot_p);
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedFleetOfFoot,_oh_FleetOfFoot_s);
+      if (OneHandedPerkModificationEnabled && OneHandedFleetOfFootPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedFleetOfFoot,_oh_FleetOfFoot_p);
+      if (OneHandedPerkModificationEnabled && OneHandedFleetOfFootPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedFleetOfFoot,_oh_FleetOfFoot_s);
       ref PerkObject _oneHandedDeadlyPurpose = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedDeadlyPurpose");
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedDeadlyPurpose,_oh_DeadlyPurpose_p);
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedDeadlyPurpose,_oh_DeadlyPurpose_s);
+      if (OneHandedPerkModificationEnabled && OneHandedDeadlyPurposePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedDeadlyPurpose,_oh_DeadlyPurpose_p);
+      if (OneHandedPerkModificationEnabled && OneHandedDeadlyPurposePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedDeadlyPurpose,_oh_DeadlyPurpose_s);
       ref PerkObject _oneHandedUnwaveringDefense = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedUnwaveringDefense");
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedUnwaveringDefense,_oh_UnwaveringDefense_p);
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedUnwaveringDefense,_oh_UnwaveringDefense_s);
+      if (OneHandedPerkModificationEnabled && OneHandedUnwaveringDefensePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedUnwaveringDefense,_oh_UnwaveringDefense_p);
+      if (OneHandedPerkModificationEnabled && OneHandedUnwaveringDefensePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedUnwaveringDefense,_oh_UnwaveringDefense_s);
       ref PerkObject _oneHandedPrestige = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedPrestige");
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedPrestige,_oh_Prestige_p);
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedPrestige,_oh_Prestige_s);
+      if (OneHandedPerkModificationEnabled && OneHandedPrestigePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedPrestige,_oh_Prestige_p);
+      if (OneHandedPerkModificationEnabled && OneHandedPrestigePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedPrestige,_oh_Prestige_s);
       ref PerkObject _oneHandedChinkInTheArmor = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedChinkInTheArmor");
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedChinkInTheArmor,_oh_ChinkInTheArmor_p);
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedChinkInTheArmor,_oh_ChinkInTheArmor_s);
+      if (OneHandedPerkModificationEnabled && OneHandedChinkInTheArmorPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedChinkInTheArmor,_oh_ChinkInTheArmor_p);
+      if (OneHandedPerkModificationEnabled && OneHandedChinkInTheArmorPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedChinkInTheArmor,_oh_ChinkInTheArmor_s);
       ref PerkObject _oneHandedWayOfTheSword = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedWayOfTheSword");
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedWayOfTheSword,_oh_WayOfTheSword_p);
-      if (OneHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedWayOfTheSword,_oh_WayOfTheSword_s);
+      if (OneHandedPerkModificationEnabled && OneHandedWayOfTheSwordPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedWayOfTheSword,_oh_WayOfTheSword_p);
+      if (OneHandedPerkModificationEnabled && OneHandedWayOfTheSwordPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_oneHandedWayOfTheSword,_oh_WayOfTheSword_s);
       ref PerkObject _twoHandedStrongGrip = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_twoHandedStrongGrip");
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedStrongGrip,_twh_StrongGrip_p);
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedStrongGrip,_twh_StrongGrip_s);
+      if (TwoHandedPerkModificationEnabled && TwoHandedStrongGripPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedStrongGrip,_twh_StrongGrip_p);
+      if (TwoHandedPerkModificationEnabled && TwoHandedStrongGripPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedStrongGrip,_twh_StrongGrip_s);
       ref PerkObject _twoHandedWoodChopper = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_twoHandedWoodChopper");
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedWoodChopper,_twh_WoodChopper_p);
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedWoodChopper,_twh_WoodChopper_s);
+      if (TwoHandedPerkModificationEnabled && TwoHandedWoodChopperPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedWoodChopper,_twh_WoodChopper_p);
+      if (TwoHandedPerkModificationEnabled && TwoHandedWoodChopperPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedWoodChopper,_twh_WoodChopper_s);
       ref PerkObject _twoHandedOnTheEdge = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_twoHandedOnTheEdge");
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedOnTheEdge,_twh_OnTheEdge_p);
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedOnTheEdge,_twh_OnTheEdge_s);
+      if (TwoHandedPerkModificationEnabled && TwoHandedOnTheEdgePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedOnTheEdge,_twh_OnTheEdge_p);
+      if (TwoHandedPerkModificationEnabled && TwoHandedOnTheEdgePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedOnTheEdge,_twh_OnTheEdge_s);
       ref PerkObject _twoHandedHeadBasher = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_twoHandedHeadBasher");
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedHeadBasher,_twh_HeadBasher_p);
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedHeadBasher,_twh_HeadBasher_s);
+      if (TwoHandedPerkModificationEnabled && TwoHandedHeadBasherPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedHeadBasher,_twh_HeadBasher_p);
+      if (TwoHandedPerkModificationEnabled && TwoHandedHeadBasherPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedHeadBasher,_twh_HeadBasher_s);
       ref PerkObject _twoHandedShowOfStrength = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_twoHandedShowOfStrength");
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedShowOfStrength,_twh_ShowOfStrength_p);
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedShowOfStrength,_twh_ShowOfStrength_s);
+      if (TwoHandedPerkModificationEnabled && TwoHandedShowOfStrengthPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedShowOfStrength,_twh_ShowOfStrength_p);
+      if (TwoHandedPerkModificationEnabled && TwoHandedShowOfStrengthPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedShowOfStrength,_twh_ShowOfStrength_s);
       ref PerkObject _twoHandedBaptisedInBlood = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_twoHandedBaptisedInBlood");
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedBaptisedInBlood,_twh_BaptisedInBlood_p);
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedBaptisedInBlood,_twh_BaptisedInBlood_s);
+      if (TwoHandedPerkModificationEnabled && TwoHandedBaptisedInBloodPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedBaptisedInBlood,_twh_BaptisedInBlood_p);
+      if (TwoHandedPerkModificationEnabled && TwoHandedBaptisedInBloodPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedBaptisedInBlood,_twh_BaptisedInBlood_s);
       ref PerkObject _twoHandedBeastSlayer = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_twoHandedBeastSlayer");
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedBeastSlayer,_twh_BeastSlayer_p);
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedBeastSlayer,_twh_BeastSlayer_s);
+      if (TwoHandedPerkModificationEnabled && TwoHandedBeastSlayerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedBeastSlayer,_twh_BeastSlayer_p);
+      if (TwoHandedPerkModificationEnabled && TwoHandedBeastSlayerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedBeastSlayer,_twh_BeastSlayer_s);
       ref PerkObject _twoHandedShieldBreaker = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_twoHandedShieldBreaker");
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedShieldBreaker,_twh_ShieldBreaker_p);
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedShieldBreaker,_twh_ShieldBreaker_s);
+      if (TwoHandedPerkModificationEnabled && TwoHandedShieldBreakerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedShieldBreaker,_twh_ShieldBreaker_p);
+      if (TwoHandedPerkModificationEnabled && TwoHandedShieldBreakerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedShieldBreaker,_twh_ShieldBreaker_s);
       ref PerkObject _twoHandedBerserker = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_twoHandedBerserker");
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedBerserker,_twh_Berserker_p);
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedBerserker,_twh_Berserker_s);
+      if (TwoHandedPerkModificationEnabled && TwoHandedBerserkerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedBerserker,_twh_Berserker_p);
+      if (TwoHandedPerkModificationEnabled && TwoHandedBerserkerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedBerserker,_twh_Berserker_s);
       ref PerkObject _twoHandedConfidence = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_twoHandedConfidence");
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedConfidence,_twh_Confidence_p);
+      if (TwoHandedPerkModificationEnabled && TwoHandedConfidencePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedConfidence,_twh_Confidence_p);
       ref PerkObject _twoHandedArrowDeflection = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_twoHandedArrowDeflection");
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedArrowDeflection,_twh_ArrowDeflection_p);
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedArrowDeflection,_twh_ArrowDeflection_s);
+      if (TwoHandedPerkModificationEnabled && TwoHandedArrowDeflectionPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedArrowDeflection,_twh_ArrowDeflection_p);
+      if (TwoHandedPerkModificationEnabled && TwoHandedArrowDeflectionPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedArrowDeflection,_twh_ArrowDeflection_s);
       ref PerkObject _twoHandedTerror = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_twoHandedTerror");
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedTerror,_twh_Terror_p);
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedTerror,_twh_Terror_s);
+      if (TwoHandedPerkModificationEnabled && TwoHandedTerrorPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedTerror,_twh_Terror_p);
+      if (TwoHandedPerkModificationEnabled && TwoHandedTerrorPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedTerror,_twh_Terror_s);
       ref PerkObject _twoHandedHope = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_twoHandedHope");
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedHope,_twh_Hope_p);
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedHope,_twh_Hope_s);
+      if (TwoHandedPerkModificationEnabled && TwoHandedHopePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedHope,_twh_Hope_p);
+      if (TwoHandedPerkModificationEnabled && TwoHandedHopePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedHope,_twh_Hope_s);
       ref PerkObject _twoHandedRecklessCharge = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_twoHandedRecklessCharge");
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedRecklessCharge,_twh_RecklessCharge_p);
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedRecklessCharge,_twh_RecklessCharge_s);
+      if (TwoHandedPerkModificationEnabled && TwoHandedRecklessChargePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedRecklessCharge,_twh_RecklessCharge_p);
+      if (TwoHandedPerkModificationEnabled && TwoHandedRecklessChargePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedRecklessCharge,_twh_RecklessCharge_s);
       ref PerkObject _twoHandedThickHides = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_twoHandedThickHides");
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedThickHides,_twh_ThickHides_p);
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedThickHides,_twh_ThickHides_s);
+      if (TwoHandedPerkModificationEnabled && TwoHandedThickHidesPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedThickHides,_twh_ThickHides_p);
+      if (TwoHandedPerkModificationEnabled && TwoHandedThickHidesPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedThickHides,_twh_ThickHides_s);
       ref PerkObject _twoHandedBladeMaster = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_twoHandedBladeMaster");
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedBladeMaster,_twh_BladeMaster_p);
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedBladeMaster,_twh_BladeMaster_s);
+      if (TwoHandedPerkModificationEnabled && TwoHandedBladeMasterPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedBladeMaster,_twh_BladeMaster_p);
+      if (TwoHandedPerkModificationEnabled && TwoHandedBladeMasterPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedBladeMaster,_twh_BladeMaster_s);
       ref PerkObject _twoHandedVandal = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_twoHandedVandal");
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedVandal,_twh_Vandal_p);
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedVandal,_twh_Vandal_s);
+      if (TwoHandedPerkModificationEnabled && TwoHandedVandalPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedVandal,_twh_Vandal_p);
+      if (TwoHandedPerkModificationEnabled && TwoHandedVandalPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedVandal,_twh_Vandal_s);
       ref PerkObject _twoHandedWayOfTheGreatAxe = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_twoHandedWayOfTheGreatAxe");
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedWayOfTheGreatAxe,_twh_WayOfTheGreatAxe_p);
-      if (TwoHandedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedWayOfTheGreatAxe,_twh_WayOfTheGreatAxe_s);
+      if (TwoHandedPerkModificationEnabled && TwoHandedWayOfTheGreatAxePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedWayOfTheGreatAxe,_twh_WayOfTheGreatAxe_p);
+      if (TwoHandedPerkModificationEnabled && TwoHandedWayOfTheGreatAxePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedWayOfTheGreatAxe,_twh_WayOfTheGreatAxe_s);
       ref PerkObject _polearmPikeman = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_polearmPikeman");
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmPikeman,_plm_Pikeman_p);
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmPikeman,_plm_Pikeman_s);
+      if (PolearmPerkModificationEnabled && PolearmPikemanPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmPikeman,_plm_Pikeman_p);
+      if (PolearmPerkModificationEnabled && PolearmPikemanPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmPikeman,_plm_Pikeman_s);
       ref PerkObject _polearmCavalry = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_polearmCavalry");
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmCavalry,_plm_Cavalry_p);
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmCavalry,_plm_Cavalry_s);
+      if (PolearmPerkModificationEnabled && PolearmCavalryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmCavalry,_plm_Cavalry_p);
+      if (PolearmPerkModificationEnabled && PolearmCavalryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmCavalry,_plm_Cavalry_s);
       ref PerkObject _polearmBraced = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_polearmBraced");
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmBraced,_plm_Braced_p);
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmBraced,_plm_Braced_s);
+      if (PolearmPerkModificationEnabled && PolearmBracedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmBraced,_plm_Braced_p);
+      if (PolearmPerkModificationEnabled && PolearmBracedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmBraced,_plm_Braced_s);
       ref PerkObject _polearmKeepAtBay = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_polearmKeepAtBay");
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmKeepAtBay,_plm_KeepAtBay_p);
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmKeepAtBay,_plm_KeepAtBay_s);
+      if (PolearmPerkModificationEnabled && PolearmKeepAtBayPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmKeepAtBay,_plm_KeepAtBay_p);
+      if (PolearmPerkModificationEnabled && PolearmKeepAtBayPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmKeepAtBay,_plm_KeepAtBay_s);
       ref PerkObject _polearmSwiftSwing = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_polearmSwiftSwing");
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmSwiftSwing,_plm_SwiftSwing_p);
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmSwiftSwing,_plm_SwiftSwing_s);
+      if (PolearmPerkModificationEnabled && PolearmSwiftSwingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmSwiftSwing,_plm_SwiftSwing_p);
+      if (PolearmPerkModificationEnabled && PolearmSwiftSwingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmSwiftSwing,_plm_SwiftSwing_s);
       ref PerkObject _polearmCleanThrust = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_polearmCleanThrust");
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmCleanThrust,_plm_CleanThrust_p);
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmCleanThrust,_plm_CleanThrust_s);
+      if (PolearmPerkModificationEnabled && PolearmCleanThrustPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmCleanThrust,_plm_CleanThrust_p);
+      if (PolearmPerkModificationEnabled && PolearmCleanThrustPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmCleanThrust,_plm_CleanThrust_s);
       ref PerkObject _polearmFootwork = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_polearmFootwork");
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmFootwork,_plm_Footwork_p);
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmFootwork,_plm_Footwork_s);
+      if (PolearmPerkModificationEnabled && PolearmFootworkPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmFootwork,_plm_Footwork_p);
+      if (PolearmPerkModificationEnabled && PolearmFootworkPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmFootwork,_plm_Footwork_s);
       ref PerkObject _polearmHardKnock = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_polearmHardKnock");
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmHardKnock,_plm_HardKnock_p);
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmHardKnock,_plm_HardKnock_s);
+      if (PolearmPerkModificationEnabled && PolearmHardKnockPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmHardKnock,_plm_HardKnock_p);
+      if (PolearmPerkModificationEnabled && PolearmHardKnockPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmHardKnock,_plm_HardKnock_s);
       ref PerkObject _polearmSteedKiller = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_polearmSteedKiller");
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmSteedKiller,_plm_SteedKiller_p);
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmSteedKiller,_plm_SteedKiller_s);
+      if (PolearmPerkModificationEnabled && PolearmSteedKillerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmSteedKiller,_plm_SteedKiller_p);
+      if (PolearmPerkModificationEnabled && PolearmSteedKillerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmSteedKiller,_plm_SteedKiller_s);
       ref PerkObject _polearmLancer = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_polearmLancer");
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmLancer,_plm_Lancer_p);
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmLancer,_plm_Lancer_s);
+      if (PolearmPerkModificationEnabled && PolearmLancerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmLancer,_plm_Lancer_p);
+      if (PolearmPerkModificationEnabled && PolearmLancerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmLancer,_plm_Lancer_s);
       ref PerkObject _polearmSkewer = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_polearmSkewer");
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmSkewer,_plm_Skewer_p);
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmSkewer,_plm_Skewer_s);
+      if (PolearmPerkModificationEnabled && PolearmSkewerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmSkewer,_plm_Skewer_p);
+      if (PolearmPerkModificationEnabled && PolearmSkewerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmSkewer,_plm_Skewer_s);
       ref PerkObject _polearmGuards = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_polearmGuards");
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmGuards,_plm_Guards_p);
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmGuards,_plm_Guards_s);
+      if (PolearmPerkModificationEnabled && PolearmGuardsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmGuards,_plm_Guards_p);
+      if (PolearmPerkModificationEnabled && PolearmGuardsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmGuards,_plm_Guards_s);
       ref PerkObject _polearmStandardBearer = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_polearmStandardBearer");
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmStandardBearer,_plm_StandardBearer_p);
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmStandardBearer,_plm_StandardBearer_s);
+      if (PolearmPerkModificationEnabled && PolearmStandardBearerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmStandardBearer,_plm_StandardBearer_p);
+      if (PolearmPerkModificationEnabled && PolearmStandardBearerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmStandardBearer,_plm_StandardBearer_s);
       ref PerkObject _polearmPhalanx = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_polearmPhalanx");
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmPhalanx,_plm_Phalanx_p);
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmPhalanx,_plm_Phalanx_s);
+      if (PolearmPerkModificationEnabled && PolearmPhalanxPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmPhalanx,_plm_Phalanx_p);
+      if (PolearmPerkModificationEnabled && PolearmPhalanxPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmPhalanx,_plm_Phalanx_s);
       ref PerkObject _polearmGenerousRations = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_polearmGenerousRations");
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmGenerousRations,_plm_GenerousRations_p);
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmGenerousRations,_plm_GenerousRations_s);
+      if (PolearmPerkModificationEnabled && PolearmGenerousRationsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmGenerousRations,_plm_GenerousRations_p);
+      if (PolearmPerkModificationEnabled && PolearmGenerousRationsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmGenerousRations,_plm_GenerousRations_s);
       ref PerkObject _polearmDrills = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_polearmDrills");
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmDrills,_plm_Drills_p);
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmDrills,_plm_Drills_s);
+      if (PolearmPerkModificationEnabled && PolearmDrillsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmDrills,_plm_Drills_p);
+      if (PolearmPerkModificationEnabled && PolearmDrillsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmDrills,_plm_Drills_s);
       ref PerkObject _polearmSureFooted = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_polearmSureFooted");
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmSureFooted,_plm_SureFooted_p);
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmSureFooted,_plm_SureFooted_s);
+      if (PolearmPerkModificationEnabled && PolearmSureFootedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmSureFooted,_plm_SureFooted_p);
+      if (PolearmPerkModificationEnabled && PolearmSureFootedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmSureFooted,_plm_SureFooted_s);
       ref PerkObject _polearmUnstoppableForce = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_polearmUnstoppableForce");
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmUnstoppableForce,_plm_UnstoppableForce_p);
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmUnstoppableForce,_plm_UnstoppableForce_s);
+      if (PolearmPerkModificationEnabled && PolearmUnstoppableForcePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmUnstoppableForce,_plm_UnstoppableForce_p);
+      if (PolearmPerkModificationEnabled && PolearmUnstoppableForcePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmUnstoppableForce,_plm_UnstoppableForce_s);
       ref PerkObject _polearmCounterweight = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_polearmCounterweight");
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmCounterweight,_plm_CounterWeight_p);
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmCounterweight,_plm_CounterWeight_s);
+      if (PolearmPerkModificationEnabled && PolearmCounterWeightPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmCounterweight,_plm_CounterWeight_p);
+      if (PolearmPerkModificationEnabled && PolearmCounterWeightPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmCounterweight,_plm_CounterWeight_s);
       ref PerkObject _polearmSharpenTheTip = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_polearmSharpenTheTip");
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmSharpenTheTip,_plm_SharpenTheTip_p);
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmSharpenTheTip,_plm_SharpenTheTip_s);
+      if (PolearmPerkModificationEnabled && PolearmSharpenTheTipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmSharpenTheTip,_plm_SharpenTheTip_p);
+      if (PolearmPerkModificationEnabled && PolearmSharpenTheTipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmSharpenTheTip,_plm_SharpenTheTip_s);
       ref PerkObject _polearmWayOfTheSpear = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_polearmWayOfTheSpear");
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmWayOfTheSpear,_plm_WayOfTheSpear_p);
-      if (PolearmPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmWayOfTheSpear,_plm_WayOfTheSpear_s);
+      if (PolearmPerkModificationEnabled && PolearmWayOfTheSpearPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_polearmWayOfTheSpear,_plm_WayOfTheSpear_p);
+      if (PolearmPerkModificationEnabled && PolearmWayOfTheSpearPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_polearmWayOfTheSpear,_plm_WayOfTheSpear_s);
       ref PerkObject _bowBowControl = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_bowBowControl");
-      if (BowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowBowControl,_bow_BowControl_p);
-      if (BowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowBowControl,_bow_BowControl_s);
+      if (BowPerkModificationEnabled && BowBowControlPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowBowControl,_bow_BowControl_p);
+      if (BowPerkModificationEnabled && BowBowControlPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowBowControl,_bow_BowControl_s);
       ref PerkObject _bowDeadAim = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_bowDeadAim");
-      if (BowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowDeadAim,_bow_DeadAim_p);
-      if (BowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowDeadAim,_bow_DeadAim_s);
+      if (BowPerkModificationEnabled && BowDeadAimPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowDeadAim,_bow_DeadAim_p);
+      if (BowPerkModificationEnabled && BowDeadAimPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowDeadAim,_bow_DeadAim_s);
       ref PerkObject _bowBodkin = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_bowBodkin");
-      if (BowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowBodkin,_bow_Bodkin_p);
-      if (BowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowBodkin,_bow_Bodkin_s);
+      if (BowPerkModificationEnabled && BowBodkinPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowBodkin,_bow_Bodkin_p);
+      if (BowPerkModificationEnabled && BowBodkinPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowBodkin,_bow_Bodkin_s);
       ref PerkObject _bowRangersSwiftness = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_bowRangersSwiftness");
-      if (BowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowRangersSwiftness,_bow_RangersSwiftness_p);
-      if (BowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowRangersSwiftness,_bow_RangersSwiftness_s);
+      if (BowPerkModificationEnabled && BowRangersSwiftnessPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowRangersSwiftness,_bow_RangersSwiftness_p);
+      if (BowPerkModificationEnabled && BowRangersSwiftnessPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowRangersSwiftness,_bow_RangersSwiftness_s);
       ref PerkObject _bowRapidFire = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_bowRapidFire");
-      if (BowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowRapidFire,_bow_RapidFire_p);
-      if (BowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowRapidFire,_bow_RapidFire_s);
+      if (BowPerkModificationEnabled && BowRapidFirePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowRapidFire,_bow_RapidFire_p);
+      if (BowPerkModificationEnabled && BowRapidFirePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowRapidFire,_bow_RapidFire_s);
       ref PerkObject _bowQuickAdjustments = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_bowQuickAdjustments");
-      if (BowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowQuickAdjustments,_bow_QuickAdjustments_p);
-      if (BowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowQuickAdjustments,_bow_QuickAdjustments_s);
+      if (BowPerkModificationEnabled && BowQuickAdjustmentsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowQuickAdjustments,_bow_QuickAdjustments_p);
+      if (BowPerkModificationEnabled && BowQuickAdjustmentsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowQuickAdjustments,_bow_QuickAdjustments_s);
       ref PerkObject _bowMerryMen = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_bowMerryMen");
-      if (BowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowMerryMen,_bow_MerryMen_p);
-      if (BowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowMerryMen,_bow_MerryMen_s);
+      if (BowPerkModificationEnabled && BowMerryMenPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowMerryMen,_bow_MerryMen_p);
+      if (BowPerkModificationEnabled && BowMerryMenPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowMerryMen,_bow_MerryMen_s);
       ref PerkObject _bowMountedArchery = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_bowMountedArchery");
-      if (BowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowMountedArchery,_bow_MountedArchery_p);
-      if (BowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowMountedArchery,_bow_MountedArchery_s);
+      if (BowPerkModificationEnabled && BowMountedArcheryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowMountedArchery,_bow_MountedArchery_p);
+      if (BowPerkModificationEnabled && BowMountedArcheryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowMountedArchery,_bow_MountedArchery_s);
       ref PerkObject _bowTrainer = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_bowTrainer");
-      if (BowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowTrainer,_bow_Trainer_p);
-      if (BowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowTrainer,_bow_Trainer_s);
+      if (BowPerkModificationEnabled && BowTrainerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowTrainer,_bow_Trainer_p);
+      if (BowPerkModificationEnabled && BowTrainerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowTrainer,_bow_Trainer_s);
       ref PerkObject _bowStrongBows = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_bowStrongBows");
-      if (BowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowStrongBows,_bow_StrongBows_p);
-      if (BowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowStrongBows,_bow_StrongBows_s);
+      if (BowPerkModificationEnabled && BowStrongBowsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowStrongBows,_bow_StrongBows_p);
+      if (BowPerkModificationEnabled && BowStrongBowsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowStrongBows,_bow_StrongBows_s);
       ref PerkObject _bowDiscipline = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_bowDiscipline");
-      if (BowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowDiscipline,_bow_Discipline_p);
-      if (BowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowDiscipline,_bow_Discipline_s);
+      if (BowPerkModificationEnabled && BowDisciplinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowDiscipline,_bow_Discipline_p);
+      if (BowPerkModificationEnabled && BowDisciplinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowDiscipline,_bow_Discipline_s);
       ref PerkObject _bowHunterClan = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_bowHunterClan");
-      if (BowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowHunterClan,_bow_HunterClan_p);
-      if (BowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowHunterClan,_bow_HunterClan_s);
+      if (BowPerkModificationEnabled && BowHunterClanPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowHunterClan,_bow_HunterClan_p);
+      if (BowPerkModificationEnabled && BowHunterClanPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowHunterClan,_bow_HunterClan_s);
       ref PerkObject _bowSkirmishPhaseMaster = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_bowSkirmishPhaseMaster");
-      if (BowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowSkirmishPhaseMaster,_bow_SkirmishPhaseMaster_p);
-      if (BowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowSkirmishPhaseMaster,_bow_SkirmishPhaseMaster_s);
+      if (BowPerkModificationEnabled && BowSkirmishPhaseMasterPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowSkirmishPhaseMaster,_bow_SkirmishPhaseMaster_p);
+      if (BowPerkModificationEnabled && BowSkirmishPhaseMasterPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowSkirmishPhaseMaster,_bow_SkirmishPhaseMaster_s);
       ref PerkObject _bowEagleEye = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_bowEagleEye");
-      if (BowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowEagleEye,_bow_EagleEye_p);
-      if (BowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowEagleEye,_bow_EagleEye_s);
+      if (BowPerkModificationEnabled && BowEagleEyePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowEagleEye,_bow_EagleEye_p);
+      if (BowPerkModificationEnabled && BowEagleEyePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowEagleEye,_bow_EagleEye_s);
       ref PerkObject _bowBullsEye = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_bowBullsEye");
-      if (BowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowBullsEye,_bow_BullsEye_p);
-      if (BowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowBullsEye,_bow_BullsEye_s);
+      if (BowPerkModificationEnabled && BowBullsEyePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowBullsEye,_bow_BullsEye_p);
+      if (BowPerkModificationEnabled && BowBullsEyePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowBullsEye,_bow_BullsEye_s);
       ref PerkObject _bowRenownedArcher = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_bowRenownedArcher");
-      if (BowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowRenownedArcher,_bow_RenownedArcher_p);
-      if (BowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowRenownedArcher,_bow_RenownedArcher_s);
+      if (BowPerkModificationEnabled && BowRenownedArcherPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowRenownedArcher,_bow_RenownedArcher_p);
+      if (BowPerkModificationEnabled && BowRenownedArcherPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowRenownedArcher,_bow_RenownedArcher_s);
       ref PerkObject _bowHorseMaster = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_bowHorseMaster");
-      if (BowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowHorseMaster,_bow_HorseMaster_p);
-      if (BowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowHorseMaster,_bow_HorseMaster_s);
+      if (BowPerkModificationEnabled && BowHorseMasterPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowHorseMaster,_bow_HorseMaster_p);
+      if (BowPerkModificationEnabled && BowHorseMasterPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowHorseMaster,_bow_HorseMaster_s);
       ref PerkObject _bowDeepQuivers = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_bowDeepQuivers");
-      if (BowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowDeepQuivers,_bow_DeepQuivers_p);
-      if (BowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowDeepQuivers,_bow_DeepQuivers_s);
+      if (BowPerkModificationEnabled && BowDeepQuiversPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowDeepQuivers,_bow_DeepQuivers_p);
+      if (BowPerkModificationEnabled && BowDeepQuiversPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowDeepQuivers,_bow_DeepQuivers_s);
       ref PerkObject _bowQuickDraw = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_bowQuickDraw");
-      if (BowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowQuickDraw,_bow_QuickDraw_p);
-      if (BowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowQuickDraw,_bow_QuickDraw_s);
+      if (BowPerkModificationEnabled && BowQuickDrawPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowQuickDraw,_bow_QuickDraw_p);
+      if (BowPerkModificationEnabled && BowQuickDrawPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowQuickDraw,_bow_QuickDraw_s);
       ref PerkObject _bowSalvo = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_bowSalvo");
-      if (BowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowSalvo,_bow_Salvo_p);
-      if (BowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowSalvo,_bow_Salvo_s);
+      if (BowPerkModificationEnabled && BowSalvoPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowSalvo,_bow_Salvo_p);
+      if (BowPerkModificationEnabled && BowSalvoPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowSalvo,_bow_Salvo_s);
       ref PerkObject _bowDeadshot = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_bowDeadshot");
-      if (BowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowDeadshot,_bow_Deadshot_p);
-      if (BowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowDeadshot,_bow_Deadshot_s);
+      if (BowPerkModificationEnabled && BowDeadshotPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_bowDeadshot,_bow_Deadshot_p);
+      if (BowPerkModificationEnabled && BowDeadshotPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_bowDeadshot,_bow_Deadshot_s);
       ref PerkObject _crossbowPiercer = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowPiercer");
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowPiercer,_xbw_Piercer_p);
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowPiercer,_xbw_Piercer_s);
+      if (CrossbowPerkModificationEnabled && CrossbowPiercerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowPiercer,_xbw_Piercer_p);
+      if (CrossbowPerkModificationEnabled && CrossbowPiercerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowPiercer,_xbw_Piercer_s);
       ref PerkObject _crossbowMarksmen = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowMarksmen");
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowMarksmen,_xbw_Marksmen_p);
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowMarksmen,_xbw_Marksmen_s);
+      if (CrossbowPerkModificationEnabled && CrossbowMarksmenPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowMarksmen,_xbw_Marksmen_p);
+      if (CrossbowPerkModificationEnabled && CrossbowMarksmenPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowMarksmen,_xbw_Marksmen_s);
       ref PerkObject _crossbowUnhorser = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowUnhorser");
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowUnhorser,_xbw_Unhorser_p);
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowUnhorser,_xbw_Unhorser_s);
+      if (CrossbowPerkModificationEnabled && CrossbowUnhorserPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowUnhorser,_xbw_Unhorser_p);
+      if (CrossbowPerkModificationEnabled && CrossbowUnhorserPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowUnhorser,_xbw_Unhorser_s);
       ref PerkObject _crossbowWindWinder = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowWindWinder");
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowWindWinder,_xbw_WindWinder_p);
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowWindWinder,_xbw_WindWinder_s);
+      if (CrossbowPerkModificationEnabled && CrossbowWindWinderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowWindWinder,_xbw_WindWinder_p);
+      if (CrossbowPerkModificationEnabled && CrossbowWindWinderPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowWindWinder,_xbw_WindWinder_s);
       ref PerkObject _crossbowDonkeysSwiftness = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowDonkeysSwiftness");
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowDonkeysSwiftness,_xbw_DonkeysSwiftness_p);
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowDonkeysSwiftness,_xbw_DonkeysSwiftness_s);
+      if (CrossbowPerkModificationEnabled && CrossbowDonkeysSwiftnessPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowDonkeysSwiftness,_xbw_DonkeysSwiftness_p);
+      if (CrossbowPerkModificationEnabled && CrossbowDonkeysSwiftnessPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowDonkeysSwiftness,_xbw_DonkeysSwiftness_s);
       ref PerkObject _crossbowSheriff = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowSheriff");
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowSheriff,_xbw_Sheriff_p);
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowSheriff,_xbw_Sheriff_s);
+      if (CrossbowPerkModificationEnabled && CrossbowSheriffPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowSheriff,_xbw_Sheriff_p);
+      if (CrossbowPerkModificationEnabled && CrossbowSheriffPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowSheriff,_xbw_Sheriff_s);
       ref PerkObject _crossbowPeasantLeader = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowPeasantLeader");
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowPeasantLeader,_xbw_PeasantLeader_p);
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowPeasantLeader,_xbw_PeasantLeader_s);
+      if (CrossbowPerkModificationEnabled && CrossbowPeasantLeaderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowPeasantLeader,_xbw_PeasantLeader_p);
+      if (CrossbowPerkModificationEnabled && CrossbowPeasantLeaderPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowPeasantLeader,_xbw_PeasantLeader_s);
       ref PerkObject _crossbowRenownMarksmen = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowRenownMarksmen");
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowRenownMarksmen,_xbw_RenownMarksmen_p);
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowRenownMarksmen,_xbw_RenownMarksmen_s);
+      if (CrossbowPerkModificationEnabled && CrossbowRenownMarksmenPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowRenownMarksmen,_xbw_RenownMarksmen_p);
+      if (CrossbowPerkModificationEnabled && CrossbowRenownMarksmenPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowRenownMarksmen,_xbw_RenownMarksmen_s);
       ref PerkObject _crossbowFletcher = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowFletcher");
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowFletcher,_xbw_Fletcher_p);
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowFletcher,_xbw_Fletcher_s);
+      if (CrossbowPerkModificationEnabled && CrossbowFletcherPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowFletcher,_xbw_Fletcher_p);
+      if (CrossbowPerkModificationEnabled && CrossbowFletcherPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowFletcher,_xbw_Fletcher_s);
       ref PerkObject _crossbowPuncture = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowPuncture");
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowPuncture,_xbw_Puncture_p);
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowPuncture,_xbw_Puncture_s);
+      if (CrossbowPerkModificationEnabled && CrossbowPuncturePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowPuncture,_xbw_Puncture_p);
+      if (CrossbowPerkModificationEnabled && CrossbowPuncturePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowPuncture,_xbw_Puncture_s);
       ref PerkObject _crossbowLooseAndMove = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowLooseAndMove");
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowLooseAndMove,_xbw_LooseAndMove_p);
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowLooseAndMove,_xbw_LooseAndMove_s);
+      if (CrossbowPerkModificationEnabled && CrossbowLooseAndMovePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowLooseAndMove,_xbw_LooseAndMove_p);
+      if (CrossbowPerkModificationEnabled && CrossbowLooseAndMovePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowLooseAndMove,_xbw_LooseAndMove_s);
       ref PerkObject _crossbowDeftHands = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowDeftHands");
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowDeftHands,_xbw_DeftHands_p);
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowDeftHands,_xbw_DeftHands_s);
+      if (CrossbowPerkModificationEnabled && CrossbowDeftHandsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowDeftHands,_xbw_DeftHands_p);
+      if (CrossbowPerkModificationEnabled && CrossbowDeftHandsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowDeftHands,_xbw_DeftHands_s);
       ref PerkObject _crossbowMountedCrossbowman = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowMountedCrossbowman");
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowMountedCrossbowman,_xbw_MountedCrossbowman_p);
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowMountedCrossbowman,_xbw_MountedCrossbowman_s);
+      if (CrossbowPerkModificationEnabled && CrossbowMountedCrossbowmanPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowMountedCrossbowman,_xbw_MountedCrossbowman_p);
+      if (CrossbowPerkModificationEnabled && CrossbowMountedCrossbowmanPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowMountedCrossbowman,_xbw_MountedCrossbowman_s);
       ref PerkObject _crossbowSteady = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowSteady");
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowSteady,_xbw_Steady_p);
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowSteady,_xbw_Steady_s);
+      if (CrossbowPerkModificationEnabled && CrossbowSteadyPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowSteady,_xbw_Steady_p);
+      if (CrossbowPerkModificationEnabled && CrossbowSteadyPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowSteady,_xbw_Steady_s);
       ref PerkObject _crossbowSniper = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowSniper");
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowSniper,_xbw_Sniper_p);
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowSniper,_xbw_Sniper_s);
+      if (CrossbowPerkModificationEnabled && CrossbowSniperPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowSniper,_xbw_Sniper_p);
+      if (CrossbowPerkModificationEnabled && CrossbowSniperPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowSniper,_xbw_Sniper_s);
       ref PerkObject _crossbowHammerBolts = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowHammerBolts");
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowHammerBolts,_xbw_HammerBolts_p);
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowHammerBolts,_xbw_HammerBolts_s);
+      if (CrossbowPerkModificationEnabled && CrossbowHammerBoltsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowHammerBolts,_xbw_HammerBolts_p);
+      if (CrossbowPerkModificationEnabled && CrossbowHammerBoltsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowHammerBolts,_xbw_HammerBolts_s);
       ref PerkObject _crossbowPavise = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowPavise");
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowPavise,_xbw_Pavise_p);
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowPavise,_xbw_Pavise_s);
+      if (CrossbowPerkModificationEnabled && CrossbowPavisePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowPavise,_xbw_Pavise_p);
+      if (CrossbowPerkModificationEnabled && CrossbowPavisePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowPavise,_xbw_Pavise_s);
       ref PerkObject _crossbowTerror = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowTerror");
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowTerror,_xbw_Terror_p);
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowTerror,_xbw_Terror_s);
+      if (CrossbowPerkModificationEnabled && CrossbowTerrorPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowTerror,_xbw_Terror_p);
+      if (CrossbowPerkModificationEnabled && CrossbowTerrorPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowTerror,_xbw_Terror_s);
       ref PerkObject _crossbowPickedShots = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowPickedShots");
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowPickedShots,_xbw_PickedShots_p);
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowPickedShots,_xbw_PickedShots_s);
+      if (CrossbowPerkModificationEnabled && CrossbowPickedShotsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowPickedShots,_xbw_PickedShots_p);
+      if (CrossbowPerkModificationEnabled && CrossbowPickedShotsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowPickedShots,_xbw_PickedShots_s);
       ref PerkObject _crossbowMightyPull = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowMightyPull");
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowMightyPull,_xbw_MightyPull_p);
-      if (CrossbowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowMightyPull,_xbw_MightyPull_s);
+      if (CrossbowPerkModificationEnabled && CrossbowMightyPullPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowMightyPull,_xbw_MightyPull_p);
+      if (CrossbowPerkModificationEnabled && CrossbowMightyPullPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowMightyPull,_xbw_MightyPull_s);
       ref PerkObject _throwingQuickDraw = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingQuickDraw");
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingQuickDraw,_thr_QuickDraw_p);
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingQuickDraw,_thr_QuickDraw_s);
+      if (ThrowingPerkModificationEnabled && ThrowingQuickDrawPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingQuickDraw,_thr_QuickDraw_p);
+      if (ThrowingPerkModificationEnabled && ThrowingQuickDrawPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingQuickDraw,_thr_QuickDraw_s);
       ref PerkObject _throwingShieldBreaker = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingShieldBreaker");
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingShieldBreaker,_thr_ShieldBreaker_p);
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingShieldBreaker,_thr_ShieldBreaker_s);
+      if (ThrowingPerkModificationEnabled && ThrowingShieldBreakerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingShieldBreaker,_thr_ShieldBreaker_p);
+      if (ThrowingPerkModificationEnabled && ThrowingShieldBreakerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingShieldBreaker,_thr_ShieldBreaker_s);
       ref PerkObject _throwingHunter = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingHunter");
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingHunter,_thr_Hunter_p);
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingHunter,_thr_Hunter_s);
+      if (ThrowingPerkModificationEnabled && ThrowingHunterPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingHunter,_thr_Hunter_p);
+      if (ThrowingPerkModificationEnabled && ThrowingHunterPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingHunter,_thr_Hunter_s);
       ref PerkObject _throwingFlexibleFighter = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingFlexibleFighter");
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingFlexibleFighter,_thr_FlexibleFighter_p);
+      if (ThrowingPerkModificationEnabled && ThrowingFlexibleFighterPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingFlexibleFighter,_thr_FlexibleFighter_p);
       ref PerkObject _throwingMountedSkirmisher = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingMountedSkirmisher");
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingMountedSkirmisher,_thr_MountedSkirmisher_p);
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingMountedSkirmisher,_thr_MountedSkirmisher_s);
+      if (ThrowingPerkModificationEnabled && ThrowingMountedSkirmisherPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingMountedSkirmisher,_thr_MountedSkirmisher_p);
+      if (ThrowingPerkModificationEnabled && ThrowingMountedSkirmisherPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingMountedSkirmisher,_thr_MountedSkirmisher_s);
       ref PerkObject _throwingPerfectTechnique = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingPerfectTechnique");
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingPerfectTechnique,_thr_PerfectTechnique_p);
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingPerfectTechnique,_thr_PerfectTechnique_s);
+      if (ThrowingPerkModificationEnabled && ThrowingPerfectTechniquePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingPerfectTechnique,_thr_PerfectTechnique_p);
+      if (ThrowingPerkModificationEnabled && ThrowingPerfectTechniquePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingPerfectTechnique,_thr_PerfectTechnique_s);
       ref PerkObject _throwingRunningThrow = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingRunningThrow");
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingRunningThrow,_thr_RunningThrow_p);
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingRunningThrow,_thr_RunningThrow_s);
+      if (ThrowingPerkModificationEnabled && ThrowingRunningThrowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingRunningThrow,_thr_RunningThrow_p);
+      if (ThrowingPerkModificationEnabled && ThrowingRunningThrowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingRunningThrow,_thr_RunningThrow_s);
       ref PerkObject _throwingKnockOff = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingKnockOff");
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingKnockOff,_thr_KnockOff_p);
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingKnockOff,_thr_KnockOff_s);
+      if (ThrowingPerkModificationEnabled && ThrowingKnockOffPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingKnockOff,_thr_KnockOff_p);
+      if (ThrowingPerkModificationEnabled && ThrowingKnockOffPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingKnockOff,_thr_KnockOff_s);
       ref PerkObject _throwingWellPrepared = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingWellPrepared");
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingWellPrepared,_thr_WellPrepared_p);
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingWellPrepared,_thr_WellPrepared_s);
+      if (ThrowingPerkModificationEnabled && ThrowingWellPreparedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingWellPrepared,_thr_WellPrepared_p);
+      if (ThrowingPerkModificationEnabled && ThrowingWellPreparedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingWellPrepared,_thr_WellPrepared_s);
       ref PerkObject _throwingFocus = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingFocus");
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingFocus,_thr_Focus_p);
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingFocus,_thr_Focus_s);
+      if (ThrowingPerkModificationEnabled && ThrowingFocusPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingFocus,_thr_Focus_p);
+      if (ThrowingPerkModificationEnabled && ThrowingFocusPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingFocus,_thr_Focus_s);
       ref PerkObject _throwingLastHit = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingLastHit");
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingLastHit,_thr_LastHit_p);
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingLastHit,_thr_LastHit_s);
+      if (ThrowingPerkModificationEnabled && ThrowingLastHitPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingLastHit,_thr_LastHit_p);
+      if (ThrowingPerkModificationEnabled && ThrowingLastHitPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingLastHit,_thr_LastHit_s);
       ref PerkObject _throwingHeadHunter = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingHeadHunter");
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingHeadHunter,_thr_HeadHunter_p);
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingHeadHunter,_thr_HeadHunter_s);
+      if (ThrowingPerkModificationEnabled && ThrowingHeadHunterPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingHeadHunter,_thr_HeadHunter_p);
+      if (ThrowingPerkModificationEnabled && ThrowingHeadHunterPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingHeadHunter,_thr_HeadHunter_s);
       ref PerkObject _throwingThrowingCompetitions = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingThrowingCompetitions");
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingThrowingCompetitions,_thr_ThrowingCompetitions_p);
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingThrowingCompetitions,_thr_ThrowingCompetitions_s);
+      if (ThrowingPerkModificationEnabled && ThrowingThrowingCompetitionsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingThrowingCompetitions,_thr_ThrowingCompetitions_p);
+      if (ThrowingPerkModificationEnabled && ThrowingThrowingCompetitionsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingThrowingCompetitions,_thr_ThrowingCompetitions_s);
       ref PerkObject _throwingSplinters = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingSplinters");
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingSplinters,_thr_Splinters_p);
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingSplinters,_thr_Splinters_s);
+      if (ThrowingPerkModificationEnabled && ThrowingSplintersPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingSplinters,_thr_Splinters_p);
+      if (ThrowingPerkModificationEnabled && ThrowingSplintersPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingSplinters,_thr_Splinters_s);
       ref PerkObject _throwingResourceful = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingResourceful");
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingResourceful,_thr_Resourceful_p);
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingResourceful,_thr_Resourceful_s);
+      if (ThrowingPerkModificationEnabled && ThrowingResourcefulPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingResourceful,_thr_Resourceful_p);
+      if (ThrowingPerkModificationEnabled && ThrowingResourcefulPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingResourceful,_thr_Resourceful_s);
       ref PerkObject _throwingLongReach = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingLongReach");
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingLongReach,_thr_LongReach_p);
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingLongReach,_thr_LongReach_s);
+      if (ThrowingPerkModificationEnabled && ThrowingLongReachPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingLongReach,_thr_LongReach_p);
+      if (ThrowingPerkModificationEnabled && ThrowingLongReachPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingLongReach,_thr_LongReach_s);
       ref PerkObject _throwingWeakSpot = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingWeakSpot");
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingWeakSpot,_thr_WeakSpot_p);
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingWeakSpot,_thr_WeakSpot_s);
+      if (ThrowingPerkModificationEnabled && ThrowingWeakSpotPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingWeakSpot,_thr_WeakSpot_p);
+      if (ThrowingPerkModificationEnabled && ThrowingWeakSpotPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingWeakSpot,_thr_WeakSpot_s);
       ref PerkObject _throwingImpale = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingImpale");
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingImpale,_thr_Impale_p);
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingImpale,_thr_Impale_s);
+      if (ThrowingPerkModificationEnabled && ThrowingImpalePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingImpale,_thr_Impale_p);
+      if (ThrowingPerkModificationEnabled && ThrowingImpalePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingImpale,_thr_Impale_s);
       ref PerkObject _throwingUnstoppableForce = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingUnstoppableForce");
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingUnstoppableForce,_thr_UnstoppableForce_p);
-      if (ThrowingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingUnstoppableForce,_thr_UnstoppableForce_s);
+      if (ThrowingPerkModificationEnabled && ThrowingUnstoppableForcePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingUnstoppableForce,_thr_UnstoppableForce_p);
+      if (ThrowingPerkModificationEnabled && ThrowingUnstoppableForcePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingUnstoppableForce,_thr_UnstoppableForce_s);
       ref PerkObject _ridingFullSpeed = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingFullSpeed");
-      if (RidingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingFullSpeed,_rid_FullSpeed_p);
-      if (RidingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingFullSpeed,_rid_FullSpeed_s);
+      if (RidingPerkModificationEnabled && RidingFullSpeedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingFullSpeed,_rid_FullSpeed_p);
+      if (RidingPerkModificationEnabled && RidingFullSpeedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingFullSpeed,_rid_FullSpeed_s);
       ref PerkObject _ridingNimbleSteed = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingNimbleSteed");
-      if (RidingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingNimbleSteed,_rid_NimbleSteed_p);
-      if (RidingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingNimbleSteed,_rid_NimbleSteed_s);
+      if (RidingPerkModificationEnabled && RidingNimbleSteedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingNimbleSteed,_rid_NimbleSteed_p);
+      if (RidingPerkModificationEnabled && RidingNimbleSteedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingNimbleSteed,_rid_NimbleSteed_s);
       ref PerkObject _ridingWellStraped = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingWellStraped");
-      if (RidingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingWellStraped,_rid_WellStraped_p);
-      if (RidingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingWellStraped,_rid_WellStraped_s);
+      if (RidingPerkModificationEnabled && RidingWellStrapedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingWellStraped,_rid_WellStraped_p);
+      if (RidingPerkModificationEnabled && RidingWellStrapedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingWellStraped,_rid_WellStraped_s);
       ref PerkObject _ridingVeterinary = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingVeterinary");
-      if (RidingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingVeterinary,_rid_Veterinary_p);
-      if (RidingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingVeterinary,_rid_Veterinary_s);
+      if (RidingPerkModificationEnabled && RidingVeterinaryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingVeterinary,_rid_Veterinary_p);
+      if (RidingPerkModificationEnabled && RidingVeterinaryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingVeterinary,_rid_Veterinary_s);
       ref PerkObject _ridingNomadicTraditions = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingNomadicTraditions");
-      if (RidingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingNomadicTraditions,_rid_NomadicTraditions_p);
-      if (RidingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingNomadicTraditions,_rid_NomadicTraditions_s);
+      if (RidingPerkModificationEnabled && RidingNomadicTraditionsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingNomadicTraditions,_rid_NomadicTraditions_p);
+      if (RidingPerkModificationEnabled && RidingNomadicTraditionsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingNomadicTraditions,_rid_NomadicTraditions_s);
       ref PerkObject _ridingFilledToBrim = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingFilledToBrim");
-      if (RidingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingFilledToBrim,_rid_FilledToBrim_p);
-      if (RidingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingFilledToBrim,_rid_FilledToBrim_s);
+      if (RidingPerkModificationEnabled && RidingFilledToBrimPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingFilledToBrim,_rid_FilledToBrim_p);
+      if (RidingPerkModificationEnabled && RidingFilledToBrimPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingFilledToBrim,_rid_FilledToBrim_s);
       ref PerkObject _ridingSagittarius = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingSagittarius");
-      if (RidingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingSagittarius,_rid_Sagittarius_p);
-      if (RidingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingSagittarius,_rid_Sagittarius_s);
+      if (RidingPerkModificationEnabled && RidingSagittariusPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingSagittarius,_rid_Sagittarius_p);
+      if (RidingPerkModificationEnabled && RidingSagittariusPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingSagittarius,_rid_Sagittarius_s);
       ref PerkObject _ridingSweepingWind = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingSweepingWind");
-      if (RidingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingSweepingWind,_rid_SweepingWind_p);
-      if (RidingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingSweepingWind,_rid_SweepingWind_s);
+      if (RidingPerkModificationEnabled && RidingSweepingWindPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingSweepingWind,_rid_SweepingWind_p);
+      if (RidingPerkModificationEnabled && RidingSweepingWindPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingSweepingWind,_rid_SweepingWind_s);
       ref PerkObject _ridingMountedWarrior = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingMountedWarrior");
-      if (RidingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingMountedWarrior,_rid_MountedWarrior_p);
-      if (RidingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingMountedWarrior,_rid_MountedWarrior_s);
+      if (RidingPerkModificationEnabled && RidingMountedWarriorPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingMountedWarrior,_rid_MountedWarrior_p);
+      if (RidingPerkModificationEnabled && RidingMountedWarriorPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingMountedWarrior,_rid_MountedWarrior_s);
       ref PerkObject _ridingHorseArcher = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingHorseArcher");
-      if (RidingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingHorseArcher,_rid_HorseArcher_p);
-      if (RidingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingHorseArcher,_rid_HorseArcher_s);
+      if (RidingPerkModificationEnabled && RidingHorseArcherPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingHorseArcher,_rid_HorseArcher_p);
+      if (RidingPerkModificationEnabled && RidingHorseArcherPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingHorseArcher,_rid_HorseArcher_s);
       ref PerkObject _ridingHorde = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingHorde");
-      if (RidingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingHorde,_rid_Horde_p);
-      if (RidingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingHorde,_rid_Horde_s);
+      if (RidingPerkModificationEnabled && RidingHordePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingHorde,_rid_Horde_p);
+      if (RidingPerkModificationEnabled && RidingHordePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingHorde,_rid_Horde_s);
       ref PerkObject _ridingBreeder = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingBreeder");
-      if (RidingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingBreeder,_rid_Breeder_p);
-      if (RidingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingBreeder,_rid_Breeder_s);
+      if (RidingPerkModificationEnabled && RidingBreederPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingBreeder,_rid_Breeder_p);
+      if (RidingPerkModificationEnabled && RidingBreederPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingBreeder,_rid_Breeder_s);
       ref PerkObject _ridingThunderousCharge = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingThunderousCharge");
-      if (RidingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingThunderousCharge,_rid_ThunderousCharge_p);
-      if (RidingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingThunderousCharge,_rid_ThunderousCharge_s);
+      if (RidingPerkModificationEnabled && RidingThunderousChargePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingThunderousCharge,_rid_ThunderousCharge_p);
+      if (RidingPerkModificationEnabled && RidingThunderousChargePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingThunderousCharge,_rid_ThunderousCharge_s);
       ref PerkObject _ridingAnnoyingBuzz = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingAnnoyingBuzz");
-      if (RidingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingAnnoyingBuzz,_rid_AnnoyingBuzz_p);
-      if (RidingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingAnnoyingBuzz,_rid_AnnoyingBuzz_s);
+      if (RidingPerkModificationEnabled && RidingAnnoyingBuzzPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingAnnoyingBuzz,_rid_AnnoyingBuzz_p);
+      if (RidingPerkModificationEnabled && RidingAnnoyingBuzzPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingAnnoyingBuzz,_rid_AnnoyingBuzz_s);
       ref PerkObject _ridingMountedPatrols = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingMountedPatrols");
-      if (RidingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingMountedPatrols,_rid_MountedPatrols_p);
-      if (RidingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingMountedPatrols,_rid_MountedPatrols_s);
+      if (RidingPerkModificationEnabled && RidingMountedPatrolsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingMountedPatrols,_rid_MountedPatrols_p);
+      if (RidingPerkModificationEnabled && RidingMountedPatrolsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingMountedPatrols,_rid_MountedPatrols_s);
       ref PerkObject _ridingCavalryTactics = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingCavalryTactics");
-      if (RidingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingCavalryTactics,_rid_CavalryTactics_p);
-      if (RidingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingCavalryTactics,_rid_CavalryTactics_s);
+      if (RidingPerkModificationEnabled && RidingCavalryTacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingCavalryTactics,_rid_CavalryTactics_p);
+      if (RidingPerkModificationEnabled && RidingCavalryTacticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingCavalryTactics,_rid_CavalryTactics_s);
       ref PerkObject _ridingDauntlessSteed = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingDauntlessSteed");
-      if (RidingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingDauntlessSteed,_rid_DauntlessSteed_p);
-      if (RidingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingDauntlessSteed,_rid_DauntlessSteed_s);
+      if (RidingPerkModificationEnabled && RidingDauntlessSteedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingDauntlessSteed,_rid_DauntlessSteed_p);
+      if (RidingPerkModificationEnabled && RidingDauntlessSteedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingDauntlessSteed,_rid_DauntlessSteed_s);
       ref PerkObject _ridingToughSteed = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingToughSteed");
-      if (RidingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingToughSteed,_rid_ToughSteed_p);
-      if (RidingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingToughSteed,_rid_ToughSteed_s);
+      if (RidingPerkModificationEnabled && RidingToughSteedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingToughSteed,_rid_ToughSteed_p);
+      if (RidingPerkModificationEnabled && RidingToughSteedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingToughSteed,_rid_ToughSteed_s);
       ref PerkObject _ridingTheWayOfTheSaddle = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingTheWayOfTheSaddle");
-      if (RidingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingTheWayOfTheSaddle,_rid_TheWayOfTheSaddle_p);
-      if (RidingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingTheWayOfTheSaddle,_rid_TheWayOfTheSaddle_s);
+      if (RidingPerkModificationEnabled && RidingTheWayOfTheSaddlePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingTheWayOfTheSaddle,_rid_TheWayOfTheSaddle_p);
+      if (RidingPerkModificationEnabled && RidingTheWayOfTheSaddlePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingTheWayOfTheSaddle,_rid_TheWayOfTheSaddle_s);
       ref PerkObject _athleticsMorningExercise = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsMorningExercise");
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsMorningExercise,_ath_MorningExercise_p);
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsMorningExercise,_ath_MorningExercise_s);
+      if (AthleticsPerkModificationEnabled && AthleticsMorningExercisePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsMorningExercise,_ath_MorningExercise_p);
+      if (AthleticsPerkModificationEnabled && AthleticsMorningExercisePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsMorningExercise,_ath_MorningExercise_s);
       ref PerkObject _athleticsWellBuilt = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsWellBuilt");
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsWellBuilt,_ath_WellBuilt_p);
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsWellBuilt,_ath_WellBuilt_s);
+      if (AthleticsPerkModificationEnabled && AthleticsWellBuiltPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsWellBuilt,_ath_WellBuilt_p);
+      if (AthleticsPerkModificationEnabled && AthleticsWellBuiltPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsWellBuilt,_ath_WellBuilt_s);
       ref PerkObject _athleticsFormFittingArmor = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsFormFittingArmor");
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsFormFittingArmor,_ath_FormFittingArmor_p);
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsFormFittingArmor,_ath_FormFittingArmor_s);
+      if (AthleticsPerkModificationEnabled && AthleticsFormFittingArmorPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsFormFittingArmor,_ath_FormFittingArmor_p);
+      if (AthleticsPerkModificationEnabled && AthleticsFormFittingArmorPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsFormFittingArmor,_ath_FormFittingArmor_s);
       ref PerkObject _athleticsHavingGoing = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsHavingGoing");
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsHavingGoing,_ath_HavingGoing_p);
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsHavingGoing,_ath_HavingGoing_s);
+      if (AthleticsPerkModificationEnabled && AthleticsHavingGoingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsHavingGoing,_ath_HavingGoing_p);
+      if (AthleticsPerkModificationEnabled && AthleticsHavingGoingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsHavingGoing,_ath_HavingGoing_s);
       ref PerkObject _athleticsStamina = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsStamina");
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsStamina,_ath_Stamina_p);
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsStamina,_ath_Stamina_s);
+      if (AthleticsPerkModificationEnabled && AthleticsStaminaPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsStamina,_ath_Stamina_p);
+      if (AthleticsPerkModificationEnabled && AthleticsStaminaPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsStamina,_ath_Stamina_s);
       ref PerkObject _athleticsPowerful = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsPowerful");
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsPowerful,_ath_Powerful_p);
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsPowerful,_ath_Powerful_s);
+      if (AthleticsPerkModificationEnabled && AthleticsPowerfulPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsPowerful,_ath_Powerful_p);
+      if (AthleticsPerkModificationEnabled && AthleticsPowerfulPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsPowerful,_ath_Powerful_s);
       ref PerkObject _athleticsSurgingBlow = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsSurgingBlow");
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsSurgingBlow,_ath_SurgingBlow_p);
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsSurgingBlow,_ath_SurgingBlow_s);
+      if (AthleticsPerkModificationEnabled && AthleticsSurgingBlowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsSurgingBlow,_ath_SurgingBlow_p);
+      if (AthleticsPerkModificationEnabled && AthleticsSurgingBlowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsSurgingBlow,_ath_SurgingBlow_s);
       ref PerkObject _athleticsBraced = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsBraced");
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsBraced,_ath_Braced_p);
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsBraced,_ath_Braced_s);
+      if (AthleticsPerkModificationEnabled && AthleticsBracedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsBraced,_ath_Braced_p);
+      if (AthleticsPerkModificationEnabled && AthleticsBracedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsBraced,_ath_Braced_s);
       ref PerkObject _athleticsWalkItOff = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsWalkItOff");
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsWalkItOff,_ath_WalkItOff_p);
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsWalkItOff,_ath_WalkItOff_s);
+      if (AthleticsPerkModificationEnabled && AthleticsWalkItOffPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsWalkItOff,_ath_WalkItOff_p);
+      if (AthleticsPerkModificationEnabled && AthleticsWalkItOffPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsWalkItOff,_ath_WalkItOff_s);
       ref PerkObject _athleticsAGoodDaysRest = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsAGoodDaysRest");
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsAGoodDaysRest,_ath_AGoodDaysRest_p);
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsAGoodDaysRest,_ath_AGoodDaysRest_s);
+      if (AthleticsPerkModificationEnabled && AthleticsAGoodDaysRestPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsAGoodDaysRest,_ath_AGoodDaysRest_p);
+      if (AthleticsPerkModificationEnabled && AthleticsAGoodDaysRestPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsAGoodDaysRest,_ath_AGoodDaysRest_s);
       ref PerkObject _athleticsHealthyCitizens = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsHealthyCitizens");
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsHealthyCitizens,_ath_HealthyCitizens_p);
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsHealthyCitizens,_ath_HealthyCitizens_s);
+      if (AthleticsPerkModificationEnabled && AthleticsHealthyCitizensPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsHealthyCitizens,_ath_HealthyCitizens_p);
+      if (AthleticsPerkModificationEnabled && AthleticsHealthyCitizensPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsHealthyCitizens,_ath_HealthyCitizens_s);
       ref PerkObject _athleticsEnergetic = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsEnergetic");
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsEnergetic,_ath_Energetic_p);
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsEnergetic,_ath_Energetic_s);
+      if (AthleticsPerkModificationEnabled && AthleticsEnergeticPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsEnergetic,_ath_Energetic_p);
+      if (AthleticsPerkModificationEnabled && AthleticsEnergeticPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsEnergetic,_ath_Energetic_s);
       ref PerkObject _athleticsSteady = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsSteady");
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsSteady,_ath_Steady_p);
+      if (AthleticsPerkModificationEnabled && AthleticsSteadyPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsSteady,_ath_Steady_p);
       ref PerkObject _athleticsStrong = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsStrong");
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsStrong,_ath_Strong_p);
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsStrong,_ath_Strong_s);
+      if (AthleticsPerkModificationEnabled && AthleticsStrongPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsStrong,_ath_Strong_p);
+      if (AthleticsPerkModificationEnabled && AthleticsStrongPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsStrong,_ath_Strong_s);
       ref PerkObject _athleticsStrongArms = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsStrongArms");
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsStrongArms,_ath_StrongArms_p);
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsStrongArms,_ath_StrongArms_s);
+      if (AthleticsPerkModificationEnabled && AthleticsStrongArmsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsStrongArms,_ath_StrongArms_p);
+      if (AthleticsPerkModificationEnabled && AthleticsStrongArmsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsStrongArms,_ath_StrongArms_s);
       ref PerkObject _athleticsSpartan = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsSpartan");
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsSpartan,_ath_Spartan_p);
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsSpartan,_ath_Spartan_s);
+      if (AthleticsPerkModificationEnabled && AthleticsSpartanPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsSpartan,_ath_Spartan_p);
+      if (AthleticsPerkModificationEnabled && AthleticsSpartanPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsSpartan,_ath_Spartan_s);
       ref PerkObject _athleticsIgnorePain = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsIgnorePain");
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsIgnorePain,_ath_IgnorePain_p);
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsIgnorePain,_ath_IgnorePain_s);
+      if (AthleticsPerkModificationEnabled && AthleticsIgnorePainPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsIgnorePain,_ath_IgnorePain_p);
+      if (AthleticsPerkModificationEnabled && AthleticsIgnorePainPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsIgnorePain,_ath_IgnorePain_s);
       ref PerkObject _athleticsMightyBlow = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsMightyBlow");
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsMightyBlow,_ath_MightyBlow_p);
-      if (AthleticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsMightyBlow,_ath_MightyBlow_s);
+      if (AthleticsPerkModificationEnabled && AthleticsMightyBlowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsMightyBlow,_ath_MightyBlow_p);
+      if (AthleticsPerkModificationEnabled && AthleticsMightyBlowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsMightyBlow,_ath_MightyBlow_s);
       ref PerkObject _craftingSharpenedEdge = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_craftingSharpenedEdge");
-      if (CraftingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_craftingSharpenedEdge,_cft_SharpenedEdge_p);
+      if (CraftingPerkModificationEnabled && CraftingSharpenedEdgePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_craftingSharpenedEdge,_cft_SharpenedEdge_p);
       ref PerkObject _craftingSharpenedTip = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_craftingSharpenedTip");
-      if (CraftingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_craftingSharpenedTip,_cft_SharpenedTip_p);
+      if (CraftingPerkModificationEnabled && CraftingSharpenedTipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_craftingSharpenedTip,_cft_SharpenedTip_p);
       ref PerkObject _tacticsTightFormations = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsTightFormations");
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsTightFormations,_tct_TightFormations_p);
+      if (TacticsPerkModificationEnabled && TacticsTightFormationsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsTightFormations,_tct_TightFormations_p);
       ref PerkObject _tacticsLooseFormations = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsLooseFormations");
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsLooseFormations,_tct_LooseFormations_p);
+      if (TacticsPerkModificationEnabled && TacticsLooseFormationsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsLooseFormations,_tct_LooseFormations_p);
       ref PerkObject _tacticsAsymmetricalWarfare = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsAsymmetricalWarfare");
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsAsymmetricalWarfare,_tct_AsymmetricalWarfare_p);
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsAsymmetricalWarfare,_tct_AsymmetricalWarfare_s);
+      if (TacticsPerkModificationEnabled && TacticsAsymmetricalWarfarePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsAsymmetricalWarfare,_tct_AsymmetricalWarfare_p);
+      if (TacticsPerkModificationEnabled && TacticsAsymmetricalWarfarePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsAsymmetricalWarfare,_tct_AsymmetricalWarfare_s);
       ref PerkObject _tacticsSmallUnitTactics = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsSmallUnitTactics");
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsSmallUnitTactics,_tct_SmallUnitTactics_p);
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsSmallUnitTactics,_tct_SmallUnitTactics_s);
+      if (TacticsPerkModificationEnabled && TacticsSmallUnitTacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsSmallUnitTactics,_tct_SmallUnitTactics_p);
+      if (TacticsPerkModificationEnabled && TacticsSmallUnitTacticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsSmallUnitTactics,_tct_SmallUnitTactics_s);
       ref PerkObject _tacticsHordeLeader = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsHordeLeader");
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsHordeLeader,_tct_HordeLeader_p);
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsHordeLeader,_tct_HordeLeader_s);
+      if (TacticsPerkModificationEnabled && TacticsHordeLeaderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsHordeLeader,_tct_HordeLeader_p);
+      if (TacticsPerkModificationEnabled && TacticsHordeLeaderPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsHordeLeader,_tct_HordeLeader_s);
       ref PerkObject _tacticsLawKeeper = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsLawKeeper");
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsLawKeeper,_tct_LawKeeper_p);
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsLawKeeper,_tct_LawKeeper_s);
+      if (TacticsPerkModificationEnabled && TacticsLawKeeperPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsLawKeeper,_tct_LawKeeper_p);
+      if (TacticsPerkModificationEnabled && TacticsLawKeeperPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsLawKeeper,_tct_LawKeeper_s);
       ref PerkObject _tacticsCoaching = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsCoaching");
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsCoaching,_tct_Coaching_p);
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsCoaching,_tct_Coaching_s);
+      if (TacticsPerkModificationEnabled && TacticsCoachingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsCoaching,_tct_Coaching_p);
+      if (TacticsPerkModificationEnabled && TacticsCoachingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsCoaching,_tct_Coaching_s);
       ref PerkObject _tacticsSwiftRegroup = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsSwiftRegroup");
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsSwiftRegroup,_tct_SwiftRegroup_p);
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsSwiftRegroup,_tct_SwiftRegroup_s);
+      if (TacticsPerkModificationEnabled && TacticsSwiftRegroupPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsSwiftRegroup,_tct_SwiftRegroup_p);
+      if (TacticsPerkModificationEnabled && TacticsSwiftRegroupPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsSwiftRegroup,_tct_SwiftRegroup_s);
       ref PerkObject _tacticsOnTheMarch = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsOnTheMarch");
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsOnTheMarch,_tct_OnTheMarch_p);
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsOnTheMarch,_tct_OnTheMarch_s);
+      if (TacticsPerkModificationEnabled && TacticsOnTheMarchPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsOnTheMarch,_tct_OnTheMarch_p);
+      if (TacticsPerkModificationEnabled && TacticsOnTheMarchPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsOnTheMarch,_tct_OnTheMarch_s);
       ref PerkObject _tacticsCallToArms = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsCallToArms");
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsCallToArms,_tct_CallToArms_p);
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsCallToArms,_tct_CallToArms_s);
+      if (TacticsPerkModificationEnabled && TacticsCallToArmsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsCallToArms,_tct_CallToArms_p);
+      if (TacticsPerkModificationEnabled && TacticsCallToArmsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsCallToArms,_tct_CallToArms_s);
       ref PerkObject _tacticsPickThemOfTheWalls = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsPickThemOfTheWalls");
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsPickThemOfTheWalls,_tct_PickThemOfTheWalls_p);
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsPickThemOfTheWalls,_tct_PickThemOfTheWalls_s);
+      if (TacticsPerkModificationEnabled && TacticsPickThemOfTheWallsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsPickThemOfTheWalls,_tct_PickThemOfTheWalls_p);
+      if (TacticsPerkModificationEnabled && TacticsPickThemOfTheWallsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsPickThemOfTheWalls,_tct_PickThemOfTheWalls_s);
       ref PerkObject _tacticsMakeThemPay = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsMakeThemPay");
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsMakeThemPay,_tct_MakeThemPay_p);
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsMakeThemPay,_tct_MakeThemPay_s);
+      if (TacticsPerkModificationEnabled && TacticsMakeThemPayPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsMakeThemPay,_tct_MakeThemPay_p);
+      if (TacticsPerkModificationEnabled && TacticsMakeThemPayPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsMakeThemPay,_tct_MakeThemPay_s);
       ref PerkObject _tacticsEliteReserves = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsEliteReserves");
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsEliteReserves,_tct_EliteReserves_p);
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsEliteReserves,_tct_EliteReserves_s);
+      if (TacticsPerkModificationEnabled && TacticsEliteReservesPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsEliteReserves,_tct_EliteReserves_p);
+      if (TacticsPerkModificationEnabled && TacticsEliteReservesPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsEliteReserves,_tct_EliteReserves_s);
       ref PerkObject _tacticsEncirclement = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsEncirclement");
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsEncirclement,_tct_Encirclement_p);
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsEncirclement,_tct_Encirclement_s);
+      if (TacticsPerkModificationEnabled && TacticsEncirclementPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsEncirclement,_tct_Encirclement_p);
+      if (TacticsPerkModificationEnabled && TacticsEncirclementPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsEncirclement,_tct_Encirclement_s);
       ref PerkObject _tacticsPreBattleManeuvers = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsPreBattleManeuvers");
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsPreBattleManeuvers,_tct_PreBattleManeuvers_p);
+      if (TacticsPerkModificationEnabled && TacticsPreBattleManeuversPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsPreBattleManeuvers,_tct_PreBattleManeuvers_p);
       ref PerkObject _tacticsBesieged = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsBesieged");
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsBesieged,_tct_Besieged_p);
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsBesieged,_tct_Besieged_s);
+      if (TacticsPerkModificationEnabled && TacticsBesiegedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsBesieged,_tct_Besieged_p);
+      if (TacticsPerkModificationEnabled && TacticsBesiegedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsBesieged,_tct_Besieged_s);
       ref PerkObject _tacticsCounteroffensive = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsCounteroffensive");
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsCounteroffensive,_tct_Counteroffensive_p);
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsCounteroffensive,_tct_Counteroffensive_s);
+      if (TacticsPerkModificationEnabled && TacticsCounteroffensivePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsCounteroffensive,_tct_Counteroffensive_p);
+      if (TacticsPerkModificationEnabled && TacticsCounteroffensivePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsCounteroffensive,_tct_Counteroffensive_s);
       ref PerkObject _tacticsGensdarmes = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsGensdarmes");
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsGensdarmes,_tct_Gensdarmes_p);
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsGensdarmes,_tct_Gensdarmes_s);
+      if (TacticsPerkModificationEnabled && TacticsGensdarmesPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsGensdarmes,_tct_Gensdarmes_p);
+      if (TacticsPerkModificationEnabled && TacticsGensdarmesPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsGensdarmes,_tct_Gensdarmes_s);
       ref PerkObject _tacticsTacticalMastery = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsTacticalMastery");
-      if (TacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsTacticalMastery,_tct_TacticalMastery_p);
+      if (TacticsPerkModificationEnabled && TacticsTacticalMasteryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsTacticalMastery,_tct_TacticalMastery_p);
       ref PerkObject _scoutingDayTraveler = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingDayTraveler");
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingDayTraveler,_sct_DayTraveler_p);
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingDayTraveler,_sct_DayTraveler_s);
+      if (ScoutingPerkModificationEnabled && ScoutingDayTravelerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingDayTraveler,_sct_DayTraveler_p);
+      if (ScoutingPerkModificationEnabled && ScoutingDayTravelerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingDayTraveler,_sct_DayTraveler_s);
       ref PerkObject _scoutingNightRunner = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingNightRunner");
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingNightRunner,_sct_NightRunner_p);
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingNightRunner,_sct_NightRunner_s);
+      if (ScoutingPerkModificationEnabled && ScoutingNightRunnerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingNightRunner,_sct_NightRunner_p);
+      if (ScoutingPerkModificationEnabled && ScoutingNightRunnerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingNightRunner,_sct_NightRunner_s);
       ref PerkObject _scoutingPathfinder = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingPathfinder");
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingPathfinder,_sct_Pathfinder_p);
+      if (ScoutingPerkModificationEnabled && ScoutingPathfinderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingPathfinder,_sct_Pathfinder_p);
       ref PerkObject _scoutingWaterDiviner = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingWaterDiviner");
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingWaterDiviner,_sct_WaterDiviner_p);
+      if (ScoutingPerkModificationEnabled && ScoutingWaterDivinerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingWaterDiviner,_sct_WaterDiviner_p);
       ref PerkObject _scoutingForestKin = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingForestKin");
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingForestKin,_sct_ForestKin_p);
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingForestKin,_sct_ForestKin_s);
+      if (ScoutingPerkModificationEnabled && ScoutingForestKinPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingForestKin,_sct_ForestKin_p);
+      if (ScoutingPerkModificationEnabled && ScoutingForestKinPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingForestKin,_sct_ForestKin_s);
       ref PerkObject _scoutingDesertBorn = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingDesertBorn");
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingDesertBorn,_sct_DesertBorn_p);
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingDesertBorn,_sct_DesertBorn_s);
+      if (ScoutingPerkModificationEnabled && ScoutingDesertBornPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingDesertBorn,_sct_DesertBorn_p);
+      if (ScoutingPerkModificationEnabled && ScoutingDesertBornPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingDesertBorn,_sct_DesertBorn_s);
       ref PerkObject _scoutingForcedMarch = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingForcedMarch");
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingForcedMarch,_sct_ForcedMarch_p);
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingForcedMarch,_sct_ForcedMarch_s);
+      if (ScoutingPerkModificationEnabled && ScoutingForcedMarchPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingForcedMarch,_sct_ForcedMarch_p);
+      if (ScoutingPerkModificationEnabled && ScoutingForcedMarchPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingForcedMarch,_sct_ForcedMarch_s);
       ref PerkObject _scoutingUnburdened = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingUnburdened");
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingUnburdened,_sct_Unburdened_p);
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingUnburdened,_sct_Unburdened_s);
+      if (ScoutingPerkModificationEnabled && ScoutingUnburdenedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingUnburdened,_sct_Unburdened_p);
+      if (ScoutingPerkModificationEnabled && ScoutingUnburdenedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingUnburdened,_sct_Unburdened_s);
       ref PerkObject _scoutingTracker = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingTracker");
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingTracker,_sct_Tracker_p);
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingTracker,_sct_Tracker_s);
+      if (ScoutingPerkModificationEnabled && ScoutingTrackerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingTracker,_sct_Tracker_p);
+      if (ScoutingPerkModificationEnabled && ScoutingTrackerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingTracker,_sct_Tracker_s);
       ref PerkObject _scoutingRanger = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingRanger");
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingRanger,_sct_Ranger_p);
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingRanger,_sct_Ranger_s);
+      if (ScoutingPerkModificationEnabled && ScoutingRangerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingRanger,_sct_Ranger_p);
+      if (ScoutingPerkModificationEnabled && ScoutingRangerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingRanger,_sct_Ranger_s);
       ref PerkObject _scoutingPatrols = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingPatrols");
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingPatrols,_sct_Patrols_p);
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingPatrols,_sct_Patrols_s);
+      if (ScoutingPerkModificationEnabled && ScoutingPatrolsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingPatrols,_sct_Patrols_p);
+      if (ScoutingPerkModificationEnabled && ScoutingPatrolsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingPatrols,_sct_Patrols_s);
       ref PerkObject _scoutingForagers = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingForagers");
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingForagers,_sct_Foragers_p);
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingForagers,_sct_Foragers_s);
+      if (ScoutingPerkModificationEnabled && ScoutingForagersPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingForagers,_sct_Foragers_p);
+      if (ScoutingPerkModificationEnabled && ScoutingForagersPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingForagers,_sct_Foragers_s);
       ref PerkObject _scoutingBeastWhisperer = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingBeastWhisperer");
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingBeastWhisperer,_sct_BeastWhisperer_p);
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingBeastWhisperer,_sct_BeastWhisperer_s);
+      if (ScoutingPerkModificationEnabled && ScoutingBeastWhispererPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingBeastWhisperer,_sct_BeastWhisperer_p);
+      if (ScoutingPerkModificationEnabled && ScoutingBeastWhispererPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingBeastWhisperer,_sct_BeastWhisperer_s);
       ref PerkObject _scoutingVillageNetwork = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingVillageNetwork");
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingVillageNetwork,_sct_VillageNetwork_p);
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingVillageNetwork,_sct_VillageNetwork_s);
+      if (ScoutingPerkModificationEnabled && ScoutingVillageNetworkPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingVillageNetwork,_sct_VillageNetwork_p);
+      if (ScoutingPerkModificationEnabled && ScoutingVillageNetworkPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingVillageNetwork,_sct_VillageNetwork_s);
       ref PerkObject _scoutingRumourNetwork = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingRumourNetwork");
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingRumourNetwork,_sct_RumourNetwork_p);
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingRumourNetwork,_sct_RumourNetwork_s);
+      if (ScoutingPerkModificationEnabled && ScoutingRumourNetworkPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingRumourNetwork,_sct_RumourNetwork_p);
+      if (ScoutingPerkModificationEnabled && ScoutingRumourNetworkPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingRumourNetwork,_sct_RumourNetwork_s);
       ref PerkObject _scoutingVantagePoint = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingVantagePoint");
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingVantagePoint,_sct_VantagePoint_p);
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingVantagePoint,_sct_VantagePoint_s);
+      if (ScoutingPerkModificationEnabled && ScoutingVantagePointPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingVantagePoint,_sct_VantagePoint_p);
+      if (ScoutingPerkModificationEnabled && ScoutingVantagePointPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingVantagePoint,_sct_VantagePoint_s);
       ref PerkObject _scoutingKeenSight = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingKeenSight");
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingKeenSight,_sct_KeenSight_p);
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingKeenSight,_sct_KeenSight_s);
+      if (ScoutingPerkModificationEnabled && ScoutingKeenSightPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingKeenSight,_sct_KeenSight_p);
+      if (ScoutingPerkModificationEnabled && ScoutingKeenSightPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingKeenSight,_sct_KeenSight_s);
       ref PerkObject _scoutingRearguard = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingRearguard");
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingRearguard,_sct_Rearguard_p);
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingRearguard,_sct_Rearguard_s);
+      if (ScoutingPerkModificationEnabled && ScoutingRearguardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingRearguard,_sct_Rearguard_p);
+      if (ScoutingPerkModificationEnabled && ScoutingRearguardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingRearguard,_sct_Rearguard_s);
       ref PerkObject _scoutingUncannyInsight = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingUncannyInsight");
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingUncannyInsight,_sct_UncannyInsight_p);
-      if (ScoutingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingUncannyInsight,_sct_UncannyInsight_s);
+      if (ScoutingPerkModificationEnabled && ScoutingUncannyInsightPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingUncannyInsight,_sct_UncannyInsight_p);
+      if (ScoutingPerkModificationEnabled && ScoutingUncannyInsightPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingUncannyInsight,_sct_UncannyInsight_s);
       ref PerkObject _rogueryNoRestForTheWicked = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_rogueryNoRestForTheWicked");
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryNoRestForTheWicked,_rog_NoRestForTheWicked_p);
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryNoRestForTheWicked,_rog_NoRestForTheWicked_s);
+      if (RogueryPerkModificationEnabled && RogueryNoRestForTheWickedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryNoRestForTheWicked,_rog_NoRestForTheWicked_p);
+      if (RogueryPerkModificationEnabled && RogueryNoRestForTheWickedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryNoRestForTheWicked,_rog_NoRestForTheWicked_s);
       ref PerkObject _roguerySweetTalker = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_roguerySweetTalker");
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_roguerySweetTalker,_rog_SweetTalker_p);
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_roguerySweetTalker,_rog_SweetTalker_s);
+      if (RogueryPerkModificationEnabled && RoguerySweetTalkerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_roguerySweetTalker,_rog_SweetTalker_p);
+      if (RogueryPerkModificationEnabled && RoguerySweetTalkerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_roguerySweetTalker,_rog_SweetTalker_s);
       ref PerkObject _rogueryTwoFaced = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_rogueryTwoFaced");
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryTwoFaced,_rog_TwoFaced_p);
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryTwoFaced,_rog_TwoFaced_s);
+      if (RogueryPerkModificationEnabled && RogueryTwoFacedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryTwoFaced,_rog_TwoFaced_p);
+      if (RogueryPerkModificationEnabled && RogueryTwoFacedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryTwoFaced,_rog_TwoFaced_s);
       ref PerkObject _rogueryDeepPockets = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_rogueryDeepPockets");
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryDeepPockets,_rog_DeepPockets_p);
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryDeepPockets,_rog_DeepPockets_s);
+      if (RogueryPerkModificationEnabled && RogueryDeepPocketsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryDeepPockets,_rog_DeepPockets_p);
+      if (RogueryPerkModificationEnabled && RogueryDeepPocketsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryDeepPockets,_rog_DeepPockets_s);
       ref PerkObject _rogueryInBestLight = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_rogueryInBestLight");
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryInBestLight,_rog_InBestLight_p);
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryInBestLight,_rog_InBestLight_s);
+      if (RogueryPerkModificationEnabled && RogueryInBestLightPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryInBestLight,_rog_InBestLight_p);
+      if (RogueryPerkModificationEnabled && RogueryInBestLightPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryInBestLight,_rog_InBestLight_s);
       ref PerkObject _rogueryKnowHow = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_rogueryKnowHow");
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryKnowHow,_rog_KnowHow_p);
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryKnowHow,_rog_KnowHow_s);
+      if (RogueryPerkModificationEnabled && RogueryKnowHowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryKnowHow,_rog_KnowHow_p);
+      if (RogueryPerkModificationEnabled && RogueryKnowHowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryKnowHow,_rog_KnowHow_s);
       ref PerkObject _rogueryPromises = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_rogueryPromises");
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryPromises,_rog_Promises_p);
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryPromises,_rog_Promises_s);
+      if (RogueryPerkModificationEnabled && RogueryPromisesPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryPromises,_rog_Promises_p);
+      if (RogueryPerkModificationEnabled && RogueryPromisesPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryPromises,_rog_Promises_s);
       ref PerkObject _roguerySlaveTrader = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_roguerySlaveTrader");
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_roguerySlaveTrader,_rog_SlaveTrader_p);
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_roguerySlaveTrader,_rog_SlaveTrader_s);
+      if (RogueryPerkModificationEnabled && RoguerySlaveTraderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_roguerySlaveTrader,_rog_SlaveTrader_p);
+      if (RogueryPerkModificationEnabled && RoguerySlaveTraderPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_roguerySlaveTrader,_rog_SlaveTrader_s);
       ref PerkObject _rogueryWhiteLies = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_rogueryWhiteLies");
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryWhiteLies,_rog_WhiteLies_p);
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryWhiteLies,_rog_WhiteLies_s);
+      if (RogueryPerkModificationEnabled && RogueryWhiteLiesPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryWhiteLies,_rog_WhiteLies_p);
+      if (RogueryPerkModificationEnabled && RogueryWhiteLiesPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryWhiteLies,_rog_WhiteLies_s);
       ref PerkObject _roguerySmugglerConnections = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_roguerySmugglerConnections");
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_roguerySmugglerConnections,_rog_SmugglerConnections_p);
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_roguerySmugglerConnections,_rog_SmugglerConnections_s);
+      if (RogueryPerkModificationEnabled && RoguerySmugglerConnectionsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_roguerySmugglerConnections,_rog_SmugglerConnections_p);
+      if (RogueryPerkModificationEnabled && RoguerySmugglerConnectionsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_roguerySmugglerConnections,_rog_SmugglerConnections_s);
       ref PerkObject _rogueryPartnersInCrime = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_rogueryPartnersInCrime");
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryPartnersInCrime,_rog_PartnersInCrime_p);
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryPartnersInCrime,_rog_PartnersInCrime_s);
+      if (RogueryPerkModificationEnabled && RogueryPartnersInCrimePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryPartnersInCrime,_rog_PartnersInCrime_p);
+      if (RogueryPerkModificationEnabled && RogueryPartnersInCrimePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryPartnersInCrime,_rog_PartnersInCrime_s);
       ref PerkObject _rogueryOneOfTheFamily = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_rogueryOneOfTheFamily");
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryOneOfTheFamily,_rog_OneOfTheFamily_p);
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryOneOfTheFamily,_rog_OneOfTheFamily_s);
+      if (RogueryPerkModificationEnabled && RogueryOneOfTheFamilyPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryOneOfTheFamily,_rog_OneOfTheFamily_p);
+      if (RogueryPerkModificationEnabled && RogueryOneOfTheFamilyPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryOneOfTheFamily,_rog_OneOfTheFamily_s);
       ref PerkObject _rogueryCarver = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_rogueryCarver");
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryCarver,_rog_Carver_p);
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryCarver,_rog_Carver_s);
+      if (RogueryPerkModificationEnabled && RogueryCarverPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryCarver,_rog_Carver_p);
+      if (RogueryPerkModificationEnabled && RogueryCarverPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryCarver,_rog_Carver_s);
       ref PerkObject _rogueryRansomBroker = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_rogueryRansomBroker");
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryRansomBroker,_rog_RansomBroker_p);
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryRansomBroker,_rog_RansomBroker_s);
+      if (RogueryPerkModificationEnabled && RogueryRansomBrokerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryRansomBroker,_rog_RansomBroker_p);
+      if (RogueryPerkModificationEnabled && RogueryRansomBrokerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryRansomBroker,_rog_RansomBroker_s);
       ref PerkObject _rogueryArmsDealer = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_rogueryArmsDealer");
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryArmsDealer,_rog_ArmsDealer_p);
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryArmsDealer,_rog_ArmsDealer_s);
+      if (RogueryPerkModificationEnabled && RogueryArmsDealerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryArmsDealer,_rog_ArmsDealer_p);
+      if (RogueryPerkModificationEnabled && RogueryArmsDealerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryArmsDealer,_rog_ArmsDealer_s);
       ref PerkObject _rogueryDirtyFighting = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_rogueryDirtyFighting");
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryDirtyFighting,_rog_DirtyFighting_p);
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryDirtyFighting,_rog_DirtyFighting_s);
+      if (RogueryPerkModificationEnabled && RogueryDirtyFightingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryDirtyFighting,_rog_DirtyFighting_p);
+      if (RogueryPerkModificationEnabled && RogueryDirtyFightingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryDirtyFighting,_rog_DirtyFighting_s);
       ref PerkObject _rogueryDashAndSlash = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_rogueryDashAndSlash");
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryDashAndSlash,_rog_DashAndSlash_p);
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryDashAndSlash,_rog_DashAndSlash_s);
+      if (RogueryPerkModificationEnabled && RogueryDashAndSlashPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryDashAndSlash,_rog_DashAndSlash_p);
+      if (RogueryPerkModificationEnabled && RogueryDashAndSlashPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryDashAndSlash,_rog_DashAndSlash_s);
       ref PerkObject _rogueryFleetFooted = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_rogueryFleetFooted");
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryFleetFooted,_rog_FleetFooted_p);
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryFleetFooted,_rog_FleetFooted_s);
+      if (RogueryPerkModificationEnabled && RogueryFleetFootedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryFleetFooted,_rog_FleetFooted_p);
+      if (RogueryPerkModificationEnabled && RogueryFleetFootedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryFleetFooted,_rog_FleetFooted_s);
       ref PerkObject _rogueryRogueExtraordinaire = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_rogueryRogueExtraordinaire");
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryRogueExtraordinaire,_rog_RogueExtraordinaire_p);
-      if (RogueryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryRogueExtraordinaire,_rog_RogueExtraordinaire_s);
+      if (RogueryPerkModificationEnabled && RogueryRogueExtraordinairePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryRogueExtraordinaire,_rog_RogueExtraordinaire_p);
+      if (RogueryPerkModificationEnabled && RogueryRogueExtraordinairePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryRogueExtraordinaire,_rog_RogueExtraordinaire_s);
       ref PerkObject _leadershipCombatTips = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipCombatTips");
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipCombatTips,_ldr_CombatTips_p);
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipCombatTips,_ldr_CombatTips_s);
+      if (LeadershipPerkModificationEnabled && LeadershipCombatTipsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipCombatTips,_ldr_CombatTips_p);
+      if (LeadershipPerkModificationEnabled && LeadershipCombatTipsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipCombatTips,_ldr_CombatTips_s);
       ref PerkObject _leadershipRaiseTheMeek = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipRaiseTheMeek");
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipRaiseTheMeek,_ldr_RaiseTheMeek_p);
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipRaiseTheMeek,_ldr_RaiseTheMeek_s);
+      if (LeadershipPerkModificationEnabled && LeadershipRaiseTheMeekPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipRaiseTheMeek,_ldr_RaiseTheMeek_p);
+      if (LeadershipPerkModificationEnabled && LeadershipRaiseTheMeekPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipRaiseTheMeek,_ldr_RaiseTheMeek_s);
       ref PerkObject _leadershipFerventAttacker = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipFerventAttacker");
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipFerventAttacker,_ldr_FerventAttacker_p);
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipFerventAttacker,_ldr_FerventAttacker_s);
+      if (LeadershipPerkModificationEnabled && LeadershipFerventAttackerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipFerventAttacker,_ldr_FerventAttacker_p);
+      if (LeadershipPerkModificationEnabled && LeadershipFerventAttackerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipFerventAttacker,_ldr_FerventAttacker_s);
       ref PerkObject _leadershipStoutDefender = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipStoutDefender");
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipStoutDefender,_ldr_StoutDefender_p);
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipStoutDefender,_ldr_StoutDefender_s);
+      if (LeadershipPerkModificationEnabled && LeadershipStoutDefenderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipStoutDefender,_ldr_StoutDefender_p);
+      if (LeadershipPerkModificationEnabled && LeadershipStoutDefenderPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipStoutDefender,_ldr_StoutDefender_s);
       ref PerkObject _leadershipAuthority = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipAuthority");
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipAuthority,_ldr_Authority_p);
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipAuthority,_ldr_Authority_s);
+      if (LeadershipPerkModificationEnabled && LeadershipAuthorityPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipAuthority,_ldr_Authority_p);
+      if (LeadershipPerkModificationEnabled && LeadershipAuthorityPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipAuthority,_ldr_Authority_s);
       ref PerkObject _leadershipHeroicLeader = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipHeroicLeader");
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipHeroicLeader,_ldr_HeroicLeader_p);
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipHeroicLeader,_ldr_HeroicLeader_s);
+      if (LeadershipPerkModificationEnabled && LeadershipHeroicLeaderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipHeroicLeader,_ldr_HeroicLeader_p);
+      if (LeadershipPerkModificationEnabled && LeadershipHeroicLeaderPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipHeroicLeader,_ldr_HeroicLeader_s);
       ref PerkObject _leadershipLoyaltyAndHonor = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipLoyaltyAndHonor");
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipLoyaltyAndHonor,_ldr_LoyaltyAndHonor_p);
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipLoyaltyAndHonor,_ldr_LoyaltyAndHonor_s);
+      if (LeadershipPerkModificationEnabled && LeadershipLoyaltyAndHonorPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipLoyaltyAndHonor,_ldr_LoyaltyAndHonor_p);
+      if (LeadershipPerkModificationEnabled && LeadershipLoyaltyAndHonorPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipLoyaltyAndHonor,_ldr_LoyaltyAndHonor_s);
       ref PerkObject _leadershipFamousCommander = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipFamousCommander");
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipFamousCommander,_ldr_FamousCommander_p);
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipFamousCommander,_ldr_FamousCommander_s);
+      if (LeadershipPerkModificationEnabled && LeadershipFamousCommanderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipFamousCommander,_ldr_FamousCommander_p);
+      if (LeadershipPerkModificationEnabled && LeadershipFamousCommanderPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipFamousCommander,_ldr_FamousCommander_s);
       ref PerkObject _leadershipPresence = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipPresence");
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipPresence,_ldr_Presence_p);
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipPresence,_ldr_Presence_s);
+      if (LeadershipPerkModificationEnabled && LeadershipPresencePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipPresence,_ldr_Presence_p);
+      if (LeadershipPerkModificationEnabled && LeadershipPresencePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipPresence,_ldr_Presence_s);
       ref PerkObject _leadershipLeaderOfTheMasses = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipLeaderOfTheMasses");
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipLeaderOfTheMasses,_ldr_LeaderOfMasses_p);
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipLeaderOfTheMasses,_ldr_LeaderOfMasses_s);
+      if (LeadershipPerkModificationEnabled && LeadershipLeaderOfMassesPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipLeaderOfTheMasses,_ldr_LeaderOfMasses_p);
+      if (LeadershipPerkModificationEnabled && LeadershipLeaderOfMassesPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipLeaderOfTheMasses,_ldr_LeaderOfMasses_s);
       ref PerkObject _leadershipVeteransRespect = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipVeteransRespect");
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipVeteransRespect,_ldr_VeteransRespect_p);
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipVeteransRespect,_ldr_VeteransRespect_s);
+      if (LeadershipPerkModificationEnabled && LeadershipVeteransRespectPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipVeteransRespect,_ldr_VeteransRespect_p);
+      if (LeadershipPerkModificationEnabled && LeadershipVeteransRespectPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipVeteransRespect,_ldr_VeteransRespect_s);
       ref PerkObject _leadershipCitizenMilitia = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipCitizenMilitia");
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipCitizenMilitia,_ldr_CitizenMilitia_p);
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipCitizenMilitia,_ldr_CitizenMilitia_s);
+      if (LeadershipPerkModificationEnabled && LeadershipCitizenMilitiaPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipCitizenMilitia,_ldr_CitizenMilitia_p);
+      if (LeadershipPerkModificationEnabled && LeadershipCitizenMilitiaPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipCitizenMilitia,_ldr_CitizenMilitia_s);
       ref PerkObject _leadershipInspiringLeader = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipInspiringLeader");
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipInspiringLeader,_ldr_InspiringLeader_p);
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipInspiringLeader,_ldr_InspiringLeader_s);
+      if (LeadershipPerkModificationEnabled && LeadershipInspiringLeaderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipInspiringLeader,_ldr_InspiringLeader_p);
+      if (LeadershipPerkModificationEnabled && LeadershipInspiringLeaderPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipInspiringLeader,_ldr_InspiringLeader_s);
       ref PerkObject _leadershipUpliftingSpirit = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipUpliftingSpirit");
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipUpliftingSpirit,_ldr_UpliftingSpirit_p);
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipUpliftingSpirit,_ldr_UpliftingSpirit_s);
+      if (LeadershipPerkModificationEnabled && LeadershipUpliftingSpiritPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipUpliftingSpirit,_ldr_UpliftingSpirit_p);
+      if (LeadershipPerkModificationEnabled && LeadershipUpliftingSpiritPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipUpliftingSpirit,_ldr_UpliftingSpirit_s);
       ref PerkObject _leadershipMakeADifference = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipMakeADifference");
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipMakeADifference,_ldr_MakeADifference_p);
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipMakeADifference,_ldr_MakeADifference_s);
+      if (LeadershipPerkModificationEnabled && LeadershipMakeADifferencePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipMakeADifference,_ldr_MakeADifference_p);
+      if (LeadershipPerkModificationEnabled && LeadershipMakeADifferencePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipMakeADifference,_ldr_MakeADifference_s);
       ref PerkObject _leadershipLeadByExample = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipLeadByExample");
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipLeadByExample,_ldr_LeadByExample_p);
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipLeadByExample,_ldr_LeadByExample_s);
+      if (LeadershipPerkModificationEnabled && LeadershipLeadByExamplePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipLeadByExample,_ldr_LeadByExample_p);
+      if (LeadershipPerkModificationEnabled && LeadershipLeadByExamplePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipLeadByExample,_ldr_LeadByExample_s);
       ref PerkObject _leadershipTrustedCommander = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipTrustedCommander");
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipTrustedCommander,_ldr_TrustedCommander_p);
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipTrustedCommander,_ldr_TrustedCommander_s);
+      if (LeadershipPerkModificationEnabled && LeadershipTrustedCommanderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipTrustedCommander,_ldr_TrustedCommander_p);
+      if (LeadershipPerkModificationEnabled && LeadershipTrustedCommanderPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipTrustedCommander,_ldr_TrustedCommander_s);
       ref PerkObject _leadershipWePledgeOurSwords = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipWePledgeOurSwords");
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipWePledgeOurSwords,_ldr_WePledgeOurSwords_p);
+      if (LeadershipPerkModificationEnabled && LeadershipWePledgeOurSwordsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipWePledgeOurSwords,_ldr_WePledgeOurSwords_p);
       ref PerkObject _leadershipTalentMagnet = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipTalentMagnet");
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipTalentMagnet,_ldr_TalentMagnet_p);
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipTalentMagnet,_ldr_TalentMagnet_s);
+      if (LeadershipPerkModificationEnabled && LeadershipTalentMagnetPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipTalentMagnet,_ldr_TalentMagnet_p);
+      if (LeadershipPerkModificationEnabled && LeadershipTalentMagnetPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipTalentMagnet,_ldr_TalentMagnet_s);
       ref PerkObject _leadershipUltimateLeader = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipUltimateLeader");
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipUltimateLeader,_ldr_UltimateLeader_p);
-      if (LeadershipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipUltimateLeader,_ldr_UltimateLeader_s);
+      if (LeadershipPerkModificationEnabled && LeadershipUltimateLeaderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipUltimateLeader,_ldr_UltimateLeader_p);
+      if (LeadershipPerkModificationEnabled && LeadershipUltimateLeaderPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipUltimateLeader,_ldr_UltimateLeader_s);
       ref PerkObject _charmDiplomacy = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmDiplomacy");
-      if (CharmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmDiplomacy,_chm_Diplomacy_p);
+      if (CharmPerkModificationEnabled && CharmDiplomacyPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmDiplomacy,_chm_Diplomacy_p);
       ref PerkObject _charmShowYourScars = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmShowYourScars");
-      if (CharmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmShowYourScars,_chm_ShowYourScars_p);
+      if (CharmPerkModificationEnabled && CharmShowYourScarsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmShowYourScars,_chm_ShowYourScars_p);
       ref PerkObject _charmForgivableGrievances = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmForgivableGrievances");
-      if (CharmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmForgivableGrievances,_chm_ForgivableGrievances_p);
+      if (CharmPerkModificationEnabled && CharmForgivableGrievancesPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmForgivableGrievances,_chm_ForgivableGrievances_p);
       ref PerkObject _charmMeaningfulFavors = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmMeaningfulFavors");
-      if (CharmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmMeaningfulFavors,_chm_MeaningfulFavors_p);
+      if (CharmPerkModificationEnabled && CharmMeaningfulFavorsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmMeaningfulFavors,_chm_MeaningfulFavors_p);
       ref PerkObject _charmInBloom = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmInBloom");
-      if (CharmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmInBloom,_chm_InBloom_p);
+      if (CharmPerkModificationEnabled && CharmInBloomPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmInBloom,_chm_InBloom_p);
       ref PerkObject _charmYoungAndRespectful = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmYoungAndRespectful");
-      if (CharmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmYoungAndRespectful,_chm_YoungAndRespectful_p);
+      if (CharmPerkModificationEnabled && CharmYoungAndRespectfulPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmYoungAndRespectful,_chm_YoungAndRespectful_p);
       ref PerkObject _charmRespectfulOpposition = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmRespectfulOpposition");
-      if (CharmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmRespectfulOpposition,_chm_RespectfulOpposition_p);
+      if (CharmPerkModificationEnabled && CharmRespectfulOppositionPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmRespectfulOpposition,_chm_RespectfulOpposition_p);
       ref PerkObject _charmOurGloriousLeader = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmOurGloriousLeader");
-      if (CharmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmOurGloriousLeader,_chm_OurGloriousLeader_p);
+      if (CharmPerkModificationEnabled && CharmOurGloriousLeaderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmOurGloriousLeader,_chm_OurGloriousLeader_p);
       ref PerkObject _charmProFamilia = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmProFamilia");
-      if (CharmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmProFamilia,_chm_ProFamilia_p);
+      if (CharmPerkModificationEnabled && CharmProFamiliaPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmProFamilia,_chm_ProFamilia_p);
       ref PerkObject _tradeAppraiser = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeAppraiser");
-      if (TradePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeAppraiser,_trd_Appraiser_p);
-      if (TradePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeAppraiser,_trd_Appraiser_s);
+      if (TradePerkModificationEnabled && TradeAppraiserPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeAppraiser,_trd_Appraiser_p);
+      if (TradePerkModificationEnabled && TradeAppraiserPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeAppraiser,_trd_Appraiser_s);
       ref PerkObject _tradeWholeSeller = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeWholeSeller");
-      if (TradePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeWholeSeller,_trd_WholeSeller_p);
-      if (TradePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeWholeSeller,_trd_WholeSeller_s);
+      if (TradePerkModificationEnabled && TradeWholeSellerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeWholeSeller,_trd_WholeSeller_p);
+      if (TradePerkModificationEnabled && TradeWholeSellerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeWholeSeller,_trd_WholeSeller_s);
       ref PerkObject _tradeCaravanMaster = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeCaravanMaster");
-      if (TradePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeCaravanMaster,_trd_CaravanMaster_p);
-      if (TradePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeCaravanMaster,_trd_CaravanMaster_s);
+      if (TradePerkModificationEnabled && TradeCaravanMasterPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeCaravanMaster,_trd_CaravanMaster_p);
+      if (TradePerkModificationEnabled && TradeCaravanMasterPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeCaravanMaster,_trd_CaravanMaster_s);
       ref PerkObject _tradeMarketDealer = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeMarketDealer");
-      if (TradePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeMarketDealer,_trd_MarketDealer_p);
-      if (TradePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeMarketDealer,_trd_MarketDealer_s);
+      if (TradePerkModificationEnabled && TradeMarketDealerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeMarketDealer,_trd_MarketDealer_p);
+      if (TradePerkModificationEnabled && TradeMarketDealerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeMarketDealer,_trd_MarketDealer_s);
       ref PerkObject _tradeTravelingRumors = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeTravelingRumors");
-      if (TradePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeTravelingRumors,_trd_TravelingRumors_p);
-      if (TradePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeTravelingRumors,_trd_TravelingRumors_s);
+      if (TradePerkModificationEnabled && TradeTravelingRumorsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeTravelingRumors,_trd_TravelingRumors_p);
+      if (TradePerkModificationEnabled && TradeTravelingRumorsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeTravelingRumors,_trd_TravelingRumors_s);
       ref PerkObject _tradeLocalConnection = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeLocalConnection");
-      if (TradePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeLocalConnection,_trd_LocalConnection_p);
-      if (TradePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeLocalConnection,_trd_LocalConnection_s);
+      if (TradePerkModificationEnabled && TradeLocalConnectionPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeLocalConnection,_trd_LocalConnection_p);
+      if (TradePerkModificationEnabled && TradeLocalConnectionPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeLocalConnection,_trd_LocalConnection_s);
       ref PerkObject _tradeDistributedGoods = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeDistributedGoods");
-      if (TradePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeDistributedGoods,_trd_DistributedGoods_p);
-      if (TradePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeDistributedGoods,_trd_DistributedGoods_s);
+      if (TradePerkModificationEnabled && TradeDistributedGoodsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeDistributedGoods,_trd_DistributedGoods_p);
+      if (TradePerkModificationEnabled && TradeDistributedGoodsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeDistributedGoods,_trd_DistributedGoods_s);
       ref PerkObject _tradeTollgates = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeTollgates");
-      if (TradePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeTollgates,_trd_Tollgates_p);
-      if (TradePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeTollgates,_trd_Tollgates_s);
+      if (TradePerkModificationEnabled && TradeTollgatesPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeTollgates,_trd_Tollgates_p);
+      if (TradePerkModificationEnabled && TradeTollgatesPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeTollgates,_trd_Tollgates_s);
       ref PerkObject _tradeArtisanCommunity = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeArtisanCommunity");
-      if (TradePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeArtisanCommunity,_trd_ArtisanCommunity_p);
-      if (TradePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeArtisanCommunity,_trd_ArtisanCommunity_s);
+      if (TradePerkModificationEnabled && TradeArtisanCommunityPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeArtisanCommunity,_trd_ArtisanCommunity_p);
+      if (TradePerkModificationEnabled && TradeArtisanCommunityPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeArtisanCommunity,_trd_ArtisanCommunity_s);
       ref PerkObject _tradeGreatInvestor = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeGreatInvestor");
-      if (TradePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeGreatInvestor,_trd_GreatInvestor_p);
-      if (TradePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeGreatInvestor,_trd_GreatInvestor_s);
+      if (TradePerkModificationEnabled && TradeGreatInvestorPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeGreatInvestor,_trd_GreatInvestor_p);
+      if (TradePerkModificationEnabled && TradeGreatInvestorPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeGreatInvestor,_trd_GreatInvestor_s);
       ref PerkObject _tradeVillagerConnections = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeVillagerConnections");
-      if (TradePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeVillagerConnections,_trd_VillagerConnections_p);
-      if (TradePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeVillagerConnections,_trd_VillagerConnections_s);
+      if (TradePerkModificationEnabled && TradeVillagerConnectionsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeVillagerConnections,_trd_VillagerConnections_p);
+      if (TradePerkModificationEnabled && TradeVillagerConnectionsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeVillagerConnections,_trd_VillagerConnections_s);
       ref PerkObject _tradeContentTrades = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeContentTrades");
-      if (TradePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeContentTrades,_trd_ContentTrades_p);
-      if (TradePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeContentTrades,_trd_ContentTrades_s);
+      if (TradePerkModificationEnabled && TradeContentTradesPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeContentTrades,_trd_ContentTrades_p);
+      if (TradePerkModificationEnabled && TradeContentTradesPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeContentTrades,_trd_ContentTrades_s);
       ref PerkObject _tradeInsurancePlans = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeInsurancePlans");
-      if (TradePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeInsurancePlans,_trd_InsurancePlans_p);
-      if (TradePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeInsurancePlans,_trd_InsurancePlans_s);
+      if (TradePerkModificationEnabled && TradeInsurancePlansPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeInsurancePlans,_trd_InsurancePlans_p);
+      if (TradePerkModificationEnabled && TradeInsurancePlansPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeInsurancePlans,_trd_InsurancePlans_s);
       ref PerkObject _tradeRapidDevelopment = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeRapidDevelopment");
-      if (TradePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeRapidDevelopment,_trd_RapidDevelopment_p);
-      if (TradePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeRapidDevelopment,_trd_RapidDevelopment_s);
+      if (TradePerkModificationEnabled && TradeRapidDevelopmentPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeRapidDevelopment,_trd_RapidDevelopment_p);
+      if (TradePerkModificationEnabled && TradeRapidDevelopmentPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeRapidDevelopment,_trd_RapidDevelopment_s);
       ref PerkObject _tradeGranaryAccountant = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeGranaryAccountant");
-      if (TradePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeGranaryAccountant,_trd_GranaryAccountant_p);
-      if (TradePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeGranaryAccountant,_trd_GranaryAccountant_s);
+      if (TradePerkModificationEnabled && TradeGranaryAccountantPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeGranaryAccountant,_trd_GranaryAccountant_p);
+      if (TradePerkModificationEnabled && TradeGranaryAccountantPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeGranaryAccountant,_trd_GranaryAccountant_s);
       ref PerkObject _tradeSwordForBarter = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeSwordForBarter");
-      if (TradePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeSwordForBarter,_trd_SwordForBarter_p);
-      if (TradePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeSwordForBarter,_trd_SwordForBarter_s);
+      if (TradePerkModificationEnabled && TradeSwordForBarterPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeSwordForBarter,_trd_SwordForBarter_p);
+      if (TradePerkModificationEnabled && TradeSwordForBarterPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeSwordForBarter,_trd_SwordForBarter_s);
       ref PerkObject _tradeSelfMadeMan = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeSelfMadeMan");
-      if (TradePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeSelfMadeMan,_trd_SelfMadeMan_p);
+      if (TradePerkModificationEnabled && TradeSelfMadeManPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeSelfMadeMan,_trd_SelfMadeMan_p);
       ref PerkObject _tradeSilverTongue = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeSilverTongue");
-      if (TradePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeSilverTongue,_trd_SilverTongue_p);
-      if (TradePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeSilverTongue,_trd_SilverTongue_s);
+      if (TradePerkModificationEnabled && TradeSilverTonguePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeSilverTongue,_trd_SilverTongue_p);
+      if (TradePerkModificationEnabled && TradeSilverTonguePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeSilverTongue,_trd_SilverTongue_s);
       ref PerkObject _tradeManOfMeans = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeManOfMeans");
-      if (TradePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeManOfMeans,_trd_ManOfMeans_p);
-      if (TradePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeManOfMeans,_trd_ManOfMeans_s);
+      if (TradePerkModificationEnabled && TradeManOfMeansPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeManOfMeans,_trd_ManOfMeans_p);
+      if (TradePerkModificationEnabled && TradeManOfMeansPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeManOfMeans,_trd_ManOfMeans_s);
       ref PerkObject _tradeTrickleDown = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeTrickleDown");
-      if (TradePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeTrickleDown,_trd_TrickleDown_p);
-      if (TradePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeTrickleDown,_trd_TrickleDown_s);
+      if (TradePerkModificationEnabled && TradeTrickleDownPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeTrickleDown,_trd_TrickleDown_p);
+      if (TradePerkModificationEnabled && TradeTrickleDownPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeTrickleDown,_trd_TrickleDown_s);
       ref PerkObject _stewardSpartan = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardSpartan");
-      if (StewardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardSpartan,_st_Spartan_p);
-      if (StewardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardSpartan,_st_Spartan_s);
+      if (StewardPerkModificationEnabled && StewardSpartanPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardSpartan,_st_Spartan_p);
+      if (StewardPerkModificationEnabled && StewardSpartanPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardSpartan,_st_Spartan_s);
       ref PerkObject _stewardFrugal = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardFrugal");
-      if (StewardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardFrugal,_st_Frugal_p);
-      if (StewardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardFrugal,_st_Frugal_s);
+      if (StewardPerkModificationEnabled && StewardFrugalPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardFrugal,_st_Frugal_p);
+      if (StewardPerkModificationEnabled && StewardFrugalPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardFrugal,_st_Frugal_s);
       ref PerkObject _stewardSevenVeterans = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardSevenVeterans");
-      if (StewardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardSevenVeterans,_st_SevenVeterans_p);
-      if (StewardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardSevenVeterans,_st_SevenVeterans_s);
+      if (StewardPerkModificationEnabled && StewardSevenVeteransPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardSevenVeterans,_st_SevenVeterans_p);
+      if (StewardPerkModificationEnabled && StewardSevenVeteransPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardSevenVeterans,_st_SevenVeterans_s);
       ref PerkObject _stewardDrillSergant = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardDrillSergant");
-      if (StewardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardDrillSergant,_st_DrillSergant_p);
-      if (StewardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardDrillSergant,_st_DrillSergant_s);
+      if (StewardPerkModificationEnabled && StewardDrillSergantPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardDrillSergant,_st_DrillSergant_p);
+      if (StewardPerkModificationEnabled && StewardDrillSergantPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardDrillSergant,_st_DrillSergant_s);
       ref PerkObject _stewardSweatshops = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardSweatshops");
-      if (StewardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardSweatshops,_st_Sweatshops_p);
-      if (StewardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardSweatshops,_st_Sweatshops_s);
+      if (StewardPerkModificationEnabled && StewardSweatshopsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardSweatshops,_st_Sweatshops_p);
+      if (StewardPerkModificationEnabled && StewardSweatshopsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardSweatshops,_st_Sweatshops_s);
       ref PerkObject _stewardStiffUpperLip = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardStiffUpperLip");
-      if (StewardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardStiffUpperLip,_st_StiffUpperLip_p);
-      if (StewardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardStiffUpperLip,_st_StiffUpperLip_s);
+      if (StewardPerkModificationEnabled && StewardStiffUpperLipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardStiffUpperLip,_st_StiffUpperLip_p);
+      if (StewardPerkModificationEnabled && StewardStiffUpperLipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardStiffUpperLip,_st_StiffUpperLip_s);
       ref PerkObject _stewardPaidInPromise = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardPaidInPromise");
-      if (StewardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardPaidInPromise,_st_PaidInPromise_p);
-      if (StewardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardPaidInPromise,_st_PaidInPromise_s);
+      if (StewardPerkModificationEnabled && StewardPaidInPromisePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardPaidInPromise,_st_PaidInPromise_p);
+      if (StewardPerkModificationEnabled && StewardPaidInPromisePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardPaidInPromise,_st_PaidInPromise_s);
       ref PerkObject _stewardEfficientCampaigner = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardEfficientCampaigner");
-      if (StewardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardEfficientCampaigner,_st_EfficientCampaigner_p);
-      if (StewardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardEfficientCampaigner,_st_EfficientCampaigner_s);
+      if (StewardPerkModificationEnabled && StewardEfficientCampaignerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardEfficientCampaigner,_st_EfficientCampaigner_p);
+      if (StewardPerkModificationEnabled && StewardEfficientCampaignerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardEfficientCampaigner,_st_EfficientCampaigner_s);
       ref PerkObject _stewardGivingHands = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardGivingHands");
-      if (StewardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardGivingHands,_st_GivingHands_p);
-      if (StewardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardGivingHands,_st_GivingHands_s);
+      if (StewardPerkModificationEnabled && StewardGivingHandsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardGivingHands,_st_GivingHands_p);
+      if (StewardPerkModificationEnabled && StewardGivingHandsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardGivingHands,_st_GivingHands_s);
       ref PerkObject _stewardLogistician = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardLogistician");
-      if (StewardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardLogistician,_st_Logistician_p);
-      if (StewardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardLogistician,_st_Logistician_s);
+      if (StewardPerkModificationEnabled && StewardLogisticianPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardLogistician,_st_Logistician_p);
+      if (StewardPerkModificationEnabled && StewardLogisticianPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardLogistician,_st_Logistician_s);
       ref PerkObject _stewardRelocation = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardRelocation");
-      if (StewardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardRelocation,_st_Relocation_p);
-      if (StewardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardRelocation,_st_Relocation_s);
+      if (StewardPerkModificationEnabled && StewardRelocationPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardRelocation,_st_Relocation_p);
+      if (StewardPerkModificationEnabled && StewardRelocationPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardRelocation,_st_Relocation_s);
       ref PerkObject _stewardAidCorps = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardAidCorps");
-      if (StewardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardAidCorps,_st_AidCorps_p);
-      if (StewardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardAidCorps,_st_AidCorps_s);
+      if (StewardPerkModificationEnabled && StewardAidCorpsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardAidCorps,_st_AidCorps_p);
+      if (StewardPerkModificationEnabled && StewardAidCorpsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardAidCorps,_st_AidCorps_s);
       ref PerkObject _stewardGourmet = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardGourmet");
-      if (StewardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardGourmet,_st_Gourmet_p);
-      if (StewardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardGourmet,_st_Gourmet_s);
+      if (StewardPerkModificationEnabled && StewardGourmetPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardGourmet,_st_Gourmet_p);
+      if (StewardPerkModificationEnabled && StewardGourmetPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardGourmet,_st_Gourmet_s);
       ref PerkObject _stewardSoundReserves = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardSoundReserves");
-      if (StewardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardSoundReserves,_st_SoundReserves_p);
-      if (StewardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardSoundReserves,_st_SoundReserves_s);
+      if (StewardPerkModificationEnabled && StewardSoundReservesPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardSoundReserves,_st_SoundReserves_p);
+      if (StewardPerkModificationEnabled && StewardSoundReservesPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardSoundReserves,_st_SoundReserves_s);
       ref PerkObject _stewardForcedLabor = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardForcedLabor");
-      if (StewardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardForcedLabor,_st_ForcedLabor_p);
-      if (StewardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardForcedLabor,_st_ForcedLabor_s);
+      if (StewardPerkModificationEnabled && StewardForcedLaborPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardForcedLabor,_st_ForcedLabor_p);
+      if (StewardPerkModificationEnabled && StewardForcedLaborPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardForcedLabor,_st_ForcedLabor_s);
       ref PerkObject _stewardContractors = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardContractors");
-      if (StewardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardContractors,_st_Contractors_p);
-      if (StewardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardContractors,_st_Contractors_s);
+      if (StewardPerkModificationEnabled && StewardContractorsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardContractors,_st_Contractors_p);
+      if (StewardPerkModificationEnabled && StewardContractorsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardContractors,_st_Contractors_s);
       ref PerkObject _stewardArenicosMules = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardArenicosMules");
-      if (StewardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardArenicosMules,_st_ArenicosMules_p);
-      if (StewardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardArenicosMules,_st_ArenicosMules_s);
+      if (StewardPerkModificationEnabled && StewardArenicosMulesPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardArenicosMules,_st_ArenicosMules_p);
+      if (StewardPerkModificationEnabled && StewardArenicosMulesPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardArenicosMules,_st_ArenicosMules_s);
       ref PerkObject _stewardArenicosHorses = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardArenicosHorses");
-      if (StewardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardArenicosHorses,_st_ArenicosHorses_p);
-      if (StewardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardArenicosHorses,_st_ArenicosHorses_s);
+      if (StewardPerkModificationEnabled && StewardArenicosHorsesPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardArenicosHorses,_st_ArenicosHorses_p);
+      if (StewardPerkModificationEnabled && StewardArenicosHorsesPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardArenicosHorses,_st_ArenicosHorses_s);
       ref PerkObject _stewardUrbanDeveloper = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardUrbanDeveloper");
-      if (StewardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardUrbanDeveloper,_st_UrbanDeveloper_p);
-      if (StewardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardUrbanDeveloper,_st_UrbanDeveloper_s);
+      if (StewardPerkModificationEnabled && StewardUrbanDeveloperPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardUrbanDeveloper,_st_UrbanDeveloper_p);
+      if (StewardPerkModificationEnabled && StewardUrbanDeveloperPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardUrbanDeveloper,_st_UrbanDeveloper_s);
       ref PerkObject _stewardMasterOfWarcraft = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardMasterOfWarcraft");
-      if (StewardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardMasterOfWarcraft,_st_MasterOfWarcraft_p);
-      if (StewardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardMasterOfWarcraft,_st_MasterOfWarcraft_s);
+      if (StewardPerkModificationEnabled && StewardMasterOfWarcraftPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardMasterOfWarcraft,_st_MasterOfWarcraft_p);
+      if (StewardPerkModificationEnabled && StewardMasterOfWarcraftPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardMasterOfWarcraft,_st_MasterOfWarcraft_s);
       ref PerkObject _medicineSelfMedication = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_medicineSelfMedication");
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineSelfMedication,_med_SelfMedication_p);
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineSelfMedication,_med_SelfMedication_s);
+      if (MedicinePerkModificationEnabled && MedicineSelfMedicationPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineSelfMedication,_med_SelfMedication_p);
+      if (MedicinePerkModificationEnabled && MedicineSelfMedicationPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineSelfMedication,_med_SelfMedication_s);
       ref PerkObject _medicinePreventiveMedicine = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_medicinePreventiveMedicine");
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicinePreventiveMedicine,_med_PreventiveMedicine_p);
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicinePreventiveMedicine,_med_PreventiveMedicine_s);
+      if (MedicinePerkModificationEnabled && MedicinePreventiveMedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicinePreventiveMedicine,_med_PreventiveMedicine_p);
+      if (MedicinePerkModificationEnabled && MedicinePreventiveMedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicinePreventiveMedicine,_med_PreventiveMedicine_s);
       ref PerkObject _medicineTriageTent = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_medicineTriageTent");
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineTriageTent,_med_TriageTent_p);
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineTriageTent,_med_TriageTent_s);
+      if (MedicinePerkModificationEnabled && MedicineTriageTentPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineTriageTent,_med_TriageTent_p);
+      if (MedicinePerkModificationEnabled && MedicineTriageTentPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineTriageTent,_med_TriageTent_s);
       ref PerkObject _medicineWalkItOff = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_medicineWalkItOff");
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineWalkItOff,_med_WalkItOff_p);
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineWalkItOff,_med_WalkItOff_s);
+      if (MedicinePerkModificationEnabled && MedicineWalkItOffPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineWalkItOff,_med_WalkItOff_p);
+      if (MedicinePerkModificationEnabled && MedicineWalkItOffPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineWalkItOff,_med_WalkItOff_s);
       ref PerkObject _medicineSledges = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_medicineSledges");
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineSledges,_med_Sledges_p);
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineSledges,_med_Sledges_s);
+      if (MedicinePerkModificationEnabled && MedicineSledgesPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineSledges,_med_Sledges_p);
+      if (MedicinePerkModificationEnabled && MedicineSledgesPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineSledges,_med_Sledges_s);
       ref PerkObject _medicineDoctorsOath = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_medicineDoctorsOath");
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineDoctorsOath,_med_DoctorsOath_p);
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineDoctorsOath,_med_DoctorsOath_s);
+      if (MedicinePerkModificationEnabled && MedicineDoctorsOathPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineDoctorsOath,_med_DoctorsOath_p);
+      if (MedicinePerkModificationEnabled && MedicineDoctorsOathPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineDoctorsOath,_med_DoctorsOath_s);
       ref PerkObject _medicineBestMedicine = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_medicineBestMedicine");
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineBestMedicine,_med_BestMedicine_p);
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineBestMedicine,_med_BestMedicine_s);
+      if (MedicinePerkModificationEnabled && MedicineBestMedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineBestMedicine,_med_BestMedicine_p);
+      if (MedicinePerkModificationEnabled && MedicineBestMedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineBestMedicine,_med_BestMedicine_s);
       ref PerkObject _medicineGoodLodging = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_medicineGoodLodging");
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineGoodLodging,_med_GoodLogdings_p);
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineGoodLodging,_med_GoodLogdings_s);
+      if (MedicinePerkModificationEnabled && MedicineGoodLogdingsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineGoodLodging,_med_GoodLogdings_p);
+      if (MedicinePerkModificationEnabled && MedicineGoodLogdingsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineGoodLodging,_med_GoodLogdings_s);
       ref PerkObject _medicineSiegeMedic = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_medicineSiegeMedic");
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineSiegeMedic,_med_SiegeMedic_p);
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineSiegeMedic,_med_SiegeMedic_s);
+      if (MedicinePerkModificationEnabled && MedicineSiegeMedicPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineSiegeMedic,_med_SiegeMedic_p);
+      if (MedicinePerkModificationEnabled && MedicineSiegeMedicPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineSiegeMedic,_med_SiegeMedic_s);
       ref PerkObject _medicineVeterinarian = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_medicineVeterinarian");
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineVeterinarian,_med_Veterinarian_p);
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineVeterinarian,_med_Veterinarian_s);
+      if (MedicinePerkModificationEnabled && MedicineVeterinarianPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineVeterinarian,_med_Veterinarian_p);
+      if (MedicinePerkModificationEnabled && MedicineVeterinarianPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineVeterinarian,_med_Veterinarian_s);
       ref PerkObject _medicinePristineStreets = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_medicinePristineStreets");
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicinePristineStreets,_med_PristineStreets_p);
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicinePristineStreets,_med_PristineStreets_s);
+      if (MedicinePerkModificationEnabled && MedicinePristineStreetsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicinePristineStreets,_med_PristineStreets_p);
+      if (MedicinePerkModificationEnabled && MedicinePristineStreetsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicinePristineStreets,_med_PristineStreets_s);
       ref PerkObject _medicineBushDoctor = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_medicineBushDoctor");
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineBushDoctor,_med_BushDoctor_p);
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineBushDoctor,_med_BushDoctor_s);
+      if (MedicinePerkModificationEnabled && MedicineBushDoctorPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineBushDoctor,_med_BushDoctor_p);
+      if (MedicinePerkModificationEnabled && MedicineBushDoctorPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineBushDoctor,_med_BushDoctor_s);
       ref PerkObject _medicinePerfectHealth = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_medicinePerfectHealth");
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicinePerfectHealth,_med_PerfectHealth_p);
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicinePerfectHealth,_med_PerfectHealth_s);
+      if (MedicinePerkModificationEnabled && MedicinePerfectHealthPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicinePerfectHealth,_med_PerfectHealth_p);
+      if (MedicinePerkModificationEnabled && MedicinePerfectHealthPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicinePerfectHealth,_med_PerfectHealth_s);
       ref PerkObject _medicineHealthAdvise = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_medicineHealthAdvise");
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineHealthAdvise,_med_HealthAdvise_p);
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineHealthAdvise,_med_HealthAdvise_s);
+      if (MedicinePerkModificationEnabled && MedicineHealthAdvisePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineHealthAdvise,_med_HealthAdvise_p);
+      if (MedicinePerkModificationEnabled && MedicineHealthAdvisePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineHealthAdvise,_med_HealthAdvise_s);
       ref PerkObject _medicinePhysicianOfPeople = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_medicinePhysicianOfPeople");
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicinePhysicianOfPeople,_med_PhysicianOfPeople_p);
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicinePhysicianOfPeople,_med_PhysicianOfPeople_s);
+      if (MedicinePerkModificationEnabled && MedicinePhysicianOfPeoplePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicinePhysicianOfPeople,_med_PhysicianOfPeople_p);
+      if (MedicinePerkModificationEnabled && MedicinePhysicianOfPeoplePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicinePhysicianOfPeople,_med_PhysicianOfPeople_s);
       ref PerkObject _medicineCleanInfrastructure = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_medicineCleanInfrastructure");
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineCleanInfrastructure,_med_CleanInfrastructure_p);
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineCleanInfrastructure,_med_CleanInfrastructure_s);
+      if (MedicinePerkModificationEnabled && MedicineCleanInfrastructurePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineCleanInfrastructure,_med_CleanInfrastructure_p);
+      if (MedicinePerkModificationEnabled && MedicineCleanInfrastructurePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineCleanInfrastructure,_med_CleanInfrastructure_s);
       ref PerkObject _medicineCheatDeath = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_medicineCheatDeath");
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineCheatDeath,_med_CheatDeath_p);
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineCheatDeath,_med_CheatDeath_s);
+      if (MedicinePerkModificationEnabled && MedicineCheatDeathPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineCheatDeath,_med_CheatDeath_p);
+      if (MedicinePerkModificationEnabled && MedicineCheatDeathPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineCheatDeath,_med_CheatDeath_s);
       ref PerkObject _medicineFortitudeTonic = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_medicineFortitudeTonic");
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineFortitudeTonic,_med_FortitudeTonic_p);
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineFortitudeTonic,_med_FortitudeTonic_s);
+      if (MedicinePerkModificationEnabled && MedicineFortitudeTonicPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineFortitudeTonic,_med_FortitudeTonic_p);
+      if (MedicinePerkModificationEnabled && MedicineFortitudeTonicPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineFortitudeTonic,_med_FortitudeTonic_s);
       ref PerkObject _medicineHelpingHands = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_medicineHelpingHands");
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineHelpingHands,_med_HelpingHands_p);
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineHelpingHands,_med_HelpingHands_s);
+      if (MedicinePerkModificationEnabled && MedicineHelpingHandsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineHelpingHands,_med_HelpingHands_p);
+      if (MedicinePerkModificationEnabled && MedicineHelpingHandsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineHelpingHands,_med_HelpingHands_s);
       ref PerkObject _medicineBattleHardened = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_medicineBattleHardened");
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineBattleHardened,_med_BattleHardened_p);
-      if (MedicinePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineBattleHardened,_med_BattleHardened_s);
+      if (MedicinePerkModificationEnabled && MedicineBattleHardenedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineBattleHardened,_med_BattleHardened_p);
+      if (MedicinePerkModificationEnabled && MedicineBattleHardenedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineBattleHardened,_med_BattleHardened_s);
       ref PerkObject _engineeringScaffolds = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringScaffolds");
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringScaffolds,_eng_Scaffolds_p);
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringScaffolds,_eng_Scaffolds_s);
+      if (EngineeringPerkModificationEnabled && EngineeringScaffoldsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringScaffolds,_eng_Scaffolds_p);
+      if (EngineeringPerkModificationEnabled && EngineeringScaffoldsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringScaffolds,_eng_Scaffolds_s);
       ref PerkObject _engineeringTorsionEngines = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringTorsionEngines");
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringTorsionEngines,_eng_TorsionEngines_p);
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringTorsionEngines,_eng_TorsionEngines_s);
+      if (EngineeringPerkModificationEnabled && EngineeringTorsionEnginesPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringTorsionEngines,_eng_TorsionEngines_p);
+      if (EngineeringPerkModificationEnabled && EngineeringTorsionEnginesPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringTorsionEngines,_eng_TorsionEngines_s);
       ref PerkObject _engineeringSiegeWorks = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringSiegeWorks");
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringSiegeWorks,_eng_SiegeWorks_p);
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringSiegeWorks,_eng_SiegeWorks_s);
+      if (EngineeringPerkModificationEnabled && EngineeringSiegeWorksPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringSiegeWorks,_eng_SiegeWorks_p);
+      if (EngineeringPerkModificationEnabled && EngineeringSiegeWorksPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringSiegeWorks,_eng_SiegeWorks_s);
       ref PerkObject _engineeringPrisonArchitect = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringPrisonArchitect");
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringPrisonArchitect,_eng_PrisonArchitect_p);
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringPrisonArchitect,_eng_PrisonArchitect_s);
+      if (EngineeringPerkModificationEnabled && EngineeringPrisonArchitectPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringPrisonArchitect,_eng_PrisonArchitect_p);
+      if (EngineeringPerkModificationEnabled && EngineeringPrisonArchitectPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringPrisonArchitect,_eng_PrisonArchitect_s);
       ref PerkObject _engineeringCarpenters = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringCarpenters");
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringCarpenters,_eng_Carpenters_p);
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringCarpenters,_eng_Carpenters_s);
+      if (EngineeringPerkModificationEnabled && EngineeringCarpentersPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringCarpenters,_eng_Carpenters_p);
+      if (EngineeringPerkModificationEnabled && EngineeringCarpentersPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringCarpenters,_eng_Carpenters_s);
       ref PerkObject _engineeringMilitaryPlanner = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringMilitaryPlanner");
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringMilitaryPlanner,_eng_MilitaryPlanner_p);
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringMilitaryPlanner,_eng_MilitaryPlanner_s);
+      if (EngineeringPerkModificationEnabled && EngineeringMilitaryPlannerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringMilitaryPlanner,_eng_MilitaryPlanner_p);
+      if (EngineeringPerkModificationEnabled && EngineeringMilitaryPlannerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringMilitaryPlanner,_eng_MilitaryPlanner_s);
       ref PerkObject _engineeringWallBreaker = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringWallBreaker");
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringWallBreaker,_eng_WallBreaker_p);
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringWallBreaker,_eng_WallBreaker_s);
+      if (EngineeringPerkModificationEnabled && EngineeringWallBreakerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringWallBreaker,_eng_WallBreaker_p);
+      if (EngineeringPerkModificationEnabled && EngineeringWallBreakerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringWallBreaker,_eng_WallBreaker_s);
       ref PerkObject _engineeringDreadfulSieger = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringDreadfulSieger");
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringDreadfulSieger,_eng_DreadfulSieger_p);
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringDreadfulSieger,_eng_DreadfulSieger_s);
+      if (EngineeringPerkModificationEnabled && EngineeringDreadfulSiegerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringDreadfulSieger,_eng_DreadfulSieger_p);
+      if (EngineeringPerkModificationEnabled && EngineeringDreadfulSiegerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringDreadfulSieger,_eng_DreadfulSieger_s);
       ref PerkObject _engineeringSalvager = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringSalvager");
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringSalvager,_eng_Salvager_p);
+      if (EngineeringPerkModificationEnabled && EngineeringSalvagerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringSalvager,_eng_Salvager_p);
       ref PerkObject _engineeringForeman = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringForeman");
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringForeman,_eng_Foreman_p);
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringForeman,_eng_Foreman_s);
+      if (EngineeringPerkModificationEnabled && EngineeringForemanPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringForeman,_eng_Foreman_p);
+      if (EngineeringPerkModificationEnabled && EngineeringForemanPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringForeman,_eng_Foreman_s);
       ref PerkObject _engineeringSiegeEngineer = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringSiegeEngineer");
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringSiegeEngineer,_eng_SiegeEngineer_p);
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringSiegeEngineer,_eng_SiegeEngineer_s);
+      if (EngineeringPerkModificationEnabled && EngineeringSiegeEngineerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringSiegeEngineer,_eng_SiegeEngineer_p);
+      if (EngineeringPerkModificationEnabled && EngineeringSiegeEngineerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringSiegeEngineer,_eng_SiegeEngineer_s);
       ref PerkObject _engineeringBattlements = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringBattlements");
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringBattlements,_eng_Battlements_p);
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringBattlements,_eng_Battlements_s);
+      if (EngineeringPerkModificationEnabled && EngineeringBattlementsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringBattlements,_eng_Battlements_p);
+      if (EngineeringPerkModificationEnabled && EngineeringBattlementsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringBattlements,_eng_Battlements_s);
       ref PerkObject _engineeringEngineeringGuilds = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringEngineeringGuilds");
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringEngineeringGuilds,_eng_EngineeringGuilds_p);
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringEngineeringGuilds,_eng_EngineeringGuilds_s);
+      if (EngineeringPerkModificationEnabled && EngineeringEngineeringGuildsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringEngineeringGuilds,_eng_EngineeringGuilds_p);
+      if (EngineeringPerkModificationEnabled && EngineeringEngineeringGuildsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringEngineeringGuilds,_eng_EngineeringGuilds_s);
       ref PerkObject _engineeringMetallurgy = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringMetallurgy");
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringMetallurgy,_eng_Metallurgy_p);
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringMetallurgy,_eng_Metallurgy_s);
+      if (EngineeringPerkModificationEnabled && EngineeringMetallurgyPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringMetallurgy,_eng_Metallurgy_p);
+      if (EngineeringPerkModificationEnabled && EngineeringMetallurgyPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringMetallurgy,_eng_Metallurgy_s);
       ref PerkObject _engineeringImprovedTools = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringImprovedTools");
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringImprovedTools,_eng_ImprovedTools_p);
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringImprovedTools,_eng_ImprovedTools_s);
+      if (EngineeringPerkModificationEnabled && EngineeringImprovedToolsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringImprovedTools,_eng_ImprovedTools_p);
+      if (EngineeringPerkModificationEnabled && EngineeringImprovedToolsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringImprovedTools,_eng_ImprovedTools_s);
       ref PerkObject _engineeringClockwork = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringClockwork");
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringClockwork,_eng_Clockwork_p);
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringClockwork,_eng_Clockwork_s);
+      if (EngineeringPerkModificationEnabled && EngineeringClockworkPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringClockwork,_eng_Clockwork_p);
+      if (EngineeringPerkModificationEnabled && EngineeringClockworkPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringClockwork,_eng_Clockwork_s);
       ref PerkObject _engineeringArchitecturalCommisions = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringArchitecturalCommisions");
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringArchitecturalCommisions,_eng_ArchitecturalCommisions_p);
-      if (EngineeringPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringArchitecturalCommisions,_eng_ArchitecturalCommisions_s);
+      if (EngineeringPerkModificationEnabled && EngineeringArchitecturalCommisionsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringArchitecturalCommisions,_eng_ArchitecturalCommisions_p);
+      if (EngineeringPerkModificationEnabled && EngineeringArchitecturalCommisionsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringArchitecturalCommisions,_eng_ArchitecturalCommisions_s);
     }
   }
 }

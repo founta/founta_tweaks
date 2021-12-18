@@ -70,7 +70,7 @@ namespace FountaTweaks
         attr_m2 = s.PlayerAttributePointsPerTwoLevels;
         attr_m3 = s.PlayerAttributePointsPerThreeLevels;
       }
-      else if (h.Clan == Clan.PlayerClan && playerclan) //main hero clan heros
+      else if (h.Clan == Clan.PlayerClan && playerclan && h != Hero.MainHero) //main hero clan heros
       {
         do_modification = true;
 
@@ -79,7 +79,7 @@ namespace FountaTweaks
         attr_m2 = s.PlayerClanHeroAttributePointsPerTwoLevels;
         attr_m3 = s.PlayerClanHeroAttributePointsPerThreeLevels;
       }
-      else if (otherclan) //everyone else
+      else if (otherclan && h.Clan != Clan.PlayerClan && h != Hero.MainHero) //everyone else
       {
         do_modification = true;
 
