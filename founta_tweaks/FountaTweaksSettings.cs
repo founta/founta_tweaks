@@ -50,6 +50,39 @@ namespace FountaTweaks
       this._version = reader.Value;
     }
 
+
+    /// <summary>
+    /// /////////////////////////////////////////////////////////// ranged tweak settings
+    /// </summary>
+
+    [SettingPropertyBool("Enable ranged tweaks", RequireRestart = false)]
+    [SettingPropertyGroup("Ranged", IsMainToggle = true)]
+    public bool RangedTweaksEnabled { get; set; } = false;
+
+    [SettingPropertyBool("Arrow barrels fill throwing weapons", RequireRestart = false)]
+    [SettingPropertyGroup("Ranged")]
+    public bool ArrowBarrelRefillThrowing { get; set; } = false;
+
+    [SettingPropertyBool("Ammunition stack count tweaks", RequireRestart = false)]
+    [SettingPropertyGroup("Ranged/Stack count", IsMainToggle = true)]
+    public bool StackCountTweaksEnabled { get; set; } = false;
+
+    [SettingPropertyInteger("Additional arrow stack count",0,100, RequireRestart = false)]
+    [SettingPropertyGroup("Ranged/Stack count")]
+    public int ExtraArrowStackCount { get; set; } = 0;
+    [SettingPropertyInteger("Additional bolt stack count", 0, 100, RequireRestart = false)]
+    [SettingPropertyGroup("Ranged/Stack count")]
+    public int ExtraBoltStackCount { get; set; } = 0;
+    [SettingPropertyInteger("Additional javelin stack count", 0, 100, RequireRestart = false)]
+    [SettingPropertyGroup("Ranged/Stack count")]
+    public int ExtraJavelinStackCount { get; set; } = 0;
+    [SettingPropertyInteger("Additional throwing axe stack count", 0, 100, RequireRestart = false)]
+    [SettingPropertyGroup("Ranged/Stack count")]
+    public int ExtraThrowingAxeStackCount { get; set; } = 0;
+    [SettingPropertyInteger("Additional throwing knife stack count", 0, 100, RequireRestart = false)]
+    [SettingPropertyGroup("Ranged/Stack count")]
+    public int ExtraThrowingKnifeStackCount { get; set; } = 0;
+
     /// <summary>
     /// /////////////////////////////////////////////////////////// tournament and arena tweak settings
     /// </summary>

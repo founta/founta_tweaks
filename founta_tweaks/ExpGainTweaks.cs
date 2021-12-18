@@ -75,7 +75,7 @@ namespace FountaTweaks
         medicine = s.MedicinePlayerExpGainModifier;
         engineering = s.EngineeringPlayerExpGainModifier;
       }
-      else if (FountaTweaksSettings.Instance.PlayerClanExpChangeEnabled && h.Clan == Clan.PlayerClan)
+      else if (s.PlayerClanExpChangeEnabled && h.Clan == Clan.PlayerClan && h != Hero.MainHero)
       {
         boost_exp = true;
 
@@ -99,7 +99,7 @@ namespace FountaTweaks
         medicine = s.MedicinePlayerClanExpGainModifier;
         engineering = s.EngineeringPlayerClanExpGainModifier;
       }
-      else if (FountaTweaksSettings.Instance.OtherClanExpChangeEnabled)
+      else if (s.OtherClanExpChangeEnabled && h != Hero.MainHero && h.Clan != Clan.PlayerClan)
       {
         boost_exp = true;
 

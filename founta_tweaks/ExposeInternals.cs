@@ -21,6 +21,13 @@ namespace FountaTweaks
   public class ExposeInternals
   {
     [HarmonyReversePatch]
+    [HarmonyPatch(typeof(StandingPoint), "IsDisabledForAgent")]
+    public static bool BaseIsDisabledForAgent(StandingPoint instance, Agent agent)
+    {
+      return true;
+    }
+
+    [HarmonyReversePatch]
     [HarmonyPatch(typeof(PerkObject), "PrimaryBonus")]
     [HarmonyPatch(MethodType.Setter)]
     public static void SetPrimaryBonus(PerkObject instance, float value)
