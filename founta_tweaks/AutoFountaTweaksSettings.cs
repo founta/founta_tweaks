@@ -172,7 +172,7 @@ namespace FountaTweaks
     private float _bow_SkirmishPhaseMaster_s = -5.000000f;
     private float _bow_EagleEye_p = 50.000000f;
     private float _bow_EagleEye_s = 10.000000f;
-    private float _bow_BullsEye_p = 0.100000f;
+    private float _bow_BullsEye_p = 10.000000f;
     private float _bow_BullsEye_s = 2.000000f;
     private float _bow_RenownedArcher_p = 10.000000f;
     private float _bow_RenownedArcher_s = -30.000000f;
@@ -402,7 +402,7 @@ namespace FountaTweaks
     private float _sct_RumourNetwork_s = 30.000000f;
     private float _sct_VantagePoint_p = 25.000000f;
     private float _sct_VantagePoint_s = 10.000000f;
-    private float _sct_KeenSight_p = -0.500000f;
+    private float _sct_KeenSight_p = -25.000000f;
     private float _sct_KeenSight_s = -50.000000f;
     private float _sct_Rearguard_p = 20.000000f;
     private float _sct_Rearguard_s = 10.000000f;
@@ -416,7 +416,7 @@ namespace FountaTweaks
     private float _rog_TwoFaced_s = 0.000000f;
     private float _rog_DeepPockets_p = 2.000000f;
     private float _rog_DeepPockets_s = -20.000000f;
-    private float _rog_InBestLight_p = 1.000000f;
+    private float _rog_InBestLight_p = 20.000000f;
     private float _rog_InBestLight_s = 0.200000f;
     private float _rog_KnowHow_p = 0.050000f;
     private float _rog_KnowHow_s = 1.000000f;
@@ -485,37 +485,15 @@ namespace FountaTweaks
     private float _ldr_TalentMagnet_s = 1.000000f;
     private float _ldr_UltimateLeader_p = 1.000000f;
     private float _ldr_UltimateLeader_s = 0.000000f;
-    private float _chm_Virile_p = 0.300000f;
-    private float _chm_Virile_s = 1.000000f;
-    private float _chm_SelfPromoter_p = 5.000000f;
-    private float _chm_SelfPromoter_s = 1.000000f;
-    private float _chm_Oratory_p = 1.000000f;
-    private float _chm_Oratory_s = 1.000000f;
-    private float _chm_Warlord_p = 0.300000f;
-    private float _chm_Warlord_s = 1.000000f;
+    private float _chm_Diplomacy_p = -15.000000f;
+    private float _chm_ShowYourScars_p = 20.000000f;
     private float _chm_ForgivableGrievances_p = 0.200000f;
-    private float _chm_ForgivableGrievances_s = 1.000000f;
     private float _chm_MeaningfulFavors_p = 0.100000f;
-    private float _chm_MeaningfulFavors_s = 1.000000f;
-    private float _chm_InBloom_p = 0.200000f;
-    private float _chm_InBloom_s = 1.000000f;
-    private float _chm_YoungAndRespectful_p = 0.200000f;
-    private float _chm_YoungAndRespectful_s = 1.000000f;
-    private float _chm_Firebrand_p = -0.500000f;
-    private float _chm_Firebrand_s = 1.000000f;
-    private float _chm_FlexibleEthics_p = -0.300000f;
-    private float _chm_FlexibleEthics_s = 1.000000f;
-    private float _chm_SlickNegotiator_p = -0.200000f;
-    private float _chm_SlickNegotiator_s = -0.100000f;
-    private float _chm_Tribute_p = 0.200000f;
-    private float _chm_Tribute_s = 1.000000f;
-    private float _chm_MoralLeader_p = -1.000000f;
-    private float _chm_MoralLeader_s = 1.000000f;
-    private float _chm_NaturalLeader_p = -1.000000f;
-    private float _chm_NaturalLeader_s = -0.100000f;
-    private float _chm_PublicSpeaker_p = 0.300000f;
-    private float _chm_Camaraderie_p = 1.000000f;
-    private float _chm_Camaraderie_s = 1.000000f;
+    private float _chm_InBloom_p = 20.000000f;
+    private float _chm_YoungAndRespectful_p = 20.000000f;
+    private float _chm_RespectfulOpposition_p = 0.300000f;
+    private float _chm_OurGloriousLeader_p = 20.000000f;
+    private float _chm_ProFamilia_p = 10.000000f;
     private float _trd_Appraiser_p = -15.000000f;
     private float _trd_Appraiser_s = 0.000000f;
     private float _trd_WholeSeller_p = -15.000000f;
@@ -536,8 +514,8 @@ namespace FountaTweaks
     private float _trd_ArtisanCommunity_s = 1.000000f;
     private float _trd_GreatInvestor_p = 1.000000f;
     private float _trd_GreatInvestor_s = -30.000000f;
-    private float _trd_MercenaryConnections_p = 25.000000f;
-    private float _trd_MercenaryConnections_s = -0.250000f;
+    private float _trd_VillagerConnections_p = 25.000000f;
+    private float _trd_VillagerConnections_s = 50.000000f;
     private float _trd_ContentTrades_p = 10.000000f;
     private float _trd_ContentTrades_s = -0.500000f;
     private float _trd_InsurancePlans_p = 5000.000000f;
@@ -548,7 +526,7 @@ namespace FountaTweaks
     private float _trd_GranaryAccountant_s = 20.000000f;
     private float _trd_SwordForBarter_p = -0.200000f;
     private float _trd_SwordForBarter_s = -0.150000f;
-    private float _trd_SelfMadeMan_p = -0.500000f;
+    private float _trd_SelfMadeMan_p = -10.000000f;
     private float _trd_SilverTongue_p = -0.500000f;
     private float _trd_SilverTongue_s = -0.150000f;
     private float _trd_ManOfMeans_p = -0.200000f;
@@ -591,8 +569,8 @@ namespace FountaTweaks
     private float _st_ArenicosMules_s = -20.000000f;
     private float _st_ArenicosHorses_p = 0.100000f;
     private float _st_ArenicosHorses_s = -20.000000f;
-    private float _st_MasterOfPlanning_p = -0.400000f;
-    private float _st_MasterOfPlanning_s = 0.200000f;
+    private float _st_UrbanDeveloper_p = 0.000000f;
+    private float _st_UrbanDeveloper_s = 20.000000f;
     private float _st_MasterOfWarcraft_p = -25.000000f;
     private float _st_MasterOfWarcraft_s = -0.050000f;
     private float _med_SelfMedication_p = 30.000000f;
@@ -612,7 +590,7 @@ namespace FountaTweaks
     private float _med_GoodLogdings_p = 20.000000f;
     private float _med_GoodLogdings_s = 1.000000f;
     private float _med_SiegeMedic_p = 50.000000f;
-    private float _med_SiegeMedic_s = -0.300000f;
+    private float _med_SiegeMedic_s = 30.000000f;
     private float _med_Veterinarian_p = 30.000000f;
     private float _med_Veterinarian_s = 50.000000f;
     private float _med_PristineStreets_p = 1.000000f;
@@ -634,7 +612,7 @@ namespace FountaTweaks
     private float _med_HelpingHands_p = 2.000000f;
     private float _med_HelpingHands_s = -50.000000f;
     private float _med_BattleHardened_p = 25.000000f;
-    private float _med_BattleHardened_s = -0.250000f;
+    private float _med_BattleHardened_s = -25.000000f;
     private float _eng_Scaffolds_p = 0.100000f;
     private float _eng_Scaffolds_s = 30.000000f;
     private float _eng_TorsionEngines_p = 0.100000f;
@@ -660,7 +638,7 @@ namespace FountaTweaks
     private float _eng_Battlements_s = 100.000000f;
     private float _eng_EngineeringGuilds_p = 1.000000f;
     private float _eng_EngineeringGuilds_s = 0.250000f;
-    private float _eng_Metallurgy_p = 0.200000f;
+    private float _eng_Metallurgy_p = 5.000000f;
     private float _eng_Metallurgy_s = 5.000000f;
     private float _eng_ImprovedTools_p = 0.200000f;
     private float _eng_ImprovedTools_s = 5.000000f;
@@ -1430,18 +1408,12 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable UltimateLeader modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Leadership/{=FK3W0SKk}Ultimate Leader", IsMainToggle=true)]
     public bool LeadershipUltimateLeaderPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Virile modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=mbqoZ4WH}Virile", IsMainToggle=true)]
-    public bool CharmVirilePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SelfPromoter modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=hkG9ATZy}Self Promoter", IsMainToggle=true)]
-    public bool CharmSelfPromoterPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Oratory modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=OZXEMb2C}Oratory", IsMainToggle=true)]
-    public bool CharmOratoryPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Warlord modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=jiWr5Rlz}Warlord", IsMainToggle=true)]
-    public bool CharmWarlordPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Diplomacy modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/{=L7wn49Uz}Diplomacy", IsMainToggle=true)]
+    public bool CharmDiplomacyPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ShowYourScars modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/{=hNmz5OL8}Show Your Scars", IsMainToggle=true)]
+    public bool CharmShowYourScarsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ForgivableGrievances modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Charm/{=l863hIyN}Forgivable Grievances", IsMainToggle=true)]
     public bool CharmForgivableGrievancesPerkModificationEnabled {get; set;} = false;
@@ -1452,32 +1424,17 @@ namespace FountaTweaks
     [SettingPropertyGroup("Perks/Charm/{=ZlXSlx0p}In Bloom", IsMainToggle=true)]
     public bool CharmInBloomPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable YoungAndRespectful modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=TpzZgFsA}Young And Respectful", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/{=TpzZgFsA}Young and Respectful", IsMainToggle=true)]
     public bool CharmYoungAndRespectfulPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Firebrand modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=EbKP7Xx5}Firebrand", IsMainToggle=true)]
-    public bool CharmFirebrandPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable FlexibleEthics modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=58Imsasy}Flexible Ethics", IsMainToggle=true)]
-    public bool CharmFlexibleEthicsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SlickNegotiator modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=WOqxWM67}Slick Negotiator", IsMainToggle=true)]
-    public bool CharmSlickNegotiatorPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Tribute modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=dSBbSHkM}Tribute", IsMainToggle=true)]
-    public bool CharmTributePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MoralLeader modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=zUXUrGWa}Morale Leader", IsMainToggle=true)]
-    public bool CharmMoralLeaderPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable NaturalLeader modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=qaZDUknZ}Natural Leader", IsMainToggle=true)]
-    public bool CharmNaturalLeaderPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable PublicSpeaker modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=16fxd9fN}Public Speaker", IsMainToggle=true)]
-    public bool CharmPublicSpeakerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Camaraderie modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=p2zZGkZw}Camaraderie", IsMainToggle=true)]
-    public bool CharmCamaraderiePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable RespectfulOpposition modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/{=TIqdvtCL}Respectful Opposition", IsMainToggle=true)]
+    public bool CharmRespectfulOppositionPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable OurGloriousLeader modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/{=5HL8Iqdx}Our Glorious Leader", IsMainToggle=true)]
+    public bool CharmOurGloriousLeaderPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ProFamilia modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/{=NGDa8KpY}Pro Familia", IsMainToggle=true)]
+    public bool CharmProFamiliaPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Appraiser modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Trade/{=b3PsxeiB}Appraiser", IsMainToggle=true)]
     public bool TradeAppraiserPerkModificationEnabled {get; set;} = false;
@@ -1508,9 +1465,9 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable GreatInvestor modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Trade/{=g9qLrEb4}Great Investor", IsMainToggle=true)]
     public bool TradeGreatInvestorPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MercenaryConnections modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=*}Mercenary Connections", IsMainToggle=true)]
-    public bool TradeMercenaryConnectionsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable VillagerConnections modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/{=rHrIM4PI}Villager Connections", IsMainToggle=true)]
+    public bool TradeVillagerConnectionsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ContentTrades modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Trade/{=FV4SWLQx}Content Trades", IsMainToggle=true)]
     public bool TradeContentTradesPerkModificationEnabled {get; set;} = false;
@@ -1527,7 +1484,7 @@ namespace FountaTweaks
     [SettingPropertyGroup("Perks/Trade/{=AIsDxCeG}Sword For Barter", IsMainToggle=true)]
     public bool TradeSwordForBarterPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SelfMadeMan modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=uHJltZ5D}Self-made Man", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/{=uHJltZ5D}Self Made Man", IsMainToggle=true)]
     public bool TradeSelfMadeManPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SilverTongue modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Trade/{=5rDdJpJo}Silver Tongue", IsMainToggle=true)]
@@ -1592,9 +1549,9 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable ArenicosHorses modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Steward/{=tbQ5bUzD}Arenicos' Horses", IsMainToggle=true)]
     public bool StewardArenicosHorsesPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MasterOfPlanning modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/{=*}Master of Planning", IsMainToggle=true)]
-    public bool StewardMasterOfPlanningPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable UrbanDeveloper modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/{=KK8MBZj5}Urban Developer", IsMainToggle=true)]
+    public bool StewardUrbanDeveloperPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable MasterOfWarcraft modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Steward/{=MM0ARhGh}Master of Warcraft", IsMainToggle=true)]
     public bool StewardMasterOfWarcraftPerkModificationEnabled {get; set;} = false;
@@ -1995,7 +1952,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=O4fIFDAx}Infantry in your party gain an additional 10% of the total xp earned after battles.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=O4fIFDAx}Infantry in your formation gain an additional 10% of the total xp earned after battles.")]
     [SettingPropertyGroup("Perks/OneHanded/{=M3aNEkBJ}Corps-a-corps")]
     public float oh_CorpsACorps_p {
       get => _oh_CorpsACorps_p;
@@ -2385,7 +2342,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=JmrERaq4}Infantry in your party gain +5 experience for each enemy you kill with a 2-handed weapon.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=JmrERaq4}Troops in the formation you are leading gain 5 experience for each enemy you kill.")]
     [SettingPropertyGroup("Perks/TwoHanded/{=miMZavW3}Baptised in Blood")]
     public float twh_BaptisedInBlood_p {
       get => _twh_BaptisedInBlood_p;
@@ -3621,7 +3578,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=6ncPxxfa}Ranged troops in your party gain an additional 10% of the total xp earned after battles.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=6ncPxxfa}Ranged troops in your formation gain an additional 10% of the total xp earned after battles.")]
     [SettingPropertyGroup("Perks/Bow/{=QH77Weyq}Bulls Eye")]
     public float bow_BullsEye_p {
       get => _bow_BullsEye_p;
@@ -6387,7 +6344,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=CJIsjKn0}20% less penalty from overburden.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=CJIsjKn0}20% less penalty from overburden ")]
     [SettingPropertyGroup("Perks/Scouting/{=sA2OrT6l}Unburdened")]
     public float sct_Unburdened_p {
       get => _sct_Unburdened_p;
@@ -6413,7 +6370,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=5NRai8K5}Increase maximum track life by 20%.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=5NRai8K5}Increase maximum track life by 20% ")]
     [SettingPropertyGroup("Perks/Scouting/{=AoaabumE}Tracker")]
     public float sct_Tracker_p {
       get => _sct_Tracker_p;
@@ -6439,7 +6396,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=MISEi5Bh}Increase maximum track spotting distance by 20%.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=MISEi5Bh}Increase maximum track spotting distance by 20%")]
     [SettingPropertyGroup("Perks/Scouting/{=09gOOa0h}Ranger")]
     public float sct_Ranger_p {
       get => _sct_Ranger_p;
@@ -6529,7 +6486,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=avZSXLfw}Increase carry capacity from pack animals by 10%.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=avZSXLfw}Increase carry capacity from pack animals by 10%")]
     [SettingPropertyGroup("Perks/Scouting/{=mrtDAhtL}Beast Whisperer")]
     public float sct_BeastWhisperer_s {
       get => _sct_BeastWhisperer_s;
@@ -6621,7 +6578,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=*}Reduce sight difficulty penalty of parties in forests by 50%.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
     [SettingPropertyGroup("Perks/Scouting/{=3yVPrhXt}Keen Sight")]
     public float sct_KeenSight_p {
       get => _sct_KeenSight_p;
@@ -6803,7 +6760,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=*}Notables of villages give +1 extra troop when successfuly forced for volunteers.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
     [SettingPropertyGroup("Perks/Roguery/{=xoARIHde}In Best Light")]
     public float rog_InBestLight_p {
       get => _rog_InBestLight_p;
@@ -6959,7 +6916,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=*}Bandit parties always offer to join you.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
     [SettingPropertyGroup("Perks/Roguery/{=2PVm7NON}Partners in Crime")]
     public float rog_PartnersInCrime_p {
       get => _rog_PartnersInCrime_p;
@@ -6985,7 +6942,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=NsBKUeQG}Bandit units in your party has +10 bonus to Vigor and Control skills.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=NsBKUeQG}Bandit units in your party has better +10 in vigor and control skills.")]
     [SettingPropertyGroup("Perks/Roguery/{=oumTabhS}One of the Family")]
     public float rog_OneOfTheFamily_p {
       get => _rog_OneOfTheFamily_p;
@@ -7701,105 +7658,29 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=bbkVpX2U}30% more likely to have children.")]
-    [SettingPropertyGroup("Perks/Charm/{=mbqoZ4WH}Virile")]
-    public float chm_Virile_p {
-      get => _chm_Virile_p;
+    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=22xPl7Y0}15% reduced barter penalty.")]
+    [SettingPropertyGroup("Perks/Charm/{=L7wn49Uz}Diplomacy")]
+    public float chm_Diplomacy_p {
+      get => _chm_Diplomacy_p;
       set {
-        if (_chm_Virile_p != value) {
-          _chm_Virile_p = value;
+        if (_chm_Diplomacy_p != value) {
+          _chm_Diplomacy_p = value;
           if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.Virile, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=8F1JaR4I}10% chance to get 1 relation with a random notable in governed settlement per day while continuous projects are active.")]
-    [SettingPropertyGroup("Perks/Charm/{=mbqoZ4WH}Virile")]
-    public float chm_Virile_s {
-      get => _chm_Virile_s;
-      set {
-        if (_chm_Virile_s != value) {
-          _chm_Virile_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.Virile, value);
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.Diplomacy, value);
         }
       }
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=TbIub0u8}Gain 5 influence by winning a tournament.")]
-    [SettingPropertyGroup("Perks/Charm/{=hkG9ATZy}Self Promoter")]
-    public float chm_SelfPromoter_p {
-      get => _chm_SelfPromoter_p;
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=f7XrO5Z8}20% more renown from battles.")]
+    [SettingPropertyGroup("Perks/Charm/{=hNmz5OL8}Show Your Scars")]
+    public float chm_ShowYourScars_p {
+      get => _chm_ShowYourScars_p;
       set {
-        if (_chm_SelfPromoter_p != value) {
-          _chm_SelfPromoter_p = value;
+        if (_chm_ShowYourScars_p != value) {
+          _chm_ShowYourScars_p = value;
           if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.SelfPromoter, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ikNAXaNx}Gain 1 morale while in a besieged settlement.")]
-    [SettingPropertyGroup("Perks/Charm/{=hkG9ATZy}Self Promoter")]
-    public float chm_SelfPromoter_s {
-      get => _chm_SelfPromoter_s;
-      set {
-        if (_chm_SelfPromoter_s != value) {
-          _chm_SelfPromoter_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.SelfPromoter, value);
-        }
-      }
-    }
-
-
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=JBLwQVNT}You gain 1 renown and influence for each issue resolved.")]
-    [SettingPropertyGroup("Perks/Charm/{=OZXEMb2C}Oratory")]
-    public float chm_Oratory_p {
-      get => _chm_Oratory_p;
-      set {
-        if (_chm_Oratory_p != value) {
-          _chm_Oratory_p = value;
-          if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.Oratory, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=IYYv49rg}Everytime you defeat an enemy lord party you gain 1 relationship with a random notable of your faction.")]
-    [SettingPropertyGroup("Perks/Charm/{=OZXEMb2C}Oratory")]
-    public float chm_Oratory_s {
-      get => _chm_Oratory_s;
-      set {
-        if (_chm_Oratory_s != value) {
-          _chm_Oratory_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.Oratory, value);
-        }
-      }
-    }
-
-
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=1CqmyOu7}Increase influence gain from battles by 30%.")]
-    [SettingPropertyGroup("Perks/Charm/{=jiWr5Rlz}Warlord")]
-    public float chm_Warlord_p {
-      get => _chm_Warlord_p;
-      set {
-        if (_chm_Warlord_p != value) {
-          _chm_Warlord_p = value;
-          if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.Warlord, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=dwTnvjXW}Everytime you defeat an enemy lord party you gain +1 relationship with a random lord of your faction.")]
-    [SettingPropertyGroup("Perks/Charm/{=jiWr5Rlz}Warlord")]
-    public float chm_Warlord_s {
-      get => _chm_Warlord_s;
-      set {
-        if (_chm_Warlord_s != value) {
-          _chm_Warlord_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.Warlord, value);
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.ShowYourScars, value);
         }
       }
     }
@@ -7817,18 +7698,6 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=hbrMyK5N}5% chance per day to increase relations with a random NPC of negative relations with you within the settlement.")]
-    [SettingPropertyGroup("Perks/Charm/{=l863hIyN}Forgivable Grievances")]
-    public float chm_ForgivableGrievances_s {
-      get => _chm_ForgivableGrievances_s;
-      set {
-        if (_chm_ForgivableGrievances_s != value) {
-          _chm_ForgivableGrievances_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.ForgivableGrievances, value);
-        }
-      }
-    }
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=bGX2Iojc}10% better chance for double persuasion success.")]
@@ -7843,21 +7712,9 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=OFai6MA4}Relations with powerful settlement NPCs improve overtime.")]
-    [SettingPropertyGroup("Perks/Charm/{=4hUEryJ6}Meaningful Favors")]
-    public float chm_MeaningfulFavors_s {
-      get => _chm_MeaningfulFavors_s;
-      set {
-        if (_chm_MeaningfulFavors_s != value) {
-          _chm_MeaningfulFavors_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.MeaningfulFavors, value);
-        }
-      }
-    }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=3cQs44Et}Increase any relationship gain with opposite gender by 20%.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=3cQs44Et}Increase relationship gain with opposite gender by 20%.")]
     [SettingPropertyGroup("Perks/Charm/{=ZlXSlx0p}In Bloom")]
     public float chm_InBloom_p {
       get => _chm_InBloom_p;
@@ -7869,22 +7726,10 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=dFXay84g}2% chance per day to increase relations with a random notable of opposed sex within the settlement.")]
-    [SettingPropertyGroup("Perks/Charm/{=ZlXSlx0p}In Bloom")]
-    public float chm_InBloom_s {
-      get => _chm_InBloom_s;
-      set {
-        if (_chm_InBloom_s != value) {
-          _chm_InBloom_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.InBloom, value);
-        }
-      }
-    }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=I4JZRzuH}Increase any relationship gain with same gender by 20%.")]
-    [SettingPropertyGroup("Perks/Charm/{=TpzZgFsA}Young And Respectful")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=I4JZRzuH}Increase relationship gain with same gender by 20%.")]
+    [SettingPropertyGroup("Perks/Charm/{=TpzZgFsA}Young and Respectful")]
     public float chm_YoungAndRespectful_p {
       get => _chm_YoungAndRespectful_p;
       set {
@@ -7895,211 +7740,45 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=nrvNbenk}2% chance per day to increase relations with a random notable of same sex within the settlement.")]
-    [SettingPropertyGroup("Perks/Charm/{=TpzZgFsA}Young And Respectful")]
-    public float chm_YoungAndRespectful_s {
-      get => _chm_YoungAndRespectful_s;
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=i0ehHB2a}30% chance to negate relationship penalty from kingdom decisions.")]
+    [SettingPropertyGroup("Perks/Charm/{=TIqdvtCL}Respectful Opposition")]
+    public float chm_RespectfulOpposition_p {
+      get => _chm_RespectfulOpposition_p;
       set {
-        if (_chm_YoungAndRespectful_s != value) {
-          _chm_YoungAndRespectful_s = value;
+        if (_chm_RespectfulOpposition_p != value) {
+          _chm_RespectfulOpposition_p = value;
           if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.YoungAndRespectful, value);
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.RespectfulOpposition, value);
         }
       }
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=sIWEhq1p}50% less influence cost to initiate kingdom decisions.")]
-    [SettingPropertyGroup("Perks/Charm/{=EbKP7Xx5}Firebrand")]
-    public float chm_Firebrand_p {
-      get => _chm_Firebrand_p;
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=9RmkwGP5}Gain 20% more influence from personal actions.")]
+    [SettingPropertyGroup("Perks/Charm/{=5HL8Iqdx}Our Glorious Leader")]
+    public float chm_OurGloriousLeader_p {
+      get => _chm_OurGloriousLeader_p;
       set {
-        if (_chm_Firebrand_p != value) {
-          _chm_Firebrand_p = value;
+        if (_chm_OurGloriousLeader_p != value) {
+          _chm_OurGloriousLeader_p = value;
           if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.Firebrand, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=0yGa0Iwb}Increase recruitment level from rural notables by +1.")]
-    [SettingPropertyGroup("Perks/Charm/{=EbKP7Xx5}Firebrand")]
-    public float chm_Firebrand_s {
-      get => _chm_Firebrand_s;
-      set {
-        if (_chm_Firebrand_s != value) {
-          _chm_Firebrand_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.Firebrand, value);
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.OurGloriousLeader, value);
         }
       }
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=7xNrHsWx}30% less influence cost when voting for proposals made by other people.")]
-    [SettingPropertyGroup("Perks/Charm/{=58Imsasy}Flexible Ethics")]
-    public float chm_FlexibleEthics_p {
-      get => _chm_FlexibleEthics_p;
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=WQ3Ohs2u}Clan member parties gain 10% more influence from actions.")]
+    [SettingPropertyGroup("Perks/Charm/{=NGDa8KpY}Pro Familia")]
+    public float chm_ProFamilia_p {
+      get => _chm_ProFamilia_p;
       set {
-        if (_chm_FlexibleEthics_p != value) {
-          _chm_FlexibleEthics_p = value;
+        if (_chm_ProFamilia_p != value) {
+          _chm_ProFamilia_p = value;
           if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.FlexibleEthics, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=MfTx4gyp}Increase recruitment level from urban notables by +1.")]
-    [SettingPropertyGroup("Perks/Charm/{=58Imsasy}Flexible Ethics")]
-    public float chm_FlexibleEthics_s {
-      get => _chm_FlexibleEthics_s;
-      set {
-        if (_chm_FlexibleEthics_s != value) {
-          _chm_FlexibleEthics_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.FlexibleEthics, value);
-        }
-      }
-    }
-
-
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=UbBnKVaI}Hiring mercenaries is 20% cheaper.")]
-    [SettingPropertyGroup("Perks/Charm/{=WOqxWM67}Slick Negotiator")]
-    public float chm_SlickNegotiator_p {
-      get => _chm_SlickNegotiator_p;
-      set {
-        if (_chm_SlickNegotiator_p != value) {
-          _chm_SlickNegotiator_p = value;
-          if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.SlickNegotiator, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=DdoGlKmU}Reduce item barter penalty with the lords of the different culture with you 10%.")]
-    [SettingPropertyGroup("Perks/Charm/{=WOqxWM67}Slick Negotiator")]
-    public float chm_SlickNegotiator_s {
-      get => _chm_SlickNegotiator_s;
-      set {
-        if (_chm_SlickNegotiator_s != value) {
-          _chm_SlickNegotiator_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.SlickNegotiator, value);
-        }
-      }
-    }
-
-
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=joDbjfWd}Increase relationship bonus by 20% chance when paying more than enough in barters.")]
-    [SettingPropertyGroup("Perks/Charm/{=dSBbSHkM}Tribute")]
-    public float chm_Tribute_p {
-      get => _chm_Tribute_p;
-      set {
-        if (_chm_Tribute_p != value) {
-          _chm_Tribute_p = value;
-          if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.Tribute, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=2i4EmlLi}Gain additional relation when you increase relationship with cruel lords.")]
-    [SettingPropertyGroup("Perks/Charm/{=dSBbSHkM}Tribute")]
-    public float chm_Tribute_s {
-      get => _chm_Tribute_s;
-      set {
-        if (_chm_Tribute_s != value) {
-          _chm_Tribute_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.Tribute, value);
-        }
-      }
-    }
-
-
-    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=aj2yAdM9}Characters in your own faction requires -1 persusion success.")]
-    [SettingPropertyGroup("Perks/Charm/{=zUXUrGWa}Morale Leader")]
-    public float chm_MoralLeader_p {
-      get => _chm_MoralLeader_p;
-      set {
-        if (_chm_MoralLeader_p != value) {
-          _chm_MoralLeader_p = value;
-          if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.MoralLeader, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=CGOG31aq}For every project completed increase notable relations with the owner by 1.")]
-    [SettingPropertyGroup("Perks/Charm/{=zUXUrGWa}Morale Leader")]
-    public float chm_MoralLeader_s {
-      get => _chm_MoralLeader_s;
-      set {
-        if (_chm_MoralLeader_s != value) {
-          _chm_MoralLeader_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.MoralLeader, value);
-        }
-      }
-    }
-
-
-    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=PgWBBJbP}Characters in other factions requires -1 persusion success.")]
-    [SettingPropertyGroup("Perks/Charm/{=qaZDUknZ}Natural Leader")]
-    public float chm_NaturalLeader_p {
-      get => _chm_NaturalLeader_p;
-      set {
-        if (_chm_NaturalLeader_p != value) {
-          _chm_NaturalLeader_p = value;
-          if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.NaturalLeader, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=aZIEZktN}Your companions gain 20% more experience.")]
-    [SettingPropertyGroup("Perks/Charm/{=qaZDUknZ}Natural Leader")]
-    public float chm_NaturalLeader_s {
-      get => _chm_NaturalLeader_s;
-      set {
-        if (_chm_NaturalLeader_s != value) {
-          _chm_NaturalLeader_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.NaturalLeader, value);
-        }
-      }
-    }
-
-
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=56XKyOib}Renown gain from battles are increased by 30%.")]
-    [SettingPropertyGroup("Perks/Charm/{=16fxd9fN}Public Speaker")]
-    public float chm_PublicSpeaker_p {
-      get => _chm_PublicSpeaker_p;
-      set {
-        if (_chm_PublicSpeaker_p != value) {
-          _chm_PublicSpeaker_p = value;
-          if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.PublicSpeaker, value);
-        }
-      }
-    }
-
-
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=IF7tcOY6}You gain double relations with a lord when you aid them in battle.")]
-    [SettingPropertyGroup("Perks/Charm/{=p2zZGkZw}Camaraderie")]
-    public float chm_Camaraderie_p {
-      get => _chm_Camaraderie_p;
-      set {
-        if (_chm_Camaraderie_p != value) {
-          _chm_Camaraderie_p = value;
-          if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.Camaraderie, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Tqfqgub5}Increase companion limit by +1.")]
-    [SettingPropertyGroup("Perks/Charm/{=p2zZGkZw}Camaraderie")]
-    public float chm_Camaraderie_s {
-      get => _chm_Camaraderie_s;
-      set {
-        if (_chm_Camaraderie_s != value) {
-          _chm_Camaraderie_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.Camaraderie, value);
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.ProFamilia, value);
         }
       }
     }
@@ -8183,7 +7862,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=eWa2Rcla}Your workshops have 20% less upkeep.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=eWa2Rcla}Your shop have 20% less upkeep.")]
     [SettingPropertyGroup("Perks/Trade/{=InLGoUbB}Market Dealer")]
     public float trd_MarketDealer_p {
       get => _trd_MarketDealer_p;
@@ -8313,7 +7992,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=81qgJ7fW}Every profitable workshop you own gives you 1 renown per day.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=81qgJ7fW}Every profitable shop you own gives you 1 renown per day.")]
     [SettingPropertyGroup("Perks/Trade/{=8f8UGq46}Artisan Community")]
     public float trd_ArtisanCommunity_p {
       get => _trd_ArtisanCommunity_p;
@@ -8365,27 +8044,27 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=B1meG5eO}Your workshop productions are increased by 25%.")]
-    [SettingPropertyGroup("Perks/Trade/{=*}Mercenary Connections")]
-    public float trd_MercenaryConnections_p {
-      get => _trd_MercenaryConnections_p;
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=B1meG5eO}Your workshop productions increased by 25%.")]
+    [SettingPropertyGroup("Perks/Trade/{=rHrIM4PI}Villager Connections")]
+    public float trd_VillagerConnections_p {
+      get => _trd_VillagerConnections_p;
       set {
-        if (_trd_MercenaryConnections_p != value) {
-          _trd_MercenaryConnections_p = value;
+        if (_trd_VillagerConnections_p != value) {
+          _trd_VillagerConnections_p = value;
           if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Trade.MercenaryConnections, value);
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Trade.VillagerConnections, value);
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=*}Mercenary troops' wages are decreased by 25%.")]
-    [SettingPropertyGroup("Perks/Trade/{=*}Mercenary Connections")]
-    public float trd_MercenaryConnections_s {
-      get => _trd_MercenaryConnections_s;
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
+    [SettingPropertyGroup("Perks/Trade/{=rHrIM4PI}Villager Connections")]
+    public float trd_VillagerConnections_s {
+      get => _trd_VillagerConnections_s;
       set {
-        if (_trd_MercenaryConnections_s != value) {
-          _trd_MercenaryConnections_s = value;
+        if (_trd_VillagerConnections_s != value) {
+          _trd_VillagerConnections_s = value;
           if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Trade.MercenaryConnections, value);
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Trade.VillagerConnections, value);
         }
       }
     }
@@ -8403,7 +8082,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=rbYHF03o}Party wage is decreased by 50% while waiting in settlements.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=rbYHF03o}Wage decreased by 50% while waiting in settlements.")]
     [SettingPropertyGroup("Perks/Trade/{=FV4SWLQx}Content Trades")]
     public float trd_ContentTrades_s {
       get => _trd_ContentTrades_s;
@@ -8443,7 +8122,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=jPcULnsk}Your workshops return 5000 gold when town is captured by enemy.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=jPcULnsk}Your shops return 5000 gold when town is captured by enemy.")]
     [SettingPropertyGroup("Perks/Trade/{=u9oONz9o}Rapid Development")]
     public float trd_RapidDevelopment_p {
       get => _trd_RapidDevelopment_p;
@@ -8495,7 +8174,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=UbBnKVaI}Hiring mercenaries is 20% cheaper.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=UbBnKVaI}You hire mercenaries from taverns for 20% cheaper.")]
     [SettingPropertyGroup("Perks/Trade/{=AIsDxCeG}Sword For Barter")]
     public float trd_SwordForBarter_p {
       get => _trd_SwordForBarter_p;
@@ -8521,8 +8200,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=*}Decrease barter penalty for items by 50%.")]
-    [SettingPropertyGroup("Perks/Trade/{=uHJltZ5D}Self-made Man")]
+    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
+    [SettingPropertyGroup("Perks/Trade/{=uHJltZ5D}Self Made Man")]
     public float trd_SelfMadeMan_p {
       get => _trd_SelfMadeMan_p;
       set {
@@ -8795,7 +8474,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=*}During village raids you gain an additional food item for each one you loot.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
     [SettingPropertyGroup("Perks/Steward/{=sC53NYcA}Efficient Campaigner")]
     public float st_EfficientCampaigner_p {
       get => _st_EfficientCampaigner_p;
@@ -9003,7 +8682,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=XzFSWBMG}Mercenary troops' wages and upgrade costs are decreased by 25%.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=XzFSWBMG}Mercenary troops' wage and upgrade cost are decreased by 25%.")]
     [SettingPropertyGroup("Perks/Steward/{=Pg5enC8c}Contractors")]
     public float st_Contractors_p {
       get => _st_Contractors_p;
@@ -9081,27 +8760,27 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=*}Reduce food consumption by 40% while in a siege camp.")]
-    [SettingPropertyGroup("Perks/Steward/{=*}Master of Planning")]
-    public float st_MasterOfPlanning_p {
-      get => _st_MasterOfPlanning_p;
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
+    [SettingPropertyGroup("Perks/Steward/{=KK8MBZj5}Urban Developer")]
+    public float st_UrbanDeveloper_p {
+      get => _st_UrbanDeveloper_p;
       set {
-        if (_st_MasterOfPlanning_p != value) {
-          _st_MasterOfPlanning_p = value;
+        if (_st_UrbanDeveloper_p != value) {
+          _st_UrbanDeveloper_p = value;
           if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Steward.MasterOfPlanning, value);
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Steward.UrbanDeveloper, value);
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=iS7GqDcg}Continuous projects for settlements are 20% more effective.")]
-    [SettingPropertyGroup("Perks/Steward/{=*}Master of Planning")]
-    public float st_MasterOfPlanning_s {
-      get => _st_MasterOfPlanning_s;
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=iS7GqDcg}Continuous projects for settlements are 20% more effective.")]
+    [SettingPropertyGroup("Perks/Steward/{=KK8MBZj5}Urban Developer")]
+    public float st_UrbanDeveloper_s {
+      get => _st_UrbanDeveloper_s;
       set {
-        if (_st_MasterOfPlanning_s != value) {
-          _st_MasterOfPlanning_s = value;
+        if (_st_UrbanDeveloper_s != value) {
+          _st_UrbanDeveloper_s = value;
           if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Steward.MasterOfPlanning, value);
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Steward.UrbanDeveloper, value);
         }
       }
     }
@@ -9353,7 +9032,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=BZIKo5Qd}30% increased chance to recover lethal wounds in siege assaults.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=BZIKo5Qd}30% increased chance to recover lethal wounds in siege assaults.")]
     [SettingPropertyGroup("Perks/Medicine/{=ObwbbEqE}Siege Medic")]
     public float med_SiegeMedic_s {
       get => _med_SiegeMedic_s;
@@ -9483,7 +9162,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=ioYR1Grc}Wounded troops do not decrease morale in battles.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
     [SettingPropertyGroup("Perks/Medicine/{=NxcvQlAk}Health Advice")]
     public float med_HealthAdvise_s {
       get => _med_HealthAdvise_s;
@@ -9549,7 +9228,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HVHEhXbO}Ignore the first negative outcome for the terminally ill roll.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HVHEhXbO}Cheat death(Ignore the first negative outcome for the terminally ill roll).")]
     [SettingPropertyGroup("Perks/Medicine/{=cpg0oHZJ}Cheat Death")]
     public float med_CheatDeath_p {
       get => _med_CheatDeath_p;
@@ -9575,7 +9254,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Sb6BW3GF}Increase max health of other heroes in your party by +10.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Sb6BW3GF}Increase max health of other heroes in your party by 10.")]
     [SettingPropertyGroup("Perks/Medicine/{=ib2SMG9b}Fortitude Tonic")]
     public float med_FortitudeTonic_p {
       get => _med_FortitudeTonic_p;
@@ -9639,7 +9318,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=*}Siege attrition loss chance is reduced by 25%.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
     [SettingPropertyGroup("Perks/Medicine/{=oSbRD72H}Battle Hardened")]
     public float med_BattleHardened_s {
       get => _med_BattleHardened_s;
@@ -9717,7 +9396,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=9arDDOOK}Settlement provides +1 extra catapult at the beginning of the siege.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=9arDDOOK}Settlement provides 1 extra catapult at the beginning of the siege.")]
     [SettingPropertyGroup("Perks/Engineering/{=Nr1GPYSr}Siegeworks")]
     public float eng_SiegeWorks_s {
       get => _eng_SiegeWorks_s;
@@ -9927,7 +9606,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=*}Start siege camps with +1 pre-built ballista.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
     [SettingPropertyGroup("Perks/Engineering/{=hHHEW1HN}Battlements")]
     public float eng_Battlements_p {
       get => _eng_Battlements_p;
@@ -9979,7 +9658,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=*}Looted items are very unlikely to get negative modifiers.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
     [SettingPropertyGroup("Perks/Engineering/{=qjvDsu8u}Metallurgy")]
     public float eng_Metallurgy_p {
       get => _eng_Metallurgy_p;
@@ -10779,53 +10458,24 @@ namespace FountaTweaks
       ref PerkObject _leadershipUltimateLeader = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipUltimateLeader");
       if (LeadershipPerkModificationEnabled && LeadershipUltimateLeaderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipUltimateLeader,_ldr_UltimateLeader_p);
       if (LeadershipPerkModificationEnabled && LeadershipUltimateLeaderPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipUltimateLeader,_ldr_UltimateLeader_s);
-      ref PerkObject _charmVirile = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmVirile");
-      if (CharmPerkModificationEnabled && CharmVirilePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmVirile,_chm_Virile_p);
-      if (CharmPerkModificationEnabled && CharmVirilePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmVirile,_chm_Virile_s);
-      ref PerkObject _charmSelfPromoter = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmSelfPromoter");
-      if (CharmPerkModificationEnabled && CharmSelfPromoterPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmSelfPromoter,_chm_SelfPromoter_p);
-      if (CharmPerkModificationEnabled && CharmSelfPromoterPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmSelfPromoter,_chm_SelfPromoter_s);
-      ref PerkObject _charmOratory = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmOratory");
-      if (CharmPerkModificationEnabled && CharmOratoryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmOratory,_chm_Oratory_p);
-      if (CharmPerkModificationEnabled && CharmOratoryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmOratory,_chm_Oratory_s);
-      ref PerkObject _charmWarlord = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmWarlord");
-      if (CharmPerkModificationEnabled && CharmWarlordPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmWarlord,_chm_Warlord_p);
-      if (CharmPerkModificationEnabled && CharmWarlordPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmWarlord,_chm_Warlord_s);
+      ref PerkObject _charmDiplomacy = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmDiplomacy");
+      if (CharmPerkModificationEnabled && CharmDiplomacyPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmDiplomacy,_chm_Diplomacy_p);
+      ref PerkObject _charmShowYourScars = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmShowYourScars");
+      if (CharmPerkModificationEnabled && CharmShowYourScarsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmShowYourScars,_chm_ShowYourScars_p);
       ref PerkObject _charmForgivableGrievances = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmForgivableGrievances");
       if (CharmPerkModificationEnabled && CharmForgivableGrievancesPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmForgivableGrievances,_chm_ForgivableGrievances_p);
-      if (CharmPerkModificationEnabled && CharmForgivableGrievancesPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmForgivableGrievances,_chm_ForgivableGrievances_s);
       ref PerkObject _charmMeaningfulFavors = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmMeaningfulFavors");
       if (CharmPerkModificationEnabled && CharmMeaningfulFavorsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmMeaningfulFavors,_chm_MeaningfulFavors_p);
-      if (CharmPerkModificationEnabled && CharmMeaningfulFavorsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmMeaningfulFavors,_chm_MeaningfulFavors_s);
       ref PerkObject _charmInBloom = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmInBloom");
       if (CharmPerkModificationEnabled && CharmInBloomPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmInBloom,_chm_InBloom_p);
-      if (CharmPerkModificationEnabled && CharmInBloomPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmInBloom,_chm_InBloom_s);
       ref PerkObject _charmYoungAndRespectful = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmYoungAndRespectful");
       if (CharmPerkModificationEnabled && CharmYoungAndRespectfulPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmYoungAndRespectful,_chm_YoungAndRespectful_p);
-      if (CharmPerkModificationEnabled && CharmYoungAndRespectfulPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmYoungAndRespectful,_chm_YoungAndRespectful_s);
-      ref PerkObject _charmFirebrand = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmFirebrand");
-      if (CharmPerkModificationEnabled && CharmFirebrandPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmFirebrand,_chm_Firebrand_p);
-      if (CharmPerkModificationEnabled && CharmFirebrandPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmFirebrand,_chm_Firebrand_s);
-      ref PerkObject _charmFlexibleEthics = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmFlexibleEthics");
-      if (CharmPerkModificationEnabled && CharmFlexibleEthicsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmFlexibleEthics,_chm_FlexibleEthics_p);
-      if (CharmPerkModificationEnabled && CharmFlexibleEthicsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmFlexibleEthics,_chm_FlexibleEthics_s);
-      ref PerkObject _charmSlickNegotiator = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmSlickNegotiator");
-      if (CharmPerkModificationEnabled && CharmSlickNegotiatorPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmSlickNegotiator,_chm_SlickNegotiator_p);
-      if (CharmPerkModificationEnabled && CharmSlickNegotiatorPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmSlickNegotiator,_chm_SlickNegotiator_s);
-      ref PerkObject _charmTribute = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmTribute");
-      if (CharmPerkModificationEnabled && CharmTributePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmTribute,_chm_Tribute_p);
-      if (CharmPerkModificationEnabled && CharmTributePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmTribute,_chm_Tribute_s);
-      ref PerkObject _charmMoralLeader = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmMoralLeader");
-      if (CharmPerkModificationEnabled && CharmMoralLeaderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmMoralLeader,_chm_MoralLeader_p);
-      if (CharmPerkModificationEnabled && CharmMoralLeaderPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmMoralLeader,_chm_MoralLeader_s);
-      ref PerkObject _charmNaturalLeader = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmNaturalLeader");
-      if (CharmPerkModificationEnabled && CharmNaturalLeaderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmNaturalLeader,_chm_NaturalLeader_p);
-      if (CharmPerkModificationEnabled && CharmNaturalLeaderPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmNaturalLeader,_chm_NaturalLeader_s);
-      ref PerkObject _charmPublicSpeaker = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmPublicSpeaker");
-      if (CharmPerkModificationEnabled && CharmPublicSpeakerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmPublicSpeaker,_chm_PublicSpeaker_p);
-      ref PerkObject _charmCamaraderie = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmCamaraderie");
-      if (CharmPerkModificationEnabled && CharmCamaraderiePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmCamaraderie,_chm_Camaraderie_p);
-      if (CharmPerkModificationEnabled && CharmCamaraderiePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmCamaraderie,_chm_Camaraderie_s);
+      ref PerkObject _charmRespectfulOpposition = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmRespectfulOpposition");
+      if (CharmPerkModificationEnabled && CharmRespectfulOppositionPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmRespectfulOpposition,_chm_RespectfulOpposition_p);
+      ref PerkObject _charmOurGloriousLeader = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmOurGloriousLeader");
+      if (CharmPerkModificationEnabled && CharmOurGloriousLeaderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmOurGloriousLeader,_chm_OurGloriousLeader_p);
+      ref PerkObject _charmProFamilia = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmProFamilia");
+      if (CharmPerkModificationEnabled && CharmProFamiliaPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmProFamilia,_chm_ProFamilia_p);
       ref PerkObject _tradeAppraiser = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeAppraiser");
       if (TradePerkModificationEnabled && TradeAppraiserPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeAppraiser,_trd_Appraiser_p);
       if (TradePerkModificationEnabled && TradeAppraiserPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeAppraiser,_trd_Appraiser_s);
@@ -10856,9 +10506,9 @@ namespace FountaTweaks
       ref PerkObject _tradeGreatInvestor = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeGreatInvestor");
       if (TradePerkModificationEnabled && TradeGreatInvestorPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeGreatInvestor,_trd_GreatInvestor_p);
       if (TradePerkModificationEnabled && TradeGreatInvestorPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeGreatInvestor,_trd_GreatInvestor_s);
-      ref PerkObject _tradeMercenaryConnections = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeMercenaryConnections");
-      if (TradePerkModificationEnabled && TradeMercenaryConnectionsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeMercenaryConnections,_trd_MercenaryConnections_p);
-      if (TradePerkModificationEnabled && TradeMercenaryConnectionsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeMercenaryConnections,_trd_MercenaryConnections_s);
+      ref PerkObject _tradeVillagerConnections = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeVillagerConnections");
+      if (TradePerkModificationEnabled && TradeVillagerConnectionsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeVillagerConnections,_trd_VillagerConnections_p);
+      if (TradePerkModificationEnabled && TradeVillagerConnectionsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeVillagerConnections,_trd_VillagerConnections_s);
       ref PerkObject _tradeContentTrades = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeContentTrades");
       if (TradePerkModificationEnabled && TradeContentTradesPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeContentTrades,_trd_ContentTrades_p);
       if (TradePerkModificationEnabled && TradeContentTradesPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeContentTrades,_trd_ContentTrades_s);
@@ -10939,9 +10589,9 @@ namespace FountaTweaks
       ref PerkObject _stewardArenicosHorses = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardArenicosHorses");
       if (StewardPerkModificationEnabled && StewardArenicosHorsesPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardArenicosHorses,_st_ArenicosHorses_p);
       if (StewardPerkModificationEnabled && StewardArenicosHorsesPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardArenicosHorses,_st_ArenicosHorses_s);
-      ref PerkObject _stewardMasterOfPlanning = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardMasterOfPlanning");
-      if (StewardPerkModificationEnabled && StewardMasterOfPlanningPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardMasterOfPlanning,_st_MasterOfPlanning_p);
-      if (StewardPerkModificationEnabled && StewardMasterOfPlanningPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardMasterOfPlanning,_st_MasterOfPlanning_s);
+      ref PerkObject _stewardUrbanDeveloper = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardUrbanDeveloper");
+      if (StewardPerkModificationEnabled && StewardUrbanDeveloperPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardUrbanDeveloper,_st_UrbanDeveloper_p);
+      if (StewardPerkModificationEnabled && StewardUrbanDeveloperPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardUrbanDeveloper,_st_UrbanDeveloper_s);
       ref PerkObject _stewardMasterOfWarcraft = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardMasterOfWarcraft");
       if (StewardPerkModificationEnabled && StewardMasterOfWarcraftPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardMasterOfWarcraft,_st_MasterOfWarcraft_p);
       if (StewardPerkModificationEnabled && StewardMasterOfWarcraftPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardMasterOfWarcraft,_st_MasterOfWarcraft_s);
