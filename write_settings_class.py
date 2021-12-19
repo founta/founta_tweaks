@@ -135,6 +135,7 @@ for line in default_perk_init_all_code.splitlines():
   #try to extract the primary description, secondary description, primary bonus and secondary bonus
   line_split = line.split(",")
   perk_disp_name = line_split[0].split('"')[1]
+  perk_eng_disp_name = perk_disp_name.split("}")[1]
   primary_desc = None
   secondary_desc = None
   primary_bonus = None
@@ -171,7 +172,7 @@ for line in default_perk_init_all_code.splitlines():
     continue
   
   mod_enable_disable += get_bool_prop_str(sp*2, "Enable %s modifications"%(perk_name), hint='""',
-                                          groups=["Perks",perk_tree,perk_disp_name],require_restart=False, ismaintoggle=True)
+                                          groups=["Perks",perk_tree,perk_name],require_restart=False, ismaintoggle=True)
   mod_enable_disable += [sp*2+"public bool %s%s {get; set;} = false;" % (perk_tree+perk_name,enabled_suffix)]
   
   do_secondary = True
@@ -265,13 +266,13 @@ for line in default_perk_init_all_code.splitlines():
   
   getter_setter_func = []
   getter_setter_func += get_whole_func(func_name_p, "float",
-                                       get_prop_str(sp*2, "Primary Bonus", plow, phigh, primary_desc, ["Perks",perk_tree,perk_disp_name]), 
+                                       get_prop_str(sp*2, "Primary Bonus", plow, phigh, primary_desc, ["Perks",perk_tree,perk_eng_disp_name]), 
                                        get_setter_getter_str(False))
   set_all_lines += get_access_str()
   set_all_lines += get_set_all_str(False)
   if do_secondary:
       getter_setter_func += get_whole_func(func_name_s, "float",
-                                       get_prop_str(sp*2, "Secondary Bonus", slow, shigh, secondary_desc, ["Perks",perk_tree,perk_disp_name]), 
+                                       get_prop_str(sp*2, "Secondary Bonus", slow, shigh, secondary_desc, ["Perks",perk_tree,perk_eng_disp_name]), 
                                        get_setter_getter_str(True))
       set_all_lines += get_set_all_str(True)
 
