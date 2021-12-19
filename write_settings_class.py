@@ -172,7 +172,7 @@ for line in default_perk_init_all_code.splitlines():
     continue
   
   mod_enable_disable += get_bool_prop_str(sp*2, "Enable %s modifications"%(perk_name), hint='""',
-                                          groups=["Perks",perk_tree,perk_name],require_restart=False, ismaintoggle=True)
+                                          groups=["Perks",perk_tree,perk_eng_disp_name],require_restart=False, ismaintoggle=True)
   mod_enable_disable += [sp*2+"public bool %s%s {get; set;} = false;" % (perk_tree+perk_name,enabled_suffix)]
   
   do_secondary = True
