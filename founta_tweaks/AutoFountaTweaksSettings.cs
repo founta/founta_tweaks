@@ -172,7 +172,7 @@ namespace FountaTweaks
     private float _bow_SkirmishPhaseMaster_s = -5.000000f;
     private float _bow_EagleEye_p = 50.000000f;
     private float _bow_EagleEye_s = 10.000000f;
-    private float _bow_BullsEye_p = 0.100000f;
+    private float _bow_BullsEye_p = 10.000000f;
     private float _bow_BullsEye_s = 2.000000f;
     private float _bow_RenownedArcher_p = 10.000000f;
     private float _bow_RenownedArcher_s = -30.000000f;
@@ -402,7 +402,7 @@ namespace FountaTweaks
     private float _sct_RumourNetwork_s = 30.000000f;
     private float _sct_VantagePoint_p = 25.000000f;
     private float _sct_VantagePoint_s = 10.000000f;
-    private float _sct_KeenSight_p = -0.500000f;
+    private float _sct_KeenSight_p = -25.000000f;
     private float _sct_KeenSight_s = -50.000000f;
     private float _sct_Rearguard_p = 20.000000f;
     private float _sct_Rearguard_s = 10.000000f;
@@ -416,7 +416,7 @@ namespace FountaTweaks
     private float _rog_TwoFaced_s = 0.000000f;
     private float _rog_DeepPockets_p = 2.000000f;
     private float _rog_DeepPockets_s = -20.000000f;
-    private float _rog_InBestLight_p = 1.000000f;
+    private float _rog_InBestLight_p = 20.000000f;
     private float _rog_InBestLight_s = 0.200000f;
     private float _rog_KnowHow_p = 0.050000f;
     private float _rog_KnowHow_s = 1.000000f;
@@ -485,37 +485,15 @@ namespace FountaTweaks
     private float _ldr_TalentMagnet_s = 1.000000f;
     private float _ldr_UltimateLeader_p = 1.000000f;
     private float _ldr_UltimateLeader_s = 0.000000f;
-    private float _chm_Virile_p = 0.300000f;
-    private float _chm_Virile_s = 1.000000f;
-    private float _chm_SelfPromoter_p = 5.000000f;
-    private float _chm_SelfPromoter_s = 1.000000f;
-    private float _chm_Oratory_p = 1.000000f;
-    private float _chm_Oratory_s = 1.000000f;
-    private float _chm_Warlord_p = 0.300000f;
-    private float _chm_Warlord_s = 1.000000f;
+    private float _chm_Diplomacy_p = -15.000000f;
+    private float _chm_ShowYourScars_p = 20.000000f;
     private float _chm_ForgivableGrievances_p = 0.200000f;
-    private float _chm_ForgivableGrievances_s = 1.000000f;
     private float _chm_MeaningfulFavors_p = 0.100000f;
-    private float _chm_MeaningfulFavors_s = 1.000000f;
-    private float _chm_InBloom_p = 0.200000f;
-    private float _chm_InBloom_s = 1.000000f;
-    private float _chm_YoungAndRespectful_p = 0.200000f;
-    private float _chm_YoungAndRespectful_s = 1.000000f;
-    private float _chm_Firebrand_p = -0.500000f;
-    private float _chm_Firebrand_s = 1.000000f;
-    private float _chm_FlexibleEthics_p = -0.300000f;
-    private float _chm_FlexibleEthics_s = 1.000000f;
-    private float _chm_SlickNegotiator_p = -0.200000f;
-    private float _chm_SlickNegotiator_s = -0.100000f;
-    private float _chm_Tribute_p = 0.200000f;
-    private float _chm_Tribute_s = 1.000000f;
-    private float _chm_MoralLeader_p = -1.000000f;
-    private float _chm_MoralLeader_s = 1.000000f;
-    private float _chm_NaturalLeader_p = -1.000000f;
-    private float _chm_NaturalLeader_s = -0.100000f;
-    private float _chm_PublicSpeaker_p = 0.300000f;
-    private float _chm_Camaraderie_p = 1.000000f;
-    private float _chm_Camaraderie_s = 1.000000f;
+    private float _chm_InBloom_p = 20.000000f;
+    private float _chm_YoungAndRespectful_p = 20.000000f;
+    private float _chm_RespectfulOpposition_p = 0.300000f;
+    private float _chm_OurGloriousLeader_p = 20.000000f;
+    private float _chm_ProFamilia_p = 10.000000f;
     private float _trd_Appraiser_p = -15.000000f;
     private float _trd_Appraiser_s = 0.000000f;
     private float _trd_WholeSeller_p = -15.000000f;
@@ -536,8 +514,8 @@ namespace FountaTweaks
     private float _trd_ArtisanCommunity_s = 1.000000f;
     private float _trd_GreatInvestor_p = 1.000000f;
     private float _trd_GreatInvestor_s = -30.000000f;
-    private float _trd_MercenaryConnections_p = 25.000000f;
-    private float _trd_MercenaryConnections_s = -0.250000f;
+    private float _trd_VillagerConnections_p = 25.000000f;
+    private float _trd_VillagerConnections_s = 50.000000f;
     private float _trd_ContentTrades_p = 10.000000f;
     private float _trd_ContentTrades_s = -0.500000f;
     private float _trd_InsurancePlans_p = 5000.000000f;
@@ -548,7 +526,7 @@ namespace FountaTweaks
     private float _trd_GranaryAccountant_s = 20.000000f;
     private float _trd_SwordForBarter_p = -0.200000f;
     private float _trd_SwordForBarter_s = -0.150000f;
-    private float _trd_SelfMadeMan_p = -0.500000f;
+    private float _trd_SelfMadeMan_p = -10.000000f;
     private float _trd_SilverTongue_p = -0.500000f;
     private float _trd_SilverTongue_s = -0.150000f;
     private float _trd_ManOfMeans_p = -0.200000f;
@@ -591,8 +569,8 @@ namespace FountaTweaks
     private float _st_ArenicosMules_s = -20.000000f;
     private float _st_ArenicosHorses_p = 0.100000f;
     private float _st_ArenicosHorses_s = -20.000000f;
-    private float _st_MasterOfPlanning_p = -0.400000f;
-    private float _st_MasterOfPlanning_s = 0.200000f;
+    private float _st_UrbanDeveloper_p = 0.000000f;
+    private float _st_UrbanDeveloper_s = 20.000000f;
     private float _st_MasterOfWarcraft_p = -25.000000f;
     private float _st_MasterOfWarcraft_s = -0.050000f;
     private float _med_SelfMedication_p = 30.000000f;
@@ -612,7 +590,7 @@ namespace FountaTweaks
     private float _med_GoodLogdings_p = 20.000000f;
     private float _med_GoodLogdings_s = 1.000000f;
     private float _med_SiegeMedic_p = 50.000000f;
-    private float _med_SiegeMedic_s = -0.300000f;
+    private float _med_SiegeMedic_s = 30.000000f;
     private float _med_Veterinarian_p = 30.000000f;
     private float _med_Veterinarian_s = 50.000000f;
     private float _med_PristineStreets_p = 1.000000f;
@@ -634,7 +612,7 @@ namespace FountaTweaks
     private float _med_HelpingHands_p = 2.000000f;
     private float _med_HelpingHands_s = -50.000000f;
     private float _med_BattleHardened_p = 25.000000f;
-    private float _med_BattleHardened_s = -0.250000f;
+    private float _med_BattleHardened_s = -25.000000f;
     private float _eng_Scaffolds_p = 0.100000f;
     private float _eng_Scaffolds_s = 30.000000f;
     private float _eng_TorsionEngines_p = 0.100000f;
@@ -660,7 +638,7 @@ namespace FountaTweaks
     private float _eng_Battlements_s = 100.000000f;
     private float _eng_EngineeringGuilds_p = 1.000000f;
     private float _eng_EngineeringGuilds_s = 0.250000f;
-    private float _eng_Metallurgy_p = 0.200000f;
+    private float _eng_Metallurgy_p = 5.000000f;
     private float _eng_Metallurgy_s = 5.000000f;
     private float _eng_ImprovedTools_p = 0.200000f;
     private float _eng_ImprovedTools_s = 5.000000f;
@@ -723,994 +701,973 @@ namespace FountaTweaks
     [SettingPropertyGroup("Perks/OneHanded", IsMainToggle=true)]
     public bool OneHandedPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Deflect modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/{=fLaRz2SM}Deflect", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Deflect", IsMainToggle=true)]
     public bool OneHandedDeflectPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Basher modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/{=6yEeYNRu}Basher", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Basher", IsMainToggle=true)]
     public bool OneHandedBasherPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ToBeBlunt modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/{=SJ69EYuI}To Be Blunt", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/To Be Blunt", IsMainToggle=true)]
     public bool OneHandedToBeBluntPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SwiftStrike modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/{=ciELES5v}Swift Strike", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Swift Strike", IsMainToggle=true)]
     public bool OneHandedSwiftStrikePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Cavalry modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/{=YVGtcLHF}Cavalry", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Cavalry", IsMainToggle=true)]
     public bool OneHandedCavalryPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ShieldBearer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/{=vnG1q18y}Shield Bearer", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Shield Bearer", IsMainToggle=true)]
     public bool OneHandedShieldBearerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Trainer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/{=3xuwVbfs}Trainer", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Trainer", IsMainToggle=true)]
     public bool OneHandedTrainerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Duelist modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/{=XphY9cNV}Duelist", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Duelist", IsMainToggle=true)]
     public bool OneHandedDuelistPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ShieldWall modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/{=nSwkI97I}Shieldwall", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Shieldwall", IsMainToggle=true)]
     public bool OneHandedShieldWallPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ArrowCatcher modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/{=a94mkNNk}Arrow Catcher", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Arrow Catcher", IsMainToggle=true)]
     public bool OneHandedArrowCatcherPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable MilitaryTradition modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/{=Fc7OsyZ8}Military Tradition", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Military Tradition", IsMainToggle=true)]
     public bool OneHandedMilitaryTraditionPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable CorpsACorps modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/{=M3aNEkBJ}Corps-a-corps", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Corps-a-corps", IsMainToggle=true)]
     public bool OneHandedCorpsACorpsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable StandUnited modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/{=d8qjwKza}Stand United", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Stand United", IsMainToggle=true)]
     public bool OneHandedStandUnitedPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable LeadByExample modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/{=bOhbWapX}Lead by example", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Lead by example", IsMainToggle=true)]
     public bool OneHandedLeadByExamplePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SteelCoreShields modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/{=rSATpMpq}Steel Core Shields", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Steel Core Shields", IsMainToggle=true)]
     public bool OneHandedSteelCoreShieldsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable FleetOfFoot modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/{=OtdkOGur}Fleet of Foot", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Fleet of Foot", IsMainToggle=true)]
     public bool OneHandedFleetOfFootPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable DeadlyPurpose modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/{=xpGoduJq}Deadly Purpose", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Deadly Purpose", IsMainToggle=true)]
     public bool OneHandedDeadlyPurposePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable UnwaveringDefense modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/{=yFbEDUyb}Unwavering Defense", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Unwavering Defense", IsMainToggle=true)]
     public bool OneHandedUnwaveringDefensePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Prestige modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/{=DSKtsYPi}Prestige", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Prestige", IsMainToggle=true)]
     public bool OneHandedPrestigePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ChinkInTheArmor modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/{=bBa0LB1D}Chink in the Armor", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Chink in the Armor", IsMainToggle=true)]
     public bool OneHandedChinkInTheArmorPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable WayOfTheSword modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/{=nThmB3yB}Way of the Sword", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Way of the Sword", IsMainToggle=true)]
     public bool OneHandedWayOfTheSwordPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable StrongGrip modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=xDQTgPf0}Strong Grip", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Strong Grip", IsMainToggle=true)]
     public bool TwoHandedStrongGripPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable WoodChopper modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=J7oh7Vin}Wood Chopper", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Wood Chopper", IsMainToggle=true)]
     public bool TwoHandedWoodChopperPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable OnTheEdge modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=rkuAgPSA}On the Edge", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/On the Edge", IsMainToggle=true)]
     public bool TwoHandedOnTheEdgePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable HeadBasher modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=E5bgLJcs}Head Basher", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Head Basher", IsMainToggle=true)]
     public bool TwoHandedHeadBasherPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ShowOfStrength modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=RlMqzqbS}Show of Strength", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Show of Strength", IsMainToggle=true)]
     public bool TwoHandedShowOfStrengthPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable BaptisedInBlood modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=miMZavW3}Baptised in Blood", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Baptised in Blood", IsMainToggle=true)]
     public bool TwoHandedBaptisedInBloodPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable BeastSlayer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=NDtlE6PY}Beast Slayer", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Beast Slayer", IsMainToggle=true)]
     public bool TwoHandedBeastSlayerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ShieldBreaker modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=bM9VX881}Shield breaker", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Shield breaker", IsMainToggle=true)]
     public bool TwoHandedShieldBreakerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Berserker modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=RssJTUpL}Berserker", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Berserker", IsMainToggle=true)]
     public bool TwoHandedBerserkerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Confidence modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=2jnsxsv5}Confidence", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Confidence", IsMainToggle=true)]
     public bool TwoHandedConfidencePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ArrowDeflection modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=MbRZSiuq}Arrow Deflection", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Arrow Deflection", IsMainToggle=true)]
     public bool TwoHandedArrowDeflectionPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Terror modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=nAlCj2m0}Terror", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Terror", IsMainToggle=true)]
     public bool TwoHandedTerrorPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Hope modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=lPuk6bao}Hope", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Hope", IsMainToggle=true)]
     public bool TwoHandedHopePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable RecklessCharge modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=ZGovl01w}Reckless Charge", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Reckless Charge", IsMainToggle=true)]
     public bool TwoHandedRecklessChargePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ThickHides modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=j9OIuxxY}Thick Hides", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Thick Hides", IsMainToggle=true)]
     public bool TwoHandedThickHidesPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable BladeMaster modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=TtwAoHfw}Blade Master", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Blade Master", IsMainToggle=true)]
     public bool TwoHandedBladeMasterPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Vandal modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=czCRxHZy}Vandal", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Vandal", IsMainToggle=true)]
     public bool TwoHandedVandalPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable WayOfTheGreatAxe modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=dbEb7iak}Way Of The Great Axe", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Way Of The Great Axe", IsMainToggle=true)]
     public bool TwoHandedWayOfTheGreatAxePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Pikeman modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/{=IFqtwpb0}Pikeman", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Pikeman", IsMainToggle=true)]
     public bool PolearmPikemanPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Cavalry modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/{=YVGtcLHF}Cavalry", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Cavalry", IsMainToggle=true)]
     public bool PolearmCavalryPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Braced modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/{=dU7haWkI}Braced", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Braced", IsMainToggle=true)]
     public bool PolearmBracedPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable KeepAtBay modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/{=TaucWWCB}Keep at Bay", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Keep at Bay", IsMainToggle=true)]
     public bool PolearmKeepAtBayPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SwiftSwing modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/{=xM5aawCj}Swift Swing", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Swift Swing", IsMainToggle=true)]
     public bool PolearmSwiftSwingPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable CleanThrust modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/{=PeaiNrSu}Clean Thrust", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Clean Thrust", IsMainToggle=true)]
     public bool PolearmCleanThrustPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Footwork modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/{=Yvk8a2tb}Footwork", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Footwork", IsMainToggle=true)]
     public bool PolearmFootworkPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable HardKnock modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/{=8DTKXbKw}Hard Knock", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Hard Knock", IsMainToggle=true)]
     public bool PolearmHardKnockPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SteedKiller modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/{=8POWjrr6}Steed Killer", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Steed Killer", IsMainToggle=true)]
     public bool PolearmSteedKillerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Lancer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/{=hchDYAKL}Lancer", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Lancer", IsMainToggle=true)]
     public bool PolearmLancerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Skewer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/{=o57z0zB9}Skewer", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Skewer", IsMainToggle=true)]
     public bool PolearmSkewerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Guards modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/{=vquApOWo}Guards", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Guards", IsMainToggle=true)]
     public bool PolearmGuardsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable StandardBearer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/{=Vv81gkWN}Standard Bearer", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Standard Bearer", IsMainToggle=true)]
     public bool PolearmStandardBearerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Phalanx modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/{=5vs3qlQ8}Phalanx", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Phalanx", IsMainToggle=true)]
     public bool PolearmPhalanxPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable GenerousRations modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/{=yBa95LU3}Generous Rations", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Generous Rations", IsMainToggle=true)]
     public bool PolearmGenerousRationsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Drills modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/{=JpiQagYa}Drills", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Drills", IsMainToggle=true)]
     public bool PolearmDrillsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SureFooted modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/{=bdzt4TcN}Sure Footed", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Sure Footed", IsMainToggle=true)]
     public bool PolearmSureFootedPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable UnstoppableForce modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/{=Jat5GFDi}Unstoppable Force", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Unstoppable Force", IsMainToggle=true)]
     public bool PolearmUnstoppableForcePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable CounterWeight modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/{=BazrgEOj}Counterweight", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Counterweight", IsMainToggle=true)]
     public bool PolearmCounterWeightPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SharpenTheTip modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/{=ljduhdzj}Sharpen the Tip", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Sharpen the Tip", IsMainToggle=true)]
     public bool PolearmSharpenTheTipPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable WayOfTheSpear modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/{=YnimoRlg}Way of the Spear", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Way of the Spear", IsMainToggle=true)]
     public bool PolearmWayOfTheSpearPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable BowControl modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/{=1zteHA7R}Bow Control", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Bow Control", IsMainToggle=true)]
     public bool BowBowControlPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable DeadAim modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/{=FVLymWqW}Dead Aim", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Dead Aim", IsMainToggle=true)]
     public bool BowDeadAimPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Bodkin modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/{=PDM8MzCA}Bodkin", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Bodkin", IsMainToggle=true)]
     public bool BowBodkinPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable RangersSwiftness modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/{=p12tSfCC}Ranger's Swiftness", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Ranger's Swiftness", IsMainToggle=true)]
     public bool BowRangersSwiftnessPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable RapidFire modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/{=Kc9oatmM}Rapid Fire", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Rapid Fire", IsMainToggle=true)]
     public bool BowRapidFirePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable QuickAdjustments modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/{=nOZerIfl}Quick Adjustments", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Quick Adjustments", IsMainToggle=true)]
     public bool BowQuickAdjustmentsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable MerryMen modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/{=ssljPTUr}Merry Men", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Merry Men", IsMainToggle=true)]
     public bool BowMerryMenPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable MountedArchery modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/{=WEUSMkCp}Mounted Archery", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Mounted Archery", IsMainToggle=true)]
     public bool BowMountedArcheryPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Trainer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/{=UE2X5rAy}Trainer", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Trainer", IsMainToggle=true)]
     public bool BowTrainerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable StrongBows modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/{=dqbbT5DK}Strong bows", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Strong bows", IsMainToggle=true)]
     public bool BowStrongBowsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Discipline modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/{=D867vF71}Discipline", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Discipline", IsMainToggle=true)]
     public bool BowDisciplinePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable HunterClan modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/{=AAy1oX7z}Hunter Clan", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Hunter Clan", IsMainToggle=true)]
     public bool BowHunterClanPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SkirmishPhaseMaster modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/{=oVdoauUE}Skirmish Phase Master", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Skirmish Phase Master", IsMainToggle=true)]
     public bool BowSkirmishPhaseMasterPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable EagleEye modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/{=lq67KjSY}Eagle Eye", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Eagle Eye", IsMainToggle=true)]
     public bool BowEagleEyePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable BullsEye modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/{=QH77Weyq}Bulls Eye", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Bulls Eye", IsMainToggle=true)]
     public bool BowBullsEyePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable RenownedArcher modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/{=aIKVpGvE}Renowned Archer", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Renowned Archer", IsMainToggle=true)]
     public bool BowRenownedArcherPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable HorseMaster modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/{=dbUybDTG}Horse Master", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Horse Master", IsMainToggle=true)]
     public bool BowHorseMasterPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable DeepQuivers modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/{=h83ZU95t}Deep Quivers", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Deep Quivers", IsMainToggle=true)]
     public bool BowDeepQuiversPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable QuickDraw modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/{=vnJndBgT}Quick Draw", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Quick Draw", IsMainToggle=true)]
     public bool BowQuickDrawPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Salvo modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/{=ZDNI6n9s}Salvo", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Salvo", IsMainToggle=true)]
     public bool BowSalvoPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Deadshot modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/{=rsKhbZpJ}Deadshot", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Deadshot", IsMainToggle=true)]
     public bool BowDeadshotPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Piercer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/{=v8RwzwqD}Piercer", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Piercer", IsMainToggle=true)]
     public bool CrossbowPiercerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Marksmen modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/{=IUGVdu64}Marksmen", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Marksmen", IsMainToggle=true)]
     public bool CrossbowMarksmenPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Unhorser modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/{=75vJc53f}Unhorser", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Unhorser", IsMainToggle=true)]
     public bool CrossbowUnhorserPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable WindWinder modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/{=1bw2uw8H}Wind Winder", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Wind Winder", IsMainToggle=true)]
     public bool CrossbowWindWinderPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable DonkeysSwiftness modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/{=uANbQUxg}Donkeys Swiftness", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Donkeys Swiftness", IsMainToggle=true)]
     public bool CrossbowDonkeysSwiftnessPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Sheriff modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/{=leaowE4D}Sheriff", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Sheriff", IsMainToggle=true)]
     public bool CrossbowSheriffPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable PeasantLeader modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/{=2rPMYl7Y}Peasant Leader", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Peasant Leader", IsMainToggle=true)]
     public bool CrossbowPeasantLeaderPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable RenownMarksmen modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/{=ICkvftaM}Renown Marksmen", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Renown Marksmen", IsMainToggle=true)]
     public bool CrossbowRenownMarksmenPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Fletcher modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/{=FA5QlTvm}Fletcher", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Fletcher", IsMainToggle=true)]
     public bool CrossbowFletcherPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Puncture modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/{=jjkJyKoy}Puncture", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Puncture", IsMainToggle=true)]
     public bool CrossbowPuncturePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable LooseAndMove modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/{=SKUPHeAw}Loose and Move", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Loose and Move", IsMainToggle=true)]
     public bool CrossbowLooseAndMovePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable DeftHands modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/{=NYHeygaj}Deft Hands", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Deft Hands", IsMainToggle=true)]
     public bool CrossbowDeftHandsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable MountedCrossbowman modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/{=UZHvbYTr}Mounted Crossbowman", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Mounted Crossbowman", IsMainToggle=true)]
     public bool CrossbowMountedCrossbowmanPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Steady modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/{=Ye9lbBr3}Steady", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Steady", IsMainToggle=true)]
     public bool CrossbowSteadyPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Sniper modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/{=aT0uYDuo}Sniper", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Sniper", IsMainToggle=true)]
     public bool CrossbowSniperPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable HammerBolts modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/{=FjMS9Mbz}Hammer Bolts", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Hammer Bolts", IsMainToggle=true)]
     public bool CrossbowHammerBoltsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Pavise modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/{=2667CwaK}Pavise", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Pavise", IsMainToggle=true)]
     public bool CrossbowPavisePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Terror modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/{=nAlCj2m0}Terror", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Terror", IsMainToggle=true)]
     public bool CrossbowTerrorPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable PickedShots modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/{=nGWmyZCs}Picked Shots", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Picked Shots", IsMainToggle=true)]
     public bool CrossbowPickedShotsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable MightyPull modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/{=ZFtyxzT5}Mighty Pull", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Mighty Pull", IsMainToggle=true)]
     public bool CrossbowMightyPullPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable QuickDraw modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/{=vnJndBgT}Quick Draw", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Quick Draw", IsMainToggle=true)]
     public bool ThrowingQuickDrawPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ShieldBreaker modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/{=DeWp2GjP}Shield Breaker", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Shield Breaker", IsMainToggle=true)]
     public bool ThrowingShieldBreakerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Hunter modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/{=xnDWqYKW}Hunter", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Hunter", IsMainToggle=true)]
     public bool ThrowingHunterPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable FlexibleFighter modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/{=mPPWRjCZ}Flexible Fighter", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Flexible Fighter", IsMainToggle=true)]
     public bool ThrowingFlexibleFighterPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable MountedSkirmisher modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/{=l1I748Fn}Mounted Skirmisher", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Mounted Skirmisher", IsMainToggle=true)]
     public bool ThrowingMountedSkirmisherPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable PerfectTechnique modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/{=BCoQgZvG}Perfect Technique", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Perfect Technique", IsMainToggle=true)]
     public bool ThrowingPerfectTechniquePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable RunningThrow modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/{=OcaW12fJ}Running Throw", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Running Throw", IsMainToggle=true)]
     public bool ThrowingRunningThrowPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable KnockOff modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/{=Gn3KBN8L}Knock Off", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Knock Off", IsMainToggle=true)]
     public bool ThrowingKnockOffPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable WellPrepared modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/{=bloxcikL}Well Prepared", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Well Prepared", IsMainToggle=true)]
     public bool ThrowingWellPreparedPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Focus modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/{=throwingskillfocus}Focus", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Focus", IsMainToggle=true)]
     public bool ThrowingFocusPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable LastHit modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/{=IsHyjvSq}Last Hit", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Last Hit", IsMainToggle=true)]
     public bool ThrowingLastHitPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable HeadHunter modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/{=iARYMyuq}Head Hunter", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Head Hunter", IsMainToggle=true)]
     public bool ThrowingHeadHunterPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ThrowingCompetitions modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/{=cC8iTtg5}Throwing Competitions", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Throwing Competitions", IsMainToggle=true)]
     public bool ThrowingThrowingCompetitionsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Splinters modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/{=b6W74uyR}Splinters", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Splinters", IsMainToggle=true)]
     public bool ThrowingSplintersPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Resourceful modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/{=w53LSPJ1}Resourceful", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Resourceful", IsMainToggle=true)]
     public bool ThrowingResourcefulPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable LongReach modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/{=9iLyu1kp}Long Reach", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Long Reach", IsMainToggle=true)]
     public bool ThrowingLongReachPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable WeakSpot modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/{=cPPLAz8l}Weak Spot", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Weak Spot", IsMainToggle=true)]
     public bool ThrowingWeakSpotPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Impale modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/{=tYAYIRjr}Impale", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Impale", IsMainToggle=true)]
     public bool ThrowingImpalePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable UnstoppableForce modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/{=Jat5GFDi}Unstoppable Force", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Unstoppable Force", IsMainToggle=true)]
     public bool ThrowingUnstoppableForcePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable FullSpeed modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/{=kzy9Iduz}Full Speed", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Full Speed", IsMainToggle=true)]
     public bool RidingFullSpeedPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable NimbleSteed modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/{=cXlnH1Jp}Nimble Steed", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Nimble Steed", IsMainToggle=true)]
     public bool RidingNimbleSteedPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable WellStraped modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/{=3lfS4iCZ}Well Strapped", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Well Strapped", IsMainToggle=true)]
     public bool RidingWellStrapedPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Veterinary modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/{=ZaSmz64G}Veterinary", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Veterinary", IsMainToggle=true)]
     public bool RidingVeterinaryPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable NomadicTraditions modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/{=PB5iowxh}Nomadic Traditions", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Nomadic Traditions", IsMainToggle=true)]
     public bool RidingNomadicTraditionsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable FilledToBrim modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/{=frQX6OZv}Filled To Brim", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Filled To Brim", IsMainToggle=true)]
     public bool RidingFilledToBrimPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Sagittarius modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/{=jbPZTSP4}Sagittarius", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Sagittarius", IsMainToggle=true)]
     public bool RidingSagittariusPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SweepingWind modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/{=gL7Ltjpc}Sweeping Wind", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Sweeping Wind", IsMainToggle=true)]
     public bool RidingSweepingWindPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable MountedWarrior modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/{=ixqTFMVA}Mounted Warrior", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Mounted Warrior", IsMainToggle=true)]
     public bool RidingMountedWarriorPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable HorseArcher modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/{=ugJfuabA}Horse Archer", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Horse Archer", IsMainToggle=true)]
     public bool RidingHorseArcherPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Horde modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/{=BdQMQW8t}Riding Horde", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Riding Horde", IsMainToggle=true)]
     public bool RidingHordePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Breeder modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/{=4Pbfs4rV}Breeder", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Breeder", IsMainToggle=true)]
     public bool RidingBreederPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ThunderousCharge modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/{=3MLtqFPt}Thunderous Charge", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Thunderous Charge", IsMainToggle=true)]
     public bool RidingThunderousChargePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable AnnoyingBuzz modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/{=Okibjv5n}Annoying Buzz", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Annoying Buzz", IsMainToggle=true)]
     public bool RidingAnnoyingBuzzPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable MountedPatrols modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/{=1z3oRPQu}Mounted Patrols", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Mounted Patrols", IsMainToggle=true)]
     public bool RidingMountedPatrolsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable CavalryTactics modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/{=ZMxAGDKU}Cavalry Tactics", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Cavalry Tactics", IsMainToggle=true)]
     public bool RidingCavalryTacticsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable DauntlessSteed modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/{=eYzTvFEH}Dauntless Steed", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Dauntless Steed", IsMainToggle=true)]
     public bool RidingDauntlessSteedPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ToughSteed modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/{=vDNbHDfq}Tough Steed", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Tough Steed", IsMainToggle=true)]
     public bool RidingToughSteedPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable TheWayOfTheSaddle modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/{=HvYgMtXO}The Way Of The Saddle", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/The Way Of The Saddle", IsMainToggle=true)]
     public bool RidingTheWayOfTheSaddlePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable MorningExercise modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/{=ipwU1JT3}Morning Exercise", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Morning Exercise", IsMainToggle=true)]
     public bool AthleticsMorningExercisePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable WellBuilt modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/{=bigS7KHi}Well Built", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Well Built", IsMainToggle=true)]
     public bool AthleticsWellBuiltPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable FormFittingArmor modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/{=tp3p7R8E}Form Fitting Armor", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Form Fitting Armor", IsMainToggle=true)]
     public bool AthleticsFormFittingArmorPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable HavingGoing modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/{=HqxV96aL}Having Going", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Having Going", IsMainToggle=true)]
     public bool AthleticsHavingGoingPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Stamina modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/{=2lCLp5eo}Stamina", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Stamina", IsMainToggle=true)]
     public bool AthleticsStaminaPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Powerful modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/{=UCpyo9hw}Powerful", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Powerful", IsMainToggle=true)]
     public bool AthleticsPowerfulPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SurgingBlow modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/{=zrYFYDfj}Surging Blow", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Surging Blow", IsMainToggle=true)]
     public bool AthleticsSurgingBlowPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Braced modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/{=dU7haWkI}Braced", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Braced", IsMainToggle=true)]
     public bool AthleticsBracedPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable WalkItOff modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/{=0pyLfrGZ}Walk It Off", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Walk It Off", IsMainToggle=true)]
     public bool AthleticsWalkItOffPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable AGoodDaysRest modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/{=B7HwvV6L}A Good Days Rest", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/A Good Days Rest", IsMainToggle=true)]
     public bool AthleticsAGoodDaysRestPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable HealthyCitizens modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/{=LVeZLsbg}Healthy Citizens", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Healthy Citizens", IsMainToggle=true)]
     public bool AthleticsHealthyCitizensPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Energetic modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/{=1YxFYg3s}Energetic", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Energetic", IsMainToggle=true)]
     public bool AthleticsEnergeticPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Steady modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/{=Ye9lbBr3}Steady", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Steady", IsMainToggle=true)]
     public bool AthleticsSteadyPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Strong modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/{=d5aK6Sv0}Strong", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Strong", IsMainToggle=true)]
     public bool AthleticsStrongPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable StrongArms modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/{=qBKmIyYx}Strong Arms", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Strong Arms", IsMainToggle=true)]
     public bool AthleticsStrongArmsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Spartan modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/{=PX0Xufmr}Spartan", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Spartan", IsMainToggle=true)]
     public bool AthleticsSpartanPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable IgnorePain modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/{=AHtFRv5T}Ignore Pain", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Ignore Pain", IsMainToggle=true)]
     public bool AthleticsIgnorePainPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable MightyBlow modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/{=lbGa4ihC}Mighty Blow ", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Mighty Blow ", IsMainToggle=true)]
     public bool AthleticsMightyBlowPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SharpenedEdge modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crafting/{=knWgaYdk}Sharpened Edge", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crafting/Sharpened Edge", IsMainToggle=true)]
     public bool CraftingSharpenedEdgePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SharpenedTip modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crafting/{=aO2JSbSq}Sharpened Tip", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Crafting/Sharpened Tip", IsMainToggle=true)]
     public bool CraftingSharpenedTipPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable TightFormations modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/{=EX5cZDLH}Tight Formations", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Tight Formations", IsMainToggle=true)]
     public bool TacticsTightFormationsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable LooseFormations modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/{=9y3X0MQg}Loose Formations", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Loose Formations", IsMainToggle=true)]
     public bool TacticsLooseFormationsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable AsymmetricalWarfare modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/{=YkjPau1o}Asymmetrical Warfare", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Asymmetrical Warfare", IsMainToggle=true)]
     public bool TacticsAsymmetricalWarfarePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SmallUnitTactics modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/{=30hNRt3x}Small Unit Tactics", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Small Unit Tactics", IsMainToggle=true)]
     public bool TacticsSmallUnitTacticsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable HordeLeader modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/{=Vp8Pwou8}Horde Leader", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Horde Leader", IsMainToggle=true)]
     public bool TacticsHordeLeaderPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable LawKeeper modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/{=zUK9JOlb}Law Keeper", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Law Keeper", IsMainToggle=true)]
     public bool TacticsLawKeeperPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Coaching modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/{=afaCdojS}Coaching", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Coaching", IsMainToggle=true)]
     public bool TacticsCoachingPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SwiftRegroup modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/{=nmJe4wN1}Swift Regroup", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Swift Regroup", IsMainToggle=true)]
     public bool TacticsSwiftRegroupPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable OnTheMarch modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/{=kolBffjD}On The March", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/On The March", IsMainToggle=true)]
     public bool TacticsOnTheMarchPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable CallToArms modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/{=mUubYb7v}Call To Arms", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Call To Arms", IsMainToggle=true)]
     public bool TacticsCallToArmsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable PickThemOfTheWalls modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/{=XQkY7jkL}Pick Them Of The Walls", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Pick Them Of The Walls", IsMainToggle=true)]
     public bool TacticsPickThemOfTheWallsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable MakeThemPay modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/{=8xxeNK0o}Make Them Pay", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Make Them Pay", IsMainToggle=true)]
     public bool TacticsMakeThemPayPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable EliteReserves modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/{=luDtfSN7}Elite Reserves", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Elite Reserves", IsMainToggle=true)]
     public bool TacticsEliteReservesPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Encirclement modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/{=EhaMPtRX}Encirclement", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Encirclement", IsMainToggle=true)]
     public bool TacticsEncirclementPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable PreBattleManeuvers modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/{=cHgLxbbc}Pre Battle Maneuvers", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Pre Battle Maneuvers", IsMainToggle=true)]
     public bool TacticsPreBattleManeuversPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Besieged modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/{=ALC3Kzv9}Besieged", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Besieged", IsMainToggle=true)]
     public bool TacticsBesiegedPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Counteroffensive modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/{=mn5tQhyp}Counter Offensive", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Counter Offensive", IsMainToggle=true)]
     public bool TacticsCounteroffensivePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Gensdarmes modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/{=CTEuBfU0}Gens d'armes", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Gens d'armes", IsMainToggle=true)]
     public bool TacticsGensdarmesPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable TacticalMastery modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/{=8rvpcb4k}Tactical Mastery", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Tactical Mastery", IsMainToggle=true)]
     public bool TacticsTacticalMasteryPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable DayTraveler modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/{=6PSgX2BP}Day Traveler", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Day Traveler", IsMainToggle=true)]
     public bool ScoutingDayTravelerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable NightRunner modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/{=B8Gq2ylh}Night Runner", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Night Runner", IsMainToggle=true)]
     public bool ScoutingNightRunnerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Pathfinder modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/{=d2qGHXyx}Pathfinder", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Pathfinder", IsMainToggle=true)]
     public bool ScoutingPathfinderPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable WaterDiviner modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/{=gsz9DMNq}Water Diviner", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Water Diviner", IsMainToggle=true)]
     public bool ScoutingWaterDivinerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ForestKin modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/{=0XuFh3cX}Forest Kin", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Forest Kin", IsMainToggle=true)]
     public bool ScoutingForestKinPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable DesertBorn modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/{=TbBmjK8M}Desert Born", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Desert Born", IsMainToggle=true)]
     public bool ScoutingDesertBornPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ForcedMarch modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/{=jhZe9Mfo}Forced March", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Forced March", IsMainToggle=true)]
     public bool ScoutingForcedMarchPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Unburdened modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/{=sA2OrT6l}Unburdened", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Unburdened", IsMainToggle=true)]
     public bool ScoutingUnburdenedPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Tracker modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/{=AoaabumE}Tracker", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Tracker", IsMainToggle=true)]
     public bool ScoutingTrackerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Ranger modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/{=09gOOa0h}Ranger", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Ranger", IsMainToggle=true)]
     public bool ScoutingRangerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Patrols modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/{=uKc4le8Q}Patrols", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Patrols", IsMainToggle=true)]
     public bool ScoutingPatrolsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Foragers modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/{=LPxEDIk7}Foragers", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Foragers", IsMainToggle=true)]
     public bool ScoutingForagersPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable BeastWhisperer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/{=mrtDAhtL}Beast Whisperer", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Beast Whisperer", IsMainToggle=true)]
     public bool ScoutingBeastWhispererPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable VillageNetwork modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/{=lYQAuYaH}Village Network", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Village Network", IsMainToggle=true)]
     public bool ScoutingVillageNetworkPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable RumourNetwork modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/{=LwWyc6ou}Rumour Network", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Rumour Network", IsMainToggle=true)]
     public bool ScoutingRumourNetworkPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable VantagePoint modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/{=EC2n5DBl}Vantage Point", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Vantage Point", IsMainToggle=true)]
     public bool ScoutingVantagePointPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable KeenSight modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/{=3yVPrhXt}Keen Sight", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Keen Sight", IsMainToggle=true)]
     public bool ScoutingKeenSightPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Rearguard modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/{=e4QAc5A6}Rearguard", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Rearguard", IsMainToggle=true)]
     public bool ScoutingRearguardPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable UncannyInsight modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/{=M9vC9mio}Uncanny Insight", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Uncanny Insight", IsMainToggle=true)]
     public bool ScoutingUncannyInsightPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable NoRestForTheWicked modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/{=RyfFWmDs}No Rest for the Wicked", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/No Rest for the Wicked", IsMainToggle=true)]
     public bool RogueryNoRestForTheWickedPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SweetTalker modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/{=570wiYEe}Sweet Talker", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Sweet Talker", IsMainToggle=true)]
     public bool RoguerySweetTalkerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable TwoFaced modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/{=kg4Mx9j4}Two Faced", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Two Faced", IsMainToggle=true)]
     public bool RogueryTwoFacedPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable DeepPockets modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/{=by1b61pn}Deep Pockets", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Deep Pockets", IsMainToggle=true)]
     public bool RogueryDeepPocketsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable InBestLight modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/{=xoARIHde}In Best Light", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/In Best Light", IsMainToggle=true)]
     public bool RogueryInBestLightPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable KnowHow modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/{=tvoN5ynt}Know-How", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Know-How", IsMainToggle=true)]
     public bool RogueryKnowHowPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Promises modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/{=XZOtTuxA}Promises", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Promises", IsMainToggle=true)]
     public bool RogueryPromisesPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SlaveTrader modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/{=jNbTBxEW}Slave Trader", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Slave Trader", IsMainToggle=true)]
     public bool RoguerySlaveTraderPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable WhiteLies modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/{=F51HfzZj}White Lies", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/White Lies", IsMainToggle=true)]
     public bool RogueryWhiteLiesPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SmugglerConnections modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/{=E8a2joMO}Smuggler Connections", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Smuggler Connections", IsMainToggle=true)]
     public bool RoguerySmugglerConnectionsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable PartnersInCrime modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/{=2PVm7NON}Partners in Crime", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Partners in Crime", IsMainToggle=true)]
     public bool RogueryPartnersInCrimePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable OneOfTheFamily modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/{=oumTabhS}One of the Family", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/One of the Family", IsMainToggle=true)]
     public bool RogueryOneOfTheFamilyPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Carver modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/{=7gZo2SY4}Carver", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Carver", IsMainToggle=true)]
     public bool RogueryCarverPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable RansomBroker modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/{=W2WXkiAh}Ransom Broker", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Ransom Broker", IsMainToggle=true)]
     public bool RogueryRansomBrokerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ArmsDealer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/{=5bmlZ26b}Arms Dealer", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Arms Dealer", IsMainToggle=true)]
     public bool RogueryArmsDealerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable DirtyFighting modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/{=bb1hS9I4}Dirty Fighting", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Dirty Fighting", IsMainToggle=true)]
     public bool RogueryDirtyFightingPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable DashAndSlash modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/{=w1B71sNj}Dash and Slash", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Dash and Slash", IsMainToggle=true)]
     public bool RogueryDashAndSlashPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable FleetFooted modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/{=yY5iDvAb}Fleet Footed", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Fleet Footed", IsMainToggle=true)]
     public bool RogueryFleetFootedPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable RogueExtraordinaire modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/{=U3cgqyUE}Rogue Extraordinaire", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Rogue Extraordinaire", IsMainToggle=true)]
     public bool RogueryRogueExtraordinairePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable CombatTips modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/{=Cb5s9HlD}Combat Tips", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Combat Tips", IsMainToggle=true)]
     public bool LeadershipCombatTipsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable RaiseTheMeek modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/{=JGCtv8om}Raise The Meek", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Raise The Meek", IsMainToggle=true)]
     public bool LeadershipRaiseTheMeekPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable FerventAttacker modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/{=MhRF64eR}Fervent Attacker", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Fervent Attacker", IsMainToggle=true)]
     public bool LeadershipFerventAttackerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable StoutDefender modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/{=YogcurDJ}Stout Defender", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Stout Defender", IsMainToggle=true)]
     public bool LeadershipStoutDefenderPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Authority modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/{=CeCAMvkX}Authority", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Authority", IsMainToggle=true)]
     public bool LeadershipAuthorityPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable HeroicLeader modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/{=7aX2eh5x}Heroic Leader", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Heroic Leader", IsMainToggle=true)]
     public bool LeadershipHeroicLeaderPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable LoyaltyAndHonor modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/{=UJYaonYM}Loyalty and Honor", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Loyalty and Honor", IsMainToggle=true)]
     public bool LeadershipLoyaltyAndHonorPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable FamousCommander modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/{=FQkHkMhw}Famous Commander", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Famous Commander", IsMainToggle=true)]
     public bool LeadershipFamousCommanderPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Presence modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/{=6RckjM4S}Presence", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Presence", IsMainToggle=true)]
     public bool LeadershipPresencePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable LeaderOfMasses modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/{=T5rM9XgO}Leader of the Masses", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Leader of the Masses", IsMainToggle=true)]
     public bool LeadershipLeaderOfMassesPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable VeteransRespect modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/{=vWGQNcu5}Veteran's Respect", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Veteran's Respect", IsMainToggle=true)]
     public bool LeadershipVeteransRespectPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable CitizenMilitia modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/{=vZtLm43v}Citizen Militia", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Citizen Militia", IsMainToggle=true)]
     public bool LeadershipCitizenMilitiaPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable InspiringLeader modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/{=kaEzJUTW}Inspiring Leader", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Inspiring Leader", IsMainToggle=true)]
     public bool LeadershipInspiringLeaderPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable UpliftingSpirit modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/{=EbROfVJJ}Uplifting Spirit", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Uplifting Spirit", IsMainToggle=true)]
     public bool LeadershipUpliftingSpiritPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable MakeADifference modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/{=5uW9zKTN}Make a Difference", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Make a Difference", IsMainToggle=true)]
     public bool LeadershipMakeADifferencePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable LeadByExample modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/{=WFFlp3Qi}Lead by Example", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Lead by Example", IsMainToggle=true)]
     public bool LeadershipLeadByExamplePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable TrustedCommander modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/{=6ETg3maz}Trusted Commander", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Trusted Commander", IsMainToggle=true)]
     public bool LeadershipTrustedCommanderPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable WePledgeOurSwords modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/{=3GHIb7YX}We Pledge our Swords", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/We Pledge our Swords", IsMainToggle=true)]
     public bool LeadershipWePledgeOurSwordsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable TalentMagnet modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/{=pFfqWRnf}Talent Magnet", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Talent Magnet", IsMainToggle=true)]
     public bool LeadershipTalentMagnetPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable UltimateLeader modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/{=FK3W0SKk}Ultimate Leader", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Ultimate Leader", IsMainToggle=true)]
     public bool LeadershipUltimateLeaderPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Virile modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=mbqoZ4WH}Virile", IsMainToggle=true)]
-    public bool CharmVirilePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SelfPromoter modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=hkG9ATZy}Self Promoter", IsMainToggle=true)]
-    public bool CharmSelfPromoterPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Oratory modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=OZXEMb2C}Oratory", IsMainToggle=true)]
-    public bool CharmOratoryPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Warlord modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=jiWr5Rlz}Warlord", IsMainToggle=true)]
-    public bool CharmWarlordPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Diplomacy modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/Diplomacy", IsMainToggle=true)]
+    public bool CharmDiplomacyPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ShowYourScars modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/Show Your Scars", IsMainToggle=true)]
+    public bool CharmShowYourScarsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ForgivableGrievances modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=l863hIyN}Forgivable Grievances", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Forgivable Grievances", IsMainToggle=true)]
     public bool CharmForgivableGrievancesPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable MeaningfulFavors modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=4hUEryJ6}Meaningful Favors", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Meaningful Favors", IsMainToggle=true)]
     public bool CharmMeaningfulFavorsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable InBloom modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=ZlXSlx0p}In Bloom", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/In Bloom", IsMainToggle=true)]
     public bool CharmInBloomPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable YoungAndRespectful modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=TpzZgFsA}Young And Respectful", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Young and Respectful", IsMainToggle=true)]
     public bool CharmYoungAndRespectfulPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Firebrand modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=EbKP7Xx5}Firebrand", IsMainToggle=true)]
-    public bool CharmFirebrandPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable FlexibleEthics modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=58Imsasy}Flexible Ethics", IsMainToggle=true)]
-    public bool CharmFlexibleEthicsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SlickNegotiator modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=WOqxWM67}Slick Negotiator", IsMainToggle=true)]
-    public bool CharmSlickNegotiatorPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Tribute modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=dSBbSHkM}Tribute", IsMainToggle=true)]
-    public bool CharmTributePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MoralLeader modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=zUXUrGWa}Morale Leader", IsMainToggle=true)]
-    public bool CharmMoralLeaderPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable NaturalLeader modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=qaZDUknZ}Natural Leader", IsMainToggle=true)]
-    public bool CharmNaturalLeaderPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable PublicSpeaker modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=16fxd9fN}Public Speaker", IsMainToggle=true)]
-    public bool CharmPublicSpeakerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Camaraderie modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/{=p2zZGkZw}Camaraderie", IsMainToggle=true)]
-    public bool CharmCamaraderiePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable RespectfulOpposition modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/Respectful Opposition", IsMainToggle=true)]
+    public bool CharmRespectfulOppositionPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable OurGloriousLeader modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/Our Glorious Leader", IsMainToggle=true)]
+    public bool CharmOurGloriousLeaderPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ProFamilia modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/Pro Familia", IsMainToggle=true)]
+    public bool CharmProFamiliaPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Appraiser modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=b3PsxeiB}Appraiser", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Appraiser", IsMainToggle=true)]
     public bool TradeAppraiserPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable WholeSeller modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=lTNpxGoh}Whole Seller", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Whole Seller", IsMainToggle=true)]
     public bool TradeWholeSellerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable CaravanMaster modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=5acLha5Q}Caravan Master", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Caravan Master", IsMainToggle=true)]
     public bool TradeCaravanMasterPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable MarketDealer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=InLGoUbB}Market Dealer", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Market Dealer", IsMainToggle=true)]
     public bool TradeMarketDealerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable TravelingRumors modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=3j6Ec63l}Traveling Rumors", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Traveling Rumors", IsMainToggle=true)]
     public bool TradeTravelingRumorsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable LocalConnection modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=mznjEwjC}Local Connection", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Local Connection", IsMainToggle=true)]
     public bool TradeLocalConnectionPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable DistributedGoods modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=nxkNY4YG}Distributed Goods", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Distributed Goods", IsMainToggle=true)]
     public bool TradeDistributedGoodsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Tollgates modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=JnSh4Fmz}Toll Gates", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Toll Gates", IsMainToggle=true)]
     public bool TradeTollgatesPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ArtisanCommunity modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=8f8UGq46}Artisan Community", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Artisan Community", IsMainToggle=true)]
     public bool TradeArtisanCommunityPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable GreatInvestor modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=g9qLrEb4}Great Investor", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Great Investor", IsMainToggle=true)]
     public bool TradeGreatInvestorPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MercenaryConnections modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=*}Mercenary Connections", IsMainToggle=true)]
-    public bool TradeMercenaryConnectionsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable VillagerConnections modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/Villager Connections", IsMainToggle=true)]
+    public bool TradeVillagerConnectionsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ContentTrades modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=FV4SWLQx}Content Trades", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Content Trades", IsMainToggle=true)]
     public bool TradeContentTradesPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable InsurancePlans modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=aYQybo4E}Insurance Plans", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Insurance Plans", IsMainToggle=true)]
     public bool TradeInsurancePlansPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable RapidDevelopment modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=u9oONz9o}Rapid Development", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Rapid Development", IsMainToggle=true)]
     public bool TradeRapidDevelopmentPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable GranaryAccountant modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=TFy2VYtM}Granary Accountant", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Granary Accountant", IsMainToggle=true)]
     public bool TradeGranaryAccountantPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SwordForBarter modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=AIsDxCeG}Sword For Barter", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Sword For Barter", IsMainToggle=true)]
     public bool TradeSwordForBarterPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SelfMadeMan modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=uHJltZ5D}Self-made Man", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Self Made Man", IsMainToggle=true)]
     public bool TradeSelfMadeManPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SilverTongue modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=5rDdJpJo}Silver Tongue", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Silver Tongue", IsMainToggle=true)]
     public bool TradeSilverTonguePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ManOfMeans modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=Jy2ap8L1}Man of Means", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Man of Means", IsMainToggle=true)]
     public bool TradeManOfMeansPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable TrickleDown modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/{=L4fz3Jdr}Trickle Down", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Trickle Down", IsMainToggle=true)]
     public bool TradeTrickleDownPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Spartan modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/{=PX0Xufmr}Spartan", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Spartan", IsMainToggle=true)]
     public bool StewardSpartanPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Frugal modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/{=eJIbMa8P}Frugal", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Frugal", IsMainToggle=true)]
     public bool StewardFrugalPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SevenVeterans modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/{=2ryLuN2i}Seven Veterans", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Seven Veterans", IsMainToggle=true)]
     public bool StewardSevenVeteransPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable DrillSergant modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/{=L9k4bovO}Drill Sergeant", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Drill Sergeant", IsMainToggle=true)]
     public bool StewardDrillSergantPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Sweatshops modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/{=jbAtOsIy}Sweatshops", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Sweatshops", IsMainToggle=true)]
     public bool StewardSweatshopsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable StiffUpperLip modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/{=QUeJ4gc3}Stiff Upper Lip", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Stiff Upper Lip", IsMainToggle=true)]
     public bool StewardStiffUpperLipPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable PaidInPromise modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/{=CPxbG7Zp}Paid in Promise", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Paid in Promise", IsMainToggle=true)]
     public bool StewardPaidInPromisePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable EfficientCampaigner modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/{=sC53NYcA}Efficient Campaigner", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Efficient Campaigner", IsMainToggle=true)]
     public bool StewardEfficientCampaignerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable GivingHands modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/{=VsqyzWYY}Giving Hands", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Giving Hands", IsMainToggle=true)]
     public bool StewardGivingHandsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Logistician modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/{=U2buPiec}Logistician", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Logistician", IsMainToggle=true)]
     public bool StewardLogisticianPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Relocation modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/{=R6dnhblo}Relocation", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Relocation", IsMainToggle=true)]
     public bool StewardRelocationPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable AidCorps modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/{=4FdtVyj1}Aid Corps", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Aid Corps", IsMainToggle=true)]
     public bool StewardAidCorpsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Gourmet modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/{=63lHFDSG}Gourmet", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Gourmet", IsMainToggle=true)]
     public bool StewardGourmetPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SoundReserves modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/{=O5dgeoss}Sound Reserves", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Sound Reserves", IsMainToggle=true)]
     public bool StewardSoundReservesPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ForcedLabor modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/{=cWyqiNrf}Forced Labor", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Forced Labor", IsMainToggle=true)]
     public bool StewardForcedLaborPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Contractors modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/{=Pg5enC8c}Contractors", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Contractors", IsMainToggle=true)]
     public bool StewardContractorsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ArenicosMules modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/{=qBx8UbUt}Arenicos' Mules", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Arenicos' Mules", IsMainToggle=true)]
     public bool StewardArenicosMulesPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ArenicosHorses modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/{=tbQ5bUzD}Arenicos' Horses", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Arenicos' Horses", IsMainToggle=true)]
     public bool StewardArenicosHorsesPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MasterOfPlanning modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/{=*}Master of Planning", IsMainToggle=true)]
-    public bool StewardMasterOfPlanningPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable UrbanDeveloper modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/Urban Developer", IsMainToggle=true)]
+    public bool StewardUrbanDeveloperPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable MasterOfWarcraft modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/{=MM0ARhGh}Master of Warcraft", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Master of Warcraft", IsMainToggle=true)]
     public bool StewardMasterOfWarcraftPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SelfMedication modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/{=TLGvIdJB}Self Medication", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Self Medication", IsMainToggle=true)]
     public bool MedicineSelfMedicationPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable PreventiveMedicine modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/{=wI393cla}Preventive Medicine", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Preventive Medicine", IsMainToggle=true)]
     public bool MedicinePreventiveMedicinePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable TriageTent modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/{=EU4JjLqV}Triage Tent", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Triage Tent", IsMainToggle=true)]
     public bool MedicineTriageTentPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable WalkItOff modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/{=0pyLfrGZ}Walk It Off", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Walk It Off", IsMainToggle=true)]
     public bool MedicineWalkItOffPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Sledges modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/{=TyB6y5bh}Sledges", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Sledges", IsMainToggle=true)]
     public bool MedicineSledgesPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable DoctorsOath modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/{=PAwDV08b}Doctors Oath", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Doctors Oath", IsMainToggle=true)]
     public bool MedicineDoctorsOathPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable BestMedicine modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/{=ei1JSeco}Best Medicine", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Best Medicine", IsMainToggle=true)]
     public bool MedicineBestMedicinePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable GoodLogdings modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/{=RXo3edjn}Good Lodging", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Good Lodging", IsMainToggle=true)]
     public bool MedicineGoodLogdingsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SiegeMedic modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/{=ObwbbEqE}Siege Medic", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Siege Medic", IsMainToggle=true)]
     public bool MedicineSiegeMedicPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Veterinarian modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/{=DNPbZZPQ}Veterinarian", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Veterinarian", IsMainToggle=true)]
     public bool MedicineVeterinarianPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable PristineStreets modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/{=72tbUfrz}Pristine Streets", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Pristine Streets", IsMainToggle=true)]
     public bool MedicinePristineStreetsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable BushDoctor modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/{=HGrsb7k2}Bush Doctor", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Bush Doctor", IsMainToggle=true)]
     public bool MedicineBushDoctorPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable PerfectHealth modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/{=cGuPMx4p}Perfect Health", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Perfect Health", IsMainToggle=true)]
     public bool MedicinePerfectHealthPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable HealthAdvise modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/{=NxcvQlAk}Health Advice", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Health Advice", IsMainToggle=true)]
     public bool MedicineHealthAdvisePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable PhysicianOfPeople modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/{=5o6pSbCx}Physician of People", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Physician of People", IsMainToggle=true)]
     public bool MedicinePhysicianOfPeoplePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable CleanInfrastructure modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/{=CZ4y5NAf}Clean Infrastructure", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Clean Infrastructure", IsMainToggle=true)]
     public bool MedicineCleanInfrastructurePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable CheatDeath modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/{=cpg0oHZJ}Cheat Death", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Cheat Death", IsMainToggle=true)]
     public bool MedicineCheatDeathPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable FortitudeTonic modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/{=ib2SMG9b}Fortitude Tonic", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Fortitude Tonic", IsMainToggle=true)]
     public bool MedicineFortitudeTonicPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable HelpingHands modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/{=KavZKNaa}Helping Hands", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Helping Hands", IsMainToggle=true)]
     public bool MedicineHelpingHandsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable BattleHardened modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/{=oSbRD72H}Battle Hardened", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Battle Hardened", IsMainToggle=true)]
     public bool MedicineBattleHardenedPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Scaffolds modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/{=ekavTnTp}Scaffolds", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Scaffolds", IsMainToggle=true)]
     public bool EngineeringScaffoldsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable TorsionEngines modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/{=57TDG2Ta}Torsion Engines", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Torsion Engines", IsMainToggle=true)]
     public bool EngineeringTorsionEnginesPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SiegeWorks modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/{=Nr1GPYSr}Siegeworks", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Siegeworks", IsMainToggle=true)]
     public bool EngineeringSiegeWorksPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable PrisonArchitect modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/{=aPbpBJq5}Prison Architect", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Prison Architect", IsMainToggle=true)]
     public bool EngineeringPrisonArchitectPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Carpenters modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/{=YwhAlz5n}Carpenters", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Carpenters", IsMainToggle=true)]
     public bool EngineeringCarpentersPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable MilitaryPlanner modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/{=mzDsT7lV}Military Planner", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Military Planner", IsMainToggle=true)]
     public bool EngineeringMilitaryPlannerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable WallBreaker modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/{=0wlWgIeL}Wall Breaker", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Wall Breaker", IsMainToggle=true)]
     public bool EngineeringWallBreakerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable DreadfulSieger modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/{=bIS4kqmf}Dreadful Besieger", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Dreadful Besieger", IsMainToggle=true)]
     public bool EngineeringDreadfulSiegerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Salvager modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/{=AgJAfEEZ}Salvager", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Salvager", IsMainToggle=true)]
     public bool EngineeringSalvagerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Foreman modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/{=3ML4EkWY}Foreman", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Foreman", IsMainToggle=true)]
     public bool EngineeringForemanPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SiegeEngineer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/{=pFGhJxyN}Siege Engineer", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Siege Engineer", IsMainToggle=true)]
     public bool EngineeringSiegeEngineerPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Battlements modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/{=hHHEW1HN}Battlements", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Battlements", IsMainToggle=true)]
     public bool EngineeringBattlementsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable EngineeringGuilds modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/{=elKQc0O6}Engineering Guilds", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Engineering Guilds", IsMainToggle=true)]
     public bool EngineeringEngineeringGuildsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Metallurgy modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/{=qjvDsu8u}Metallurgy", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Metallurgy", IsMainToggle=true)]
     public bool EngineeringMetallurgyPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ImprovedTools modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/{=XixNAaD5}Improved Tools", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Improved Tools", IsMainToggle=true)]
     public bool EngineeringImprovedToolsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Clockwork modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/{=Z9Rey6LC}Clockwork", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Clockwork", IsMainToggle=true)]
     public bool EngineeringClockworkPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ArchitecturalCommisions modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/{=KODafKT7}Architectural Commissions", IsMainToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Architectural Commissions", IsMainToggle=true)]
     public bool EngineeringArchitecturalCommisionsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=JKqsYaBj}One handed weapons you wield have their handling increased by 20%.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=fLaRz2SM}Deflect")]
+    [SettingPropertyGroup("Perks/OneHanded/Deflect")]
     public float oh_Deflect_p {
       get => _oh_Deflect_p;
       set {
@@ -1722,7 +1679,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=rHcPtNKI}Troops in the formation you are leading have their one handed combat effectiveness as if they were one tier higher.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=fLaRz2SM}Deflect")]
+    [SettingPropertyGroup("Perks/OneHanded/Deflect")]
     public float oh_Deflect_s {
       get => _oh_Deflect_s;
       set {
@@ -1736,7 +1693,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=xMpCWjg0}Shield bashes now deal 50% more damage and stun your enemies for longer.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=6yEeYNRu}Basher")]
+    [SettingPropertyGroup("Perks/OneHanded/Basher")]
     public float oh_Basher_p {
       get => _oh_Basher_p;
       set {
@@ -1748,7 +1705,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=qDJmqZrJ}Infantry troops take 4% less melee damage while in shield wall formation.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=6yEeYNRu}Basher")]
+    [SettingPropertyGroup("Perks/OneHanded/Basher")]
     public float oh_Basher_s {
       get => _oh_Basher_s;
       set {
@@ -1762,7 +1719,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=TDDswrfW}Increases your damage with axes and maces by 5%.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=SJ69EYuI}To Be Blunt")]
+    [SettingPropertyGroup("Perks/OneHanded/To Be Blunt")]
     public float oh_ToBeBlunt_p {
       get => _oh_ToBeBlunt_p;
       set {
@@ -1774,7 +1731,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=oxqZJ0s9}Governed settlements gain 0.5 security per day.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=SJ69EYuI}To Be Blunt")]
+    [SettingPropertyGroup("Perks/OneHanded/To Be Blunt")]
     public float oh_ToBeBlunt_s {
       get => _oh_ToBeBlunt_s;
       set {
@@ -1788,7 +1745,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=4hvV3GF1}+2% swing speed with one handed weapons.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=ciELES5v}Swift Strike")]
+    [SettingPropertyGroup("Perks/OneHanded/Swift Strike")]
     public float oh_SwiftStrike_p {
       get => _oh_SwiftStrike_p;
       set {
@@ -1800,7 +1757,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=oYJz4V0s}Governed settlements have increased militia recruitment by 0.5 per day.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=ciELES5v}Swift Strike")]
+    [SettingPropertyGroup("Perks/OneHanded/Swift Strike")]
     public float oh_SwiftStrike_s {
       get => _oh_SwiftStrike_s;
       set {
@@ -1814,7 +1771,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=BkFausb8}Your one handed weapon damage is increased by 5% while mounted.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=YVGtcLHF}Cavalry")]
+    [SettingPropertyGroup("Perks/OneHanded/Cavalry")]
     public float oh_Cavalry_p {
       get => _oh_Cavalry_p;
       set {
@@ -1826,7 +1783,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=P0Zm6daz}Cavalry troops in the formation you are leading have their melee damage increased by 5%.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=YVGtcLHF}Cavalry")]
+    [SettingPropertyGroup("Perks/OneHanded/Cavalry")]
     public float oh_Cavalry_s {
       get => _oh_Cavalry_s;
       set {
@@ -1840,7 +1797,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=gCol2epF}Reduces the effect of wielding a shield on your combat movement speed.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=vnG1q18y}Shield Bearer")]
+    [SettingPropertyGroup("Perks/OneHanded/Shield Bearer")]
     public float oh_ShieldBearer_p {
       get => _oh_ShieldBearer_p;
       set {
@@ -1852,7 +1809,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=FCZc2zev}Infantry troops in the formation you are leading have their movement speed increased by 3%.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=vnG1q18y}Shield Bearer")]
+    [SettingPropertyGroup("Perks/OneHanded/Shield Bearer")]
     public float oh_ShieldBearer_s {
       get => _oh_ShieldBearer_s;
       set {
@@ -1866,7 +1823,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=daJkC7ZG}Increases your hit points by 2.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=3xuwVbfs}Trainer")]
+    [SettingPropertyGroup("Perks/OneHanded/Trainer")]
     public float oh_Trainer_p {
       get => _oh_Trainer_p;
       set {
@@ -1878,7 +1835,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=cvk5Wb7e}Melee troops gain 5% more experience after every battle.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=3xuwVbfs}Trainer")]
+    [SettingPropertyGroup("Perks/OneHanded/Trainer")]
     public float oh_Trainer_s {
       get => _oh_Trainer_s;
       set {
@@ -1892,7 +1849,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ow06ZHwa}20% more damage while wielding a one-handed weapon without a shield.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=XphY9cNV}Duelist")]
+    [SettingPropertyGroup("Perks/OneHanded/Duelist")]
     public float oh_Duelist_p {
       get => _oh_Duelist_p;
       set {
@@ -1904,7 +1861,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=pdLfrowl}You get double renown from tournaments.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=XphY9cNV}Duelist")]
+    [SettingPropertyGroup("Perks/OneHanded/Duelist")]
     public float oh_Duelist_s {
       get => _oh_Duelist_s;
       set {
@@ -1918,7 +1875,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=cZ2eQZdZ}Your shield takes 20% less damage while blocking the wrong direction.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=nSwkI97I}Shieldwall")]
+    [SettingPropertyGroup("Perks/OneHanded/Shieldwall")]
     public float oh_ShieldWall_p {
       get => _oh_ShieldWall_p;
       set {
@@ -1930,7 +1887,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=SzoXR4Iy}Troops in the formation you are leading have medium bonus to their shield size against projectiles while they are in shield wall formation.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=nSwkI97I}Shieldwall")]
+    [SettingPropertyGroup("Perks/OneHanded/Shieldwall")]
     public float oh_ShieldWall_s {
       get => _oh_ShieldWall_s;
       set {
@@ -1944,7 +1901,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=7b3HrKwv}Larger shield protection area against projectiles.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=a94mkNNk}Arrow Catcher")]
+    [SettingPropertyGroup("Perks/OneHanded/Arrow Catcher")]
     public float oh_ArrowCatcher_p {
       get => _oh_ArrowCatcher_p;
       set {
@@ -1956,7 +1913,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=ijanbumZ}Led formation has a small bonus to their shield protection area against projectiles.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=a94mkNNk}Arrow Catcher")]
+    [SettingPropertyGroup("Perks/OneHanded/Arrow Catcher")]
     public float oh_ArrowCatcher_s {
       get => _oh_ArrowCatcher_s;
       set {
@@ -1970,7 +1927,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=bXrpRfcT}Infantry troops gain +2 xp daily.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=Fc7OsyZ8}Military Tradition")]
+    [SettingPropertyGroup("Perks/OneHanded/Military Tradition")]
     public float oh_MilitaryTradition_p {
       get => _oh_MilitaryTradition_p;
       set {
@@ -1982,7 +1939,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=sSTCcoiT}Garrison wages in the governed settlements are reduced by 5%.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=Fc7OsyZ8}Military Tradition")]
+    [SettingPropertyGroup("Perks/OneHanded/Military Tradition")]
     public float oh_MilitaryTradition_s {
       get => _oh_MilitaryTradition_s;
       set {
@@ -1995,8 +1952,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=O4fIFDAx}Infantry in your party gain an additional 10% of the total xp earned after battles.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=M3aNEkBJ}Corps-a-corps")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=O4fIFDAx}Infantry in your formation gain an additional 10% of the total xp earned after battles.")]
+    [SettingPropertyGroup("Perks/OneHanded/Corps-a-corps")]
     public float oh_CorpsACorps_p {
       get => _oh_CorpsACorps_p;
       set {
@@ -2008,7 +1965,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=MNuEtdvb}Increases garrison limit in the governed settlements by 30.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=M3aNEkBJ}Corps-a-corps")]
+    [SettingPropertyGroup("Perks/OneHanded/Corps-a-corps")]
     public float oh_CorpsACorps_s {
       get => _oh_CorpsACorps_s;
       set {
@@ -2022,7 +1979,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=rQEPseAj}Troops in your party start with +8 battle morale if you are outnumbered.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=d8qjwKza}Stand United")]
+    [SettingPropertyGroup("Perks/OneHanded/Stand United")]
     public float oh_StandUnited_p {
       get => _oh_StandUnited_p;
       set {
@@ -2034,7 +1991,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=6TbPgeQE}Garrison troops in governed settlements are 30% more effective in restoring town security.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=d8qjwKza}Stand United")]
+    [SettingPropertyGroup("Perks/OneHanded/Stand United")]
     public float oh_StandUnited_s {
       get => _oh_StandUnited_s;
       set {
@@ -2048,7 +2005,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Oz8Aj6uB}Troops in your party gain 5% more experience after each battle.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=bOhbWapX}Lead by example")]
+    [SettingPropertyGroup("Perks/OneHanded/Lead by example")]
     public float oh_LeadByExample_p {
       get => _oh_LeadByExample_p;
       set {
@@ -2060,7 +2017,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=xLbfPMKR}Troops in your party start battles with +5 battle morale.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=bOhbWapX}Lead by example")]
+    [SettingPropertyGroup("Perks/OneHanded/Lead by example")]
     public float oh_LeadByExample_s {
       get => _oh_LeadByExample_s;
       set {
@@ -2074,7 +2031,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=rx2bN30s}Your shields take 10% less damage.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=rSATpMpq}Steel Core Shields")]
+    [SettingPropertyGroup("Perks/OneHanded/Steel Core Shields")]
     public float oh_SteelCoreShields_p {
       get => _oh_SteelCoreShields_p;
       set {
@@ -2086,7 +2043,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=V1ZKAdcK}Infantry troops in the formation you are leading take 10% less damage to their shields.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=rSATpMpq}Steel Core Shields")]
+    [SettingPropertyGroup("Perks/OneHanded/Steel Core Shields")]
     public float oh_SteelCoreShields_s {
       get => _oh_SteelCoreShields_s;
       set {
@@ -2100,7 +2057,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=9jDRGKDs}Increases your combat movement speed by 5%.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=OtdkOGur}Fleet of Foot")]
+    [SettingPropertyGroup("Perks/OneHanded/Fleet of Foot")]
     public float oh_FleetOfFoot_p {
       get => _oh_FleetOfFoot_p;
       set {
@@ -2112,7 +2069,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=1bNb2bZz}Infantry troops in the formation you are leading have their movement speed increased by 4%.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=OtdkOGur}Fleet of Foot")]
+    [SettingPropertyGroup("Perks/OneHanded/Fleet of Foot")]
     public float oh_FleetOfFoot_s {
       get => _oh_FleetOfFoot_s;
       set {
@@ -2126,7 +2083,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=M8yrANf5}Increases damage with one handed weapons by 5%.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=xpGoduJq}Deadly Purpose")]
+    [SettingPropertyGroup("Perks/OneHanded/Deadly Purpose")]
     public float oh_DeadlyPurpose_p {
       get => _oh_DeadlyPurpose_p;
       set {
@@ -2138,7 +2095,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=XAwb1Yhg}Infantry troops in the formation you are leading have their melee weapon damage increased by 10%.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=xpGoduJq}Deadly Purpose")]
+    [SettingPropertyGroup("Perks/OneHanded/Deadly Purpose")]
     public float oh_DeadlyPurpose_s {
       get => _oh_DeadlyPurpose_s;
       set {
@@ -2152,7 +2109,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=SlrvOUWa}You gain +5 hit points.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=yFbEDUyb}Unwavering Defense")]
+    [SettingPropertyGroup("Perks/OneHanded/Unwavering Defense")]
     public float oh_UnwaveringDefense_p {
       get => _oh_UnwaveringDefense_p;
       set {
@@ -2164,7 +2121,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=GzNVqogG}Infantry troops in the the party you are leading have their hit points increased by 10.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=yFbEDUyb}Unwavering Defense")]
+    [SettingPropertyGroup("Perks/OneHanded/Unwavering Defense")]
     public float oh_UnwaveringDefense_s {
       get => _oh_UnwaveringDefense_s;
       set {
@@ -2178,7 +2135,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=4FI0EqbH}You deal 50% more damage with one handed weapons against shields.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=DSKtsYPi}Prestige")]
+    [SettingPropertyGroup("Perks/OneHanded/Prestige")]
     public float oh_Prestige_p {
       get => _oh_Prestige_p;
       set {
@@ -2190,7 +2147,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=4oxnmb5B}Increases your party limit by 15.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=DSKtsYPi}Prestige")]
+    [SettingPropertyGroup("Perks/OneHanded/Prestige")]
     public float oh_Prestige_s {
       get => _oh_Prestige_s;
       set {
@@ -2204,7 +2161,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=qDcqDybV}Your one handed melee attacks ignore 10% of enemy's armor.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=bBa0LB1D}Chink in the Armor")]
+    [SettingPropertyGroup("Perks/OneHanded/Chink in the Armor")]
     public float oh_ChinkInTheArmor_p {
       get => _oh_ChinkInTheArmor_p;
       set {
@@ -2216,7 +2173,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=joBeQXGd}Reduces recruitment cost of infantry troops by 20%.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=bBa0LB1D}Chink in the Armor")]
+    [SettingPropertyGroup("Perks/OneHanded/Chink in the Armor")]
     public float oh_ChinkInTheArmor_s {
       get => _oh_ChinkInTheArmor_s;
       set {
@@ -2230,7 +2187,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=gQK2IfoH}Each skill point above 250 grants you 0.2% attack speed increase with one handed weapons.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=nThmB3yB}Way of the Sword")]
+    [SettingPropertyGroup("Perks/OneHanded/Way of the Sword")]
     public float oh_WayOfTheSword_p {
       get => _oh_WayOfTheSword_p;
       set {
@@ -2242,7 +2199,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=bOSE6Mhq}Each skill point above 250 grants you 0.5% damage increase with one handed weapons.")]
-    [SettingPropertyGroup("Perks/OneHanded/{=nThmB3yB}Way of the Sword")]
+    [SettingPropertyGroup("Perks/OneHanded/Way of the Sword")]
     public float oh_WayOfTheSword_s {
       get => _oh_WayOfTheSword_s;
       set {
@@ -2256,7 +2213,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=KuZiQJhV}Two handed weapons you wield have 10% better handling.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=xDQTgPf0}Strong Grip")]
+    [SettingPropertyGroup("Perks/TwoHanded/Strong Grip")]
     public float twh_StrongGrip_p {
       get => _twh_StrongGrip_p;
       set {
@@ -2268,7 +2225,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=6mWaEzgs}Infantry troops in the formation you are leading have their two handed skill increased by 30.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=xDQTgPf0}Strong Grip")]
+    [SettingPropertyGroup("Perks/TwoHanded/Strong Grip")]
     public float twh_StrongGrip_s {
       get => _twh_StrongGrip_s;
       set {
@@ -2282,7 +2239,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=pjjnackd}Increases your damage with two handed weapons by 30% against shields.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=J7oh7Vin}Wood Chopper")]
+    [SettingPropertyGroup("Perks/TwoHanded/Wood Chopper")]
     public float twh_WoodChopper_p {
       get => _twh_WoodChopper_p;
       set {
@@ -2294,7 +2251,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=QcECvqaN}Infantry troops in the formation you are leading have their damage increased by 15% against shields.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=J7oh7Vin}Wood Chopper")]
+    [SettingPropertyGroup("Perks/TwoHanded/Wood Chopper")]
     public float twh_WoodChopper_s {
       get => _twh_WoodChopper_s;
       set {
@@ -2308,7 +2265,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Eqwrqotp}Increases your swing speed with two handed swords by 3%.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=rkuAgPSA}On the Edge")]
+    [SettingPropertyGroup("Perks/TwoHanded/On the Edge")]
     public float twh_OnTheEdge_p {
       get => _twh_OnTheEdge_p;
       set {
@@ -2320,7 +2277,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=1eEPRKKO}Infantry troops in the formation you are leading have their swing speed increased by 2%.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=rkuAgPSA}On the Edge")]
+    [SettingPropertyGroup("Perks/TwoHanded/On the Edge")]
     public float twh_OnTheEdge_s {
       get => _twh_OnTheEdge_s;
       set {
@@ -2334,7 +2291,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=czTKtBIk}Increases your damage by 10% with two handed axes and two handed maces.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=E5bgLJcs}Head Basher")]
+    [SettingPropertyGroup("Perks/TwoHanded/Head Basher")]
     public float twh_HeadBasher_p {
       get => _twh_HeadBasher_p;
       set {
@@ -2346,7 +2303,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=cRwfJ7aU}Infantry troops in the formation you are leading have their damage increased by 2%.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=E5bgLJcs}Head Basher")]
+    [SettingPropertyGroup("Perks/TwoHanded/Head Basher")]
     public float twh_HeadBasher_s {
       get => _twh_HeadBasher_s;
       set {
@@ -2360,7 +2317,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=WAbqnair}Two handed weapon attacks that deal damage over 25% of your opponent's hit points have 30% chance to knock them down.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=RlMqzqbS}Show of Strength")]
+    [SettingPropertyGroup("Perks/TwoHanded/Show of Strength")]
     public float twh_ShowOfStrength_p {
       get => _twh_ShowOfStrength_p;
       set {
@@ -2372,7 +2329,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=x0cNi9lk}Infantry troops are 20% cheaper to recruit.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=RlMqzqbS}Show of Strength")]
+    [SettingPropertyGroup("Perks/TwoHanded/Show of Strength")]
     public float twh_ShowOfStrength_s {
       get => _twh_ShowOfStrength_s;
       set {
@@ -2385,8 +2342,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=JmrERaq4}Infantry in your party gain +5 experience for each enemy you kill with a 2-handed weapon.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=miMZavW3}Baptised in Blood")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=JmrERaq4}Troops in the formation you are leading gain 5 experience for each enemy you kill.")]
+    [SettingPropertyGroup("Perks/TwoHanded/Baptised in Blood")]
     public float twh_BaptisedInBlood_p {
       get => _twh_BaptisedInBlood_p;
       set {
@@ -2398,7 +2355,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ytvDsThh}All melee infantry troops in your party gain 5% more xp in battles.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=miMZavW3}Baptised in Blood")]
+    [SettingPropertyGroup("Perks/TwoHanded/Baptised in Blood")]
     public float twh_BaptisedInBlood_s {
       get => _twh_BaptisedInBlood_s;
       set {
@@ -2412,7 +2369,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Wa0Rp59Q}Increases your damage with two handed weapons by 50% against mounts.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=NDtlE6PY}Beast Slayer")]
+    [SettingPropertyGroup("Perks/TwoHanded/Beast Slayer")]
     public float twh_BeastSlayer_p {
       get => _twh_BeastSlayer_p;
       set {
@@ -2424,7 +2381,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=e9bk6QBv}Infantry troops in the formation you are leading have their damage increased by 10% against mounts.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=NDtlE6PY}Beast Slayer")]
+    [SettingPropertyGroup("Perks/TwoHanded/Beast Slayer")]
     public float twh_BeastSlayer_s {
       get => _twh_BeastSlayer_s;
       set {
@@ -2438,7 +2395,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Ge9RMuRi}40% more damage to shields with 2 handed weapons.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=bM9VX881}Shield breaker")]
+    [SettingPropertyGroup("Perks/TwoHanded/Shield breaker")]
     public float twh_ShieldBreaker_p {
       get => _twh_ShieldBreaker_p;
       set {
@@ -2450,7 +2407,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=2tw8Ha2b}Infantry troops in the formation you are leading have their damage increased by 10% against shields.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=bM9VX881}Shield breaker")]
+    [SettingPropertyGroup("Perks/TwoHanded/Shield breaker")]
     public float twh_ShieldBreaker_s {
       get => _twh_ShieldBreaker_s;
       set {
@@ -2464,7 +2421,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=WyXs70nc}Increases your damage with two handed weapons by 20% when you have less than half hit points.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=RssJTUpL}Berserker")]
+    [SettingPropertyGroup("Perks/TwoHanded/Berserker")]
     public float twh_Berserker_p {
       get => _twh_Berserker_p;
       set {
@@ -2476,7 +2433,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=t9bDPzab}Garrison wages are reduced by 10% in governed town.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=RssJTUpL}Berserker")]
+    [SettingPropertyGroup("Perks/TwoHanded/Berserker")]
     public float twh_Berserker_s {
       get => _twh_Berserker_s;
       set {
@@ -2490,7 +2447,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=BibRbG6U}Increases your damage with two handed weapons by 15% when your hit points are above 90%.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=2jnsxsv5}Confidence")]
+    [SettingPropertyGroup("Perks/TwoHanded/Confidence")]
     public float twh_Confidence_p {
       get => _twh_Confidence_p;
       set {
@@ -2504,7 +2461,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=6aiNd5W0}You can deflect arrows with two handed swords by blocking.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=MbRZSiuq}Arrow Deflection")]
+    [SettingPropertyGroup("Perks/TwoHanded/Arrow Deflection")]
     public float twh_ArrowDeflection_p {
       get => _twh_ArrowDeflection_p;
       set {
@@ -2516,7 +2473,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=4nqaSQyO}The garrison in governed settlement gain 10% more experience from battles.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=MbRZSiuq}Arrow Deflection")]
+    [SettingPropertyGroup("Perks/TwoHanded/Arrow Deflection")]
     public float twh_ArrowDeflection_s {
       get => _twh_ArrowDeflection_s;
       set {
@@ -2530,7 +2487,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=J53hpSzc}Your kills with two handed weapons have 20% higher effect on enemy troops' battle morale.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=nAlCj2m0}Terror")]
+    [SettingPropertyGroup("Perks/TwoHanded/Terror")]
     public float twh_Terror_p {
       get => _twh_Terror_p;
       set {
@@ -2542,7 +2499,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=PMSSAVgi}Increases your prisoner limit by 10.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=nAlCj2m0}Terror")]
+    [SettingPropertyGroup("Perks/TwoHanded/Terror")]
     public float twh_Terror_s {
       get => _twh_Terror_s;
       set {
@@ -2556,7 +2513,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=GgHn8qUr}Your kills with two handed weapons have 30% higher effect on friendly troops' battle morale.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=lPuk6bao}Hope")]
+    [SettingPropertyGroup("Perks/TwoHanded/Hope")]
     public float twh_Hope_p {
       get => _twh_Hope_p;
       set {
@@ -2568,7 +2525,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=2Ott7Iq1}Your party limit is increased by 5.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=lPuk6bao}Hope")]
+    [SettingPropertyGroup("Perks/TwoHanded/Hope")]
     public float twh_Hope_s {
       get => _twh_Hope_s;
       set {
@@ -2582,7 +2539,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Tpvthjf1}Increases your speed damage bonus with two handed weapons by 20% while on foot.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=ZGovl01w}Reckless Charge")]
+    [SettingPropertyGroup("Perks/TwoHanded/Reckless Charge")]
     public float twh_RecklessCharge_p {
       get => _twh_RecklessCharge_p;
       set {
@@ -2594,7 +2551,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=EbFK5HXY}Infantry troops in the formation you are leading have their damage increased by 2% and movement speed increased by 2%.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=ZGovl01w}Reckless Charge")]
+    [SettingPropertyGroup("Perks/TwoHanded/Reckless Charge")]
     public float twh_RecklessCharge_s {
       get => _twh_RecklessCharge_s;
       set {
@@ -2608,7 +2565,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=kKSSJD84}You gain 5 hit points.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=j9OIuxxY}Thick Hides")]
+    [SettingPropertyGroup("Perks/TwoHanded/Thick Hides")]
     public float twh_ThickHides_p {
       get => _twh_ThickHides_p;
       set {
@@ -2620,7 +2577,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=w7UwHsE0}Troops in your party have their hit points increased by +5.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=j9OIuxxY}Thick Hides")]
+    [SettingPropertyGroup("Perks/TwoHanded/Thick Hides")]
     public float twh_ThickHides_s {
       get => _twh_ThickHides_s;
       set {
@@ -2634,7 +2591,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=lOaVRxdR}Increases your two handed weapon damage by 10%.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=TtwAoHfw}Blade Master")]
+    [SettingPropertyGroup("Perks/TwoHanded/Blade Master")]
     public float twh_BladeMaster_p {
       get => _twh_BladeMaster_p;
       set {
@@ -2646,7 +2603,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=aR3M3YfX}Infantry troops in the formation you are leading have their attack speed increased by 2%.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=TtwAoHfw}Blade Master")]
+    [SettingPropertyGroup("Perks/TwoHanded/Blade Master")]
     public float twh_BladeMaster_s {
       get => _twh_BladeMaster_s;
       set {
@@ -2660,7 +2617,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=GYNbGbwd}Your attacks ignore 25% of enemy's armor.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=czCRxHZy}Vandal")]
+    [SettingPropertyGroup("Perks/TwoHanded/Vandal")]
     public float twh_Vandal_p {
       get => _twh_Vandal_p;
       set {
@@ -2672,7 +2629,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=gYonPSUM}Infantry troops in the formation you are leading have their damage increased by 20% against destructible objects.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=czCRxHZy}Vandal")]
+    [SettingPropertyGroup("Perks/TwoHanded/Vandal")]
     public float twh_Vandal_s {
       get => _twh_Vandal_s;
       set {
@@ -2686,7 +2643,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=brmnjfP3}Each skill point above 250 grants you 0.2% speed increase with two handed weapons.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=dbEb7iak}Way Of The Great Axe")]
+    [SettingPropertyGroup("Perks/TwoHanded/Way Of The Great Axe")]
     public float twh_WayOfTheGreatAxe_p {
       get => _twh_WayOfTheGreatAxe_p;
       set {
@@ -2698,7 +2655,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=fANacbya}Each skill point above 250 grants you 0.5% damage increase with two handed weapons.")]
-    [SettingPropertyGroup("Perks/TwoHanded/{=dbEb7iak}Way Of The Great Axe")]
+    [SettingPropertyGroup("Perks/TwoHanded/Way Of The Great Axe")]
     public float twh_WayOfTheGreatAxe_s {
       get => _twh_WayOfTheGreatAxe_s;
       set {
@@ -2712,7 +2669,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=UdAlVmmF}Increases your damage with polearms by 2%.")]
-    [SettingPropertyGroup("Perks/Polearm/{=IFqtwpb0}Pikeman")]
+    [SettingPropertyGroup("Perks/Polearm/Pikeman")]
     public float plm_Pikeman_p {
       get => _plm_Pikeman_p;
       set {
@@ -2724,7 +2681,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ZYEPyNfF}Infantry troops in the formation you are leading have their damage increased by 2%.")]
-    [SettingPropertyGroup("Perks/Polearm/{=IFqtwpb0}Pikeman")]
+    [SettingPropertyGroup("Perks/Polearm/Pikeman")]
     public float plm_Pikeman_s {
       get => _plm_Pikeman_s;
       set {
@@ -2738,7 +2695,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=vpGuPeAH}Increases your damage by 2% with polearms while mounted.")]
-    [SettingPropertyGroup("Perks/Polearm/{=YVGtcLHF}Cavalry")]
+    [SettingPropertyGroup("Perks/Polearm/Cavalry")]
     public float plm_Cavalry_p {
       get => _plm_Cavalry_p;
       set {
@@ -2750,7 +2707,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=850DaOJR}Cavalry troops in the formation you are leading have their damage increased by 2%.")]
-    [SettingPropertyGroup("Perks/Polearm/{=YVGtcLHF}Cavalry")]
+    [SettingPropertyGroup("Perks/Polearm/Cavalry")]
     public float plm_Cavalry_s {
       get => _plm_Cavalry_s;
       set {
@@ -2764,7 +2721,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=taTbOAte}Polearm attacks that deal damage over 25% of enemy cavalry's hit points has 25% chance to dismount them.")]
-    [SettingPropertyGroup("Perks/Polearm/{=dU7haWkI}Braced")]
+    [SettingPropertyGroup("Perks/Polearm/Braced")]
     public float plm_Braced_p {
       get => _plm_Braced_p;
       set {
@@ -2776,7 +2733,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=jZJV8W7A}Infantry troops in the formation you are leading have their damage increased by 10% against enemy cavalry.")]
-    [SettingPropertyGroup("Perks/Polearm/{=dU7haWkI}Braced")]
+    [SettingPropertyGroup("Perks/Polearm/Braced")]
     public float plm_Braced_s {
       get => _plm_Braced_s;
       set {
@@ -2790,7 +2747,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=gW4Qmn73}Thrust attacks with polearms have 30% more chance to knock opponents back.")]
-    [SettingPropertyGroup("Perks/Polearm/{=TaucWWCB}Keep at Bay")]
+    [SettingPropertyGroup("Perks/Polearm/Keep at Bay")]
     public float plm_KeepAtBay_p {
       get => _plm_KeepAtBay_p;
       set {
@@ -2802,7 +2759,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=WXDcmG0f}Increases militia recruitment in governed settlements by 0.5.")]
-    [SettingPropertyGroup("Perks/Polearm/{=TaucWWCB}Keep at Bay")]
+    [SettingPropertyGroup("Perks/Polearm/Keep at Bay")]
     public float plm_KeepAtBay_s {
       get => _plm_KeepAtBay_s;
       set {
@@ -2816,7 +2773,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=2OId6uC6}Increases your swing speed with polearms by 5%.")]
-    [SettingPropertyGroup("Perks/Polearm/{=xM5aawCj}Swift Swing")]
+    [SettingPropertyGroup("Perks/Polearm/Swift Swing")]
     public float plm_SwiftSwing_p {
       get => _plm_SwiftSwing_p;
       set {
@@ -2828,7 +2785,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=1eEPRKKO}Infantry troops in the formation you are leading have their swing speed increased by 2%.")]
-    [SettingPropertyGroup("Perks/Polearm/{=xM5aawCj}Swift Swing")]
+    [SettingPropertyGroup("Perks/Polearm/Swift Swing")]
     public float plm_SwiftSwing_s {
       get => _plm_SwiftSwing_s;
       set {
@@ -2842,7 +2799,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=A9mtiIx2}Increases your thrust damage with polearms by 10%.")]
-    [SettingPropertyGroup("Perks/Polearm/{=PeaiNrSu}Clean Thrust")]
+    [SettingPropertyGroup("Perks/Polearm/Clean Thrust")]
     public float plm_CleanThrust_p {
       get => _plm_CleanThrust_p;
       set {
@@ -2854,7 +2811,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=jgtQbyyU}Infantry troops in the formation you are leading have +30 to their polearms skills.")]
-    [SettingPropertyGroup("Perks/Polearm/{=PeaiNrSu}Clean Thrust")]
+    [SettingPropertyGroup("Perks/Polearm/Clean Thrust")]
     public float plm_CleanThrust_s {
       get => _plm_CleanThrust_s;
       set {
@@ -2868,7 +2825,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=6zSTQZXK}Increases your combat movement speed with polearms by 2%.")]
-    [SettingPropertyGroup("Perks/Polearm/{=Yvk8a2tb}Footwork")]
+    [SettingPropertyGroup("Perks/Polearm/Footwork")]
     public float plm_Footwork_p {
       get => _plm_Footwork_p;
       set {
@@ -2880,7 +2837,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=jdQuO7Qf}Infantry troops in the formation you are leading have their movement speed increased by 2%.")]
-    [SettingPropertyGroup("Perks/Polearm/{=Yvk8a2tb}Footwork")]
+    [SettingPropertyGroup("Perks/Polearm/Footwork")]
     public float plm_Footwork_s {
       get => _plm_Footwork_s;
       set {
@@ -2894,7 +2851,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ft6k4Fav}Polearm attacks that deal damage over 25% of your opponent's hit points have 25% chance to knock them down.")]
-    [SettingPropertyGroup("Perks/Polearm/{=8DTKXbKw}Hard Knock")]
+    [SettingPropertyGroup("Perks/Polearm/Hard Knock")]
     public float plm_HardKnock_p {
       get => _plm_HardKnock_p;
       set {
@@ -2906,7 +2863,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=gTuRHrjO}Infantry troops in the party you are leading gain 3 hit points.")]
-    [SettingPropertyGroup("Perks/Polearm/{=8DTKXbKw}Hard Knock")]
+    [SettingPropertyGroup("Perks/Polearm/Hard Knock")]
     public float plm_HardKnock_s {
       get => _plm_HardKnock_s;
       set {
@@ -2920,7 +2877,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=GcycaG5L}Increases your damage with polearms by 70% against mounts.")]
-    [SettingPropertyGroup("Perks/Polearm/{=8POWjrr6}Steed Killer")]
+    [SettingPropertyGroup("Perks/Polearm/Steed Killer")]
     public float plm_SteedKiller_p {
       get => _plm_SteedKiller_p;
       set {
@@ -2932,7 +2889,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=FLxu1bc0}Infantry troops in the formation you are leading increase have their damage increased with polearms by 30% against mounts.")]
-    [SettingPropertyGroup("Perks/Polearm/{=8POWjrr6}Steed Killer")]
+    [SettingPropertyGroup("Perks/Polearm/Steed Killer")]
     public float plm_SteedKiller_s {
       get => _plm_SteedKiller_s;
       set {
@@ -2946,7 +2903,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=eL9RlPbj}Increases your speed damage bonus with polearms by 20% while mounted.")]
-    [SettingPropertyGroup("Perks/Polearm/{=hchDYAKL}Lancer")]
+    [SettingPropertyGroup("Perks/Polearm/Lancer")]
     public float plm_Lancer_p {
       get => _plm_Lancer_p;
       set {
@@ -2958,7 +2915,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=tm52b6ji}Troops in the formation you are leading have their damage speed bonus with polearms increased by 20%.")]
-    [SettingPropertyGroup("Perks/Polearm/{=hchDYAKL}Lancer")]
+    [SettingPropertyGroup("Perks/Polearm/Lancer")]
     public float plm_Lancer_s {
       get => _plm_Lancer_s;
       set {
@@ -2972,7 +2929,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=jD7aFORo}Your couch lance now has a 30% chance to stay couched after it kills someone.")]
-    [SettingPropertyGroup("Perks/Polearm/{=o57z0zB9}Skewer")]
+    [SettingPropertyGroup("Perks/Polearm/Skewer")]
     public float plm_Skewer_p {
       get => _plm_Skewer_p;
       set {
@@ -2984,7 +2941,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=lB12FYqb}Governed settlements gain 1 security per day.")]
-    [SettingPropertyGroup("Perks/Polearm/{=o57z0zB9}Skewer")]
+    [SettingPropertyGroup("Perks/Polearm/Skewer")]
     public float plm_Skewer_s {
       get => _plm_Skewer_s;
       set {
@@ -2998,7 +2955,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=LUTwOksA}When you hit an enemy in the head with a polearm you deal 50% more damage.")]
-    [SettingPropertyGroup("Perks/Polearm/{=vquApOWo}Guards")]
+    [SettingPropertyGroup("Perks/Polearm/Guards")]
     public float plm_Guards_p {
       get => _plm_Guards_p;
       set {
@@ -3010,7 +2967,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=s4BKLQc1}Experience gain of garrisoned cavalry in governed settlements is increased by 20%.")]
-    [SettingPropertyGroup("Perks/Polearm/{=vquApOWo}Guards")]
+    [SettingPropertyGroup("Perks/Polearm/Guards")]
     public float plm_Guards_s {
       get => _plm_Guards_s;
       set {
@@ -3024,7 +2981,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=o6J5b0M2}Troops in your formation have 20% less morale loss.")]
-    [SettingPropertyGroup("Perks/Polearm/{=Vv81gkWN}Standard Bearer")]
+    [SettingPropertyGroup("Perks/Polearm/Standard Bearer")]
     public float plm_StandardBearer_p {
       get => _plm_StandardBearer_p;
       set {
@@ -3036,7 +2993,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=IyRHO2Ez}Garrisoned infantry in governed settlements have their wages reduced by 20%.")]
-    [SettingPropertyGroup("Perks/Polearm/{=Vv81gkWN}Standard Bearer")]
+    [SettingPropertyGroup("Perks/Polearm/Standard Bearer")]
     public float plm_StandardBearer_s {
       get => _plm_StandardBearer_s;
       set {
@@ -3050,7 +3007,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=xWbSbNqy}Infantry in your party have their melee weapon skills increased by 30 while in shield wall formation.")]
-    [SettingPropertyGroup("Perks/Polearm/{=5vs3qlQ8}Phalanx")]
+    [SettingPropertyGroup("Perks/Polearm/Phalanx")]
     public float plm_Phalanx_p {
       get => _plm_Phalanx_p;
       set {
@@ -3062,7 +3019,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=EtRkxd6x}Troops in the formation you are leading have their damage with polearms increased by 3%.")]
-    [SettingPropertyGroup("Perks/Polearm/{=5vs3qlQ8}Phalanx")]
+    [SettingPropertyGroup("Perks/Polearm/Phalanx")]
     public float plm_Phalanx_s {
       get => _plm_Phalanx_s;
       set {
@@ -3076,7 +3033,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=g7a7vk3S}Troops in your party gain 5 hit points.")]
-    [SettingPropertyGroup("Perks/Polearm/{=yBa95LU3}Generous Rations")]
+    [SettingPropertyGroup("Perks/Polearm/Generous Rations")]
     public float plm_GenerousRations_p {
       get => _plm_GenerousRations_p;
       set {
@@ -3088,7 +3045,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=nKn6m1LH}Reduces recruitment cost of infantry troops by 20%.")]
-    [SettingPropertyGroup("Perks/Polearm/{=yBa95LU3}Generous Rations")]
+    [SettingPropertyGroup("Perks/Polearm/Generous Rations")]
     public float plm_GenerousRations_s {
       get => _plm_GenerousRations_s;
       set {
@@ -3102,7 +3059,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=IYyuc1fz}Governed settlements gain 0.5 militia per day.")]
-    [SettingPropertyGroup("Perks/Polearm/{=JpiQagYa}Drills")]
+    [SettingPropertyGroup("Perks/Polearm/Drills")]
     public float plm_Drills_p {
       get => _plm_Drills_p;
       set {
@@ -3114,7 +3071,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=BC1vxpPb}All troops in your party gain additional 1 xp per day.")]
-    [SettingPropertyGroup("Perks/Polearm/{=JpiQagYa}Drills")]
+    [SettingPropertyGroup("Perks/Polearm/Drills")]
     public float plm_Drills_s {
       get => _plm_Drills_s;
       set {
@@ -3128,7 +3085,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=KT9rp0v9}Increases your defence against mount charge damage by 50%.")]
-    [SettingPropertyGroup("Perks/Polearm/{=bdzt4TcN}Sure Footed")]
+    [SettingPropertyGroup("Perks/Polearm/Sure Footed")]
     public float plm_SureFooted_p {
       get => _plm_SureFooted_p;
       set {
@@ -3140,7 +3097,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=ckTWlCtf}Infantry troops in the formation you are leading have their defence against mount charge damage increased by 30%.")]
-    [SettingPropertyGroup("Perks/Polearm/{=bdzt4TcN}Sure Footed")]
+    [SettingPropertyGroup("Perks/Polearm/Sure Footed")]
     public float plm_SureFooted_s {
       get => _plm_SureFooted_s;
       set {
@@ -3154,7 +3111,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=WXPGv7Si}Your couch lance attacks deal triple damage against shields.")]
-    [SettingPropertyGroup("Perks/Polearm/{=Jat5GFDi}Unstoppable Force")]
+    [SettingPropertyGroup("Perks/Polearm/Unstoppable Force")]
     public float plm_UnstoppableForce_p {
       get => _plm_UnstoppableForce_p;
       set {
@@ -3166,7 +3123,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=3Kb5QJrN}Cavalry troops in the formation you are leading have their speed damage bonus with polearms increased by 30%.")]
-    [SettingPropertyGroup("Perks/Polearm/{=Jat5GFDi}Unstoppable Force")]
+    [SettingPropertyGroup("Perks/Polearm/Unstoppable Force")]
     public float plm_UnstoppableForce_s {
       get => _plm_UnstoppableForce_s;
       set {
@@ -3180,7 +3137,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ufciD08A}Increase your handling of swingable polearms by 15%.")]
-    [SettingPropertyGroup("Perks/Polearm/{=BazrgEOj}Counterweight")]
+    [SettingPropertyGroup("Perks/Polearm/Counterweight")]
     public float plm_CounterWeight_p {
       get => _plm_CounterWeight_p;
       set {
@@ -3192,7 +3149,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=0mivh2E1}Infantry troops in the formation you are leading have their polearm skill increased by 20.")]
-    [SettingPropertyGroup("Perks/Polearm/{=BazrgEOj}Counterweight")]
+    [SettingPropertyGroup("Perks/Polearm/Counterweight")]
     public float plm_CounterWeight_s {
       get => _plm_CounterWeight_s;
       set {
@@ -3206,7 +3163,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=DzFvoy8r}Thrust attacks with polearms have 5% increased damage.")]
-    [SettingPropertyGroup("Perks/Polearm/{=ljduhdzj}Sharpen the Tip")]
+    [SettingPropertyGroup("Perks/Polearm/Sharpen the Tip")]
     public float plm_SharpenTheTip_p {
       get => _plm_SharpenTheTip_p;
       set {
@@ -3218,7 +3175,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=xDuAJ7rA}Infantry troops in the formation you are leading have their thrust damage increased by 5%.")]
-    [SettingPropertyGroup("Perks/Polearm/{=ljduhdzj}Sharpen the Tip")]
+    [SettingPropertyGroup("Perks/Polearm/Sharpen the Tip")]
     public float plm_SharpenTheTip_s {
       get => _plm_SharpenTheTip_s;
       set {
@@ -3232,7 +3189,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=UDpWoSuA}Each skill point above 250 grants you 0.2% speed increase with polearms.")]
-    [SettingPropertyGroup("Perks/Polearm/{=YnimoRlg}Way of the Spear")]
+    [SettingPropertyGroup("Perks/Polearm/Way of the Spear")]
     public float plm_WayOfTheSpear_p {
       get => _plm_WayOfTheSpear_p;
       set {
@@ -3244,7 +3201,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=nb0l067B}Each skill point above 250 grants you 0.5% damage increase with polearms.")]
-    [SettingPropertyGroup("Perks/Polearm/{=YnimoRlg}Way of the Spear")]
+    [SettingPropertyGroup("Perks/Polearm/Way of the Spear")]
     public float plm_WayOfTheSpear_s {
       get => _plm_WayOfTheSpear_s;
       set {
@@ -3258,7 +3215,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=G0VizlNf}Decreases your bow accuracy loss due to movement by 30%.")]
-    [SettingPropertyGroup("Perks/Bow/{=1zteHA7R}Bow Control")]
+    [SettingPropertyGroup("Perks/Bow/Bow Control")]
     public float bow_BowControl_p {
       get => _bow_BowControl_p;
       set {
@@ -3270,7 +3227,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=3pBnLqIM}Bow equipped troops in your formation gain 5% damage with bows.")]
-    [SettingPropertyGroup("Perks/Bow/{=1zteHA7R}Bow Control")]
+    [SettingPropertyGroup("Perks/Bow/Bow Control")]
     public float bow_BowControl_s {
       get => _bow_BowControl_s;
       set {
@@ -3284,7 +3241,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=lgV3IXwY}Increases your headshot damage bonus by 30% with bows.")]
-    [SettingPropertyGroup("Perks/Bow/{=FVLymWqW}Dead Aim")]
+    [SettingPropertyGroup("Perks/Bow/Dead Aim")]
     public float bow_DeadAim_p {
       get => _bow_DeadAim_p;
       set {
@@ -3296,7 +3253,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=luguToag}Bow equipped troops in your formation gain +20 Archery skill.")]
-    [SettingPropertyGroup("Perks/Bow/{=FVLymWqW}Dead Aim")]
+    [SettingPropertyGroup("Perks/Bow/Dead Aim")]
     public float bow_DeadAim_s {
       get => _bow_DeadAim_s;
       set {
@@ -3310,7 +3267,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=xTUSAw9v}Your attacks with bows ignore 10% of enemy's armor.")]
-    [SettingPropertyGroup("Perks/Bow/{=PDM8MzCA}Bodkin")]
+    [SettingPropertyGroup("Perks/Bow/Bodkin")]
     public float bow_Bodkin_p {
       get => _bow_Bodkin_p;
       set {
@@ -3322,7 +3279,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=6nUa0FIl}Bow equipped troops in your formation ignores 5% of enemy's armor.")]
-    [SettingPropertyGroup("Perks/Bow/{=PDM8MzCA}Bodkin")]
+    [SettingPropertyGroup("Perks/Bow/Bodkin")]
     public float bow_Bodkin_s {
       get => _bow_Bodkin_s;
       set {
@@ -3336,7 +3293,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=cbwRp51K}Decreases the penalty to movement speed for reloading by 50%.")]
-    [SettingPropertyGroup("Perks/Bow/{=p12tSfCC}Ranger's Swiftness")]
+    [SettingPropertyGroup("Perks/Bow/Ranger's Swiftness")]
     public float bow_RangersSwiftness_p {
       get => _bow_RangersSwiftness_p;
       set {
@@ -3348,7 +3305,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ghbKql0E}Bow equipped troops in your formation gain 3% to their on foot movement speed.")]
-    [SettingPropertyGroup("Perks/Bow/{=p12tSfCC}Ranger's Swiftness")]
+    [SettingPropertyGroup("Perks/Bow/Ranger's Swiftness")]
     public float bow_RangersSwiftness_s {
       get => _bow_RangersSwiftness_s;
       set {
@@ -3362,7 +3319,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=03db314S}Increases your bow reload speed by 25%.")]
-    [SettingPropertyGroup("Perks/Bow/{=Kc9oatmM}Rapid Fire")]
+    [SettingPropertyGroup("Perks/Bow/Rapid Fire")]
     public float bow_RapidFire_p {
       get => _bow_RapidFire_p;
       set {
@@ -3374,7 +3331,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=eyIspJfB}Troops in your formation have their bow reload speed increased by 5%.")]
-    [SettingPropertyGroup("Perks/Bow/{=Kc9oatmM}Rapid Fire")]
+    [SettingPropertyGroup("Perks/Bow/Rapid Fire")]
     public float bow_RapidFire_s {
       get => _bow_RapidFire_s;
       set {
@@ -3388,7 +3345,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=Y2a6yycL}Decreases your bow accuracy loss due to rotating by 50%.")]
-    [SettingPropertyGroup("Perks/Bow/{=nOZerIfl}Quick Adjustments")]
+    [SettingPropertyGroup("Perks/Bow/Quick Adjustments")]
     public float bow_QuickAdjustments_p {
       get => _bow_QuickAdjustments_p;
       set {
@@ -3400,7 +3357,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=RDKNUawJ}Troops in your formation gain 5% accuracy with bows.")]
-    [SettingPropertyGroup("Perks/Bow/{=nOZerIfl}Quick Adjustments")]
+    [SettingPropertyGroup("Perks/Bow/Quick Adjustments")]
     public float bow_QuickAdjustments_s {
       get => _bow_QuickAdjustments_s;
       set {
@@ -3414,7 +3371,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=920FKjJk}Increases your party size by 5.")]
-    [SettingPropertyGroup("Perks/Bow/{=ssljPTUr}Merry Men")]
+    [SettingPropertyGroup("Perks/Bow/Merry Men")]
     public float bow_MerryMen_p {
       get => _bow_MerryMen_p;
       set {
@@ -3426,7 +3383,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=b4BX9Fr5}Governed settlement gains 0.5 militia per day.")]
-    [SettingPropertyGroup("Perks/Bow/{=ssljPTUr}Merry Men")]
+    [SettingPropertyGroup("Perks/Bow/Merry Men")]
     public float bow_MerryMen_s {
       get => _bow_MerryMen_s;
       set {
@@ -3440,7 +3397,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=kK8Kom0h}Decreases mounted accuracy penalties by 30% while using a bow.")]
-    [SettingPropertyGroup("Perks/Bow/{=WEUSMkCp}Mounted Archery")]
+    [SettingPropertyGroup("Perks/Bow/Mounted Archery")]
     public float bow_MountedArchery_p {
       get => _bow_MountedArchery_p;
       set {
@@ -3452,7 +3409,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=AsjB3siS}Range troops in governed settlement's garrison provide 20% more security.")]
-    [SettingPropertyGroup("Perks/Bow/{=WEUSMkCp}Mounted Archery")]
+    [SettingPropertyGroup("Perks/Bow/Mounted Archery")]
     public float bow_MountedArchery_s {
       get => _bow_MountedArchery_s;
       set {
@@ -3466,7 +3423,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=fFk5dSXc}Everyday the party member with lowest bow skill gains experience in bow.")]
-    [SettingPropertyGroup("Perks/Bow/{=UE2X5rAy}Trainer")]
+    [SettingPropertyGroup("Perks/Bow/Trainer")]
     public float bow_Trainer_p {
       get => _bow_Trainer_p;
       set {
@@ -3478,7 +3435,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=H2zjWQLk}Bow equipped troops in your party gain +3 xp everyday.")]
-    [SettingPropertyGroup("Perks/Bow/{=UE2X5rAy}Trainer")]
+    [SettingPropertyGroup("Perks/Bow/Trainer")]
     public float bow_Trainer_s {
       get => _bow_Trainer_s;
       set {
@@ -3492,7 +3449,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=XzbpZji3}Increases your damage with bows by 8%.")]
-    [SettingPropertyGroup("Perks/Bow/{=dqbbT5DK}Strong bows")]
+    [SettingPropertyGroup("Perks/Bow/Strong bows")]
     public float bow_StrongBows_p {
       get => _bow_StrongBows_p;
       set {
@@ -3504,7 +3461,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=gpPlaaey}Tier 3+ troops in your formation gain 5% damage with bows.")]
-    [SettingPropertyGroup("Perks/Bow/{=dqbbT5DK}Strong bows")]
+    [SettingPropertyGroup("Perks/Bow/Strong bows")]
     public float bow_StrongBows_s {
       get => _bow_StrongBows_s;
       set {
@@ -3518,7 +3475,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=lWAmQK5a}You can hold your aim 50% longer without losing accuracy.")]
-    [SettingPropertyGroup("Perks/Bow/{=D867vF71}Discipline")]
+    [SettingPropertyGroup("Perks/Bow/Discipline")]
     public float bow_Discipline_p {
       get => _bow_Discipline_p;
       set {
@@ -3530,7 +3487,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=sbRKNK8h}+1 loyalty per day for governed settlement.")]
-    [SettingPropertyGroup("Perks/Bow/{=D867vF71}Discipline")]
+    [SettingPropertyGroup("Perks/Bow/Discipline")]
     public float bow_Discipline_s {
       get => _bow_Discipline_s;
       set {
@@ -3544,7 +3501,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=bMPZi9OZ}Increases your damage against mounts with bows by 30%.")]
-    [SettingPropertyGroup("Perks/Bow/{=AAy1oX7z}Hunter Clan")]
+    [SettingPropertyGroup("Perks/Bow/Hunter Clan")]
     public float bow_HunterClan_p {
       get => _bow_HunterClan_p;
       set {
@@ -3556,7 +3513,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=UXaVb1Jt}Garrison maintenance costs are decreased by 15%.")]
-    [SettingPropertyGroup("Perks/Bow/{=AAy1oX7z}Hunter Clan")]
+    [SettingPropertyGroup("Perks/Bow/Hunter Clan")]
     public float bow_HunterClan_s {
       get => _bow_HunterClan_s;
       set {
@@ -3570,7 +3527,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=x6AYjN9a}You take 10% less damage from projectiles.")]
-    [SettingPropertyGroup("Perks/Bow/{=oVdoauUE}Skirmish Phase Master")]
+    [SettingPropertyGroup("Perks/Bow/Skirmish Phase Master")]
     public float bow_SkirmishPhaseMaster_p {
       get => _bow_SkirmishPhaseMaster_p;
       set {
@@ -3582,7 +3539,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=vPc4hyYy}Bow equipped troops in your formation take 5% less damage from projectiles.")]
-    [SettingPropertyGroup("Perks/Bow/{=oVdoauUE}Skirmish Phase Master")]
+    [SettingPropertyGroup("Perks/Bow/Skirmish Phase Master")]
     public float bow_SkirmishPhaseMaster_s {
       get => _bow_SkirmishPhaseMaster_s;
       set {
@@ -3596,7 +3553,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=pJcsJaW2}You can zoom in 50% more with bows.")]
-    [SettingPropertyGroup("Perks/Bow/{=lq67KjSY}Eagle Eye")]
+    [SettingPropertyGroup("Perks/Bow/Eagle Eye")]
     public float bow_EagleEye_p {
       get => _bow_EagleEye_p;
       set {
@@ -3608,7 +3565,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=h7zHLPX5}Increases your visual range in campaign map by 10%.")]
-    [SettingPropertyGroup("Perks/Bow/{=lq67KjSY}Eagle Eye")]
+    [SettingPropertyGroup("Perks/Bow/Eagle Eye")]
     public float bow_EagleEye_s {
       get => _bow_EagleEye_s;
       set {
@@ -3621,8 +3578,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=6ncPxxfa}Ranged troops in your party gain an additional 10% of the total xp earned after battles.")]
-    [SettingPropertyGroup("Perks/Bow/{=QH77Weyq}Bulls Eye")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=6ncPxxfa}Ranged troops in your formation gain an additional 10% of the total xp earned after battles.")]
+    [SettingPropertyGroup("Perks/Bow/Bulls Eye")]
     public float bow_BullsEye_p {
       get => _bow_BullsEye_p;
       set {
@@ -3634,7 +3591,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=bcONdncG}+2 xp daily to all troops in garrison to governed settlement.")]
-    [SettingPropertyGroup("Perks/Bow/{=QH77Weyq}Bulls Eye")]
+    [SettingPropertyGroup("Perks/Bow/Bulls Eye")]
     public float bow_BullsEye_s {
       get => _bow_BullsEye_s;
       set {
@@ -3648,7 +3605,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=WYPotR6p}Increases morale of range troops in your party at the beginning of battle by 10%.")]
-    [SettingPropertyGroup("Perks/Bow/{=aIKVpGvE}Renowned Archer")]
+    [SettingPropertyGroup("Perks/Bow/Renowned Archer")]
     public float bow_RenownedArcher_p {
       get => _bow_RenownedArcher_p;
       set {
@@ -3660,7 +3617,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=u0j3Nfmc}Ranged troops are 30% cheaper to recruit and to upgrade.")]
-    [SettingPropertyGroup("Perks/Bow/{=aIKVpGvE}Renowned Archer")]
+    [SettingPropertyGroup("Perks/Bow/Renowned Archer")]
     public float bow_RenownedArcher_s {
       get => _bow_RenownedArcher_s;
       set {
@@ -3674,7 +3631,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=LiaRnWJZ}You can now use all bows on horseback.")]
-    [SettingPropertyGroup("Perks/Bow/{=dbUybDTG}Horse Master")]
+    [SettingPropertyGroup("Perks/Bow/Horse Master")]
     public float bow_HorseMaster_p {
       get => _bow_HorseMaster_p;
       set {
@@ -3686,7 +3643,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=EHBkdRfV}Mounted archers in your formation gain +30 bow skill.")]
-    [SettingPropertyGroup("Perks/Bow/{=dbUybDTG}Horse Master")]
+    [SettingPropertyGroup("Perks/Bow/Horse Master")]
     public float bow_HorseMaster_s {
       get => _bow_HorseMaster_s;
       set {
@@ -3700,7 +3657,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ll4s461C}You get 3 extra arrows per quiver.")]
-    [SettingPropertyGroup("Perks/Bow/{=h83ZU95t}Deep Quivers")]
+    [SettingPropertyGroup("Perks/Bow/Deep Quivers")]
     public float bow_DeepQuivers_p {
       get => _bow_DeepQuivers_p;
       set {
@@ -3712,7 +3669,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=KOyGEcbQ}Bow equipped troops in your party gain 1 extra arrow per quiver.")]
-    [SettingPropertyGroup("Perks/Bow/{=h83ZU95t}Deep Quivers")]
+    [SettingPropertyGroup("Perks/Bow/Deep Quivers")]
     public float bow_DeepQuivers_s {
       get => _bow_DeepQuivers_s;
       set {
@@ -3726,7 +3683,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=MOITVVNu}Aiming with your bow is 25% faster.")]
-    [SettingPropertyGroup("Perks/Bow/{=vnJndBgT}Quick Draw")]
+    [SettingPropertyGroup("Perks/Bow/Quick Draw")]
     public float bow_QuickDraw_p {
       get => _bow_QuickDraw_p;
       set {
@@ -3738,7 +3695,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=9D6Xv3e8}Increases tax gain in governed settlement by 5%.")]
-    [SettingPropertyGroup("Perks/Bow/{=vnJndBgT}Quick Draw")]
+    [SettingPropertyGroup("Perks/Bow/Quick Draw")]
     public float bow_QuickDraw_s {
       get => _bow_QuickDraw_s;
       set {
@@ -3752,7 +3709,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=RQd005zy}Equipped bows do not slow you down.")]
-    [SettingPropertyGroup("Perks/Bow/{=ZDNI6n9s}Salvo")]
+    [SettingPropertyGroup("Perks/Bow/Salvo")]
     public float bow_Salvo_p {
       get => _bow_Salvo_p;
       set {
@@ -3764,7 +3721,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=AsjB3siS}Range troops in governed settlement's garrison provide 20% more security.")]
-    [SettingPropertyGroup("Perks/Bow/{=ZDNI6n9s}Salvo")]
+    [SettingPropertyGroup("Perks/Bow/Salvo")]
     public float bow_Salvo_s {
       get => _bow_Salvo_s;
       set {
@@ -3778,7 +3735,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=kgJ4hfd2}Each skill point above 200 grants you 0.2% speed increase with bows.")]
-    [SettingPropertyGroup("Perks/Bow/{=rsKhbZpJ}Deadshot")]
+    [SettingPropertyGroup("Perks/Bow/Deadshot")]
     public float bow_Deadshot_p {
       get => _bow_Deadshot_p;
       set {
@@ -3790,7 +3747,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=mXDS8YR0}Each skill point above 200 grants you 0.5% damage increase with bows.")]
-    [SettingPropertyGroup("Perks/Bow/{=rsKhbZpJ}Deadshot")]
+    [SettingPropertyGroup("Perks/Bow/Deadshot")]
     public float bow_Deadshot_s {
       get => _bow_Deadshot_s;
       set {
@@ -3804,7 +3761,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=DyLbvdUw}Your crossbow attacks ignore armors below 20.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=v8RwzwqD}Piercer")]
+    [SettingPropertyGroup("Perks/Crossbow/Piercer")]
     public float xbw_Piercer_p {
       get => _xbw_Piercer_p;
       set {
@@ -3816,7 +3773,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=R71hUTU2}Ranged troops are 20% cheaper to recruit.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=v8RwzwqD}Piercer")]
+    [SettingPropertyGroup("Perks/Crossbow/Piercer")]
     public float xbw_Piercer_s {
       get => _xbw_Piercer_s;
       set {
@@ -3830,7 +3787,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=jojBRn0D}Aiming with your crossbow is 25% faster.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=IUGVdu64}Marksmen")]
+    [SettingPropertyGroup("Perks/Crossbow/Marksmen")]
     public float xbw_Marksmen_p {
       get => _xbw_Marksmen_p;
       set {
@@ -3842,7 +3799,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=U32R2S5O}Increases the morale of ranged troops at the start of the battle by 10%.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=IUGVdu64}Marksmen")]
+    [SettingPropertyGroup("Perks/Crossbow/Marksmen")]
     public float xbw_Marksmen_s {
       get => _xbw_Marksmen_s;
       set {
@@ -3856,7 +3813,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=mTjktBP6}Increases crossbow damage against mounts by 40%.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=75vJc53f}Unhorser")]
+    [SettingPropertyGroup("Perks/Crossbow/Unhorser")]
     public float xbw_Unhorser_p {
       get => _xbw_Unhorser_p;
       set {
@@ -3868,7 +3825,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=rYHlksFs}Crossbow equipped troops in your formation deal 20% more damage against mounts.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=75vJc53f}Unhorser")]
+    [SettingPropertyGroup("Perks/Crossbow/Unhorser")]
     public float xbw_Unhorser_s {
       get => _xbw_Unhorser_s;
       set {
@@ -3882,7 +3839,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=VtTMWJja}Reduces your crossbow reload time by 25%.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=1bw2uw8H}Wind Winder")]
+    [SettingPropertyGroup("Perks/Crossbow/Wind Winder")]
     public float xbw_WindWinder_p {
       get => _xbw_WindWinder_p;
       set {
@@ -3894,7 +3851,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=6Rh07aSi}Ranged troops' crossbow reload speed is increased by 5%.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=1bw2uw8H}Wind Winder")]
+    [SettingPropertyGroup("Perks/Crossbow/Wind Winder")]
     public float xbw_WindWinder_s {
       get => _xbw_WindWinder_s;
       set {
@@ -3908,7 +3865,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=aq4NI3Ao}Decreases your crossbow accuracy loss due to movement by 30%.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=uANbQUxg}Donkeys Swiftness")]
+    [SettingPropertyGroup("Perks/Crossbow/Donkeys Swiftness")]
     public float xbw_DonkeysSwiftness_p {
       get => _xbw_DonkeysSwiftness_p;
       set {
@@ -3920,7 +3877,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=6nm9biYR}Crossbow equipped troops in your formation have +30 crossbow skill.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=uANbQUxg}Donkeys Swiftness")]
+    [SettingPropertyGroup("Perks/Crossbow/Donkeys Swiftness")]
     public float xbw_DonkeysSwiftness_s {
       get => _xbw_DonkeysSwiftness_s;
       set {
@@ -3934,7 +3891,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=1ndbOvdQ}Increases your head shot damage with crossbows by 50%.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=leaowE4D}Sheriff")]
+    [SettingPropertyGroup("Perks/Crossbow/Sheriff")]
     public float xbw_Sheriff_p {
       get => _xbw_Sheriff_p;
       set {
@@ -3946,7 +3903,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=AD30RcU9}Troops in your formation deal 10% more damage against foot soldiers with crossbows.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=leaowE4D}Sheriff")]
+    [SettingPropertyGroup("Perks/Crossbow/Sheriff")]
     public float xbw_Sheriff_s {
       get => _xbw_Sheriff_s;
       set {
@@ -3960,7 +3917,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Arwl4bAi}Increases the morale of each Tier 1 to 3 troops by 10%.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=2rPMYl7Y}Peasant Leader")]
+    [SettingPropertyGroup("Perks/Crossbow/Peasant Leader")]
     public float xbw_PeasantLeader_p {
       get => _xbw_PeasantLeader_p;
       set {
@@ -3972,7 +3929,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=byX4TWWM}Reduces upkeep of ranged troops in the governed settlement's garrison by 20%.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=2rPMYl7Y}Peasant Leader")]
+    [SettingPropertyGroup("Perks/Crossbow/Peasant Leader")]
     public float xbw_PeasantLeader_s {
       get => _xbw_PeasantLeader_s;
       set {
@@ -3986,7 +3943,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HM60zpIf}Your ranged troops gain 2 xp everyday.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=ICkvftaM}Renown Marksmen")]
+    [SettingPropertyGroup("Perks/Crossbow/Renown Marksmen")]
     public float xbw_RenownMarksmen_p {
       get => _xbw_RenownMarksmen_p;
       set {
@@ -3998,7 +3955,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=BaYbaMU2}Ranged troops in governed settlement's garrison provide 30% more security.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=ICkvftaM}Renown Marksmen")]
+    [SettingPropertyGroup("Perks/Crossbow/Renown Marksmen")]
     public float xbw_RenownMarksmen_s {
       get => _xbw_RenownMarksmen_s;
       set {
@@ -4012,7 +3969,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=CiSkFsfa}Increases stack size for quivers by 4.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=FA5QlTvm}Fletcher")]
+    [SettingPropertyGroup("Perks/Crossbow/Fletcher")]
     public float xbw_Fletcher_p {
       get => _xbw_Fletcher_p;
       set {
@@ -4024,7 +3981,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=lslBxgaw}Crossbow equipped troops in your party gain 2 extra bolts per quiver.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=FA5QlTvm}Fletcher")]
+    [SettingPropertyGroup("Perks/Crossbow/Fletcher")]
     public float xbw_Fletcher_s {
       get => _xbw_Fletcher_s;
       set {
@@ -4038,7 +3995,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=retWZcQ0}Your attacks with crossbows ignore 10% of enemy's armor.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=jjkJyKoy}Puncture")]
+    [SettingPropertyGroup("Perks/Crossbow/Puncture")]
     public float xbw_Puncture_p {
       get => _xbw_Puncture_p;
       set {
@@ -4050,7 +4007,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=xORKx4wb}Crossbow equipped troops in your formation ignore 5% of enemy's armor.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=jjkJyKoy}Puncture")]
+    [SettingPropertyGroup("Perks/Crossbow/Puncture")]
     public float xbw_Puncture_s {
       get => _xbw_Puncture_s;
       set {
@@ -4064,7 +4021,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=BbaidhT4}Equipped crossbows do not slow you down.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=SKUPHeAw}Loose and Move")]
+    [SettingPropertyGroup("Perks/Crossbow/Loose and Move")]
     public float xbw_LooseAndMove_p {
       get => _xbw_LooseAndMove_p;
       set {
@@ -4076,7 +4033,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Lj6SwJYF}Ranged troops under your command have their their movement speed increased by 5%.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=SKUPHeAw}Loose and Move")]
+    [SettingPropertyGroup("Perks/Crossbow/Loose and Move")]
     public float xbw_LooseAndMove_s {
       get => _xbw_LooseAndMove_s;
       set {
@@ -4090,7 +4047,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=nOjfjiUc}Doubles the interrupt threshold while you are reloading your crossbow.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=NYHeygaj}Deft Hands")]
+    [SettingPropertyGroup("Perks/Crossbow/Deft Hands")]
     public float xbw_DeftHands_p {
       get => _xbw_DeftHands_p;
       set {
@@ -4102,7 +4059,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=tVhDLrGY}Troops under your command have their interrupt threshold doubled while reloading their crossbows.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=NYHeygaj}Deft Hands")]
+    [SettingPropertyGroup("Perks/Crossbow/Deft Hands")]
     public float xbw_DeftHands_s {
       get => _xbw_DeftHands_s;
       set {
@@ -4116,7 +4073,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=NhQrsc1A}You can reload any crossbow on horseback.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=UZHvbYTr}Mounted Crossbowman")]
+    [SettingPropertyGroup("Perks/Crossbow/Mounted Crossbowman")]
     public float xbw_MountedCrossbowman_p {
       get => _xbw_MountedCrossbowman_p;
       set {
@@ -4128,7 +4085,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=pS7bgCl0}Ranged troops gain 5% more xp after battles.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=UZHvbYTr}Mounted Crossbowman")]
+    [SettingPropertyGroup("Perks/Crossbow/Mounted Crossbowman")]
     public float xbw_MountedCrossbowman_s {
       get => _xbw_MountedCrossbowman_s;
       set {
@@ -4142,7 +4099,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=TlA4utZV}The accuracy penalty while shooting crossbows from horseback is halved.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=Ye9lbBr3}Steady")]
+    [SettingPropertyGroup("Perks/Crossbow/Steady")]
     public float xbw_Steady_p {
       get => _xbw_Steady_p;
       set {
@@ -4154,7 +4111,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Wifppt09}Increases settlement tariff gain by 5%.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=Ye9lbBr3}Steady")]
+    [SettingPropertyGroup("Perks/Crossbow/Steady")]
     public float xbw_Steady_s {
       get => _xbw_Steady_s;
       set {
@@ -4168,7 +4125,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=VWPbNJrY}You can zoom in 100% more with crossbows.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=aT0uYDuo}Sniper")]
+    [SettingPropertyGroup("Perks/Crossbow/Sniper")]
     public float xbw_Sniper_p {
       get => _xbw_Sniper_p;
       set {
@@ -4180,7 +4137,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=UIuKnT2h}Governed settlement gains +1 militia per day.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=aT0uYDuo}Sniper")]
+    [SettingPropertyGroup("Perks/Crossbow/Sniper")]
     public float xbw_Sniper_s {
       get => _xbw_Sniper_s;
       set {
@@ -4194,7 +4151,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=3hcbkk2i}Crossbow hits dismount enemy cavalry when they deal damage over 25% of their hit points.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=FjMS9Mbz}Hammer Bolts")]
+    [SettingPropertyGroup("Perks/Crossbow/Hammer Bolts")]
     public float xbw_HammerBolts_p {
       get => _xbw_HammerBolts_p;
       set {
@@ -4206,7 +4163,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=JFvZAuKl}Crossbow equipped troops in your formation gain 10% damage with crossbows.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=FjMS9Mbz}Hammer Bolts")]
+    [SettingPropertyGroup("Perks/Crossbow/Hammer Bolts")]
     public float xbw_HammerBolts_s {
       get => _xbw_HammerBolts_s;
       set {
@@ -4220,7 +4177,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=yL192BsB}Shield on your back has a 75% chance of blocking projectile damage from behind.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=2667CwaK}Pavise")]
+    [SettingPropertyGroup("Perks/Crossbow/Pavise")]
     public float xbw_Pavise_p {
       get => _xbw_Pavise_p;
       set {
@@ -4232,7 +4189,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=3nla4sSL}Governed settlement's ballistae gain 30% bonus accuracy in siege bombardment phase.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=2667CwaK}Pavise")]
+    [SettingPropertyGroup("Perks/Crossbow/Pavise")]
     public float xbw_Pavise_s {
       get => _xbw_Pavise_s;
       set {
@@ -4246,7 +4203,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=1nRyaC98}You have a 20% chance to increase bombardment casualties by 1 unit.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=nAlCj2m0}Terror")]
+    [SettingPropertyGroup("Perks/Crossbow/Terror")]
     public float xbw_Terror_p {
       get => _xbw_Terror_p;
       set {
@@ -4258,7 +4215,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ddcEaGrG}Your troops' crossbow kills inflict 25% more morale loss to enemy.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=nAlCj2m0}Terror")]
+    [SettingPropertyGroup("Perks/Crossbow/Terror")]
     public float xbw_Terror_s {
       get => _xbw_Terror_s;
       set {
@@ -4272,7 +4229,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=wGoEB4ba}Upkeep of tier 4+ ranged troops are reduced by 50%.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=nGWmyZCs}Picked Shots")]
+    [SettingPropertyGroup("Perks/Crossbow/Picked Shots")]
     public float xbw_PickedShots_p {
       get => _xbw_PickedShots_p;
       set {
@@ -4284,7 +4241,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=dQyiRllV}Your ranged troops have +5 hit points.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=nGWmyZCs}Picked Shots")]
+    [SettingPropertyGroup("Perks/Crossbow/Picked Shots")]
     public float xbw_PickedShots_s {
       get => _xbw_PickedShots_s;
       set {
@@ -4298,7 +4255,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=isepwTYW}Each skill point above 200 grants you 0.2% speed increase with crossbows.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=ZFtyxzT5}Mighty Pull")]
+    [SettingPropertyGroup("Perks/Crossbow/Mighty Pull")]
     public float xbw_MightyPull_p {
       get => _xbw_MightyPull_p;
       set {
@@ -4310,7 +4267,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ujSlI1fl}Each skill point above 200 grants you 0.5% damage increase with crossbows.")]
-    [SettingPropertyGroup("Perks/Crossbow/{=ZFtyxzT5}Mighty Pull")]
+    [SettingPropertyGroup("Perks/Crossbow/Mighty Pull")]
     public float xbw_MightyPull_s {
       get => _xbw_MightyPull_s;
       set {
@@ -4324,7 +4281,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Og8QMFeC}Increases your drawing speed with throwing weapons by 20%.")]
-    [SettingPropertyGroup("Perks/Throwing/{=vnJndBgT}Quick Draw")]
+    [SettingPropertyGroup("Perks/Throwing/Quick Draw")]
     public float thr_QuickDraw_p {
       get => _thr_QuickDraw_p;
       set {
@@ -4336,7 +4293,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=kQtrLwVD}Increases your troops' drawing speed of throwing weapons by 10%.")]
-    [SettingPropertyGroup("Perks/Throwing/{=vnJndBgT}Quick Draw")]
+    [SettingPropertyGroup("Perks/Throwing/Quick Draw")]
     public float thr_QuickDraw_s {
       get => _thr_QuickDraw_s;
       set {
@@ -4350,7 +4307,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=JfLCWjqI}You deal 40% more damage with throwing weapons against shields.")]
-    [SettingPropertyGroup("Perks/Throwing/{=DeWp2GjP}Shield Breaker")]
+    [SettingPropertyGroup("Perks/Throwing/Shield Breaker")]
     public float thr_ShieldBreaker_p {
       get => _thr_ShieldBreaker_p;
       set {
@@ -4362,7 +4319,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=SP5n2GOz}Troops in your formation deal 8% more damage with throwing weapons against shields.")]
-    [SettingPropertyGroup("Perks/Throwing/{=DeWp2GjP}Shield Breaker")]
+    [SettingPropertyGroup("Perks/Throwing/Shield Breaker")]
     public float thr_ShieldBreaker_s {
       get => _thr_ShieldBreaker_s;
       set {
@@ -4376,7 +4333,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=bqjL4vxF}Deal 40% more damage with throwing weapons against horses.")]
-    [SettingPropertyGroup("Perks/Throwing/{=xnDWqYKW}Hunter")]
+    [SettingPropertyGroup("Perks/Throwing/Hunter")]
     public float thr_Hunter_p {
       get => _thr_Hunter_p;
       set {
@@ -4388,7 +4345,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=IqcdcG9j}Troops in your formation deal 8% more damage with throwing weapons against mounts.")]
-    [SettingPropertyGroup("Perks/Throwing/{=xnDWqYKW}Hunter")]
+    [SettingPropertyGroup("Perks/Throwing/Hunter")]
     public float thr_Hunter_s {
       get => _thr_Hunter_s;
       set {
@@ -4402,7 +4359,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=6GldhQg8}Melee usage of thrown weapons deals 10% more damage.")]
-    [SettingPropertyGroup("Perks/Throwing/{=mPPWRjCZ}Flexible Fighter")]
+    [SettingPropertyGroup("Perks/Throwing/Flexible Fighter")]
     public float thr_FlexibleFighter_p {
       get => _thr_FlexibleFighter_p;
       set {
@@ -4416,7 +4373,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=N8UfRVVH}Decreases mounted accuracy penalties by 20% while using a throwing weapon.")]
-    [SettingPropertyGroup("Perks/Throwing/{=l1I748Fn}Mounted Skirmisher")]
+    [SettingPropertyGroup("Perks/Throwing/Mounted Skirmisher")]
     public float thr_MountedSkirmisher_p {
       get => _thr_MountedSkirmisher_p;
       set {
@@ -4428,7 +4385,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=VLIlhrRx}Mounted troops under your command deal 10% more damage with thrown weapons.")]
-    [SettingPropertyGroup("Perks/Throwing/{=l1I748Fn}Mounted Skirmisher")]
+    [SettingPropertyGroup("Perks/Throwing/Mounted Skirmisher")]
     public float thr_MountedSkirmisher_s {
       get => _thr_MountedSkirmisher_s;
       set {
@@ -4442,7 +4399,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=bRdjTD7Q}Projectile speed of your throwing weapons is increased by 25%.")]
-    [SettingPropertyGroup("Perks/Throwing/{=BCoQgZvG}Perfect Technique")]
+    [SettingPropertyGroup("Perks/Throwing/Perfect Technique")]
     public float thr_PerfectTechnique_p {
       get => _thr_PerfectTechnique_p;
       set {
@@ -4454,7 +4411,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=xPt71fIC}Troops under your command have their projectile speed increased by 10%.")]
-    [SettingPropertyGroup("Perks/Throwing/{=BCoQgZvG}Perfect Technique")]
+    [SettingPropertyGroup("Perks/Throwing/Perfect Technique")]
     public float thr_PerfectTechnique_s {
       get => _thr_PerfectTechnique_s;
       set {
@@ -4468,7 +4425,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=6fMGZbXD}Your throwing weapons gain 25% additional speed from your movement.")]
-    [SettingPropertyGroup("Perks/Throwing/{=OcaW12fJ}Running Throw")]
+    [SettingPropertyGroup("Perks/Throwing/Running Throw")]
     public float thr_RunningThrow_p {
       get => _thr_RunningThrow_p;
       set {
@@ -4480,7 +4437,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=h1juSIZx}Troops under your command have +30 throwing skill.")]
-    [SettingPropertyGroup("Perks/Throwing/{=OcaW12fJ}Running Throw")]
+    [SettingPropertyGroup("Perks/Throwing/Running Throw")]
     public float thr_RunningThrow_s {
       get => _thr_RunningThrow_s;
       set {
@@ -4494,7 +4451,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=dEItpQvn}Thrown weapon hits that deal damage over 25% of enemy cavalry's hit points have 50% chance to dismount them.")]
-    [SettingPropertyGroup("Perks/Throwing/{=Gn3KBN8L}Knock Off")]
+    [SettingPropertyGroup("Perks/Throwing/Knock Off")]
     public float thr_KnockOff_p {
       get => _thr_KnockOff_p;
       set {
@@ -4506,7 +4463,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=DjYcaHTw}Troops in the formation you control deal 5% more throwing weapon damage against enemy cavalry.")]
-    [SettingPropertyGroup("Perks/Throwing/{=Gn3KBN8L}Knock Off")]
+    [SettingPropertyGroup("Perks/Throwing/Knock Off")]
     public float thr_KnockOff_s {
       get => _thr_KnockOff_s;
       set {
@@ -4520,7 +4477,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=5zkewF8C}You have +1 ammunition for throwing weapons.")]
-    [SettingPropertyGroup("Perks/Throwing/{=bloxcikL}Well Prepared")]
+    [SettingPropertyGroup("Perks/Throwing/Well Prepared")]
     public float thr_WellPrepared_p {
       get => _thr_WellPrepared_p;
       set {
@@ -4532,7 +4489,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=WiJZC36N}Ranged troops in your party have 25% chance of having +1 ammunition for throwing weapons.")]
-    [SettingPropertyGroup("Perks/Throwing/{=bloxcikL}Well Prepared")]
+    [SettingPropertyGroup("Perks/Throwing/Well Prepared")]
     public float thr_WellPrepared_s {
       get => _thr_WellPrepared_s;
       set {
@@ -4546,7 +4503,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=BSLbbQ7j}You can zoom in 25% more with throwing weapons.")]
-    [SettingPropertyGroup("Perks/Throwing/{=throwingskillfocus}Focus")]
+    [SettingPropertyGroup("Perks/Throwing/Focus")]
     public float thr_Focus_p {
       get => _thr_Focus_p;
       set {
@@ -4558,7 +4515,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=8coU5Ff5}Increases security of governed settlement by 1.")]
-    [SettingPropertyGroup("Perks/Throwing/{=throwingskillfocus}Focus")]
+    [SettingPropertyGroup("Perks/Throwing/Focus")]
     public float thr_Focus_s {
       get => _thr_Focus_s;
       set {
@@ -4572,7 +4529,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=csKot5g4}Your throwing weapons deal 50% more damage to enemies with less than 50% hit points left.")]
-    [SettingPropertyGroup("Perks/Throwing/{=IsHyjvSq}Last Hit")]
+    [SettingPropertyGroup("Perks/Throwing/Last Hit")]
     public float thr_LastHit_p {
       get => _thr_LastHit_p;
       set {
@@ -4584,7 +4541,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ZMYTashc}Increases the morale of your party at the start of the battle by 5.")]
-    [SettingPropertyGroup("Perks/Throwing/{=IsHyjvSq}Last Hit")]
+    [SettingPropertyGroup("Perks/Throwing/Last Hit")]
     public float thr_LastHit_s {
       get => _thr_LastHit_s;
       set {
@@ -4598,7 +4555,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=aDbvfb8z}+50% damage to headshots with thrown weapons.")]
-    [SettingPropertyGroup("Perks/Throwing/{=iARYMyuq}Head Hunter")]
+    [SettingPropertyGroup("Perks/Throwing/Head Hunter")]
     public float thr_HeadHunter_p {
       get => _thr_HeadHunter_p;
       set {
@@ -4610,7 +4567,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=MoHbMLEa}Tier 2+ troops are 20% cheaper to recruit.")]
-    [SettingPropertyGroup("Perks/Throwing/{=iARYMyuq}Head Hunter")]
+    [SettingPropertyGroup("Perks/Throwing/Head Hunter")]
     public float thr_HeadHunter_s {
       get => _thr_HeadHunter_s;
       set {
@@ -4624,7 +4581,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=32MHeh5r}Infantry upgrades are 20% cheaper.")]
-    [SettingPropertyGroup("Perks/Throwing/{=cC8iTtg5}Throwing Competitions")]
+    [SettingPropertyGroup("Perks/Throwing/Throwing Competitions")]
     public float thr_ThrowingCompetitions_p {
       get => _thr_ThrowingCompetitions_p;
       set {
@@ -4636,7 +4593,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=b4BX9Fr5}Governed settlement gains 0.5 militia per day.")]
-    [SettingPropertyGroup("Perks/Throwing/{=cC8iTtg5}Throwing Competitions")]
+    [SettingPropertyGroup("Perks/Throwing/Throwing Competitions")]
     public float thr_ThrowingCompetitions_s {
       get => _thr_ThrowingCompetitions_s;
       set {
@@ -4650,7 +4607,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=mQYqKCIK}Your throwing axes deal triple damage to shields.")]
-    [SettingPropertyGroup("Perks/Throwing/{=b6W74uyR}Splinters")]
+    [SettingPropertyGroup("Perks/Throwing/Splinters")]
     public float thr_Splinters_p {
       get => _thr_Splinters_p;
       set {
@@ -4662,7 +4619,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=qCCLpjAa}Troops under your command deal 50% more damage to shields with throwing weapons.")]
-    [SettingPropertyGroup("Perks/Throwing/{=b6W74uyR}Splinters")]
+    [SettingPropertyGroup("Perks/Throwing/Splinters")]
     public float thr_Splinters_s {
       get => _thr_Splinters_s;
       set {
@@ -4676,7 +4633,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=FaJa4YD5}You have +2 ammunition for throwing weapons.")]
-    [SettingPropertyGroup("Perks/Throwing/{=w53LSPJ1}Resourceful")]
+    [SettingPropertyGroup("Perks/Throwing/Resourceful")]
     public float thr_Resourceful_p {
       get => _thr_Resourceful_p;
       set {
@@ -4688,7 +4645,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=IiMfnxMC}Throwing weapon equipped troops gain 10% more xp after battles.")]
-    [SettingPropertyGroup("Perks/Throwing/{=w53LSPJ1}Resourceful")]
+    [SettingPropertyGroup("Perks/Throwing/Resourceful")]
     public float thr_Resourceful_s {
       get => _thr_Resourceful_s;
       set {
@@ -4702,7 +4659,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=leKleLYK}You can pick up spears or weapons from the ground while mounted.")]
-    [SettingPropertyGroup("Perks/Throwing/{=9iLyu1kp}Long Reach")]
+    [SettingPropertyGroup("Perks/Throwing/Long Reach")]
     public float thr_LongReach_p {
       get => _thr_LongReach_p;
       set {
@@ -4714,7 +4671,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=kVSO17rc}Winning battles give 20% more morale and renown.")]
-    [SettingPropertyGroup("Perks/Throwing/{=9iLyu1kp}Long Reach")]
+    [SettingPropertyGroup("Perks/Throwing/Long Reach")]
     public float thr_LongReach_s {
       get => _thr_LongReach_s;
       set {
@@ -4728,7 +4685,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=sFoPPLaX}Throwing weapons ignore 30% of enemy's armor.")]
-    [SettingPropertyGroup("Perks/Throwing/{=cPPLAz8l}Weak Spot")]
+    [SettingPropertyGroup("Perks/Throwing/Weak Spot")]
     public float thr_WeakSpot_p {
       get => _thr_WeakSpot_p;
       set {
@@ -4740,7 +4697,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=2QWg8lOr}Troops in your formation ignore 10% of enemy's armor when attacking with thrown weapons.")]
-    [SettingPropertyGroup("Perks/Throwing/{=cPPLAz8l}Weak Spot")]
+    [SettingPropertyGroup("Perks/Throwing/Weak Spot")]
     public float thr_WeakSpot_s {
       get => _thr_WeakSpot_s;
       set {
@@ -4754,7 +4711,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=6VtZJPSb}Javelins you throw penetrate shields like ballista bolts.")]
-    [SettingPropertyGroup("Perks/Throwing/{=tYAYIRjr}Impale")]
+    [SettingPropertyGroup("Perks/Throwing/Impale")]
     public float thr_Impale_p {
       get => _thr_Impale_p;
       set {
@@ -4766,7 +4723,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=PzqAt7W5}Infantry troops in your formation deal 10% more damage with their throwing weapons.")]
-    [SettingPropertyGroup("Perks/Throwing/{=tYAYIRjr}Impale")]
+    [SettingPropertyGroup("Perks/Throwing/Impale")]
     public float thr_Impale_s {
       get => _thr_Impale_s;
       set {
@@ -4780,7 +4737,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=DIEjNmNa}Each skill point above 200 grants you 0.2% projectile speed increase with throwing weapons.")]
-    [SettingPropertyGroup("Perks/Throwing/{=Jat5GFDi}Unstoppable Force")]
+    [SettingPropertyGroup("Perks/Throwing/Unstoppable Force")]
     public float thr_UnstoppableForce_p {
       get => _thr_UnstoppableForce_p;
       set {
@@ -4792,7 +4749,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Abj4P4Hg}Each skill point above 200 grants you 0.5% damage increase with throwing weapons.")]
-    [SettingPropertyGroup("Perks/Throwing/{=Jat5GFDi}Unstoppable Force")]
+    [SettingPropertyGroup("Perks/Throwing/Unstoppable Force")]
     public float thr_UnstoppableForce_s {
       get => _thr_UnstoppableForce_s;
       set {
@@ -4806,7 +4763,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=NCJCEVkp}Increases your charge damage by 20%.")]
-    [SettingPropertyGroup("Perks/Riding/{=kzy9Iduz}Full Speed")]
+    [SettingPropertyGroup("Perks/Riding/Full Speed")]
     public float rid_FullSpeed_p {
       get => _rid_FullSpeed_p;
       set {
@@ -4818,7 +4775,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=LU3lcIwl}Mounted troops in your formation gain +10% charge damage.")]
-    [SettingPropertyGroup("Perks/Riding/{=kzy9Iduz}Full Speed")]
+    [SettingPropertyGroup("Perks/Riding/Full Speed")]
     public float rid_FullSpeed_s {
       get => _rid_FullSpeed_s;
       set {
@@ -4832,7 +4789,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=t2dcmd1L}Increases your maneuvering by 10%.")]
-    [SettingPropertyGroup("Perks/Riding/{=cXlnH1Jp}Nimble Steed")]
+    [SettingPropertyGroup("Perks/Riding/Nimble Steed")]
     public float rid_NimbleSteed_p {
       get => _rid_NimbleSteed_p;
       set {
@@ -4844,7 +4801,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=E42pGCZg}Mounted troops in your formation gain +30 riding skill.")]
-    [SettingPropertyGroup("Perks/Riding/{=cXlnH1Jp}Nimble Steed")]
+    [SettingPropertyGroup("Perks/Riding/Nimble Steed")]
     public float rid_NimbleSteed_s {
       get => _rid_NimbleSteed_s;
       set {
@@ -4858,7 +4815,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=nQ0uWQsv}Increases your mount's hit points by 20%.")]
-    [SettingPropertyGroup("Perks/Riding/{=3lfS4iCZ}Well Strapped")]
+    [SettingPropertyGroup("Perks/Riding/Well Strapped")]
     public float rid_WellStraped_p {
       get => _rid_WellStraped_p;
       set {
@@ -4870,7 +4827,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=jCBbUvHx}Mounts of your commanded troops have 10% more hit points.")]
-    [SettingPropertyGroup("Perks/Riding/{=3lfS4iCZ}Well Strapped")]
+    [SettingPropertyGroup("Perks/Riding/Well Strapped")]
     public float rid_WellStraped_s {
       get => _rid_WellStraped_s;
       set {
@@ -4884,7 +4841,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=g2qYB345}Halves the chance of your mount becoming lame or dead after it falls in battle.")]
-    [SettingPropertyGroup("Perks/Riding/{=ZaSmz64G}Veterinary")]
+    [SettingPropertyGroup("Perks/Riding/Veterinary")]
     public float rid_Veterinary_p {
       get => _rid_Veterinary_p;
       set {
@@ -4896,7 +4853,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=PTYKFbqf}Governed settlement gains +0.5 prosperity per day.")]
-    [SettingPropertyGroup("Perks/Riding/{=ZaSmz64G}Veterinary")]
+    [SettingPropertyGroup("Perks/Riding/Veterinary")]
     public float rid_Veterinary_s {
       get => _rid_Veterinary_s;
       set {
@@ -4910,7 +4867,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=EbSw2vj0}Mounted infantry increase your party speed by 30%.")]
-    [SettingPropertyGroup("Perks/Riding/{=PB5iowxh}Nomadic Traditions")]
+    [SettingPropertyGroup("Perks/Riding/Nomadic Traditions")]
     public float rid_NomadicTraditions_p {
       get => _rid_NomadicTraditions_p;
       set {
@@ -4922,7 +4879,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=iIzShvKQ}Melee cavalry in your formation gain 10% speed damage bonus.")]
-    [SettingPropertyGroup("Perks/Riding/{=PB5iowxh}Nomadic Traditions")]
+    [SettingPropertyGroup("Perks/Riding/Nomadic Traditions")]
     public float rid_NomadicTraditions_s {
       get => _rid_NomadicTraditions_s;
       set {
@@ -4936,7 +4893,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=ulgd9Veb}Increases carry capacity of pack animals by 20%.")]
-    [SettingPropertyGroup("Perks/Riding/{=frQX6OZv}Filled To Brim")]
+    [SettingPropertyGroup("Perks/Riding/Filled To Brim")]
     public float rid_FilledToBrim_p {
       get => _rid_FilledToBrim_p;
       set {
@@ -4948,7 +4905,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=1JDFcOwV}Better deal for buying and selling mounts.")]
-    [SettingPropertyGroup("Perks/Riding/{=frQX6OZv}Filled To Brim")]
+    [SettingPropertyGroup("Perks/Riding/Filled To Brim")]
     public float rid_FilledToBrim_s {
       get => _rid_FilledToBrim_s;
       set {
@@ -4962,7 +4919,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=dAau8qyS}Decreases accuracy penalty by 15% while you are mounted.")]
-    [SettingPropertyGroup("Perks/Riding/{=jbPZTSP4}Sagittarius")]
+    [SettingPropertyGroup("Perks/Riding/Sagittarius")]
     public float rid_Sagittarius_p {
       get => _rid_Sagittarius_p;
       set {
@@ -4974,7 +4931,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=LjMR6OuD}Decreases accuracy penalty by 15% for mounted ranged troops in your formation.")]
-    [SettingPropertyGroup("Perks/Riding/{=jbPZTSP4}Sagittarius")]
+    [SettingPropertyGroup("Perks/Riding/Sagittarius")]
     public float rid_Sagittarius_s {
       get => _rid_Sagittarius_s;
       set {
@@ -4988,7 +4945,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=hOyX7rSy}Increases your mount's top speed by 5%.")]
-    [SettingPropertyGroup("Perks/Riding/{=gL7Ltjpc}Sweeping Wind")]
+    [SettingPropertyGroup("Perks/Riding/Sweeping Wind")]
     public float rid_SweepingWind_p {
       get => _rid_SweepingWind_p;
       set {
@@ -5000,7 +4957,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=rl4fgGfh}Increases your party speed by 2%.")]
-    [SettingPropertyGroup("Perks/Riding/{=gL7Ltjpc}Sweeping Wind")]
+    [SettingPropertyGroup("Perks/Riding/Sweeping Wind")]
     public float rid_SweepingWind_s {
       get => _rid_SweepingWind_s;
       set {
@@ -5014,7 +4971,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=sgpEjTkv}Increases your mounted melee damage by 5%.")]
-    [SettingPropertyGroup("Perks/Riding/{=ixqTFMVA}Mounted Warrior")]
+    [SettingPropertyGroup("Perks/Riding/Mounted Warrior")]
     public float rid_MountedWarrior_p {
       get => _rid_MountedWarrior_p;
       set {
@@ -5026,7 +4983,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=cFN6JaT2}Melee cavalry in your formation deals 5% more melee damage.")]
-    [SettingPropertyGroup("Perks/Riding/{=ixqTFMVA}Mounted Warrior")]
+    [SettingPropertyGroup("Perks/Riding/Mounted Warrior")]
     public float rid_MountedWarrior_s {
       get => _rid_MountedWarrior_s;
       set {
@@ -5040,7 +4997,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=0iF5sNNZ}Increases your ranged damage by 10% while mounted.")]
-    [SettingPropertyGroup("Perks/Riding/{=ugJfuabA}Horse Archer")]
+    [SettingPropertyGroup("Perks/Riding/Horse Archer")]
     public float rid_HorseArcher_p {
       get => _rid_HorseArcher_p;
       set {
@@ -5052,7 +5009,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Ioyk7QVU}Mounted archers in your formation deal 5% more ranged damage.")]
-    [SettingPropertyGroup("Perks/Riding/{=ugJfuabA}Horse Archer")]
+    [SettingPropertyGroup("Perks/Riding/Horse Archer")]
     public float rid_HorseArcher_s {
       get => _rid_HorseArcher_s;
       set {
@@ -5066,7 +5023,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=gIL4YKp3}Halves the party speed penalty for herding.")]
-    [SettingPropertyGroup("Perks/Riding/{=BdQMQW8t}Riding Horde")]
+    [SettingPropertyGroup("Perks/Riding/Riding Horde")]
     public float rid_Horde_p {
       get => _rid_Horde_p;
       set {
@@ -5078,7 +5035,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ZHPpzEdM}Governed settlement's bound villages have better chance to produce Tier 2 horses.")]
-    [SettingPropertyGroup("Perks/Riding/{=BdQMQW8t}Riding Horde")]
+    [SettingPropertyGroup("Perks/Riding/Riding Horde")]
     public float rid_Horde_s {
       get => _rid_Horde_s;
       set {
@@ -5092,7 +5049,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=5NwaDzcs}Animals in your inventory have a very low chance to reproduce.")]
-    [SettingPropertyGroup("Perks/Riding/{=4Pbfs4rV}Breeder")]
+    [SettingPropertyGroup("Perks/Riding/Breeder")]
     public float rid_Breeder_p {
       get => _rid_Breeder_p;
       set {
@@ -5104,7 +5061,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Hl33qopv}Governed settlement's bound villages have 5% more production rate.")]
-    [SettingPropertyGroup("Perks/Riding/{=4Pbfs4rV}Breeder")]
+    [SettingPropertyGroup("Perks/Riding/Breeder")]
     public float rid_Breeder_s {
       get => _rid_Breeder_s;
       set {
@@ -5118,7 +5075,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=qW2Vo7Gm}You cause 20% more battle morale penalty with melee kills while mounted.")]
-    [SettingPropertyGroup("Perks/Riding/{=3MLtqFPt}Thunderous Charge")]
+    [SettingPropertyGroup("Perks/Riding/Thunderous Charge")]
     public float rid_ThunderousCharge_p {
       get => _rid_ThunderousCharge_p;
       set {
@@ -5130,7 +5087,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=dBRKCTao}Mounted troops in your formation cause 10% more battle morale penalty when they kill enemies in melee.")]
-    [SettingPropertyGroup("Perks/Riding/{=3MLtqFPt}Thunderous Charge")]
+    [SettingPropertyGroup("Perks/Riding/Thunderous Charge")]
     public float rid_ThunderousCharge_s {
       get => _rid_ThunderousCharge_s;
       set {
@@ -5144,7 +5101,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=S8Z1lYcq}You cause 20% more battle morale penalty with ranged kills while mounted.")]
-    [SettingPropertyGroup("Perks/Riding/{=Okibjv5n}Annoying Buzz")]
+    [SettingPropertyGroup("Perks/Riding/Annoying Buzz")]
     public float rid_AnnoyingBuzz_p {
       get => _rid_AnnoyingBuzz_p;
       set {
@@ -5156,7 +5113,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HM2XzVr7}Mounted troops in your formation cause 5% more battle morale penalty when they kill enemies on range.")]
-    [SettingPropertyGroup("Perks/Riding/{=Okibjv5n}Annoying Buzz")]
+    [SettingPropertyGroup("Perks/Riding/Annoying Buzz")]
     public float rid_AnnoyingBuzz_s {
       get => _rid_AnnoyingBuzz_s;
       set {
@@ -5170,7 +5127,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=cYvpUGq9}Prisoners in your party are 50% less likely to escape.")]
-    [SettingPropertyGroup("Perks/Riding/{=1z3oRPQu}Mounted Patrols")]
+    [SettingPropertyGroup("Perks/Riding/Mounted Patrols")]
     public float rid_MountedPatrols_p {
       get => _rid_MountedPatrols_p;
       set {
@@ -5182,7 +5139,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=LrDbwars}Prisoners in governed town are 50% less likely to escape.")]
-    [SettingPropertyGroup("Perks/Riding/{=1z3oRPQu}Mounted Patrols")]
+    [SettingPropertyGroup("Perks/Riding/Mounted Patrols")]
     public float rid_MountedPatrols_s {
       get => _rid_MountedPatrols_s;
       set {
@@ -5196,7 +5153,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=nZK2r5Gn}Cavalry troop volunteering rate is increased by 30% in the towns your clan govern.")]
-    [SettingPropertyGroup("Perks/Riding/{=ZMxAGDKU}Cavalry Tactics")]
+    [SettingPropertyGroup("Perks/Riding/Cavalry Tactics")]
     public float rid_CavalryTactics_p {
       get => _rid_CavalryTactics_p;
       set {
@@ -5208,7 +5165,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=6U6s0EuM}Mounted troops have 50% reduced wages in governed settlement's garrison.")]
-    [SettingPropertyGroup("Perks/Riding/{=ZMxAGDKU}Cavalry Tactics")]
+    [SettingPropertyGroup("Perks/Riding/Cavalry Tactics")]
     public float rid_CavalryTactics_s {
       get => _rid_CavalryTactics_s;
       set {
@@ -5222,7 +5179,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=WczAmdQL}Increases your stagger damage threshold by 50% while mounted.")]
-    [SettingPropertyGroup("Perks/Riding/{=eYzTvFEH}Dauntless Steed")]
+    [SettingPropertyGroup("Perks/Riding/Dauntless Steed")]
     public float rid_DauntlessSteed_p {
       get => _rid_DauntlessSteed_p;
       set {
@@ -5234,7 +5191,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=xvOUF9Kg}Mounted troops in your formation gain +5 armor.")]
-    [SettingPropertyGroup("Perks/Riding/{=eYzTvFEH}Dauntless Steed")]
+    [SettingPropertyGroup("Perks/Riding/Dauntless Steed")]
     public float rid_DauntlessSteed_s {
       get => _rid_DauntlessSteed_s;
       set {
@@ -5248,7 +5205,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=mxpRb5pd}Increases your mount's armor by 20%.")]
-    [SettingPropertyGroup("Perks/Riding/{=vDNbHDfq}Tough Steed")]
+    [SettingPropertyGroup("Perks/Riding/Tough Steed")]
     public float rid_ToughSteed_p {
       get => _rid_ToughSteed_p;
       set {
@@ -5260,7 +5217,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HZW39Tj2}Mounted troops in your formation gain +10 mount armor.")]
-    [SettingPropertyGroup("Perks/Riding/{=vDNbHDfq}Tough Steed")]
+    [SettingPropertyGroup("Perks/Riding/Tough Steed")]
     public float rid_ToughSteed_s {
       get => _rid_ToughSteed_s;
       set {
@@ -5274,7 +5231,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=IsuynJ2f}Increases your charge damage and maneuver by 1 for each 10 riding skill above 200.")]
-    [SettingPropertyGroup("Perks/Riding/{=HvYgMtXO}The Way Of The Saddle")]
+    [SettingPropertyGroup("Perks/Riding/The Way Of The Saddle")]
     public float rid_TheWayOfTheSaddle_p {
       get => _rid_TheWayOfTheSaddle_p;
       set {
@@ -5286,7 +5243,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="Unknown")]
-    [SettingPropertyGroup("Perks/Riding/{=HvYgMtXO}The Way Of The Saddle")]
+    [SettingPropertyGroup("Perks/Riding/The Way Of The Saddle")]
     public float rid_TheWayOfTheSaddle_s {
       get => _rid_TheWayOfTheSaddle_s;
       set {
@@ -5300,7 +5257,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=m4KacGv9}Increases your movement speed by 3%.")]
-    [SettingPropertyGroup("Perks/Athletics/{=ipwU1JT3}Morning Exercise")]
+    [SettingPropertyGroup("Perks/Athletics/Morning Exercise")]
     public float ath_MorningExercise_p {
       get => _ath_MorningExercise_p;
       set {
@@ -5312,7 +5269,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=dyaagsuj}Foot troops in your formation gain 5% movement speed.")]
-    [SettingPropertyGroup("Perks/Athletics/{=ipwU1JT3}Morning Exercise")]
+    [SettingPropertyGroup("Perks/Athletics/Morning Exercise")]
     public float ath_MorningExercise_s {
       get => _ath_MorningExercise_s;
       set {
@@ -5326,7 +5283,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=vixwTVbE}Increases your maximum hit points by 5.")]
-    [SettingPropertyGroup("Perks/Athletics/{=bigS7KHi}Well Built")]
+    [SettingPropertyGroup("Perks/Athletics/Well Built")]
     public float ath_WellBuilt_p {
       get => _ath_WellBuilt_p;
       set {
@@ -5338,7 +5295,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HKNtU2NI}Foot troops in your party gain 5 hit points.")]
-    [SettingPropertyGroup("Perks/Athletics/{=bigS7KHi}Well Built")]
+    [SettingPropertyGroup("Perks/Athletics/Well Built")]
     public float ath_WellBuilt_s {
       get => _ath_WellBuilt_s;
       set {
@@ -5352,7 +5309,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=D49gf45A}Decreases your armor weight by 15%.")]
-    [SettingPropertyGroup("Perks/Athletics/{=tp3p7R8E}Form Fitting Armor")]
+    [SettingPropertyGroup("Perks/Athletics/Form Fitting Armor")]
     public float ath_FormFittingArmor_p {
       get => _ath_FormFittingArmor_p;
       set {
@@ -5364,7 +5321,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=b7FbnGn6}Tier 3+ foot troops in your formation gain 4% movement speed.")]
-    [SettingPropertyGroup("Perks/Athletics/{=tp3p7R8E}Form Fitting Armor")]
+    [SettingPropertyGroup("Perks/Athletics/Form Fitting Armor")]
     public float ath_FormFittingArmor_s {
       get => _ath_FormFittingArmor_s;
       set {
@@ -5378,7 +5335,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=zEIe1ROP}Slightly increases your persuasion chance.")]
-    [SettingPropertyGroup("Perks/Athletics/{=HqxV96aL}Having Going")]
+    [SettingPropertyGroup("Perks/Athletics/Having Going")]
     public float ath_HavingGoing_p {
       get => _ath_HavingGoing_p;
       set {
@@ -5390,7 +5347,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=920FKjJk}Increases your party size by 5.")]
-    [SettingPropertyGroup("Perks/Athletics/{=HqxV96aL}Having Going")]
+    [SettingPropertyGroup("Perks/Athletics/Having Going")]
     public float ath_HavingGoing_s {
       get => _ath_HavingGoing_s;
       set {
@@ -5404,7 +5361,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=T3UdjMXf}Increases crafting stamina recovery rate by 50%.")]
-    [SettingPropertyGroup("Perks/Athletics/{=2lCLp5eo}Stamina")]
+    [SettingPropertyGroup("Perks/Athletics/Stamina")]
     public float ath_Stamina_p {
       get => _ath_Stamina_p;
       set {
@@ -5416,7 +5373,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=6fFFbQS6}Increases your prisoner size limit by 5 and decreases prisoner escape chance by 10%.")]
-    [SettingPropertyGroup("Perks/Athletics/{=2lCLp5eo}Stamina")]
+    [SettingPropertyGroup("Perks/Athletics/Stamina")]
     public float ath_Stamina_s {
       get => _ath_Stamina_s;
       set {
@@ -5430,7 +5387,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=jXepJAhO}Increases your damage by 4% with all melee weapons.")]
-    [SettingPropertyGroup("Perks/Athletics/{=UCpyo9hw}Powerful")]
+    [SettingPropertyGroup("Perks/Athletics/Powerful")]
     public float ath_Powerful_p {
       get => _ath_Powerful_p;
       set {
@@ -5442,7 +5399,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=G14cbf5j}Troops in your formation deal 2% more melee damage.")]
-    [SettingPropertyGroup("Perks/Athletics/{=UCpyo9hw}Powerful")]
+    [SettingPropertyGroup("Perks/Athletics/Powerful")]
     public float ath_Powerful_s {
       get => _ath_Powerful_s;
       set {
@@ -5456,7 +5413,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=7Kz2tQbK}Increases your speed damage bonus by 30% while on foot.")]
-    [SettingPropertyGroup("Perks/Athletics/{=zrYFYDfj}Surging Blow")]
+    [SettingPropertyGroup("Perks/Athletics/Surging Blow")]
     public float ath_SurgingBlow_p {
       get => _ath_SurgingBlow_p;
       set {
@@ -5468,7 +5425,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=LVwh7Eba}Foot troops in your formation gain 30% speed damage bonus.")]
-    [SettingPropertyGroup("Perks/Athletics/{=zrYFYDfj}Surging Blow")]
+    [SettingPropertyGroup("Perks/Athletics/Surging Blow")]
     public float ath_SurgingBlow_s {
       get => _ath_SurgingBlow_s;
       set {
@@ -5482,7 +5439,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=MkbmHsAH}Decreases your charge damage taken by 50%.")]
-    [SettingPropertyGroup("Perks/Athletics/{=dU7haWkI}Braced")]
+    [SettingPropertyGroup("Perks/Athletics/Braced")]
     public float ath_Braced_p {
       get => _ath_Braced_p;
       set {
@@ -5494,7 +5451,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=xjtibL4J}Foot troops in your formation take 50% less charge damage.")]
-    [SettingPropertyGroup("Perks/Athletics/{=dU7haWkI}Braced")]
+    [SettingPropertyGroup("Perks/Athletics/Braced")]
     public float ath_Braced_s {
       get => _ath_Braced_s;
       set {
@@ -5508,7 +5465,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=I0OtUEDb}Increases your hit point regeneration by 10% while traveling.")]
-    [SettingPropertyGroup("Perks/Athletics/{=0pyLfrGZ}Walk It Off")]
+    [SettingPropertyGroup("Perks/Athletics/Walk It Off")]
     public float ath_WalkItOff_p {
       get => _ath_WalkItOff_p;
       set {
@@ -5520,7 +5477,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=aMHPsSe4}Foot troops in your party gain 3 xp everyday while traveling.")]
-    [SettingPropertyGroup("Perks/Athletics/{=0pyLfrGZ}Walk It Off")]
+    [SettingPropertyGroup("Perks/Athletics/Walk It Off")]
     public float ath_WalkItOff_s {
       get => _ath_WalkItOff_s;
       set {
@@ -5534,7 +5491,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=QR80Vhdk}Increases your hit point regeneration by 10% while waiting in settlements.")]
-    [SettingPropertyGroup("Perks/Athletics/{=B7HwvV6L}A Good Days Rest")]
+    [SettingPropertyGroup("Perks/Athletics/A Good Days Rest")]
     public float ath_AGoodDaysRest_p {
       get => _ath_AGoodDaysRest_p;
       set {
@@ -5546,7 +5503,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=b38NeEp2}Foot troops in your party gain 10 xp everyday while waiting in settlements.")]
-    [SettingPropertyGroup("Perks/Athletics/{=B7HwvV6L}A Good Days Rest")]
+    [SettingPropertyGroup("Perks/Athletics/A Good Days Rest")]
     public float ath_AGoodDaysRest_s {
       get => _ath_AGoodDaysRest_s;
       set {
@@ -5560,7 +5517,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=7kZ7BucN}Increases your Endurance Attribute by 1.")]
-    [SettingPropertyGroup("Perks/Athletics/{=LVeZLsbg}Healthy Citizens")]
+    [SettingPropertyGroup("Perks/Athletics/Healthy Citizens")]
     public float ath_HealthyCitizens_p {
       get => _ath_HealthyCitizens_p;
       set {
@@ -5572,7 +5529,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=AlY8Edde}Governed settlement gains 1 loyalty per day.")]
-    [SettingPropertyGroup("Perks/Athletics/{=LVeZLsbg}Healthy Citizens")]
+    [SettingPropertyGroup("Perks/Athletics/Healthy Citizens")]
     public float ath_HealthyCitizens_s {
       get => _ath_HealthyCitizens_s;
       set {
@@ -5586,7 +5543,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=bMBqJx4h}Your party suffers 20% less from speed penalty for being overburdened.")]
-    [SettingPropertyGroup("Perks/Athletics/{=1YxFYg3s}Energetic")]
+    [SettingPropertyGroup("Perks/Athletics/Energetic")]
     public float ath_Energetic_p {
       get => _ath_Energetic_p;
       set {
@@ -5598,7 +5555,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=myM5wdFI}20% hearth increase in the villages you govern.")]
-    [SettingPropertyGroup("Perks/Athletics/{=1YxFYg3s}Energetic")]
+    [SettingPropertyGroup("Perks/Athletics/Energetic")]
     public float ath_Energetic_s {
       get => _ath_Energetic_s;
       set {
@@ -5612,7 +5569,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=4anAdME9}Increases your Control Attribute by 1.")]
-    [SettingPropertyGroup("Perks/Athletics/{=Ye9lbBr3}Steady")]
+    [SettingPropertyGroup("Perks/Athletics/Steady")]
     public float ath_Steady_p {
       get => _ath_Steady_p;
       set {
@@ -5626,7 +5583,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=xbal9bvg}Increases your Vigor Attribute by 1.")]
-    [SettingPropertyGroup("Perks/Athletics/{=d5aK6Sv0}Strong")]
+    [SettingPropertyGroup("Perks/Athletics/Strong")]
     public float ath_Strong_p {
       get => _ath_Strong_p;
       set {
@@ -5638,7 +5595,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=9gaXSO0T}Foot troops in your party give +5% party speed.")]
-    [SettingPropertyGroup("Perks/Athletics/{=d5aK6Sv0}Strong")]
+    [SettingPropertyGroup("Perks/Athletics/Strong")]
     public float ath_Strong_s {
       get => _ath_Strong_s;
       set {
@@ -5652,7 +5609,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=CRXQ3Fmn}Gives 1 focus point to throwing.")]
-    [SettingPropertyGroup("Perks/Athletics/{=qBKmIyYx}Strong Arms")]
+    [SettingPropertyGroup("Perks/Athletics/Strong Arms")]
     public float ath_StrongArms_p {
       get => _ath_StrongArms_p;
       set {
@@ -5664,7 +5621,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=XNsTQlgr}Troops in your formation has +20 throwing skill.")]
-    [SettingPropertyGroup("Perks/Athletics/{=qBKmIyYx}Strong Arms")]
+    [SettingPropertyGroup("Perks/Athletics/Strong Arms")]
     public float ath_StrongArms_s {
       get => _ath_StrongArms_s;
       set {
@@ -5678,7 +5635,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=E5XGVJGE}Increases your stagger damage threshold by 50% while on foot.")]
-    [SettingPropertyGroup("Perks/Athletics/{=PX0Xufmr}Spartan")]
+    [SettingPropertyGroup("Perks/Athletics/Spartan")]
     public float ath_Spartan_p {
       get => _ath_Spartan_p;
       set {
@@ -5690,7 +5647,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=1TX57OIu}Decreases your party's food consumption by 20%.")]
-    [SettingPropertyGroup("Perks/Athletics/{=PX0Xufmr}Spartan")]
+    [SettingPropertyGroup("Perks/Athletics/Spartan")]
     public float ath_Spartan_s {
       get => _ath_Spartan_s;
       set {
@@ -5704,7 +5661,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=EeHDUxf8}Increases your armor by 10% while on foot.")]
-    [SettingPropertyGroup("Perks/Athletics/{=AHtFRv5T}Ignore Pain")]
+    [SettingPropertyGroup("Perks/Athletics/Ignore Pain")]
     public float ath_IgnorePain_p {
       get => _ath_IgnorePain_p;
       set {
@@ -5716,7 +5673,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=kbs0D9wc}Foot troops in your formation gain 5 armor.")]
-    [SettingPropertyGroup("Perks/Athletics/{=AHtFRv5T}Ignore Pain")]
+    [SettingPropertyGroup("Perks/Athletics/Ignore Pain")]
     public float ath_IgnorePain_s {
       get => _ath_IgnorePain_s;
       set {
@@ -5730,7 +5687,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=DqOBr2BF}You stun your enemies longer after they block your attack.")]
-    [SettingPropertyGroup("Perks/Athletics/{=lbGa4ihC}Mighty Blow ")]
+    [SettingPropertyGroup("Perks/Athletics/Mighty Blow ")]
     public float ath_MightyBlow_p {
       get => _ath_MightyBlow_p;
       set {
@@ -5742,7 +5699,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=NPoClaRb}Each skill point above 250 grants you +1 hit point.")]
-    [SettingPropertyGroup("Perks/Athletics/{=lbGa4ihC}Mighty Blow ")]
+    [SettingPropertyGroup("Perks/Athletics/Mighty Blow ")]
     public float ath_MightyBlow_s {
       get => _ath_MightyBlow_s;
       set {
@@ -5756,7 +5713,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=UNVAkOY4}Swing damage of crafted weapons is increased by 2%.")]
-    [SettingPropertyGroup("Perks/Crafting/{=knWgaYdk}Sharpened Edge")]
+    [SettingPropertyGroup("Perks/Crafting/Sharpened Edge")]
     public float cft_SharpenedEdge_p {
       get => _cft_SharpenedEdge_p;
       set {
@@ -5770,7 +5727,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Pml3haCM}Thrust damage of crafted weapons is increased by 2%.")]
-    [SettingPropertyGroup("Perks/Crafting/{=aO2JSbSq}Sharpened Tip")]
+    [SettingPropertyGroup("Perks/Crafting/Sharpened Tip")]
     public float cft_SharpenedTip_p {
       get => _cft_SharpenedTip_p;
       set {
@@ -5784,7 +5741,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=6YeKVvCE}Your infantrymen deal 10% more damage to cavalry in simulations.")]
-    [SettingPropertyGroup("Perks/Tactics/{=EX5cZDLH}Tight Formations")]
+    [SettingPropertyGroup("Perks/Tactics/Tight Formations")]
     public float tct_TightFormations_p {
       get => _tct_TightFormations_p;
       set {
@@ -5798,7 +5755,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=BuPOdw0f}Your infantrymen suffer 10% less damage by ranged troops in simulations.")]
-    [SettingPropertyGroup("Perks/Tactics/{=9y3X0MQg}Loose Formations")]
+    [SettingPropertyGroup("Perks/Tactics/Loose Formations")]
     public float tct_LooseFormations_p {
       get => _tct_LooseFormations_p;
       set {
@@ -5812,7 +5769,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Eazyj0P8}Troops deal 10% more damage in simulations in snow and forest terrain.")]
-    [SettingPropertyGroup("Perks/Tactics/{=YkjPau1o}Asymmetrical Warfare")]
+    [SettingPropertyGroup("Perks/Tactics/Asymmetrical Warfare")]
     public float tct_AsymmetricalWarfare_p {
       get => _tct_AsymmetricalWarfare_p;
       set {
@@ -5824,7 +5781,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ULVc7QuF}Troops in your formation gain 2% increased movement speed in snowy and forest terrain battlefields.")]
-    [SettingPropertyGroup("Perks/Tactics/{=YkjPau1o}Asymmetrical Warfare")]
+    [SettingPropertyGroup("Perks/Tactics/Asymmetrical Warfare")]
     public float tct_AsymmetricalWarfare_s {
       get => _tct_AsymmetricalWarfare_s;
       set {
@@ -5838,7 +5795,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=5PDACkqX}+1 troop joins you when fighting in hideouts.")]
-    [SettingPropertyGroup("Perks/Tactics/{=30hNRt3x}Small Unit Tactics")]
+    [SettingPropertyGroup("Perks/Tactics/Small Unit Tactics")]
     public float tct_SmallUnitTactics_p {
       get => _tct_SmallUnitTactics_p;
       set {
@@ -5850,7 +5807,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=zbHcS5Qc}Troops in your formation gain 5% movement speed bonus when they are less than 15 soldiers.")]
-    [SettingPropertyGroup("Perks/Tactics/{=30hNRt3x}Small Unit Tactics")]
+    [SettingPropertyGroup("Perks/Tactics/Small Unit Tactics")]
     public float tct_SmallUnitTactics_s {
       get => _tct_SmallUnitTactics_s;
       set {
@@ -5864,7 +5821,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=9bsSw7b9}+10 to party size.")]
-    [SettingPropertyGroup("Perks/Tactics/{=Vp8Pwou8}Horde Leader")]
+    [SettingPropertyGroup("Perks/Tactics/Horde Leader")]
     public float tct_HordeLeader_p {
       get => _tct_HordeLeader_p;
       set {
@@ -5876,7 +5833,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=r5jtBp1C}Your army loses cohesion 5% slower.")]
-    [SettingPropertyGroup("Perks/Tactics/{=Vp8Pwou8}Horde Leader")]
+    [SettingPropertyGroup("Perks/Tactics/Horde Leader")]
     public float tct_HordeLeader_s {
       get => _tct_HordeLeader_s;
       set {
@@ -5890,7 +5847,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=bcpYibrF}10% more damage bonus in simulations against bandit parties.")]
-    [SettingPropertyGroup("Perks/Tactics/{=zUK9JOlb}Law Keeper")]
+    [SettingPropertyGroup("Perks/Tactics/Law Keeper")]
     public float tct_LawKeeper_p {
       get => _tct_LawKeeper_p;
       set {
@@ -5902,7 +5859,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=z7eyVsPQ}Troops in your formation gain 4% damage against bandit troops.")]
-    [SettingPropertyGroup("Perks/Tactics/{=zUK9JOlb}Law Keeper")]
+    [SettingPropertyGroup("Perks/Tactics/Law Keeper")]
     public float tct_LawKeeper_s {
       get => _tct_LawKeeper_s;
       set {
@@ -5916,7 +5873,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=y6DWG9xQ}3% more damage bonus in all battle simulations.")]
-    [SettingPropertyGroup("Perks/Tactics/{=afaCdojS}Coaching")]
+    [SettingPropertyGroup("Perks/Tactics/Coaching")]
     public float tct_Coaching_p {
       get => _tct_Coaching_p;
       set {
@@ -5928,7 +5885,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=b47HTdFK}Troops in your formation gain 1% damage against any troop.")]
-    [SettingPropertyGroup("Perks/Tactics/{=afaCdojS}Coaching")]
+    [SettingPropertyGroup("Perks/Tactics/Coaching")]
     public float tct_Coaching_s {
       get => _tct_Coaching_s;
       set {
@@ -5942,7 +5899,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=83YInCvB}Decreases the duration of the disorganized state after breaking sieges and raids by 15%.")]
-    [SettingPropertyGroup("Perks/Tactics/{=nmJe4wN1}Swift Regroup")]
+    [SettingPropertyGroup("Perks/Tactics/Swift Regroup")]
     public float tct_SwiftRegroup_p {
       get => _tct_SwiftRegroup_p;
       set {
@@ -5954,7 +5911,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=lSZKnnay}You can escape from battles by leaving 50% less soldiers behind.")]
-    [SettingPropertyGroup("Perks/Tactics/{=nmJe4wN1}Swift Regroup")]
+    [SettingPropertyGroup("Perks/Tactics/Swift Regroup")]
     public float tct_SwiftRegroup_s {
       get => _tct_SwiftRegroup_s;
       set {
@@ -5968,7 +5925,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=XawWg9aY}Reduce fortification bonus in simulations by 20%.")]
-    [SettingPropertyGroup("Perks/Tactics/{=kolBffjD}On The March")]
+    [SettingPropertyGroup("Perks/Tactics/On The March")]
     public float tct_OnTheMarch_p {
       get => _tct_OnTheMarch_p;
       set {
@@ -5980,7 +5937,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=n9zbvTCq}Increase fortification bonus in simulations by 20%.")]
-    [SettingPropertyGroup("Perks/Tactics/{=kolBffjD}On The March")]
+    [SettingPropertyGroup("Perks/Tactics/On The March")]
     public float tct_OnTheMarch_s {
       get => _tct_OnTheMarch_s;
       set {
@@ -5994,7 +5951,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=XxLfbCxp}Parties that you have called to your army moves 10% faster while moving to the army.")]
-    [SettingPropertyGroup("Perks/Tactics/{=mUubYb7v}Call To Arms")]
+    [SettingPropertyGroup("Perks/Tactics/Call To Arms")]
     public float tct_CallToArms_p {
       get => _tct_CallToArms_p;
       set {
@@ -6006,7 +5963,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=V6dV2K1r}15% less influence required per party to call to your army.")]
-    [SettingPropertyGroup("Perks/Tactics/{=mUubYb7v}Call To Arms")]
+    [SettingPropertyGroup("Perks/Tactics/Call To Arms")]
     public float tct_CallToArms_s {
       get => _tct_CallToArms_s;
       set {
@@ -6020,7 +5977,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=YNK17aGp}Double damage to siege defender personnel with %25 chance.")]
-    [SettingPropertyGroup("Perks/Tactics/{=XQkY7jkL}Pick Them Of The Walls")]
+    [SettingPropertyGroup("Perks/Tactics/Pick Them Of The Walls")]
     public float tct_PickThemOfTheWalls_p {
       get => _tct_PickThemOfTheWalls_p;
       set {
@@ -6032,7 +5989,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=0LTL5qGP}Double damage to besieging personnel with %25 chance.")]
-    [SettingPropertyGroup("Perks/Tactics/{=XQkY7jkL}Pick Them Of The Walls")]
+    [SettingPropertyGroup("Perks/Tactics/Pick Them Of The Walls")]
     public float tct_PickThemOfTheWalls_s {
       get => _tct_PickThemOfTheWalls_s;
       set {
@@ -6046,7 +6003,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=IhktcM29}25% more damage to defender siege engines.")]
-    [SettingPropertyGroup("Perks/Tactics/{=8xxeNK0o}Make Them Pay")]
+    [SettingPropertyGroup("Perks/Tactics/Make Them Pay")]
     public float tct_MakeThemPay_p {
       get => _tct_MakeThemPay_p;
       set {
@@ -6058,7 +6015,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=vMT92Xzz}20% more damage to besieger siege engines.")]
-    [SettingPropertyGroup("Perks/Tactics/{=8xxeNK0o}Make Them Pay")]
+    [SettingPropertyGroup("Perks/Tactics/Make Them Pay")]
     public float tct_MakeThemPay_s {
       get => _tct_MakeThemPay_s;
       set {
@@ -6072,7 +6029,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=lFTMxU98}Tier 3+ units suffer 20% less damage in simulations.")]
-    [SettingPropertyGroup("Perks/Tactics/{=luDtfSN7}Elite Reserves")]
+    [SettingPropertyGroup("Perks/Tactics/Elite Reserves")]
     public float tct_EliteReserves_p {
       get => _tct_EliteReserves_p;
       set {
@@ -6084,7 +6041,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=QvorOOSZ}The troops in the formation you control has 5% damage reduction.")]
-    [SettingPropertyGroup("Perks/Tactics/{=luDtfSN7}Elite Reserves")]
+    [SettingPropertyGroup("Perks/Tactics/Elite Reserves")]
     public float tct_EliteReserves_s {
       get => _tct_EliteReserves_s;
       set {
@@ -6098,7 +6055,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=8ZrQJeUJ}5% more damage in simulations while outnumbering the enemy.")]
-    [SettingPropertyGroup("Perks/Tactics/{=EhaMPtRX}Encirclement")]
+    [SettingPropertyGroup("Perks/Tactics/Encirclement")]
     public float tct_Encirclement_p {
       get => _tct_Encirclement_p;
       set {
@@ -6110,7 +6067,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=S0LSg98G}10% less influence needed to boost army cohesion.")]
-    [SettingPropertyGroup("Perks/Tactics/{=EhaMPtRX}Encirclement")]
+    [SettingPropertyGroup("Perks/Tactics/Encirclement")]
     public float tct_Encirclement_s {
       get => _tct_Encirclement_s;
       set {
@@ -6124,7 +6081,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=vlZu6uaR}25% more influence gain from winning field engagements.")]
-    [SettingPropertyGroup("Perks/Tactics/{=cHgLxbbc}Pre Battle Maneuvers")]
+    [SettingPropertyGroup("Perks/Tactics/Pre Battle Maneuvers")]
     public float tct_PreBattleManeuvers_p {
       get => _tct_PreBattleManeuvers_p;
       set {
@@ -6138,7 +6095,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=WrAFPs4H}When you are besieged 10% more damage in simulations.")]
-    [SettingPropertyGroup("Perks/Tactics/{=ALC3Kzv9}Besieged")]
+    [SettingPropertyGroup("Perks/Tactics/Besieged")]
     public float tct_Besieged_p {
       get => _tct_Besieged_p;
       set {
@@ -6150,7 +6107,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=c5aMtlA7}50% more influence gain from winning sieges.")]
-    [SettingPropertyGroup("Perks/Tactics/{=ALC3Kzv9}Besieged")]
+    [SettingPropertyGroup("Perks/Tactics/Besieged")]
     public float tct_Besieged_s {
       get => _tct_Besieged_s;
       set {
@@ -6164,7 +6121,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=D9F4IA2W}When you are attacked in a field battle 10% more damage in simulations.")]
-    [SettingPropertyGroup("Perks/Tactics/{=mn5tQhyp}Counter Offensive")]
+    [SettingPropertyGroup("Perks/Tactics/Counter Offensive")]
     public float tct_Counteroffensive_p {
       get => _tct_Counteroffensive_p;
       set {
@@ -6176,7 +6133,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=SngfSCqh}10% more damage in simulations when outnumbered.")]
-    [SettingPropertyGroup("Perks/Tactics/{=mn5tQhyp}Counter Offensive")]
+    [SettingPropertyGroup("Perks/Tactics/Counter Offensive")]
     public float tct_Counteroffensive_s {
       get => _tct_Counteroffensive_s;
       set {
@@ -6190,7 +6147,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Dt1VM9WR}Cavalry troops in your formation deals 2% more damage to enemy infantry units.")]
-    [SettingPropertyGroup("Perks/Tactics/{=CTEuBfU0}Gens d'armes")]
+    [SettingPropertyGroup("Perks/Tactics/Gens d'armes")]
     public float tct_Gensdarmes_p {
       get => _tct_Gensdarmes_p;
       set {
@@ -6202,7 +6159,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=qLaeEndX}Increase governed town security by +1 per day.")]
-    [SettingPropertyGroup("Perks/Tactics/{=CTEuBfU0}Gens d'armes")]
+    [SettingPropertyGroup("Perks/Tactics/Gens d'armes")]
     public float tct_Gensdarmes_s {
       get => _tct_Gensdarmes_s;
       set {
@@ -6216,7 +6173,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=uLmNh3RQ}Increase simulation damage by 1% for every skill level over 200.")]
-    [SettingPropertyGroup("Perks/Tactics/{=8rvpcb4k}Tactical Mastery")]
+    [SettingPropertyGroup("Perks/Tactics/Tactical Mastery")]
     public float tct_TacticalMastery_p {
       get => _tct_TacticalMastery_p;
       set {
@@ -6230,7 +6187,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=tqDlfh7p}2% movement speed bonus during day time.")]
-    [SettingPropertyGroup("Perks/Scouting/{=6PSgX2BP}Day Traveler")]
+    [SettingPropertyGroup("Perks/Scouting/Day Traveler")]
     public float sct_DayTraveler_p {
       get => _sct_DayTraveler_p;
       set {
@@ -6242,7 +6199,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=m3JX1IFv}You have 10% increased sight range during day time.")]
-    [SettingPropertyGroup("Perks/Scouting/{=6PSgX2BP}Day Traveler")]
+    [SettingPropertyGroup("Perks/Scouting/Day Traveler")]
     public float sct_DayTraveler_s {
       get => _sct_DayTraveler_s;
       set {
@@ -6256,7 +6213,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=moQchgM4}5% movement speed bonus during night time.")]
-    [SettingPropertyGroup("Perks/Scouting/{=B8Gq2ylh}Night Runner")]
+    [SettingPropertyGroup("Perks/Scouting/Night Runner")]
     public float sct_NightRunner_p {
       get => _sct_NightRunner_p;
       set {
@@ -6268,7 +6225,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=NJa55XTF}You have 30% increased sight range during night time.")]
-    [SettingPropertyGroup("Perks/Scouting/{=B8Gq2ylh}Night Runner")]
+    [SettingPropertyGroup("Perks/Scouting/Night Runner")]
     public float sct_NightRunner_s {
       get => _sct_NightRunner_s;
       set {
@@ -6282,7 +6239,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=p3Aa9Fr9}2% movement speed bonus on steppes and plains.")]
-    [SettingPropertyGroup("Perks/Scouting/{=d2qGHXyx}Pathfinder")]
+    [SettingPropertyGroup("Perks/Scouting/Pathfinder")]
     public float sct_Pathfinder_p {
       get => _sct_Pathfinder_p;
       set {
@@ -6296,7 +6253,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=z7b7s4cN}10% sight range bonus while on steppes and plains.")]
-    [SettingPropertyGroup("Perks/Scouting/{=gsz9DMNq}Water Diviner")]
+    [SettingPropertyGroup("Perks/Scouting/Water Diviner")]
     public float sct_WaterDiviner_p {
       get => _sct_WaterDiviner_p;
       set {
@@ -6310,7 +6267,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=U1APiMVL}If your party is more than 75% infantry you receive 50% less speed penalty in forests.")]
-    [SettingPropertyGroup("Perks/Scouting/{=0XuFh3cX}Forest Kin")]
+    [SettingPropertyGroup("Perks/Scouting/Forest Kin")]
     public float sct_ForestKin_p {
       get => _sct_ForestKin_p;
       set {
@@ -6322,7 +6279,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=FIBSi2VF}Villages you govern give 10% more tax.")]
-    [SettingPropertyGroup("Perks/Scouting/{=0XuFh3cX}Forest Kin")]
+    [SettingPropertyGroup("Perks/Scouting/Forest Kin")]
     public float sct_ForestKin_s {
       get => _sct_ForestKin_s;
       set {
@@ -6336,7 +6293,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=AcYxyuDL}5% movement speed bonus on deserts and dunes.")]
-    [SettingPropertyGroup("Perks/Scouting/{=TbBmjK8M}Desert Born")]
+    [SettingPropertyGroup("Perks/Scouting/Desert Born")]
     public float sct_DesertBorn_p {
       get => _sct_DesertBorn_p;
       set {
@@ -6348,7 +6305,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=yTUfzVaR}Towns you govern give 2.5% more tax.")]
-    [SettingPropertyGroup("Perks/Scouting/{=TbBmjK8M}Desert Born")]
+    [SettingPropertyGroup("Perks/Scouting/Desert Born")]
     public float sct_DesertBorn_s {
       get => _sct_DesertBorn_s;
       set {
@@ -6362,7 +6319,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=yC8X2qwQ}2.5% movement speed bonus when party morale is higher than 75.")]
-    [SettingPropertyGroup("Perks/Scouting/{=jhZe9Mfo}Forced March")]
+    [SettingPropertyGroup("Perks/Scouting/Forced March")]
     public float sct_ForcedMarch_p {
       get => _sct_ForcedMarch_p;
       set {
@@ -6374,7 +6331,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=886Q6KjF}Moving while party morale is higher than 75 gives +2 passive xp to all troops daily.")]
-    [SettingPropertyGroup("Perks/Scouting/{=jhZe9Mfo}Forced March")]
+    [SettingPropertyGroup("Perks/Scouting/Forced March")]
     public float sct_ForcedMarch_s {
       get => _sct_ForcedMarch_s;
       set {
@@ -6387,8 +6344,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=CJIsjKn0}20% less penalty from overburden.")]
-    [SettingPropertyGroup("Perks/Scouting/{=sA2OrT6l}Unburdened")]
+    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=CJIsjKn0}20% less penalty from overburden ")]
+    [SettingPropertyGroup("Perks/Scouting/Unburdened")]
     public float sct_Unburdened_p {
       get => _sct_Unburdened_p;
       set {
@@ -6400,7 +6357,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=mhUmO65C}Moving while overburdened gives +2 xp to all troops daily.")]
-    [SettingPropertyGroup("Perks/Scouting/{=sA2OrT6l}Unburdened")]
+    [SettingPropertyGroup("Perks/Scouting/Unburdened")]
     public float sct_Unburdened_s {
       get => _sct_Unburdened_s;
       set {
@@ -6413,8 +6370,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=5NRai8K5}Increase maximum track life by 20%.")]
-    [SettingPropertyGroup("Perks/Scouting/{=AoaabumE}Tracker")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=5NRai8K5}Increase maximum track life by 20% ")]
+    [SettingPropertyGroup("Perks/Scouting/Tracker")]
     public float sct_Tracker_p {
       get => _sct_Tracker_p;
       set {
@@ -6426,7 +6383,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=HAdaEaQD}When following a hostile party on the campaign map you gain 2% speed bonus.")]
-    [SettingPropertyGroup("Perks/Scouting/{=AoaabumE}Tracker")]
+    [SettingPropertyGroup("Perks/Scouting/Tracker")]
     public float sct_Tracker_s {
       get => _sct_Tracker_s;
       set {
@@ -6439,8 +6396,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=MISEi5Bh}Increase maximum track spotting distance by 20%.")]
-    [SettingPropertyGroup("Perks/Scouting/{=09gOOa0h}Ranger")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=MISEi5Bh}Increase maximum track spotting distance by 20%")]
+    [SettingPropertyGroup("Perks/Scouting/Ranger")]
     public float sct_Ranger_p {
       get => _sct_Ranger_p;
       set {
@@ -6452,7 +6409,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=KL3h23kB}Increase track detection chance by 10%.")]
-    [SettingPropertyGroup("Perks/Scouting/{=09gOOa0h}Ranger")]
+    [SettingPropertyGroup("Perks/Scouting/Ranger")]
     public float sct_Ranger_s {
       get => _sct_Ranger_s;
       set {
@@ -6466,7 +6423,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=bVmHW3wg}When fighting against bandit parties you have +5 battle morale.")]
-    [SettingPropertyGroup("Perks/Scouting/{=uKc4le8Q}Patrols")]
+    [SettingPropertyGroup("Perks/Scouting/Patrols")]
     public float sct_Patrols_p {
       get => _sct_Patrols_p;
       set {
@@ -6478,7 +6435,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=xFhaMGmY}Your party has 10% advantage in simulated battles against bandits.")]
-    [SettingPropertyGroup("Perks/Scouting/{=uKc4le8Q}Patrols")]
+    [SettingPropertyGroup("Perks/Scouting/Patrols")]
     public float sct_Patrols_s {
       get => _sct_Patrols_s;
       set {
@@ -6492,7 +6449,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=VlM9gt97}When moving through steppes or forests reduce food consumption by 10%.")]
-    [SettingPropertyGroup("Perks/Scouting/{=LPxEDIk7}Foragers")]
+    [SettingPropertyGroup("Perks/Scouting/Foragers")]
     public float sct_Foragers_p {
       get => _sct_Foragers_p;
       set {
@@ -6504,7 +6461,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=KVDysdv2}15% reduction in disorganized state recovery duration.")]
-    [SettingPropertyGroup("Perks/Scouting/{=LPxEDIk7}Foragers")]
+    [SettingPropertyGroup("Perks/Scouting/Foragers")]
     public float sct_Foragers_s {
       get => _sct_Foragers_s;
       set {
@@ -6518,7 +6475,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=28zNieSg}When moving through steppes or plains you have a 5% chance of finding mount daily.")]
-    [SettingPropertyGroup("Perks/Scouting/{=mrtDAhtL}Beast Whisperer")]
+    [SettingPropertyGroup("Perks/Scouting/Beast Whisperer")]
     public float sct_BeastWhisperer_p {
       get => _sct_BeastWhisperer_p;
       set {
@@ -6529,8 +6486,8 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=avZSXLfw}Increase carry capacity from pack animals by 10%.")]
-    [SettingPropertyGroup("Perks/Scouting/{=mrtDAhtL}Beast Whisperer")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=avZSXLfw}Increase carry capacity from pack animals by 10%")]
+    [SettingPropertyGroup("Perks/Scouting/Beast Whisperer")]
     public float sct_BeastWhisperer_s {
       get => _sct_BeastWhisperer_s;
       set {
@@ -6544,7 +6501,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=Znft0z5W}Trade penalty within villages of your faction is decreased by 10%.")]
-    [SettingPropertyGroup("Perks/Scouting/{=lYQAuYaH}Village Network")]
+    [SettingPropertyGroup("Perks/Scouting/Village Network")]
     public float sct_VillageNetwork_p {
       get => _sct_VillageNetwork_p;
       set {
@@ -6556,7 +6513,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=NRiJ615C}Villagers parties are 10% larger.")]
-    [SettingPropertyGroup("Perks/Scouting/{=lYQAuYaH}Village Network")]
+    [SettingPropertyGroup("Perks/Scouting/Village Network")]
     public float sct_VillageNetwork_s {
       get => _sct_VillageNetwork_s;
       set {
@@ -6570,7 +6527,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=bcYgBWkn}Trade penalty within cities of your faction is decreased by 5%.")]
-    [SettingPropertyGroup("Perks/Scouting/{=LwWyc6ou}Rumour Network")]
+    [SettingPropertyGroup("Perks/Scouting/Rumour Network")]
     public float sct_RumourNetwork_p {
       get => _sct_RumourNetwork_p;
       set {
@@ -6582,7 +6539,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=RaaQFsC7}Hideout detection range is increased by 30%.")]
-    [SettingPropertyGroup("Perks/Scouting/{=LwWyc6ou}Rumour Network")]
+    [SettingPropertyGroup("Perks/Scouting/Rumour Network")]
     public float sct_RumourNetwork_s {
       get => _sct_RumourNetwork_s;
       set {
@@ -6596,7 +6553,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=p1eNH4BK}When stationary for a while (1 hour) increase sight range by 25%.")]
-    [SettingPropertyGroup("Perks/Scouting/{=EC2n5DBl}Vantage Point")]
+    [SettingPropertyGroup("Perks/Scouting/Vantage Point")]
     public float sct_VantagePoint_p {
       get => _sct_VantagePoint_p;
       set {
@@ -6608,7 +6565,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=8CUvpLtP}Increase the prisoner size limit by +10.")]
-    [SettingPropertyGroup("Perks/Scouting/{=EC2n5DBl}Vantage Point")]
+    [SettingPropertyGroup("Perks/Scouting/Vantage Point")]
     public float sct_VantagePoint_s {
       get => _sct_VantagePoint_s;
       set {
@@ -6621,8 +6578,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=*}Reduce sight difficulty penalty of parties in forests by 50%.")]
-    [SettingPropertyGroup("Perks/Scouting/{=3yVPrhXt}Keen Sight")]
+    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
+    [SettingPropertyGroup("Perks/Scouting/Keen Sight")]
     public float sct_KeenSight_p {
       get => _sct_KeenSight_p;
       set {
@@ -6634,7 +6591,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=wOa7dcbO}Prisoner lords are 50% less likely desert from your party.")]
-    [SettingPropertyGroup("Perks/Scouting/{=3yVPrhXt}Keen Sight")]
+    [SettingPropertyGroup("Perks/Scouting/Keen Sight")]
     public float sct_KeenSight_s {
       get => _sct_KeenSight_s;
       set {
@@ -6648,7 +6605,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=XjbPBIct}Increase troop wounded recovery ratio by 20% while in an army.")]
-    [SettingPropertyGroup("Perks/Scouting/{=e4QAc5A6}Rearguard")]
+    [SettingPropertyGroup("Perks/Scouting/Rearguard")]
     public float sct_Rearguard_p {
       get => _sct_Rearguard_p;
       set {
@@ -6660,7 +6617,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=D7DZxiSt}10% more damage in simulated battles defending the siege camp.")]
-    [SettingPropertyGroup("Perks/Scouting/{=e4QAc5A6}Rearguard")]
+    [SettingPropertyGroup("Perks/Scouting/Rearguard")]
     public float sct_Rearguard_s {
       get => _sct_Rearguard_s;
       set {
@@ -6674,7 +6631,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=6XxRQ38k}Increase Party Speed by 0.1% for every skill level over 200.")]
-    [SettingPropertyGroup("Perks/Scouting/{=M9vC9mio}Uncanny Insight")]
+    [SettingPropertyGroup("Perks/Scouting/Uncanny Insight")]
     public float sct_UncannyInsight_p {
       get => _sct_UncannyInsight_p;
       set {
@@ -6686,7 +6643,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="")]
-    [SettingPropertyGroup("Perks/Scouting/{=M9vC9mio}Uncanny Insight")]
+    [SettingPropertyGroup("Perks/Scouting/Uncanny Insight")]
     public float sct_UncannyInsight_s {
       get => _sct_UncannyInsight_s;
       set {
@@ -6700,7 +6657,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=aIo3xj0y}Bandit units in your party gain xp 20% faster.")]
-    [SettingPropertyGroup("Perks/Roguery/{=RyfFWmDs}No Rest for the Wicked")]
+    [SettingPropertyGroup("Perks/Roguery/No Rest for the Wicked")]
     public float rog_NoRestForTheWicked_p {
       get => _rog_NoRestForTheWicked_p;
       set {
@@ -6712,7 +6669,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=F6dEZOVl}Faster raiding 5%.")]
-    [SettingPropertyGroup("Perks/Roguery/{=RyfFWmDs}No Rest for the Wicked")]
+    [SettingPropertyGroup("Perks/Roguery/No Rest for the Wicked")]
     public float rog_NoRestForTheWicked_s {
       get => _rog_NoRestForTheWicked_s;
       set {
@@ -6726,7 +6683,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=T70o6ItZ}Bandits are 20% easier to convince to leave in peace while bartering.")]
-    [SettingPropertyGroup("Perks/Roguery/{=570wiYEe}Sweet Talker")]
+    [SettingPropertyGroup("Perks/Roguery/Sweet Talker")]
     public float rog_SweetTalker_p {
       get => _rog_SweetTalker_p;
       set {
@@ -6738,7 +6695,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=M4Q32HvX}Prisoners are 20% less likely to escape from towns.")]
-    [SettingPropertyGroup("Perks/Roguery/{=570wiYEe}Sweet Talker")]
+    [SettingPropertyGroup("Perks/Roguery/Sweet Talker")]
     public float rog_SweetTalker_s {
       get => _rog_SweetTalker_s;
       set {
@@ -6752,7 +6709,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=vPbx5vJQ}50% Better chance of success with disguise missions.")]
-    [SettingPropertyGroup("Perks/Roguery/{=kg4Mx9j4}Two Faced")]
+    [SettingPropertyGroup("Perks/Roguery/Two Faced")]
     public float rog_TwoFaced_p {
       get => _rog_TwoFaced_p;
       set {
@@ -6764,7 +6721,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=hIi6w8J1}Convert bandit prisoners without suffering morale penalty.")]
-    [SettingPropertyGroup("Perks/Roguery/{=kg4Mx9j4}Two Faced")]
+    [SettingPropertyGroup("Perks/Roguery/Two Faced")]
     public float rog_TwoFaced_s {
       get => _rog_TwoFaced_s;
       set {
@@ -6778,7 +6735,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ilKDq9f5}Double the amount of betting you can use in tournaments.")]
-    [SettingPropertyGroup("Perks/Roguery/{=by1b61pn}Deep Pockets")]
+    [SettingPropertyGroup("Perks/Roguery/Deep Pockets")]
     public float rog_DeepPockets_p {
       get => _rog_DeepPockets_p;
       set {
@@ -6790,7 +6747,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=TbkoiaEg}Bandit units in your party require 20% cheaper wage.")]
-    [SettingPropertyGroup("Perks/Roguery/{=by1b61pn}Deep Pockets")]
+    [SettingPropertyGroup("Perks/Roguery/Deep Pockets")]
     public float rog_DeepPockets_s {
       get => _rog_DeepPockets_s;
       set {
@@ -6803,8 +6760,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=*}Notables of villages give +1 extra troop when successfuly forced for volunteers.")]
-    [SettingPropertyGroup("Perks/Roguery/{=xoARIHde}In Best Light")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
+    [SettingPropertyGroup("Perks/Roguery/In Best Light")]
     public float rog_InBestLight_p {
       get => _rog_InBestLight_p;
       set {
@@ -6816,7 +6773,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=bE4ihnBv}Villages of your clan recover 20% faster.")]
-    [SettingPropertyGroup("Perks/Roguery/{=xoARIHde}In Best Light")]
+    [SettingPropertyGroup("Perks/Roguery/In Best Light")]
     public float rog_InBestLight_s {
       get => _rog_InBestLight_s;
       set {
@@ -6830,7 +6787,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=60PPnopy}Defeated villagers and caravans give 5% more access to their inventory.")]
-    [SettingPropertyGroup("Perks/Roguery/{=tvoN5ynt}Know-How")]
+    [SettingPropertyGroup("Perks/Roguery/Know-How")]
     public float rog_KnowHow_p {
       get => _rog_KnowHow_p;
       set {
@@ -6842,7 +6799,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=7ePa5JnG}Increase security of the settlement you govern by +1 per day.")]
-    [SettingPropertyGroup("Perks/Roguery/{=tvoN5ynt}Know-How")]
+    [SettingPropertyGroup("Perks/Roguery/Know-How")]
     public float rog_KnowHow_s {
       get => _rog_KnowHow_s;
       set {
@@ -6856,7 +6813,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=ljKoJX9P}Bandit units in your party consume 50% less food.")]
-    [SettingPropertyGroup("Perks/Roguery/{=XZOtTuxA}Promises")]
+    [SettingPropertyGroup("Perks/Roguery/Promises")]
     public float rog_Promises_p {
       get => _rog_Promises_p;
       set {
@@ -6868,7 +6825,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=XpIxj8Nb}Bandit prisoners can be recruited to party 30% faster.")]
-    [SettingPropertyGroup("Perks/Roguery/{=XZOtTuxA}Promises")]
+    [SettingPropertyGroup("Perks/Roguery/Promises")]
     public float rog_Promises_s {
       get => _rog_Promises_s;
       set {
@@ -6882,7 +6839,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=bO40QzdH}20% better deals with ransom broker for regular troops.")]
-    [SettingPropertyGroup("Perks/Roguery/{=jNbTBxEW}Slave Trader")]
+    [SettingPropertyGroup("Perks/Roguery/Slave Trader")]
     public float rog_SlaveTrader_p {
       get => _rog_SlaveTrader_p;
       set {
@@ -6894,7 +6851,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=d7dUtRgd}Increase prisoner limit by 20%.")]
-    [SettingPropertyGroup("Perks/Roguery/{=jNbTBxEW}Slave Trader")]
+    [SettingPropertyGroup("Perks/Roguery/Slave Trader")]
     public float rog_SlaveTrader_s {
       get => _rog_SlaveTrader_s;
       set {
@@ -6908,7 +6865,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=dfmrof9R}Your crime rating decreases 20% faster.")]
-    [SettingPropertyGroup("Perks/Roguery/{=F51HfzZj}White Lies")]
+    [SettingPropertyGroup("Perks/Roguery/White Lies")]
     public float rog_WhiteLies_p {
       get => _rog_WhiteLies_p;
       set {
@@ -6920,7 +6877,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=vzYyJpmu}2% daily chance to improve relations by 1 with random notable in the settlement you govern.")]
-    [SettingPropertyGroup("Perks/Roguery/{=F51HfzZj}White Lies")]
+    [SettingPropertyGroup("Perks/Roguery/White Lies")]
     public float rog_WhiteLies_s {
       get => _rog_WhiteLies_s;
       set {
@@ -6934,7 +6891,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=TAlERbfz}Increase the armor provided by civillian body armors by 10.")]
-    [SettingPropertyGroup("Perks/Roguery/{=E8a2joMO}Smuggler Connections")]
+    [SettingPropertyGroup("Perks/Roguery/Smuggler Connections")]
     public float rog_SmugglerConnections_p {
       get => _rog_SmugglerConnections_p;
       set {
@@ -6946,7 +6903,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=enZbJasV}When you have any amount of criminal rating you suffer 50% less trade penalty.")]
-    [SettingPropertyGroup("Perks/Roguery/{=E8a2joMO}Smuggler Connections")]
+    [SettingPropertyGroup("Perks/Roguery/Smuggler Connections")]
     public float rog_SmugglerConnections_s {
       get => _rog_SmugglerConnections_s;
       set {
@@ -6959,8 +6916,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=*}Bandit parties always offer to join you.")]
-    [SettingPropertyGroup("Perks/Roguery/{=2PVm7NON}Partners in Crime")]
+    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
+    [SettingPropertyGroup("Perks/Roguery/Partners in Crime")]
     public float rog_PartnersInCrime_p {
       get => _rog_PartnersInCrime_p;
       set {
@@ -6972,7 +6929,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=glL3Dj4R}Bandit units in the formation you control deals 2% more damage.")]
-    [SettingPropertyGroup("Perks/Roguery/{=2PVm7NON}Partners in Crime")]
+    [SettingPropertyGroup("Perks/Roguery/Partners in Crime")]
     public float rog_PartnersInCrime_s {
       get => _rog_PartnersInCrime_s;
       set {
@@ -6985,8 +6942,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=NsBKUeQG}Bandit units in your party has +10 bonus to Vigor and Control skills.")]
-    [SettingPropertyGroup("Perks/Roguery/{=oumTabhS}One of the Family")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=NsBKUeQG}Bandit units in your party has better +10 in vigor and control skills.")]
+    [SettingPropertyGroup("Perks/Roguery/One of the Family")]
     public float rog_OneOfTheFamily_p {
       get => _rog_OneOfTheFamily_p;
       set {
@@ -6998,7 +6955,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=f0abqIAz}Gang leaders in your settlement offer you 1 more recruitment slot.")]
-    [SettingPropertyGroup("Perks/Roguery/{=oumTabhS}One of the Family")]
+    [SettingPropertyGroup("Perks/Roguery/One of the Family")]
     public float rog_OneOfTheFamily_s {
       get => _rog_OneOfTheFamily_s;
       set {
@@ -7012,7 +6969,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=90r4jzsS}10% increased damage with \"civilian\" weapons.")]
-    [SettingPropertyGroup("Perks/Roguery/{=7gZo2SY4}Carver")]
+    [SettingPropertyGroup("Perks/Roguery/Carver")]
     public float rog_Carver_p {
       get => _rog_Carver_p;
       set {
@@ -7024,7 +6981,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=fDRbGy7y}Troops under your command deal 2% more damage with one handed swords.")]
-    [SettingPropertyGroup("Perks/Roguery/{=7gZo2SY4}Carver")]
+    [SettingPropertyGroup("Perks/Roguery/Carver")]
     public float rog_Carver_s {
       get => _rog_Carver_s;
       set {
@@ -7038,7 +6995,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=HabvheWJ}Hero prisoners gain a 25% better deal from ransom broker.")]
-    [SettingPropertyGroup("Perks/Roguery/{=W2WXkiAh}Ransom Broker")]
+    [SettingPropertyGroup("Perks/Roguery/Ransom Broker")]
     public float rog_RansomBroker_p {
       get => _rog_RansomBroker_p;
       set {
@@ -7050,7 +7007,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=WU0HmqY2}Hero Prisoners are 30% less likely to escape.")]
-    [SettingPropertyGroup("Perks/Roguery/{=W2WXkiAh}Ransom Broker")]
+    [SettingPropertyGroup("Perks/Roguery/Ransom Broker")]
     public float rog_RansomBroker_s {
       get => _rog_RansomBroker_s;
       set {
@@ -7064,7 +7021,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=ZbabC8XE}20% decrease in sell price penalty for weapons.")]
-    [SettingPropertyGroup("Perks/Roguery/{=5bmlZ26b}Arms Dealer")]
+    [SettingPropertyGroup("Perks/Roguery/Arms Dealer")]
     public float rog_ArmsDealer_p {
       get => _rog_ArmsDealer_p;
       set {
@@ -7076,7 +7033,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Hdd7n8Ux}Increase daily militia by +2 per day while under siege.")]
-    [SettingPropertyGroup("Perks/Roguery/{=5bmlZ26b}Arms Dealer")]
+    [SettingPropertyGroup("Perks/Roguery/Arms Dealer")]
     public float rog_ArmsDealer_s {
       get => _rog_ArmsDealer_s;
       set {
@@ -7090,7 +7047,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Ggs8sYEe}Your kicks stun your opponents for 50% longer.")]
-    [SettingPropertyGroup("Perks/Roguery/{=bb1hS9I4}Dirty Fighting")]
+    [SettingPropertyGroup("Perks/Roguery/Dirty Fighting")]
     public float rog_DirtyFighting_p {
       get => _rog_DirtyFighting_p;
       set {
@@ -7102,7 +7059,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=fjpuRPFe}Town can smuggle in a 2 random food item per day while undersiege.")]
-    [SettingPropertyGroup("Perks/Roguery/{=bb1hS9I4}Dirty Fighting")]
+    [SettingPropertyGroup("Perks/Roguery/Dirty Fighting")]
     public float rog_DirtyFighting_s {
       get => _rog_DirtyFighting_s;
       set {
@@ -7116,7 +7073,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=zZvU1ANu}Increase speed bonus effect to damage by 50% while on foot.")]
-    [SettingPropertyGroup("Perks/Roguery/{=w1B71sNj}Dash and Slash")]
+    [SettingPropertyGroup("Perks/Roguery/Dash and Slash")]
     public float rog_DashAndSlash_p {
       get => _rog_DashAndSlash_p;
       set {
@@ -7128,7 +7085,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=bl7zYCaL}Troops under your command deal 2% more damage with two handed weapons.")]
-    [SettingPropertyGroup("Perks/Roguery/{=w1B71sNj}Dash and Slash")]
+    [SettingPropertyGroup("Perks/Roguery/Dash and Slash")]
     public float rog_DashAndSlash_s {
       get => _rog_DashAndSlash_s;
       set {
@@ -7142,7 +7099,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=VfTfCFc8}Increase your movement speed by 10% while no weapons or shields are equipped.")]
-    [SettingPropertyGroup("Perks/Roguery/{=yY5iDvAb}Fleet Footed")]
+    [SettingPropertyGroup("Perks/Roguery/Fleet Footed")]
     public float rog_FleetFooted_p {
       get => _rog_FleetFooted_p;
       set {
@@ -7154,7 +7111,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ZyeIno52}Increase escape chance by 30% from mobile parties.")]
-    [SettingPropertyGroup("Perks/Roguery/{=yY5iDvAb}Fleet Footed")]
+    [SettingPropertyGroup("Perks/Roguery/Fleet Footed")]
     public float rog_FleetFooted_s {
       get => _rog_FleetFooted_s;
       set {
@@ -7168,7 +7125,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=OZk856at}Increase loot amount by 1% for every skill point over 200.")]
-    [SettingPropertyGroup("Perks/Roguery/{=U3cgqyUE}Rogue Extraordinaire")]
+    [SettingPropertyGroup("Perks/Roguery/Rogue Extraordinaire")]
     public float rog_RogueExtraordinaire_p {
       get => _rog_RogueExtraordinaire_p;
       set {
@@ -7180,7 +7137,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="")]
-    [SettingPropertyGroup("Perks/Roguery/{=U3cgqyUE}Rogue Extraordinaire")]
+    [SettingPropertyGroup("Perks/Roguery/Rogue Extraordinaire")]
     public float rog_RogueExtraordinaire_s {
       get => _rog_RogueExtraordinaire_s;
       set {
@@ -7194,7 +7151,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=QGX317PD}+2 xp per day to all troops in party.")]
-    [SettingPropertyGroup("Perks/Leadership/{=Cb5s9HlD}Combat Tips")]
+    [SettingPropertyGroup("Perks/Leadership/Combat Tips")]
     public float ldr_CombatTips_p {
       get => _ldr_CombatTips_p;
       set {
@@ -7206,7 +7163,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=bkPCaa0D}Increase recruit level of units of the same culture with you from npcs.")]
-    [SettingPropertyGroup("Perks/Leadership/{=Cb5s9HlD}Combat Tips")]
+    [SettingPropertyGroup("Perks/Leadership/Combat Tips")]
     public float ldr_CombatTips_s {
       get => _ldr_CombatTips_s;
       set {
@@ -7220,7 +7177,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=emH1yQAs}+4 xp per day to tier 1-2 troops.")]
-    [SettingPropertyGroup("Perks/Leadership/{=JGCtv8om}Raise The Meek")]
+    [SettingPropertyGroup("Perks/Leadership/Raise The Meek")]
     public float ldr_RaiseTheMeek_p {
       get => _ldr_RaiseTheMeek_p;
       set {
@@ -7232,7 +7189,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=zzOxYsv1}Each troop in the garrison gains +3 xp per day.")]
-    [SettingPropertyGroup("Perks/Leadership/{=JGCtv8om}Raise The Meek")]
+    [SettingPropertyGroup("Perks/Leadership/Raise The Meek")]
     public float ldr_RaiseTheMeek_s {
       get => _ldr_RaiseTheMeek_s;
       set {
@@ -7246,7 +7203,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ODpmvGFf}Additional 4 morale at the beginning of the battle when you are attacking.")]
-    [SettingPropertyGroup("Perks/Leadership/{=MhRF64eR}Fervent Attacker")]
+    [SettingPropertyGroup("Perks/Leadership/Fervent Attacker")]
     public float ldr_FerventAttacker_p {
       get => _ldr_FerventAttacker_p;
       set {
@@ -7258,7 +7215,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=G6256l4w}Increase the rate of recruiting Tier 1-2-3 prisoners by %50.")]
-    [SettingPropertyGroup("Perks/Leadership/{=MhRF64eR}Fervent Attacker")]
+    [SettingPropertyGroup("Perks/Leadership/Fervent Attacker")]
     public float ldr_FerventAttacker_s {
       get => _ldr_FerventAttacker_s;
       set {
@@ -7272,7 +7229,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=WsvrvuLE}Additional 8 morale at the beginning of the battle when you are defending.")]
-    [SettingPropertyGroup("Perks/Leadership/{=YogcurDJ}Stout Defender")]
+    [SettingPropertyGroup("Perks/Leadership/Stout Defender")]
     public float ldr_StoutDefender_p {
       get => _ldr_StoutDefender_p;
       set {
@@ -7284,7 +7241,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=27CWu3Zq}Increase the rate of recruiting Tier 4-5-6 prisoners by %50.")]
-    [SettingPropertyGroup("Perks/Leadership/{=YogcurDJ}Stout Defender")]
+    [SettingPropertyGroup("Perks/Leadership/Stout Defender")]
     public float ldr_StoutDefender_s {
       get => _ldr_StoutDefender_s;
       set {
@@ -7298,7 +7255,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=6mhVzBKL}Town garrison is 20% more effective (for security).")]
-    [SettingPropertyGroup("Perks/Leadership/{=CeCAMvkX}Authority")]
+    [SettingPropertyGroup("Perks/Leadership/Authority")]
     public float ldr_Authority_p {
       get => _ldr_Authority_p;
       set {
@@ -7310,7 +7267,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=dgVuAcjn}Increase the party size limit by +5.")]
-    [SettingPropertyGroup("Perks/Leadership/{=CeCAMvkX}Authority")]
+    [SettingPropertyGroup("Perks/Leadership/Authority")]
     public float ldr_Authority_s {
       get => _ldr_Authority_s;
       set {
@@ -7324,7 +7281,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=1ZEsHKgI}+1 town loyalty per day.")]
-    [SettingPropertyGroup("Perks/Leadership/{=7aX2eh5x}Heroic Leader")]
+    [SettingPropertyGroup("Perks/Leadership/Heroic Leader")]
     public float ldr_HeroicLeader_p {
       get => _ldr_HeroicLeader_p;
       set {
@@ -7336,7 +7293,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=OY0Jwctd}Troops in your formation cause 10% more morale penalty when they kill an enemy.")]
-    [SettingPropertyGroup("Perks/Leadership/{=7aX2eh5x}Heroic Leader")]
+    [SettingPropertyGroup("Perks/Leadership/Heroic Leader")]
     public float ldr_HeroicLeader_s {
       get => _ldr_HeroicLeader_s;
       set {
@@ -7350,7 +7307,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=vI8qJ85a}Tier 3+ Troops under your command ignore retreat due to low morale.")]
-    [SettingPropertyGroup("Perks/Leadership/{=UJYaonYM}Loyalty and Honor")]
+    [SettingPropertyGroup("Perks/Leadership/Loyalty and Honor")]
     public float ldr_LoyaltyAndHonor_p {
       get => _ldr_LoyaltyAndHonor_p;
       set {
@@ -7362,7 +7319,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ClrrVHcM}Convert non-bandit prisoners 30% faster.")]
-    [SettingPropertyGroup("Perks/Leadership/{=UJYaonYM}Loyalty and Honor")]
+    [SettingPropertyGroup("Perks/Leadership/Loyalty and Honor")]
     public float ldr_LoyaltyAndHonor_s {
       get => _ldr_LoyaltyAndHonor_s;
       set {
@@ -7376,7 +7333,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=gV9oppoq}Increase renown gain from battles by 50%.")]
-    [SettingPropertyGroup("Perks/Leadership/{=FQkHkMhw}Famous Commander")]
+    [SettingPropertyGroup("Perks/Leadership/Famous Commander")]
     public float ldr_FamousCommander_p {
       get => _ldr_FamousCommander_p;
       set {
@@ -7388,7 +7345,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=sqC0sWl4}Recruited troops start with bonus experience of 200 xp.")]
-    [SettingPropertyGroup("Perks/Leadership/{=FQkHkMhw}Famous Commander")]
+    [SettingPropertyGroup("Perks/Leadership/Famous Commander")]
     public float ldr_FamousCommander_s {
       get => _ldr_FamousCommander_s;
       set {
@@ -7402,7 +7359,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=4BeLW46B}Increase +5 security in a town per day while waiting.")]
-    [SettingPropertyGroup("Perks/Leadership/{=6RckjM4S}Presence")]
+    [SettingPropertyGroup("Perks/Leadership/Presence")]
     public float ldr_Presence_p {
       get => _ldr_Presence_p;
       set {
@@ -7414,7 +7371,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=rCzzYL7U}Remove morale penalty for recruiting prisoners of your faction.")]
-    [SettingPropertyGroup("Perks/Leadership/{=6RckjM4S}Presence")]
+    [SettingPropertyGroup("Perks/Leadership/Presence")]
     public float ldr_Presence_s {
       get => _ldr_Presence_s;
       set {
@@ -7428,7 +7385,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=AuohHCJZ}Increase party size by +5 for each town you control.")]
-    [SettingPropertyGroup("Perks/Leadership/{=T5rM9XgO}Leader of the Masses")]
+    [SettingPropertyGroup("Perks/Leadership/Leader of the Masses")]
     public float ldr_LeaderOfMasses_p {
       get => _ldr_LeaderOfMasses_p;
       set {
@@ -7440,7 +7397,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=nW8psnGg}Heroes generate shared experience.")]
-    [SettingPropertyGroup("Perks/Leadership/{=T5rM9XgO}Leader of the Masses")]
+    [SettingPropertyGroup("Perks/Leadership/Leader of the Masses")]
     public float ldr_LeaderOfMasses_s {
       get => _ldr_LeaderOfMasses_s;
       set {
@@ -7454,7 +7411,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=6x1EcNvO}Increase garrison size by 20.")]
-    [SettingPropertyGroup("Perks/Leadership/{=vWGQNcu5}Veteran's Respect")]
+    [SettingPropertyGroup("Perks/Leadership/Veteran's Respect")]
     public float ldr_VeteransRespect_p {
       get => _ldr_VeteransRespect_p;
       set {
@@ -7466,7 +7423,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=tkz13PjS}You are able to convert bandits into regular troops.")]
-    [SettingPropertyGroup("Perks/Leadership/{=vWGQNcu5}Veteran's Respect")]
+    [SettingPropertyGroup("Perks/Leadership/Veteran's Respect")]
     public float ldr_VeteransRespect_s {
       get => _ldr_VeteransRespect_s;
       set {
@@ -7480,7 +7437,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=R8dqZlqB}Militia has 20% chance to spawn with more experienced troops.")]
-    [SettingPropertyGroup("Perks/Leadership/{=vZtLm43v}Citizen Militia")]
+    [SettingPropertyGroup("Perks/Leadership/Citizen Militia")]
     public float ldr_CitizenMilitia_p {
       get => _ldr_CitizenMilitia_p;
       set {
@@ -7492,7 +7449,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=LrXRhmoS}Increased morale gain from victories by 20%.")]
-    [SettingPropertyGroup("Perks/Leadership/{=vZtLm43v}Citizen Militia")]
+    [SettingPropertyGroup("Perks/Leadership/Citizen Militia")]
     public float ldr_CitizenMilitia_s {
       get => _ldr_CitizenMilitia_s;
       set {
@@ -7506,7 +7463,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=kaeRYRJN}20% less influence needed to call parties to army.")]
-    [SettingPropertyGroup("Perks/Leadership/{=kaEzJUTW}Inspiring Leader")]
+    [SettingPropertyGroup("Perks/Leadership/Inspiring Leader")]
     public float ldr_InspiringLeader_p {
       get => _ldr_InspiringLeader_p;
       set {
@@ -7518,7 +7475,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=zalLawWA}Troops in your formation gain 5% more experience from battles.")]
-    [SettingPropertyGroup("Perks/Leadership/{=kaEzJUTW}Inspiring Leader")]
+    [SettingPropertyGroup("Perks/Leadership/Inspiring Leader")]
     public float ldr_InspiringLeader_s {
       get => _ldr_InspiringLeader_s;
       set {
@@ -7532,7 +7489,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=t4kOTpwY}Increase battle morale by 10 during siege assaults and defense.")]
-    [SettingPropertyGroup("Perks/Leadership/{=EbROfVJJ}Uplifting Spirit")]
+    [SettingPropertyGroup("Perks/Leadership/Uplifting Spirit")]
     public float ldr_UpliftingSpirit_p {
       get => _ldr_UpliftingSpirit_p;
       set {
@@ -7544,7 +7501,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HLoivET9}Party size limit increased by 10.")]
-    [SettingPropertyGroup("Perks/Leadership/{=EbROfVJJ}Uplifting Spirit")]
+    [SettingPropertyGroup("Perks/Leadership/Uplifting Spirit")]
     public float ldr_UpliftingSpirit_s {
       get => _ldr_UpliftingSpirit_s;
       set {
@@ -7558,7 +7515,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=FajKnyPb}Your kills have 100% higher effect on friendly troops' battle morale.")]
-    [SettingPropertyGroup("Perks/Leadership/{=5uW9zKTN}Make a Difference")]
+    [SettingPropertyGroup("Perks/Leadership/Make a Difference")]
     public float ldr_MakeADifference_p {
       get => _ldr_MakeADifference_p;
       set {
@@ -7570,7 +7527,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=KKajZg3a}Archer troops generate 10% more shared experience.")]
-    [SettingPropertyGroup("Perks/Leadership/{=5uW9zKTN}Make a Difference")]
+    [SettingPropertyGroup("Perks/Leadership/Make a Difference")]
     public float ldr_MakeADifference_s {
       get => _ldr_MakeADifference_s;
       set {
@@ -7584,7 +7541,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=DuaVp7UH}Increase the rate of recruiting melee prisoners by %50.")]
-    [SettingPropertyGroup("Perks/Leadership/{=WFFlp3Qi}Lead by Example")]
+    [SettingPropertyGroup("Perks/Leadership/Lead by Example")]
     public float ldr_LeadByExample_p {
       get => _ldr_LeadByExample_p;
       set {
@@ -7596,7 +7553,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=0Yhuvx3C}Cavalry troops generate 10% more shared experience.")]
-    [SettingPropertyGroup("Perks/Leadership/{=WFFlp3Qi}Lead by Example")]
+    [SettingPropertyGroup("Perks/Leadership/Lead by Example")]
     public float ldr_LeadByExample_s {
       get => _ldr_LeadByExample_s;
       set {
@@ -7610,7 +7567,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=WZxUAn6V}Increase the rate of recruiting ranged prisoners by %50.")]
-    [SettingPropertyGroup("Perks/Leadership/{=6ETg3maz}Trusted Commander")]
+    [SettingPropertyGroup("Perks/Leadership/Trusted Commander")]
     public float ldr_TrustedCommander_p {
       get => _ldr_TrustedCommander_p;
       set {
@@ -7622,7 +7579,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=oHwFpTEw}Troop experience gain while fighting in simulated battles are increased by 20%.")]
-    [SettingPropertyGroup("Perks/Leadership/{=6ETg3maz}Trusted Commander")]
+    [SettingPropertyGroup("Perks/Leadership/Trusted Commander")]
     public float ldr_TrustedCommander_s {
       get => _ldr_TrustedCommander_s;
       set {
@@ -7636,7 +7593,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=NNalp5mr}+1 companion.")]
-    [SettingPropertyGroup("Perks/Leadership/{=3GHIb7YX}We Pledge our Swords")]
+    [SettingPropertyGroup("Perks/Leadership/We Pledge our Swords")]
     public float ldr_WePledgeOurSwords_p {
       get => _ldr_WePledgeOurSwords_p;
       set {
@@ -7650,7 +7607,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Dl4PUYNO}Add 3 focus points to 3 random clan members when you get this perk.")]
-    [SettingPropertyGroup("Perks/Leadership/{=pFfqWRnf}Talent Magnet")]
+    [SettingPropertyGroup("Perks/Leadership/Talent Magnet")]
     public float ldr_TalentMagnet_p {
       get => _ldr_TalentMagnet_p;
       set {
@@ -7662,7 +7619,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=swggGckO}+1 party.")]
-    [SettingPropertyGroup("Perks/Leadership/{=pFfqWRnf}Talent Magnet")]
+    [SettingPropertyGroup("Perks/Leadership/Talent Magnet")]
     public float ldr_TalentMagnet_s {
       get => _ldr_TalentMagnet_s;
       set {
@@ -7676,7 +7633,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=4BLBgJ1U}Every skill increase after 250 gives you +1 party size.")]
-    [SettingPropertyGroup("Perks/Leadership/{=FK3W0SKk}Ultimate Leader")]
+    [SettingPropertyGroup("Perks/Leadership/Ultimate Leader")]
     public float ldr_UltimateLeader_p {
       get => _ldr_UltimateLeader_p;
       set {
@@ -7688,7 +7645,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="Unknown")]
-    [SettingPropertyGroup("Perks/Leadership/{=FK3W0SKk}Ultimate Leader")]
+    [SettingPropertyGroup("Perks/Leadership/Ultimate Leader")]
     public float ldr_UltimateLeader_s {
       get => _ldr_UltimateLeader_s;
       set {
@@ -7701,112 +7658,36 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=bbkVpX2U}30% more likely to have children.")]
-    [SettingPropertyGroup("Perks/Charm/{=mbqoZ4WH}Virile")]
-    public float chm_Virile_p {
-      get => _chm_Virile_p;
+    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=22xPl7Y0}15% reduced barter penalty.")]
+    [SettingPropertyGroup("Perks/Charm/Diplomacy")]
+    public float chm_Diplomacy_p {
+      get => _chm_Diplomacy_p;
       set {
-        if (_chm_Virile_p != value) {
-          _chm_Virile_p = value;
+        if (_chm_Diplomacy_p != value) {
+          _chm_Diplomacy_p = value;
           if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.Virile, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=8F1JaR4I}10% chance to get 1 relation with a random notable in governed settlement per day while continuous projects are active.")]
-    [SettingPropertyGroup("Perks/Charm/{=mbqoZ4WH}Virile")]
-    public float chm_Virile_s {
-      get => _chm_Virile_s;
-      set {
-        if (_chm_Virile_s != value) {
-          _chm_Virile_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.Virile, value);
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.Diplomacy, value);
         }
       }
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=TbIub0u8}Gain 5 influence by winning a tournament.")]
-    [SettingPropertyGroup("Perks/Charm/{=hkG9ATZy}Self Promoter")]
-    public float chm_SelfPromoter_p {
-      get => _chm_SelfPromoter_p;
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=f7XrO5Z8}20% more renown from battles.")]
+    [SettingPropertyGroup("Perks/Charm/Show Your Scars")]
+    public float chm_ShowYourScars_p {
+      get => _chm_ShowYourScars_p;
       set {
-        if (_chm_SelfPromoter_p != value) {
-          _chm_SelfPromoter_p = value;
+        if (_chm_ShowYourScars_p != value) {
+          _chm_ShowYourScars_p = value;
           if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.SelfPromoter, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ikNAXaNx}Gain 1 morale while in a besieged settlement.")]
-    [SettingPropertyGroup("Perks/Charm/{=hkG9ATZy}Self Promoter")]
-    public float chm_SelfPromoter_s {
-      get => _chm_SelfPromoter_s;
-      set {
-        if (_chm_SelfPromoter_s != value) {
-          _chm_SelfPromoter_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.SelfPromoter, value);
-        }
-      }
-    }
-
-
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=JBLwQVNT}You gain 1 renown and influence for each issue resolved.")]
-    [SettingPropertyGroup("Perks/Charm/{=OZXEMb2C}Oratory")]
-    public float chm_Oratory_p {
-      get => _chm_Oratory_p;
-      set {
-        if (_chm_Oratory_p != value) {
-          _chm_Oratory_p = value;
-          if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.Oratory, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=IYYv49rg}Everytime you defeat an enemy lord party you gain 1 relationship with a random notable of your faction.")]
-    [SettingPropertyGroup("Perks/Charm/{=OZXEMb2C}Oratory")]
-    public float chm_Oratory_s {
-      get => _chm_Oratory_s;
-      set {
-        if (_chm_Oratory_s != value) {
-          _chm_Oratory_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.Oratory, value);
-        }
-      }
-    }
-
-
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=1CqmyOu7}Increase influence gain from battles by 30%.")]
-    [SettingPropertyGroup("Perks/Charm/{=jiWr5Rlz}Warlord")]
-    public float chm_Warlord_p {
-      get => _chm_Warlord_p;
-      set {
-        if (_chm_Warlord_p != value) {
-          _chm_Warlord_p = value;
-          if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.Warlord, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=dwTnvjXW}Everytime you defeat an enemy lord party you gain +1 relationship with a random lord of your faction.")]
-    [SettingPropertyGroup("Perks/Charm/{=jiWr5Rlz}Warlord")]
-    public float chm_Warlord_s {
-      get => _chm_Warlord_s;
-      set {
-        if (_chm_Warlord_s != value) {
-          _chm_Warlord_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.Warlord, value);
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.ShowYourScars, value);
         }
       }
     }
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=Pt2n5Cez}20% chance to avoid persuasion critical failure.")]
-    [SettingPropertyGroup("Perks/Charm/{=l863hIyN}Forgivable Grievances")]
+    [SettingPropertyGroup("Perks/Charm/Forgivable Grievances")]
     public float chm_ForgivableGrievances_p {
       get => _chm_ForgivableGrievances_p;
       set {
@@ -7817,22 +7698,10 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=hbrMyK5N}5% chance per day to increase relations with a random NPC of negative relations with you within the settlement.")]
-    [SettingPropertyGroup("Perks/Charm/{=l863hIyN}Forgivable Grievances")]
-    public float chm_ForgivableGrievances_s {
-      get => _chm_ForgivableGrievances_s;
-      set {
-        if (_chm_ForgivableGrievances_s != value) {
-          _chm_ForgivableGrievances_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.ForgivableGrievances, value);
-        }
-      }
-    }
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=bGX2Iojc}10% better chance for double persuasion success.")]
-    [SettingPropertyGroup("Perks/Charm/{=4hUEryJ6}Meaningful Favors")]
+    [SettingPropertyGroup("Perks/Charm/Meaningful Favors")]
     public float chm_MeaningfulFavors_p {
       get => _chm_MeaningfulFavors_p;
       set {
@@ -7843,22 +7712,10 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=OFai6MA4}Relations with powerful settlement NPCs improve overtime.")]
-    [SettingPropertyGroup("Perks/Charm/{=4hUEryJ6}Meaningful Favors")]
-    public float chm_MeaningfulFavors_s {
-      get => _chm_MeaningfulFavors_s;
-      set {
-        if (_chm_MeaningfulFavors_s != value) {
-          _chm_MeaningfulFavors_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.MeaningfulFavors, value);
-        }
-      }
-    }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=3cQs44Et}Increase any relationship gain with opposite gender by 20%.")]
-    [SettingPropertyGroup("Perks/Charm/{=ZlXSlx0p}In Bloom")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=3cQs44Et}Increase relationship gain with opposite gender by 20%.")]
+    [SettingPropertyGroup("Perks/Charm/In Bloom")]
     public float chm_InBloom_p {
       get => _chm_InBloom_p;
       set {
@@ -7869,22 +7726,10 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=dFXay84g}2% chance per day to increase relations with a random notable of opposed sex within the settlement.")]
-    [SettingPropertyGroup("Perks/Charm/{=ZlXSlx0p}In Bloom")]
-    public float chm_InBloom_s {
-      get => _chm_InBloom_s;
-      set {
-        if (_chm_InBloom_s != value) {
-          _chm_InBloom_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.InBloom, value);
-        }
-      }
-    }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=I4JZRzuH}Increase any relationship gain with same gender by 20%.")]
-    [SettingPropertyGroup("Perks/Charm/{=TpzZgFsA}Young And Respectful")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=I4JZRzuH}Increase relationship gain with same gender by 20%.")]
+    [SettingPropertyGroup("Perks/Charm/Young and Respectful")]
     public float chm_YoungAndRespectful_p {
       get => _chm_YoungAndRespectful_p;
       set {
@@ -7895,218 +7740,52 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=nrvNbenk}2% chance per day to increase relations with a random notable of same sex within the settlement.")]
-    [SettingPropertyGroup("Perks/Charm/{=TpzZgFsA}Young And Respectful")]
-    public float chm_YoungAndRespectful_s {
-      get => _chm_YoungAndRespectful_s;
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=i0ehHB2a}30% chance to negate relationship penalty from kingdom decisions.")]
+    [SettingPropertyGroup("Perks/Charm/Respectful Opposition")]
+    public float chm_RespectfulOpposition_p {
+      get => _chm_RespectfulOpposition_p;
       set {
-        if (_chm_YoungAndRespectful_s != value) {
-          _chm_YoungAndRespectful_s = value;
+        if (_chm_RespectfulOpposition_p != value) {
+          _chm_RespectfulOpposition_p = value;
           if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.YoungAndRespectful, value);
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.RespectfulOpposition, value);
         }
       }
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=sIWEhq1p}50% less influence cost to initiate kingdom decisions.")]
-    [SettingPropertyGroup("Perks/Charm/{=EbKP7Xx5}Firebrand")]
-    public float chm_Firebrand_p {
-      get => _chm_Firebrand_p;
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=9RmkwGP5}Gain 20% more influence from personal actions.")]
+    [SettingPropertyGroup("Perks/Charm/Our Glorious Leader")]
+    public float chm_OurGloriousLeader_p {
+      get => _chm_OurGloriousLeader_p;
       set {
-        if (_chm_Firebrand_p != value) {
-          _chm_Firebrand_p = value;
+        if (_chm_OurGloriousLeader_p != value) {
+          _chm_OurGloriousLeader_p = value;
           if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.Firebrand, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=0yGa0Iwb}Increase recruitment level from rural notables by +1.")]
-    [SettingPropertyGroup("Perks/Charm/{=EbKP7Xx5}Firebrand")]
-    public float chm_Firebrand_s {
-      get => _chm_Firebrand_s;
-      set {
-        if (_chm_Firebrand_s != value) {
-          _chm_Firebrand_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.Firebrand, value);
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.OurGloriousLeader, value);
         }
       }
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=7xNrHsWx}30% less influence cost when voting for proposals made by other people.")]
-    [SettingPropertyGroup("Perks/Charm/{=58Imsasy}Flexible Ethics")]
-    public float chm_FlexibleEthics_p {
-      get => _chm_FlexibleEthics_p;
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=WQ3Ohs2u}Clan member parties gain 10% more influence from actions.")]
+    [SettingPropertyGroup("Perks/Charm/Pro Familia")]
+    public float chm_ProFamilia_p {
+      get => _chm_ProFamilia_p;
       set {
-        if (_chm_FlexibleEthics_p != value) {
-          _chm_FlexibleEthics_p = value;
+        if (_chm_ProFamilia_p != value) {
+          _chm_ProFamilia_p = value;
           if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.FlexibleEthics, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=MfTx4gyp}Increase recruitment level from urban notables by +1.")]
-    [SettingPropertyGroup("Perks/Charm/{=58Imsasy}Flexible Ethics")]
-    public float chm_FlexibleEthics_s {
-      get => _chm_FlexibleEthics_s;
-      set {
-        if (_chm_FlexibleEthics_s != value) {
-          _chm_FlexibleEthics_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.FlexibleEthics, value);
-        }
-      }
-    }
-
-
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=UbBnKVaI}Hiring mercenaries is 20% cheaper.")]
-    [SettingPropertyGroup("Perks/Charm/{=WOqxWM67}Slick Negotiator")]
-    public float chm_SlickNegotiator_p {
-      get => _chm_SlickNegotiator_p;
-      set {
-        if (_chm_SlickNegotiator_p != value) {
-          _chm_SlickNegotiator_p = value;
-          if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.SlickNegotiator, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=DdoGlKmU}Reduce item barter penalty with the lords of the different culture with you 10%.")]
-    [SettingPropertyGroup("Perks/Charm/{=WOqxWM67}Slick Negotiator")]
-    public float chm_SlickNegotiator_s {
-      get => _chm_SlickNegotiator_s;
-      set {
-        if (_chm_SlickNegotiator_s != value) {
-          _chm_SlickNegotiator_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.SlickNegotiator, value);
-        }
-      }
-    }
-
-
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=joDbjfWd}Increase relationship bonus by 20% chance when paying more than enough in barters.")]
-    [SettingPropertyGroup("Perks/Charm/{=dSBbSHkM}Tribute")]
-    public float chm_Tribute_p {
-      get => _chm_Tribute_p;
-      set {
-        if (_chm_Tribute_p != value) {
-          _chm_Tribute_p = value;
-          if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.Tribute, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=2i4EmlLi}Gain additional relation when you increase relationship with cruel lords.")]
-    [SettingPropertyGroup("Perks/Charm/{=dSBbSHkM}Tribute")]
-    public float chm_Tribute_s {
-      get => _chm_Tribute_s;
-      set {
-        if (_chm_Tribute_s != value) {
-          _chm_Tribute_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.Tribute, value);
-        }
-      }
-    }
-
-
-    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=aj2yAdM9}Characters in your own faction requires -1 persusion success.")]
-    [SettingPropertyGroup("Perks/Charm/{=zUXUrGWa}Morale Leader")]
-    public float chm_MoralLeader_p {
-      get => _chm_MoralLeader_p;
-      set {
-        if (_chm_MoralLeader_p != value) {
-          _chm_MoralLeader_p = value;
-          if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.MoralLeader, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=CGOG31aq}For every project completed increase notable relations with the owner by 1.")]
-    [SettingPropertyGroup("Perks/Charm/{=zUXUrGWa}Morale Leader")]
-    public float chm_MoralLeader_s {
-      get => _chm_MoralLeader_s;
-      set {
-        if (_chm_MoralLeader_s != value) {
-          _chm_MoralLeader_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.MoralLeader, value);
-        }
-      }
-    }
-
-
-    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=PgWBBJbP}Characters in other factions requires -1 persusion success.")]
-    [SettingPropertyGroup("Perks/Charm/{=qaZDUknZ}Natural Leader")]
-    public float chm_NaturalLeader_p {
-      get => _chm_NaturalLeader_p;
-      set {
-        if (_chm_NaturalLeader_p != value) {
-          _chm_NaturalLeader_p = value;
-          if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.NaturalLeader, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=aZIEZktN}Your companions gain 20% more experience.")]
-    [SettingPropertyGroup("Perks/Charm/{=qaZDUknZ}Natural Leader")]
-    public float chm_NaturalLeader_s {
-      get => _chm_NaturalLeader_s;
-      set {
-        if (_chm_NaturalLeader_s != value) {
-          _chm_NaturalLeader_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.NaturalLeader, value);
-        }
-      }
-    }
-
-
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=56XKyOib}Renown gain from battles are increased by 30%.")]
-    [SettingPropertyGroup("Perks/Charm/{=16fxd9fN}Public Speaker")]
-    public float chm_PublicSpeaker_p {
-      get => _chm_PublicSpeaker_p;
-      set {
-        if (_chm_PublicSpeaker_p != value) {
-          _chm_PublicSpeaker_p = value;
-          if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.PublicSpeaker, value);
-        }
-      }
-    }
-
-
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=IF7tcOY6}You gain double relations with a lord when you aid them in battle.")]
-    [SettingPropertyGroup("Perks/Charm/{=p2zZGkZw}Camaraderie")]
-    public float chm_Camaraderie_p {
-      get => _chm_Camaraderie_p;
-      set {
-        if (_chm_Camaraderie_p != value) {
-          _chm_Camaraderie_p = value;
-          if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.Camaraderie, value);
-        }
-      }
-    }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Tqfqgub5}Increase companion limit by +1.")]
-    [SettingPropertyGroup("Perks/Charm/{=p2zZGkZw}Camaraderie")]
-    public float chm_Camaraderie_s {
-      get => _chm_Camaraderie_s;
-      set {
-        if (_chm_Camaraderie_s != value) {
-          _chm_Camaraderie_s = value;
-          if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.Camaraderie, value);
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.ProFamilia, value);
         }
       }
     }
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=HokNfd1i}15% decrease in sell price penalty for equipments.")]
-    [SettingPropertyGroup("Perks/Trade/{=b3PsxeiB}Appraiser")]
+    [SettingPropertyGroup("Perks/Trade/Appraiser")]
     public float trd_Appraiser_p {
       get => _trd_Appraiser_p;
       set {
@@ -8118,7 +7797,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=gHUQfWlg}Your profits are marked.")]
-    [SettingPropertyGroup("Perks/Trade/{=b3PsxeiB}Appraiser")]
+    [SettingPropertyGroup("Perks/Trade/Appraiser")]
     public float trd_Appraiser_s {
       get => _trd_Appraiser_s;
       set {
@@ -8132,7 +7811,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=Dqjq02Sd}15% decrease in sell price penalty for trade goods.")]
-    [SettingPropertyGroup("Perks/Trade/{=lTNpxGoh}Whole Seller")]
+    [SettingPropertyGroup("Perks/Trade/Whole Seller")]
     public float trd_WholeSeller_p {
       get => _trd_WholeSeller_p;
       set {
@@ -8144,7 +7823,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=gHUQfWlg}Your profits are marked.")]
-    [SettingPropertyGroup("Perks/Trade/{=lTNpxGoh}Whole Seller")]
+    [SettingPropertyGroup("Perks/Trade/Whole Seller")]
     public float trd_WholeSeller_s {
       get => _trd_WholeSeller_s;
       set {
@@ -8158,7 +7837,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=6bVZbvFJ}Party can carry 30% more weight.")]
-    [SettingPropertyGroup("Perks/Trade/{=5acLha5Q}Caravan Master")]
+    [SettingPropertyGroup("Perks/Trade/Caravan Master")]
     public float trd_CaravanMaster_p {
       get => _trd_CaravanMaster_p;
       set {
@@ -8170,7 +7849,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=awog3kRm}Mark item prices relative to average price.")]
-    [SettingPropertyGroup("Perks/Trade/{=5acLha5Q}Caravan Master")]
+    [SettingPropertyGroup("Perks/Trade/Caravan Master")]
     public float trd_CaravanMaster_s {
       get => _trd_CaravanMaster_s;
       set {
@@ -8183,8 +7862,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=eWa2Rcla}Your workshops have 20% less upkeep.")]
-    [SettingPropertyGroup("Perks/Trade/{=InLGoUbB}Market Dealer")]
+    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=eWa2Rcla}Your shop have 20% less upkeep.")]
+    [SettingPropertyGroup("Perks/Trade/Market Dealer")]
     public float trd_MarketDealer_p {
       get => _trd_MarketDealer_p;
       set {
@@ -8196,7 +7875,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=awog3kRm}Mark item prices relative to average price.")]
-    [SettingPropertyGroup("Perks/Trade/{=InLGoUbB}Market Dealer")]
+    [SettingPropertyGroup("Perks/Trade/Market Dealer")]
     public float trd_MarketDealer_s {
       get => _trd_MarketDealer_s;
       set {
@@ -8210,7 +7889,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=DV2kW53e}Your caravans gather trade rumors.")]
-    [SettingPropertyGroup("Perks/Trade/{=3j6Ec63l}Traveling Rumors")]
+    [SettingPropertyGroup("Perks/Trade/Traveling Rumors")]
     public float trd_TravelingRumors_p {
       get => _trd_TravelingRumors_p;
       set {
@@ -8222,7 +7901,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=WeQla2wI}15% decrease in buy price penalty from villages.")]
-    [SettingPropertyGroup("Perks/Trade/{=3j6Ec63l}Traveling Rumors")]
+    [SettingPropertyGroup("Perks/Trade/Traveling Rumors")]
     public float trd_TravelingRumors_s {
       get => _trd_TravelingRumors_s;
       set {
@@ -8236,7 +7915,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=SOHgkGKy}Your workshops gather trade rumors.")]
-    [SettingPropertyGroup("Perks/Trade/{=mznjEwjC}Local Connection")]
+    [SettingPropertyGroup("Perks/Trade/Local Connection")]
     public float trd_LocalConnection_p {
       get => _trd_LocalConnection_p;
       set {
@@ -8248,7 +7927,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=TbXWCRa0}15% decrease in sell price penalty for Animals.")]
-    [SettingPropertyGroup("Perks/Trade/{=mznjEwjC}Local Connection")]
+    [SettingPropertyGroup("Perks/Trade/Local Connection")]
     public float trd_LocalConnection_s {
       get => _trd_LocalConnection_s;
       set {
@@ -8262,7 +7941,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=cepOilBX}Double relationship gain by resolved issues with artisans.")]
-    [SettingPropertyGroup("Perks/Trade/{=nxkNY4YG}Distributed Goods")]
+    [SettingPropertyGroup("Perks/Trade/Distributed Goods")]
     public float trd_DistributedGoods_p {
       get => _trd_DistributedGoods_p;
       set {
@@ -8274,7 +7953,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=4ScutTtz}Every villager party entering your town generates 30 gold income")]
-    [SettingPropertyGroup("Perks/Trade/{=nxkNY4YG}Distributed Goods")]
+    [SettingPropertyGroup("Perks/Trade/Distributed Goods")]
     public float trd_DistributedGoods_s {
       get => _trd_DistributedGoods_s;
       set {
@@ -8288,7 +7967,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=qgIMB69a}Double relationship gain by resolved issues with merchants.")]
-    [SettingPropertyGroup("Perks/Trade/{=JnSh4Fmz}Toll Gates")]
+    [SettingPropertyGroup("Perks/Trade/Toll Gates")]
     public float trd_Tollgates_p {
       get => _trd_Tollgates_p;
       set {
@@ -8300,7 +7979,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=fFqT4eJ2}Every caravan entering your town generates 20 gold income.")]
-    [SettingPropertyGroup("Perks/Trade/{=JnSh4Fmz}Toll Gates")]
+    [SettingPropertyGroup("Perks/Trade/Toll Gates")]
     public float trd_Tollgates_s {
       get => _trd_Tollgates_s;
       set {
@@ -8313,8 +7992,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=81qgJ7fW}Every profitable workshop you own gives you 1 renown per day.")]
-    [SettingPropertyGroup("Perks/Trade/{=8f8UGq46}Artisan Community")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=81qgJ7fW}Every profitable shop you own gives you 1 renown per day.")]
+    [SettingPropertyGroup("Perks/Trade/Artisan Community")]
     public float trd_ArtisanCommunity_p {
       get => _trd_ArtisanCommunity_p;
       set {
@@ -8326,7 +8005,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=tJqWNH2H}Increase recruitment slot by 1 when recruiting from merchant notables.")]
-    [SettingPropertyGroup("Perks/Trade/{=8f8UGq46}Artisan Community")]
+    [SettingPropertyGroup("Perks/Trade/Artisan Community")]
     public float trd_ArtisanCommunity_s {
       get => _trd_ArtisanCommunity_s;
       set {
@@ -8340,7 +8019,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=NVnuAwuU}Every profitable caravan you own gives you 1 renown per day.")]
-    [SettingPropertyGroup("Perks/Trade/{=g9qLrEb4}Great Investor")]
+    [SettingPropertyGroup("Perks/Trade/Great Investor")]
     public float trd_GreatInvestor_p {
       get => _trd_GreatInvestor_p;
       set {
@@ -8352,7 +8031,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=axdYx3zY}Hiring companions is 30% cheaper.")]
-    [SettingPropertyGroup("Perks/Trade/{=g9qLrEb4}Great Investor")]
+    [SettingPropertyGroup("Perks/Trade/Great Investor")]
     public float trd_GreatInvestor_s {
       get => _trd_GreatInvestor_s;
       set {
@@ -8365,34 +8044,34 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=B1meG5eO}Your workshop productions are increased by 25%.")]
-    [SettingPropertyGroup("Perks/Trade/{=*}Mercenary Connections")]
-    public float trd_MercenaryConnections_p {
-      get => _trd_MercenaryConnections_p;
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=B1meG5eO}Your workshop productions increased by 25%.")]
+    [SettingPropertyGroup("Perks/Trade/Villager Connections")]
+    public float trd_VillagerConnections_p {
+      get => _trd_VillagerConnections_p;
       set {
-        if (_trd_MercenaryConnections_p != value) {
-          _trd_MercenaryConnections_p = value;
+        if (_trd_VillagerConnections_p != value) {
+          _trd_VillagerConnections_p = value;
           if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Trade.MercenaryConnections, value);
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Trade.VillagerConnections, value);
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=*}Mercenary troops' wages are decreased by 25%.")]
-    [SettingPropertyGroup("Perks/Trade/{=*}Mercenary Connections")]
-    public float trd_MercenaryConnections_s {
-      get => _trd_MercenaryConnections_s;
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
+    [SettingPropertyGroup("Perks/Trade/Villager Connections")]
+    public float trd_VillagerConnections_s {
+      get => _trd_VillagerConnections_s;
       set {
-        if (_trd_MercenaryConnections_s != value) {
-          _trd_MercenaryConnections_s = value;
+        if (_trd_VillagerConnections_s != value) {
+          _trd_VillagerConnections_s = value;
           if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Trade.MercenaryConnections, value);
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Trade.VillagerConnections, value);
         }
       }
     }
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=BRbEODrQ}Increased tariff income by 10%.")]
-    [SettingPropertyGroup("Perks/Trade/{=FV4SWLQx}Content Trades")]
+    [SettingPropertyGroup("Perks/Trade/Content Trades")]
     public float trd_ContentTrades_p {
       get => _trd_ContentTrades_p;
       set {
@@ -8403,8 +8082,8 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=rbYHF03o}Party wage is decreased by 50% while waiting in settlements.")]
-    [SettingPropertyGroup("Perks/Trade/{=FV4SWLQx}Content Trades")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=rbYHF03o}Wage decreased by 50% while waiting in settlements.")]
+    [SettingPropertyGroup("Perks/Trade/Content Trades")]
     public float trd_ContentTrades_s {
       get => _trd_ContentTrades_s;
       set {
@@ -8418,7 +8097,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=TXnHX2Ed}Your caravans return 5000 gold when destroyed.")]
-    [SettingPropertyGroup("Perks/Trade/{=aYQybo4E}Insurance Plans")]
+    [SettingPropertyGroup("Perks/Trade/Insurance Plans")]
     public float trd_InsurancePlans_p {
       get => _trd_InsurancePlans_p;
       set {
@@ -8430,7 +8109,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=oQxJYJsq}25% decrease in buy price penalty food items.")]
-    [SettingPropertyGroup("Perks/Trade/{=aYQybo4E}Insurance Plans")]
+    [SettingPropertyGroup("Perks/Trade/Insurance Plans")]
     public float trd_InsurancePlans_s {
       get => _trd_InsurancePlans_s;
       set {
@@ -8443,8 +8122,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=jPcULnsk}Your workshops return 5000 gold when town is captured by enemy.")]
-    [SettingPropertyGroup("Perks/Trade/{=u9oONz9o}Rapid Development")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=jPcULnsk}Your shops return 5000 gold when town is captured by enemy.")]
+    [SettingPropertyGroup("Perks/Trade/Rapid Development")]
     public float trd_RapidDevelopment_p {
       get => _trd_RapidDevelopment_p;
       set {
@@ -8456,7 +8135,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=QorXGtie}25% decrease in buy price penalty clay / iron / cotton / silver.")]
-    [SettingPropertyGroup("Perks/Trade/{=u9oONz9o}Rapid Development")]
+    [SettingPropertyGroup("Perks/Trade/Rapid Development")]
     public float trd_RapidDevelopment_s {
       get => _trd_RapidDevelopment_s;
       set {
@@ -8470,7 +8149,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=ZqRMPC7F}20% decrease in sell price penalty for food trade goods.")]
-    [SettingPropertyGroup("Perks/Trade/{=TFy2VYtM}Granary Accountant")]
+    [SettingPropertyGroup("Perks/Trade/Granary Accountant")]
     public float trd_GranaryAccountant_p {
       get => _trd_GranaryAccountant_p;
       set {
@@ -8482,7 +8161,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=vWxioznX}Your towns' bound villages' grain / olives / fish / date production is increased by 20%")]
-    [SettingPropertyGroup("Perks/Trade/{=TFy2VYtM}Granary Accountant")]
+    [SettingPropertyGroup("Perks/Trade/Granary Accountant")]
     public float trd_GranaryAccountant_s {
       get => _trd_GranaryAccountant_s;
       set {
@@ -8495,8 +8174,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=UbBnKVaI}Hiring mercenaries is 20% cheaper.")]
-    [SettingPropertyGroup("Perks/Trade/{=AIsDxCeG}Sword For Barter")]
+    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=UbBnKVaI}You hire mercenaries from taverns for 20% cheaper.")]
+    [SettingPropertyGroup("Perks/Trade/Sword For Barter")]
     public float trd_SwordForBarter_p {
       get => _trd_SwordForBarter_p;
       set {
@@ -8508,7 +8187,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=xZtdcNmM}15% lower wage for caravan guards troops.")]
-    [SettingPropertyGroup("Perks/Trade/{=AIsDxCeG}Sword For Barter")]
+    [SettingPropertyGroup("Perks/Trade/Sword For Barter")]
     public float trd_SwordForBarter_s {
       get => _trd_SwordForBarter_s;
       set {
@@ -8521,8 +8200,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=*}Decrease barter penalty for items by 50%.")]
-    [SettingPropertyGroup("Perks/Trade/{=uHJltZ5D}Self-made Man")]
+    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
+    [SettingPropertyGroup("Perks/Trade/Self Made Man")]
     public float trd_SelfMadeMan_p {
       get => _trd_SelfMadeMan_p;
       set {
@@ -8536,7 +8215,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=0g4R557I}Negotiation for safe passage barter is 50% cheaper.")]
-    [SettingPropertyGroup("Perks/Trade/{=5rDdJpJo}Silver Tongue")]
+    [SettingPropertyGroup("Perks/Trade/Silver Tongue")]
     public float trd_SilverTongue_p {
       get => _trd_SilverTongue_p;
       set {
@@ -8548,7 +8227,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=3DF72oIo}Caravans and villagers offer 15% better trade deals.")]
-    [SettingPropertyGroup("Perks/Trade/{=5rDdJpJo}Silver Tongue")]
+    [SettingPropertyGroup("Perks/Trade/Silver Tongue")]
     public float trd_SilverTongue_s {
       get => _trd_SilverTongue_s;
       set {
@@ -8562,7 +8241,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=CLPj9WZe}Recruitment of minor factions into your clan is 20% cheaper.")]
-    [SettingPropertyGroup("Perks/Trade/{=Jy2ap8L1}Man of Means")]
+    [SettingPropertyGroup("Perks/Trade/Man of Means")]
     public float trd_ManOfMeans_p {
       get => _trd_ManOfMeans_p;
       set {
@@ -8574,7 +8253,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=PQ3zjab7}You will get 30% reduced ransom offer.")]
-    [SettingPropertyGroup("Perks/Trade/{=Jy2ap8L1}Man of Means")]
+    [SettingPropertyGroup("Perks/Trade/Man of Means")]
     public float trd_ManOfMeans_s {
       get => _trd_ManOfMeans_s;
       set {
@@ -8588,7 +8267,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=gT9QF6ML}Gain relationship 1 with merchant notables if you buy more than 10000 gold worth of trade goods in a town.")]
-    [SettingPropertyGroup("Perks/Trade/{=L4fz3Jdr}Trickle Down")]
+    [SettingPropertyGroup("Perks/Trade/Trickle Down")]
     public float trd_TrickleDown_p {
       get => _trd_TrickleDown_p;
       set {
@@ -8600,7 +8279,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=aVZcVuIu}Governed town gains 1 prosperity per day as long as it is building a project.")]
-    [SettingPropertyGroup("Perks/Trade/{=L4fz3Jdr}Trickle Down")]
+    [SettingPropertyGroup("Perks/Trade/Trickle Down")]
     public float trd_TrickleDown_s {
       get => _trd_TrickleDown_s;
       set {
@@ -8614,7 +8293,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=TWaxzej6}Party consumes 10% less food.")]
-    [SettingPropertyGroup("Perks/Steward/{=PX0Xufmr}Spartan")]
+    [SettingPropertyGroup("Perks/Steward/Spartan")]
     public float st_Spartan_p {
       get => _st_Spartan_p;
       set {
@@ -8626,7 +8305,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=mSvfxXVW}No morale penalty from having single type of food.")]
-    [SettingPropertyGroup("Perks/Steward/{=PX0Xufmr}Spartan")]
+    [SettingPropertyGroup("Perks/Steward/Spartan")]
     public float st_Spartan_s {
       get => _st_Spartan_s;
       set {
@@ -8640,7 +8319,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=6d755ZJ5}Party wages are 5% less.")]
-    [SettingPropertyGroup("Perks/Steward/{=eJIbMa8P}Frugal")]
+    [SettingPropertyGroup("Perks/Steward/Frugal")]
     public float st_Frugal_p {
       get => _st_Frugal_p;
       set {
@@ -8652,7 +8331,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=xgIDGakc}Recruitment costs are reduced by 15%.")]
-    [SettingPropertyGroup("Perks/Steward/{=eJIbMa8P}Frugal")]
+    [SettingPropertyGroup("Perks/Steward/Frugal")]
     public float st_Frugal_s {
       get => _st_Frugal_s;
       set {
@@ -8666,7 +8345,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=z4lWVbHy}Tier 4+ troops gain +4 daily xp.")]
-    [SettingPropertyGroup("Perks/Steward/{=2ryLuN2i}Seven Veterans")]
+    [SettingPropertyGroup("Perks/Steward/Seven Veterans")]
     public float st_SevenVeterans_p {
       get => _st_SevenVeterans_p;
       set {
@@ -8678,7 +8357,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=tZumf1sD}+1 militia per day.")]
-    [SettingPropertyGroup("Perks/Steward/{=2ryLuN2i}Seven Veterans")]
+    [SettingPropertyGroup("Perks/Steward/Seven Veterans")]
     public float st_SevenVeterans_s {
       get => _st_SevenVeterans_s;
       set {
@@ -8692,7 +8371,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=vvb8UG8i}All troops gain +2 daily xp.")]
-    [SettingPropertyGroup("Perks/Steward/{=L9k4bovO}Drill Sergeant")]
+    [SettingPropertyGroup("Perks/Steward/Drill Sergeant")]
     public float st_DrillSergant_p {
       get => _st_DrillSergant_p;
       set {
@@ -8704,7 +8383,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=KstesAiE}Garrison wages are 5% less.")]
-    [SettingPropertyGroup("Perks/Steward/{=L9k4bovO}Drill Sergeant")]
+    [SettingPropertyGroup("Perks/Steward/Drill Sergeant")]
     public float st_DrillSergant_s {
       get => _st_DrillSergant_s;
       set {
@@ -8718,7 +8397,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Hapal2OX}Workshops owned by you have 20% increased production.")]
-    [SettingPropertyGroup("Perks/Steward/{=jbAtOsIy}Sweatshops")]
+    [SettingPropertyGroup("Perks/Steward/Sweatshops")]
     public float st_Sweatshops_p {
       get => _st_Sweatshops_p;
       set {
@@ -8730,7 +8409,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=NUiIPZRm}Siege engines are built 20% faster.")]
-    [SettingPropertyGroup("Perks/Steward/{=jbAtOsIy}Sweatshops")]
+    [SettingPropertyGroup("Perks/Steward/Sweatshops")]
     public float st_Sweatshops_s {
       get => _st_Sweatshops_s;
       set {
@@ -8744,7 +8423,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=GpKJ7N4d}Reduce food consumption while in an army by 10%.")]
-    [SettingPropertyGroup("Perks/Steward/{=QUeJ4gc3}Stiff Upper Lip")]
+    [SettingPropertyGroup("Perks/Steward/Stiff Upper Lip")]
     public float st_StiffUpperLip_p {
       get => _st_StiffUpperLip_p;
       set {
@@ -8756,7 +8435,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=EDWcOdGI}Garrison wages are decreased by 20% for castles.")]
-    [SettingPropertyGroup("Perks/Steward/{=QUeJ4gc3}Stiff Upper Lip")]
+    [SettingPropertyGroup("Perks/Steward/Stiff Upper Lip")]
     public float st_StiffUpperLip_s {
       get => _st_StiffUpperLip_s;
       set {
@@ -8770,7 +8449,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=9pOPaFXb}Companion wages and recruitment fees are reduced by 25%.")]
-    [SettingPropertyGroup("Perks/Steward/{=CPxbG7Zp}Paid in Promise")]
+    [SettingPropertyGroup("Perks/Steward/Paid in Promise")]
     public float st_PaidInPromise_p {
       get => _st_PaidInPromise_p;
       set {
@@ -8782,7 +8461,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=JSHVCviV}Discarded armors can be donated to troops for increased experience.")]
-    [SettingPropertyGroup("Perks/Steward/{=CPxbG7Zp}Paid in Promise")]
+    [SettingPropertyGroup("Perks/Steward/Paid in Promise")]
     public float st_PaidInPromise_s {
       get => _st_PaidInPromise_s;
       set {
@@ -8795,8 +8474,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=*}During village raids you gain an additional food item for each one you loot.")]
-    [SettingPropertyGroup("Perks/Steward/{=sC53NYcA}Efficient Campaigner")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
+    [SettingPropertyGroup("Perks/Steward/Efficient Campaigner")]
     public float st_EfficientCampaigner_p {
       get => _st_EfficientCampaigner_p;
       set {
@@ -8808,7 +8487,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=TCtGVTTk}Troop wages are decreased by 25% while in an army.")]
-    [SettingPropertyGroup("Perks/Steward/{=sC53NYcA}Efficient Campaigner")]
+    [SettingPropertyGroup("Perks/Steward/Efficient Campaigner")]
     public float st_EfficientCampaigner_s {
       get => _st_EfficientCampaigner_s;
       set {
@@ -8822,7 +8501,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=NM1lcYQI}Discarded weapons can be donated to troops for increased experience.")]
-    [SettingPropertyGroup("Perks/Steward/{=VsqyzWYY}Giving Hands")]
+    [SettingPropertyGroup("Perks/Steward/Giving Hands")]
     public float st_GivingHands_p {
       get => _st_GivingHands_p;
       set {
@@ -8834,7 +8513,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=pmsItOBR}Tariff income is 10% higher.")]
-    [SettingPropertyGroup("Perks/Steward/{=VsqyzWYY}Giving Hands")]
+    [SettingPropertyGroup("Perks/Steward/Giving Hands")]
     public float st_GivingHands_s {
       get => _st_GivingHands_s;
       set {
@@ -8848,7 +8527,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=mchBqAXt}Increase party morale by 4 if number of mounts is greater than non-cavalry troops.")]
-    [SettingPropertyGroup("Perks/Steward/{=U2buPiec}Logistician")]
+    [SettingPropertyGroup("Perks/Steward/Logistician")]
     public float st_Logistician_p {
       get => _st_Logistician_p;
       set {
@@ -8860,7 +8539,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=iMPNkxTB}Tax income is 10% higher.")]
-    [SettingPropertyGroup("Perks/Steward/{=U2buPiec}Logistician")]
+    [SettingPropertyGroup("Perks/Steward/Logistician")]
     public float st_Logistician_s {
       get => _st_Logistician_s;
       set {
@@ -8874,7 +8553,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=YrywEzSc}Influence gain from donating troops are increased by 25%.")]
-    [SettingPropertyGroup("Perks/Steward/{=R6dnhblo}Relocation")]
+    [SettingPropertyGroup("Perks/Steward/Relocation")]
     public float st_Relocation_p {
       get => _st_Relocation_p;
       set {
@@ -8886,7 +8565,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=mIfHAazB}Project boosting is more 20% effective.")]
-    [SettingPropertyGroup("Perks/Steward/{=R6dnhblo}Relocation")]
+    [SettingPropertyGroup("Perks/Steward/Relocation")]
     public float st_Relocation_s {
       get => _st_Relocation_s;
       set {
@@ -8900,7 +8579,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=RKHb4xse}Do not pay wages for wounded soldiers.")]
-    [SettingPropertyGroup("Perks/Steward/{=4FdtVyj1}Aid Corps")]
+    [SettingPropertyGroup("Perks/Steward/Aid Corps")]
     public float st_AidCorps_p {
       get => _st_AidCorps_p;
       set {
@@ -8912,7 +8591,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=QWDAY3OJ}Increase village hearth growth rate by 20%.")]
-    [SettingPropertyGroup("Perks/Steward/{=4FdtVyj1}Aid Corps")]
+    [SettingPropertyGroup("Perks/Steward/Aid Corps")]
     public float st_AidCorps_s {
       get => _st_AidCorps_s;
       set {
@@ -8926,7 +8605,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=c9aKz2A6}Morale bonus from having diverse food is doubled.")]
-    [SettingPropertyGroup("Perks/Steward/{=63lHFDSG}Gourmet")]
+    [SettingPropertyGroup("Perks/Steward/Gourmet")]
     public float st_Gourmet_p {
       get => _st_Gourmet_p;
       set {
@@ -8938,7 +8617,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=d52z03aH}Reduce food consumption of garrisons during siege by 10%.")]
-    [SettingPropertyGroup("Perks/Steward/{=63lHFDSG}Gourmet")]
+    [SettingPropertyGroup("Perks/Steward/Gourmet")]
     public float st_Gourmet_s {
       get => _st_Gourmet_s;
       set {
@@ -8952,7 +8631,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=dlLibmSM}Cost of upgrading units are decreased by 10%.")]
-    [SettingPropertyGroup("Perks/Steward/{=O5dgeoss}Sound Reserves")]
+    [SettingPropertyGroup("Perks/Steward/Sound Reserves")]
     public float st_SoundReserves_p {
       get => _st_SoundReserves_p;
       set {
@@ -8964,7 +8643,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=AhyaNGD9}Reduce food consumption of parties during siege by 10%.")]
-    [SettingPropertyGroup("Perks/Steward/{=O5dgeoss}Sound Reserves")]
+    [SettingPropertyGroup("Perks/Steward/Sound Reserves")]
     public float st_SoundReserves_s {
       get => _st_SoundReserves_s;
       set {
@@ -8978,7 +8657,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=SzvHCF7s}Prisoners in your party provide carry capacity as if they are a normal troop.")]
-    [SettingPropertyGroup("Perks/Steward/{=cWyqiNrf}Forced Labor")]
+    [SettingPropertyGroup("Perks/Steward/Forced Labor")]
     public float st_ForcedLabor_p {
       get => _st_ForcedLabor_p;
       set {
@@ -8990,7 +8669,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=znaDexg2}Construction speed is increased by 10%.")]
-    [SettingPropertyGroup("Perks/Steward/{=cWyqiNrf}Forced Labor")]
+    [SettingPropertyGroup("Perks/Steward/Forced Labor")]
     public float st_ForcedLabor_s {
       get => _st_ForcedLabor_s;
       set {
@@ -9003,8 +8682,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=XzFSWBMG}Mercenary troops' wages and upgrade costs are decreased by 25%.")]
-    [SettingPropertyGroup("Perks/Steward/{=Pg5enC8c}Contractors")]
+    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=XzFSWBMG}Mercenary troops' wage and upgrade cost are decreased by 25%.")]
+    [SettingPropertyGroup("Perks/Steward/Contractors")]
     public float st_Contractors_p {
       get => _st_Contractors_p;
       set {
@@ -9016,7 +8695,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=C3rAwf7p}Town projects are 10% more effective.")]
-    [SettingPropertyGroup("Perks/Steward/{=Pg5enC8c}Contractors")]
+    [SettingPropertyGroup("Perks/Steward/Contractors")]
     public float st_Contractors_s {
       get => _st_Contractors_s;
       set {
@@ -9030,7 +8709,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=54Nszjhl}20% increased carrying capacity for pack animals.")]
-    [SettingPropertyGroup("Perks/Steward/{=qBx8UbUt}Arenicos' Mules")]
+    [SettingPropertyGroup("Perks/Steward/Arenicos' Mules")]
     public float st_ArenicosMules_p {
       get => _st_ArenicosMules_p;
       set {
@@ -9042,7 +8721,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=dj7YQaTS}Trade penalty for pack animals are reduced by 20%.")]
-    [SettingPropertyGroup("Perks/Steward/{=qBx8UbUt}Arenicos' Mules")]
+    [SettingPropertyGroup("Perks/Steward/Arenicos' Mules")]
     public float st_ArenicosMules_s {
       get => _st_ArenicosMules_s;
       set {
@@ -9056,7 +8735,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=a7iyhqNR}10% increased carrying capacity for troops.")]
-    [SettingPropertyGroup("Perks/Steward/{=tbQ5bUzD}Arenicos' Horses")]
+    [SettingPropertyGroup("Perks/Steward/Arenicos' Horses")]
     public float st_ArenicosHorses_p {
       get => _st_ArenicosHorses_p;
       set {
@@ -9068,7 +8747,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=akX6AdrL}Trade penalty for mounts are reduced by 20%.")]
-    [SettingPropertyGroup("Perks/Steward/{=tbQ5bUzD}Arenicos' Horses")]
+    [SettingPropertyGroup("Perks/Steward/Arenicos' Horses")]
     public float st_ArenicosHorses_s {
       get => _st_ArenicosHorses_s;
       set {
@@ -9081,34 +8760,34 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=*}Reduce food consumption by 40% while in a siege camp.")]
-    [SettingPropertyGroup("Perks/Steward/{=*}Master of Planning")]
-    public float st_MasterOfPlanning_p {
-      get => _st_MasterOfPlanning_p;
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
+    [SettingPropertyGroup("Perks/Steward/Urban Developer")]
+    public float st_UrbanDeveloper_p {
+      get => _st_UrbanDeveloper_p;
       set {
-        if (_st_MasterOfPlanning_p != value) {
-          _st_MasterOfPlanning_p = value;
+        if (_st_UrbanDeveloper_p != value) {
+          _st_UrbanDeveloper_p = value;
           if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Steward.MasterOfPlanning, value);
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Steward.UrbanDeveloper, value);
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=iS7GqDcg}Continuous projects for settlements are 20% more effective.")]
-    [SettingPropertyGroup("Perks/Steward/{=*}Master of Planning")]
-    public float st_MasterOfPlanning_s {
-      get => _st_MasterOfPlanning_s;
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=iS7GqDcg}Continuous projects for settlements are 20% more effective.")]
+    [SettingPropertyGroup("Perks/Steward/Urban Developer")]
+    public float st_UrbanDeveloper_s {
+      get => _st_UrbanDeveloper_s;
       set {
-        if (_st_MasterOfPlanning_s != value) {
-          _st_MasterOfPlanning_s = value;
+        if (_st_UrbanDeveloper_s != value) {
+          _st_UrbanDeveloper_s = value;
           if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Steward.MasterOfPlanning, value);
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Steward.UrbanDeveloper, value);
         }
       }
     }
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=noXFy09m}Troops wages are decreased by 25% while in a siege camp.")]
-    [SettingPropertyGroup("Perks/Steward/{=MM0ARhGh}Master of Warcraft")]
+    [SettingPropertyGroup("Perks/Steward/Master of Warcraft")]
     public float st_MasterOfWarcraft_p {
       get => _st_MasterOfWarcraft_p;
       set {
@@ -9120,7 +8799,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=AajL4Oza}Town population consumes 5% less food.")]
-    [SettingPropertyGroup("Perks/Steward/{=MM0ARhGh}Master of Warcraft")]
+    [SettingPropertyGroup("Perks/Steward/Master of Warcraft")]
     public float st_MasterOfWarcraft_s {
       get => _st_MasterOfWarcraft_s;
       set {
@@ -9134,7 +8813,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=t5UiDoaW}Increase character's healing rate by 30%.")]
-    [SettingPropertyGroup("Perks/Medicine/{=TLGvIdJB}Self Medication")]
+    [SettingPropertyGroup("Perks/Medicine/Self Medication")]
     public float med_SelfMedication_p {
       get => _med_SelfMedication_p;
       set {
@@ -9146,7 +8825,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=MmWzufrk}Increase character's movement speed by 2%.")]
-    [SettingPropertyGroup("Perks/Medicine/{=TLGvIdJB}Self Medication")]
+    [SettingPropertyGroup("Perks/Medicine/Self Medication")]
     public float med_SelfMedication_s {
       get => _med_SelfMedication_s;
       set {
@@ -9160,7 +8839,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HIVRbq8l}Increase character's hit points by 5.")]
-    [SettingPropertyGroup("Perks/Medicine/{=wI393cla}Preventive Medicine")]
+    [SettingPropertyGroup("Perks/Medicine/Preventive Medicine")]
     public float med_PreventiveMedicine_p {
       get => _med_PreventiveMedicine_p;
       set {
@@ -9172,7 +8851,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=qD6qbbvH}Character heals 30% of lost health points after each battle.")]
-    [SettingPropertyGroup("Perks/Medicine/{=wI393cla}Preventive Medicine")]
+    [SettingPropertyGroup("Perks/Medicine/Preventive Medicine")]
     public float med_PreventiveMedicine_s {
       get => _med_PreventiveMedicine_s;
       set {
@@ -9186,7 +8865,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=hbqab1rY}Increase heal rate by 30% when stationary in the world map.")]
-    [SettingPropertyGroup("Perks/Medicine/{=EU4JjLqV}Triage Tent")]
+    [SettingPropertyGroup("Perks/Medicine/Triage Tent")]
     public float med_TriageTent_p {
       get => _med_TriageTent_p;
       set {
@@ -9198,7 +8877,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=98giYyES}During sieges reduce settlement food consumption by 5%.")]
-    [SettingPropertyGroup("Perks/Medicine/{=EU4JjLqV}Triage Tent")]
+    [SettingPropertyGroup("Perks/Medicine/Triage Tent")]
     public float med_TriageTent_s {
       get => _med_TriageTent_s;
       set {
@@ -9212,7 +8891,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=BAGQhsQA}Increase heal rate by 15% when mobile in the world map.")]
-    [SettingPropertyGroup("Perks/Medicine/{=0pyLfrGZ}Walk It Off")]
+    [SettingPropertyGroup("Perks/Medicine/Walk It Off")]
     public float med_WalkItOff_p {
       get => _med_WalkItOff_p;
       set {
@@ -9224,7 +8903,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=rfkrddb9}Recover 10 hp lost after each offensive battle.")]
-    [SettingPropertyGroup("Perks/Medicine/{=0pyLfrGZ}Walk It Off")]
+    [SettingPropertyGroup("Perks/Medicine/Walk It Off")]
     public float med_WalkItOff_s {
       get => _med_WalkItOff_s;
       set {
@@ -9238,7 +8917,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=9jB3KdQC}Decrease wounded party speed penalty by 50%.")]
-    [SettingPropertyGroup("Perks/Medicine/{=TyB6y5bh}Sledges")]
+    [SettingPropertyGroup("Perks/Medicine/Sledges")]
     public float med_Sledges_p {
       get => _med_Sledges_p;
       set {
@@ -9250,7 +8929,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=FMbQeBfN}Increase the health of every mount in your party by 15.")]
-    [SettingPropertyGroup("Perks/Medicine/{=TyB6y5bh}Sledges")]
+    [SettingPropertyGroup("Perks/Medicine/Sledges")]
     public float med_Sledges_s {
       get => _med_Sledges_s;
       set {
@@ -9264,7 +8943,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=tzbXy8Nb}Medicine recovery chance applies to enemies too.")]
-    [SettingPropertyGroup("Perks/Medicine/{=PAwDV08b}Doctors Oath")]
+    [SettingPropertyGroup("Perks/Medicine/Doctors Oath")]
     public float med_DoctorsOath_p {
       get => _med_DoctorsOath_p;
       set {
@@ -9276,7 +8955,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=4pCODkNn}Increase your max health by 5.")]
-    [SettingPropertyGroup("Perks/Medicine/{=PAwDV08b}Doctors Oath")]
+    [SettingPropertyGroup("Perks/Medicine/Doctors Oath")]
     public float med_DoctorsOath_s {
       get => _med_DoctorsOath_s;
       set {
@@ -9290,7 +8969,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Di2Qbaae}High morale increases the healing rate by 15%.")]
-    [SettingPropertyGroup("Perks/Medicine/{=ei1JSeco}Best Medicine")]
+    [SettingPropertyGroup("Perks/Medicine/Best Medicine")]
     public float med_BestMedicine_p {
       get => _med_BestMedicine_p;
       set {
@@ -9302,7 +8981,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=336rXArq}Increase relationship by 1 with a random notable over age 50 while in a town.")]
-    [SettingPropertyGroup("Perks/Medicine/{=ei1JSeco}Best Medicine")]
+    [SettingPropertyGroup("Perks/Medicine/Best Medicine")]
     public float med_BestMedicine_s {
       get => _med_BestMedicine_s;
       set {
@@ -9316,7 +8995,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=nkmoAaI7}Resting in settlements increase heal rate by 20%.")]
-    [SettingPropertyGroup("Perks/Medicine/{=RXo3edjn}Good Lodging")]
+    [SettingPropertyGroup("Perks/Medicine/Good Lodging")]
     public float med_GoodLogdings_p {
       get => _med_GoodLogdings_p;
       set {
@@ -9328,7 +9007,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=aoKJbxi8}Increase relationship by 1 with a random noble over age 50 while in a town.")]
-    [SettingPropertyGroup("Perks/Medicine/{=RXo3edjn}Good Lodging")]
+    [SettingPropertyGroup("Perks/Medicine/Good Lodging")]
     public float med_GoodLogdings_s {
       get => _med_GoodLogdings_s;
       set {
@@ -9342,7 +9021,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=REFJzAAt}Losses to siege bombardment has a 50% chance of getting wounded instead of getting killed.")]
-    [SettingPropertyGroup("Perks/Medicine/{=ObwbbEqE}Siege Medic")]
+    [SettingPropertyGroup("Perks/Medicine/Siege Medic")]
     public float med_SiegeMedic_p {
       get => _med_SiegeMedic_p;
       set {
@@ -9353,8 +9032,8 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=BZIKo5Qd}30% increased chance to recover lethal wounds in siege assaults.")]
-    [SettingPropertyGroup("Perks/Medicine/{=ObwbbEqE}Siege Medic")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=BZIKo5Qd}30% increased chance to recover lethal wounds in siege assaults.")]
+    [SettingPropertyGroup("Perks/Medicine/Siege Medic")]
     public float med_SiegeMedic_s {
       get => _med_SiegeMedic_s;
       set {
@@ -9368,7 +9047,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=TPMrjd5m}30% chance per day to recover a lame horse.")]
-    [SettingPropertyGroup("Perks/Medicine/{=DNPbZZPQ}Veterinarian")]
+    [SettingPropertyGroup("Perks/Medicine/Veterinarian")]
     public float med_Veterinarian_p {
       get => _med_Veterinarian_p;
       set {
@@ -9380,7 +9059,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=p71X2Z5d}50% chance to recover a mount from lost cavalry after battles.")]
-    [SettingPropertyGroup("Perks/Medicine/{=DNPbZZPQ}Veterinarian")]
+    [SettingPropertyGroup("Perks/Medicine/Veterinarian")]
     public float med_Veterinarian_s {
       get => _med_Veterinarian_s;
       set {
@@ -9394,7 +9073,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=dhbkT2Il}Increase settlement prosperity by +1 everyday.")]
-    [SettingPropertyGroup("Perks/Medicine/{=72tbUfrz}Pristine Streets")]
+    [SettingPropertyGroup("Perks/Medicine/Pristine Streets")]
     public float med_PristineStreets_p {
       get => _med_PristineStreets_p;
       set {
@@ -9406,7 +9085,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=eNUtOIr5}Get 20% healing bonus in towns.")]
-    [SettingPropertyGroup("Perks/Medicine/{=72tbUfrz}Pristine Streets")]
+    [SettingPropertyGroup("Perks/Medicine/Pristine Streets")]
     public float med_PristineStreets_s {
       get => _med_PristineStreets_s;
       set {
@@ -9420,7 +9099,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=QWDAY3OJ}Increase village hearth growth rate by 20%.")]
-    [SettingPropertyGroup("Perks/Medicine/{=HGrsb7k2}Bush Doctor")]
+    [SettingPropertyGroup("Perks/Medicine/Bush Doctor")]
     public float med_BushDoctor_p {
       get => _med_BushDoctor_p;
       set {
@@ -9432,7 +9111,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=L53ABEua}Get 20% healing bonus in villages.")]
-    [SettingPropertyGroup("Perks/Medicine/{=HGrsb7k2}Bush Doctor")]
+    [SettingPropertyGroup("Perks/Medicine/Bush Doctor")]
     public float med_BushDoctor_s {
       get => _med_BushDoctor_s;
       set {
@@ -9446,7 +9125,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=onhUqzD6}Food variety increase recovery rate by 5% for each point.")]
-    [SettingPropertyGroup("Perks/Medicine/{=cGuPMx4p}Perfect Health")]
+    [SettingPropertyGroup("Perks/Medicine/Perfect Health")]
     public float med_PerfectHealth_p {
       get => _med_PerfectHealth_p;
       set {
@@ -9458,7 +9137,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=DsbtHShA}Increase animal production in governed villages by 10%.")]
-    [SettingPropertyGroup("Perks/Medicine/{=cGuPMx4p}Perfect Health")]
+    [SettingPropertyGroup("Perks/Medicine/Perfect Health")]
     public float med_PerfectHealth_s {
       get => _med_PerfectHealth_s;
       set {
@@ -9472,7 +9151,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=B8iqnA9N}Small increase to clan life expentancy.")]
-    [SettingPropertyGroup("Perks/Medicine/{=NxcvQlAk}Health Advice")]
+    [SettingPropertyGroup("Perks/Medicine/Health Advice")]
     public float med_HealthAdvise_p {
       get => _med_HealthAdvise_p;
       set {
@@ -9483,8 +9162,8 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=ioYR1Grc}Wounded troops do not decrease morale in battles.")]
-    [SettingPropertyGroup("Perks/Medicine/{=NxcvQlAk}Health Advice")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
+    [SettingPropertyGroup("Perks/Medicine/Health Advice")]
     public float med_HealthAdvise_s {
       get => _med_HealthAdvise_s;
       set {
@@ -9498,7 +9177,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=xpRKA34Q}Increases loyalty of settlement by 1 per day.")]
-    [SettingPropertyGroup("Perks/Medicine/{=5o6pSbCx}Physician of People")]
+    [SettingPropertyGroup("Perks/Medicine/Physician of People")]
     public float med_PhysicianOfPeople_p {
       get => _med_PhysicianOfPeople_p;
       set {
@@ -9510,7 +9189,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=D5JUgcyl}Tier 1 and tier 2 troops have 30% higher chance to recover from fatal wounds.")]
-    [SettingPropertyGroup("Perks/Medicine/{=5o6pSbCx}Physician of People")]
+    [SettingPropertyGroup("Perks/Medicine/Physician of People")]
     public float med_PhysicianOfPeople_s {
       get => _med_PhysicianOfPeople_s;
       set {
@@ -9524,7 +9203,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=V4bgbS26}Town projects that is related with sanitation and health(e.g aquaduct/market place/granary) also give bonus prosperity increase.")]
-    [SettingPropertyGroup("Perks/Medicine/{=CZ4y5NAf}Clean Infrastructure")]
+    [SettingPropertyGroup("Perks/Medicine/Clean Infrastructure")]
     public float med_CleanInfrastructure_p {
       get => _med_CleanInfrastructure_p;
       set {
@@ -9536,7 +9215,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=EZR23u6f}Recover governed villages 30% faster.")]
-    [SettingPropertyGroup("Perks/Medicine/{=CZ4y5NAf}Clean Infrastructure")]
+    [SettingPropertyGroup("Perks/Medicine/Clean Infrastructure")]
     public float med_CleanInfrastructure_s {
       get => _med_CleanInfrastructure_s;
       set {
@@ -9549,8 +9228,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HVHEhXbO}Ignore the first negative outcome for the terminally ill roll.")]
-    [SettingPropertyGroup("Perks/Medicine/{=cpg0oHZJ}Cheat Death")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HVHEhXbO}Cheat death(Ignore the first negative outcome for the terminally ill roll).")]
+    [SettingPropertyGroup("Perks/Medicine/Cheat Death")]
     public float med_CheatDeath_p {
       get => _med_CheatDeath_p;
       set {
@@ -9562,7 +9241,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=Wrqb3iXP}Hero death chance in battle is 50% less.")]
-    [SettingPropertyGroup("Perks/Medicine/{=cpg0oHZJ}Cheat Death")]
+    [SettingPropertyGroup("Perks/Medicine/Cheat Death")]
     public float med_CheatDeath_s {
       get => _med_CheatDeath_s;
       set {
@@ -9575,8 +9254,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Sb6BW3GF}Increase max health of other heroes in your party by +10.")]
-    [SettingPropertyGroup("Perks/Medicine/{=ib2SMG9b}Fortitude Tonic")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Sb6BW3GF}Increase max health of other heroes in your party by 10.")]
+    [SettingPropertyGroup("Perks/Medicine/Fortitude Tonic")]
     public float med_FortitudeTonic_p {
       get => _med_FortitudeTonic_p;
       set {
@@ -9588,7 +9267,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=4pCODkNn}Increase your max health by 5.")]
-    [SettingPropertyGroup("Perks/Medicine/{=ib2SMG9b}Fortitude Tonic")]
+    [SettingPropertyGroup("Perks/Medicine/Fortitude Tonic")]
     public float med_FortitudeTonic_s {
       get => _med_FortitudeTonic_s;
       set {
@@ -9602,7 +9281,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=EJyQ186a}Every 10 troop in your party increase troop recovery rate by 2%.")]
-    [SettingPropertyGroup("Perks/Medicine/{=KavZKNaa}Helping Hands")]
+    [SettingPropertyGroup("Perks/Medicine/Helping Hands")]
     public float med_HelpingHands_p {
       get => _med_HelpingHands_p;
       set {
@@ -9614,7 +9293,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=PQOElTav}50% less prosperity loss from starvation.")]
-    [SettingPropertyGroup("Perks/Medicine/{=KavZKNaa}Helping Hands")]
+    [SettingPropertyGroup("Perks/Medicine/Helping Hands")]
     public float med_HelpingHands_s {
       get => _med_HelpingHands_s;
       set {
@@ -9628,7 +9307,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=GUr0jxSv}Wounded units gain +25 xp at the end of the battle.")]
-    [SettingPropertyGroup("Perks/Medicine/{=oSbRD72H}Battle Hardened")]
+    [SettingPropertyGroup("Perks/Medicine/Battle Hardened")]
     public float med_BattleHardened_p {
       get => _med_BattleHardened_p;
       set {
@@ -9639,8 +9318,8 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=*}Siege attrition loss chance is reduced by 25%.")]
-    [SettingPropertyGroup("Perks/Medicine/{=oSbRD72H}Battle Hardened")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
+    [SettingPropertyGroup("Perks/Medicine/Battle Hardened")]
     public float med_BattleHardened_s {
       get => _med_BattleHardened_s;
       set {
@@ -9654,7 +9333,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=xIDEjHyf}Non-ranged siege engine build speed increased by 10%.")]
-    [SettingPropertyGroup("Perks/Engineering/{=ekavTnTp}Scaffolds")]
+    [SettingPropertyGroup("Perks/Engineering/Scaffolds")]
     public float eng_Scaffolds_p {
       get => _eng_Scaffolds_p;
       set {
@@ -9666,7 +9345,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=7vZcwCqA}Increase equipped shield hitpoints by 30%.")]
-    [SettingPropertyGroup("Perks/Engineering/{=ekavTnTp}Scaffolds")]
+    [SettingPropertyGroup("Perks/Engineering/Scaffolds")]
     public float eng_Scaffolds_s {
       get => _eng_Scaffolds_s;
       set {
@@ -9680,7 +9359,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=4V3sK20q}Ranged siege engine build speed increased by 10%.")]
-    [SettingPropertyGroup("Perks/Engineering/{=57TDG2Ta}Torsion Engines")]
+    [SettingPropertyGroup("Perks/Engineering/Torsion Engines")]
     public float eng_TorsionEngines_p {
       get => _eng_TorsionEngines_p;
       set {
@@ -9692,7 +9371,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=tw5y78XY}Increase equipped crossbow damage by 3.")]
-    [SettingPropertyGroup("Perks/Engineering/{=57TDG2Ta}Torsion Engines")]
+    [SettingPropertyGroup("Perks/Engineering/Torsion Engines")]
     public float eng_TorsionEngines_s {
       get => _eng_TorsionEngines_s;
       set {
@@ -9706,7 +9385,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=hC47p0t2}Ranged siege engines have 10% more hit points (In mission as well).")]
-    [SettingPropertyGroup("Perks/Engineering/{=Nr1GPYSr}Siegeworks")]
+    [SettingPropertyGroup("Perks/Engineering/Siegeworks")]
     public float eng_SiegeWorks_p {
       get => _eng_SiegeWorks_p;
       set {
@@ -9717,8 +9396,8 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=9arDDOOK}Settlement provides +1 extra catapult at the beginning of the siege.")]
-    [SettingPropertyGroup("Perks/Engineering/{=Nr1GPYSr}Siegeworks")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=9arDDOOK}Settlement provides 1 extra catapult at the beginning of the siege.")]
+    [SettingPropertyGroup("Perks/Engineering/Siegeworks")]
     public float eng_SiegeWorks_s {
       get => _eng_SiegeWorks_s;
       set {
@@ -9732,7 +9411,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=F58CwbzF}Ranged siege engines are 25% less likely to be hit while bombarding settlements.")]
-    [SettingPropertyGroup("Perks/Engineering/{=aPbpBJq5}Prison Architect")]
+    [SettingPropertyGroup("Perks/Engineering/Prison Architect")]
     public float eng_PrisonArchitect_p {
       get => _eng_PrisonArchitect_p;
       set {
@@ -9744,7 +9423,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=gkAHdFul}Prisoner escape chance from dungeons are decreased by 25%.")]
-    [SettingPropertyGroup("Perks/Engineering/{=aPbpBJq5}Prison Architect")]
+    [SettingPropertyGroup("Perks/Engineering/Prison Architect")]
     public float eng_PrisonArchitect_s {
       get => _eng_PrisonArchitect_s;
       set {
@@ -9758,7 +9437,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=A16GZubg}Rams and siege-towers have 33% more hitpoints.")]
-    [SettingPropertyGroup("Perks/Engineering/{=YwhAlz5n}Carpenters")]
+    [SettingPropertyGroup("Perks/Engineering/Carpenters")]
     public float eng_Carpenters_p {
       get => _eng_Carpenters_p;
       set {
@@ -9770,7 +9449,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=FbzyR6hL}12% increased build speed for town projects.")]
-    [SettingPropertyGroup("Perks/Engineering/{=YwhAlz5n}Carpenters")]
+    [SettingPropertyGroup("Perks/Engineering/Carpenters")]
     public float eng_Carpenters_s {
       get => _eng_Carpenters_s;
       set {
@@ -9784,7 +9463,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=r4uMbbKN}Ranged troops have 50% more ammunition when besieging.")]
-    [SettingPropertyGroup("Perks/Engineering/{=mzDsT7lV}Military Planner")]
+    [SettingPropertyGroup("Perks/Engineering/Military Planner")]
     public float eng_MilitaryPlanner_p {
       get => _eng_MilitaryPlanner_p;
       set {
@@ -9796,7 +9475,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=IJof7vUp}25% increased build speed for castle projects.")]
-    [SettingPropertyGroup("Perks/Engineering/{=mzDsT7lV}Military Planner")]
+    [SettingPropertyGroup("Perks/Engineering/Military Planner")]
     public float eng_MilitaryPlanner_s {
       get => _eng_MilitaryPlanner_s;
       set {
@@ -9810,7 +9489,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=bUNitf5F}Damage to walls increased by 25% during siege.")]
-    [SettingPropertyGroup("Perks/Engineering/{=0wlWgIeL}Wall Breaker")]
+    [SettingPropertyGroup("Perks/Engineering/Wall Breaker")]
     public float eng_WallBreaker_p {
       get => _eng_WallBreaker_p;
       set {
@@ -9822,7 +9501,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=dFLbbXDm}Your troops deal 10% more damage to shields.")]
-    [SettingPropertyGroup("Perks/Engineering/{=0wlWgIeL}Wall Breaker")]
+    [SettingPropertyGroup("Perks/Engineering/Wall Breaker")]
     public float eng_WallBreaker_s {
       get => _eng_WallBreaker_s;
       set {
@@ -9836,7 +9515,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=13GCPNo5}Increased hit chance to siege engines by 10% during campaign siege.")]
-    [SettingPropertyGroup("Perks/Engineering/{=bIS4kqmf}Dreadful Besieger")]
+    [SettingPropertyGroup("Perks/Engineering/Dreadful Besieger")]
     public float eng_DreadfulSieger_p {
       get => _eng_DreadfulSieger_p;
       set {
@@ -9848,7 +9527,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=uM4i676z}Your troops deal 5% increased damage with crossbows.")]
-    [SettingPropertyGroup("Perks/Engineering/{=bIS4kqmf}Dreadful Besieger")]
+    [SettingPropertyGroup("Perks/Engineering/Dreadful Besieger")]
     public float eng_DreadfulSieger_s {
       get => _eng_DreadfulSieger_s;
       set {
@@ -9862,7 +9541,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=BWdrwU59}Increase campaign map ballista accuracy by 20%.")]
-    [SettingPropertyGroup("Perks/Engineering/{=AgJAfEEZ}Salvager")]
+    [SettingPropertyGroup("Perks/Engineering/Salvager")]
     public float eng_Salvager_p {
       get => _eng_Salvager_p;
       set {
@@ -9876,7 +9555,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=lLaIzlr4}Increase campaign map mangonel and trebuchet accuracy by 10%.")]
-    [SettingPropertyGroup("Perks/Engineering/{=3ML4EkWY}Foreman")]
+    [SettingPropertyGroup("Perks/Engineering/Foreman")]
     public float eng_Foreman_p {
       get => _eng_Foreman_p;
       set {
@@ -9888,7 +9567,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=W6ajyrga}Everytime a project is finished increase prosperity by 100.")]
-    [SettingPropertyGroup("Perks/Engineering/{=3ML4EkWY}Foreman")]
+    [SettingPropertyGroup("Perks/Engineering/Foreman")]
     public float eng_Foreman_s {
       get => _eng_Foreman_s;
       set {
@@ -9902,7 +9581,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=eCkC7Grp}Defensive siege engines have 30% more hit points.")]
-    [SettingPropertyGroup("Perks/Engineering/{=pFGhJxyN}Siege Engineer")]
+    [SettingPropertyGroup("Perks/Engineering/Siege Engineer")]
     public float eng_SiegeEngineer_p {
       get => _eng_SiegeEngineer_p;
       set {
@@ -9914,7 +9593,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=sTCBMmGl}Can craft Fire versions of siege engines.")]
-    [SettingPropertyGroup("Perks/Engineering/{=pFGhJxyN}Siege Engineer")]
+    [SettingPropertyGroup("Perks/Engineering/Siege Engineer")]
     public float eng_SiegeEngineer_s {
       get => _eng_SiegeEngineer_s;
       set {
@@ -9927,8 +9606,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=*}Start siege camps with +1 pre-built ballista.")]
-    [SettingPropertyGroup("Perks/Engineering/{=hHHEW1HN}Battlements")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
+    [SettingPropertyGroup("Perks/Engineering/Battlements")]
     public float eng_Battlements_p {
       get => _eng_Battlements_p;
       set {
@@ -9940,7 +9619,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=WBCt4M0J}Increase max granary food storage capacity by 100.")]
-    [SettingPropertyGroup("Perks/Engineering/{=hHHEW1HN}Battlements")]
+    [SettingPropertyGroup("Perks/Engineering/Battlements")]
     public float eng_Battlements_s {
       get => _eng_Battlements_s;
       set {
@@ -9954,7 +9633,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=YkAV0SgY}Increase recuitment slot by 1 when recuiting from artisan notables.")]
-    [SettingPropertyGroup("Perks/Engineering/{=elKQc0O6}Engineering Guilds")]
+    [SettingPropertyGroup("Perks/Engineering/Engineering Guilds")]
     public float eng_EngineeringGuilds_p {
       get => _eng_EngineeringGuilds_p;
       set {
@@ -9966,7 +9645,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=rkKMB9qK}Wall hit points are increased by 25%.")]
-    [SettingPropertyGroup("Perks/Engineering/{=elKQc0O6}Engineering Guilds")]
+    [SettingPropertyGroup("Perks/Engineering/Engineering Guilds")]
     public float eng_EngineeringGuilds_s {
       get => _eng_EngineeringGuilds_s;
       set {
@@ -9979,8 +9658,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=*}Looted items are very unlikely to get negative modifiers.")]
-    [SettingPropertyGroup("Perks/Engineering/{=qjvDsu8u}Metallurgy")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=1PYZ36bt}Not Implemented.")]
+    [SettingPropertyGroup("Perks/Engineering/Metallurgy")]
     public float eng_Metallurgy_p {
       get => _eng_Metallurgy_p;
       set {
@@ -9992,7 +9671,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=eSNa0skd}Troops under the formation you control have their armor values increased by 5.")]
-    [SettingPropertyGroup("Perks/Engineering/{=qjvDsu8u}Metallurgy")]
+    [SettingPropertyGroup("Perks/Engineering/Metallurgy")]
     public float eng_Metallurgy_s {
       get => _eng_Metallurgy_s;
       set {
@@ -10006,7 +9685,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=ta2z0bEv}Camp preparation is 20% faster.")]
-    [SettingPropertyGroup("Perks/Engineering/{=XixNAaD5}Improved Tools")]
+    [SettingPropertyGroup("Perks/Engineering/Improved Tools")]
     public float eng_ImprovedTools_p {
       get => _eng_ImprovedTools_p;
       set {
@@ -10018,7 +9697,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=N9lA0KwA}Troops under the formation you control deal 5% more melee damage.")]
-    [SettingPropertyGroup("Perks/Engineering/{=XixNAaD5}Improved Tools")]
+    [SettingPropertyGroup("Perks/Engineering/Improved Tools")]
     public float eng_ImprovedTools_s {
       get => _eng_ImprovedTools_s;
       set {
@@ -10032,7 +9711,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=2eBBY7nG}Ballista in siege bombardment reload 25% faster.")]
-    [SettingPropertyGroup("Perks/Engineering/{=Z9Rey6LC}Clockwork")]
+    [SettingPropertyGroup("Perks/Engineering/Clockwork")]
     public float eng_Clockwork_p {
       get => _eng_Clockwork_p;
       set {
@@ -10044,7 +9723,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=Q51nMDju}Gold boosts for town projects are 20% more effective.")]
-    [SettingPropertyGroup("Perks/Engineering/{=Z9Rey6LC}Clockwork")]
+    [SettingPropertyGroup("Perks/Engineering/Clockwork")]
     public float eng_Clockwork_s {
       get => _eng_Clockwork_s;
       set {
@@ -10058,7 +9737,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=cOS8cdib}Mangonels and trebuchets in siege bombardment reload 25% faster.")]
-    [SettingPropertyGroup("Perks/Engineering/{=KODafKT7}Architectural Commissions")]
+    [SettingPropertyGroup("Perks/Engineering/Architectural Commissions")]
     public float eng_ArchitecturalCommisions_p {
       get => _eng_ArchitecturalCommisions_p;
       set {
@@ -10070,7 +9749,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=6nSusCkE}Continuous projects provides 20 gold per day.")]
-    [SettingPropertyGroup("Perks/Engineering/{=KODafKT7}Architectural Commissions")]
+    [SettingPropertyGroup("Perks/Engineering/Architectural Commissions")]
     public float eng_ArchitecturalCommisions_s {
       get => _eng_ArchitecturalCommisions_s;
       set {
@@ -10779,53 +10458,24 @@ namespace FountaTweaks
       ref PerkObject _leadershipUltimateLeader = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipUltimateLeader");
       if (LeadershipPerkModificationEnabled && LeadershipUltimateLeaderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipUltimateLeader,_ldr_UltimateLeader_p);
       if (LeadershipPerkModificationEnabled && LeadershipUltimateLeaderPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipUltimateLeader,_ldr_UltimateLeader_s);
-      ref PerkObject _charmVirile = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmVirile");
-      if (CharmPerkModificationEnabled && CharmVirilePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmVirile,_chm_Virile_p);
-      if (CharmPerkModificationEnabled && CharmVirilePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmVirile,_chm_Virile_s);
-      ref PerkObject _charmSelfPromoter = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmSelfPromoter");
-      if (CharmPerkModificationEnabled && CharmSelfPromoterPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmSelfPromoter,_chm_SelfPromoter_p);
-      if (CharmPerkModificationEnabled && CharmSelfPromoterPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmSelfPromoter,_chm_SelfPromoter_s);
-      ref PerkObject _charmOratory = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmOratory");
-      if (CharmPerkModificationEnabled && CharmOratoryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmOratory,_chm_Oratory_p);
-      if (CharmPerkModificationEnabled && CharmOratoryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmOratory,_chm_Oratory_s);
-      ref PerkObject _charmWarlord = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmWarlord");
-      if (CharmPerkModificationEnabled && CharmWarlordPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmWarlord,_chm_Warlord_p);
-      if (CharmPerkModificationEnabled && CharmWarlordPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmWarlord,_chm_Warlord_s);
+      ref PerkObject _charmDiplomacy = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmDiplomacy");
+      if (CharmPerkModificationEnabled && CharmDiplomacyPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmDiplomacy,_chm_Diplomacy_p);
+      ref PerkObject _charmShowYourScars = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmShowYourScars");
+      if (CharmPerkModificationEnabled && CharmShowYourScarsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmShowYourScars,_chm_ShowYourScars_p);
       ref PerkObject _charmForgivableGrievances = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmForgivableGrievances");
       if (CharmPerkModificationEnabled && CharmForgivableGrievancesPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmForgivableGrievances,_chm_ForgivableGrievances_p);
-      if (CharmPerkModificationEnabled && CharmForgivableGrievancesPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmForgivableGrievances,_chm_ForgivableGrievances_s);
       ref PerkObject _charmMeaningfulFavors = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmMeaningfulFavors");
       if (CharmPerkModificationEnabled && CharmMeaningfulFavorsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmMeaningfulFavors,_chm_MeaningfulFavors_p);
-      if (CharmPerkModificationEnabled && CharmMeaningfulFavorsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmMeaningfulFavors,_chm_MeaningfulFavors_s);
       ref PerkObject _charmInBloom = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmInBloom");
       if (CharmPerkModificationEnabled && CharmInBloomPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmInBloom,_chm_InBloom_p);
-      if (CharmPerkModificationEnabled && CharmInBloomPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmInBloom,_chm_InBloom_s);
       ref PerkObject _charmYoungAndRespectful = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmYoungAndRespectful");
       if (CharmPerkModificationEnabled && CharmYoungAndRespectfulPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmYoungAndRespectful,_chm_YoungAndRespectful_p);
-      if (CharmPerkModificationEnabled && CharmYoungAndRespectfulPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmYoungAndRespectful,_chm_YoungAndRespectful_s);
-      ref PerkObject _charmFirebrand = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmFirebrand");
-      if (CharmPerkModificationEnabled && CharmFirebrandPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmFirebrand,_chm_Firebrand_p);
-      if (CharmPerkModificationEnabled && CharmFirebrandPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmFirebrand,_chm_Firebrand_s);
-      ref PerkObject _charmFlexibleEthics = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmFlexibleEthics");
-      if (CharmPerkModificationEnabled && CharmFlexibleEthicsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmFlexibleEthics,_chm_FlexibleEthics_p);
-      if (CharmPerkModificationEnabled && CharmFlexibleEthicsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmFlexibleEthics,_chm_FlexibleEthics_s);
-      ref PerkObject _charmSlickNegotiator = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmSlickNegotiator");
-      if (CharmPerkModificationEnabled && CharmSlickNegotiatorPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmSlickNegotiator,_chm_SlickNegotiator_p);
-      if (CharmPerkModificationEnabled && CharmSlickNegotiatorPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmSlickNegotiator,_chm_SlickNegotiator_s);
-      ref PerkObject _charmTribute = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmTribute");
-      if (CharmPerkModificationEnabled && CharmTributePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmTribute,_chm_Tribute_p);
-      if (CharmPerkModificationEnabled && CharmTributePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmTribute,_chm_Tribute_s);
-      ref PerkObject _charmMoralLeader = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmMoralLeader");
-      if (CharmPerkModificationEnabled && CharmMoralLeaderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmMoralLeader,_chm_MoralLeader_p);
-      if (CharmPerkModificationEnabled && CharmMoralLeaderPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmMoralLeader,_chm_MoralLeader_s);
-      ref PerkObject _charmNaturalLeader = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmNaturalLeader");
-      if (CharmPerkModificationEnabled && CharmNaturalLeaderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmNaturalLeader,_chm_NaturalLeader_p);
-      if (CharmPerkModificationEnabled && CharmNaturalLeaderPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmNaturalLeader,_chm_NaturalLeader_s);
-      ref PerkObject _charmPublicSpeaker = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmPublicSpeaker");
-      if (CharmPerkModificationEnabled && CharmPublicSpeakerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmPublicSpeaker,_chm_PublicSpeaker_p);
-      ref PerkObject _charmCamaraderie = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmCamaraderie");
-      if (CharmPerkModificationEnabled && CharmCamaraderiePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmCamaraderie,_chm_Camaraderie_p);
-      if (CharmPerkModificationEnabled && CharmCamaraderiePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmCamaraderie,_chm_Camaraderie_s);
+      ref PerkObject _charmRespectfulOpposition = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmRespectfulOpposition");
+      if (CharmPerkModificationEnabled && CharmRespectfulOppositionPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmRespectfulOpposition,_chm_RespectfulOpposition_p);
+      ref PerkObject _charmOurGloriousLeader = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmOurGloriousLeader");
+      if (CharmPerkModificationEnabled && CharmOurGloriousLeaderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmOurGloriousLeader,_chm_OurGloriousLeader_p);
+      ref PerkObject _charmProFamilia = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmProFamilia");
+      if (CharmPerkModificationEnabled && CharmProFamiliaPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmProFamilia,_chm_ProFamilia_p);
       ref PerkObject _tradeAppraiser = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeAppraiser");
       if (TradePerkModificationEnabled && TradeAppraiserPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeAppraiser,_trd_Appraiser_p);
       if (TradePerkModificationEnabled && TradeAppraiserPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeAppraiser,_trd_Appraiser_s);
@@ -10856,9 +10506,9 @@ namespace FountaTweaks
       ref PerkObject _tradeGreatInvestor = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeGreatInvestor");
       if (TradePerkModificationEnabled && TradeGreatInvestorPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeGreatInvestor,_trd_GreatInvestor_p);
       if (TradePerkModificationEnabled && TradeGreatInvestorPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeGreatInvestor,_trd_GreatInvestor_s);
-      ref PerkObject _tradeMercenaryConnections = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeMercenaryConnections");
-      if (TradePerkModificationEnabled && TradeMercenaryConnectionsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeMercenaryConnections,_trd_MercenaryConnections_p);
-      if (TradePerkModificationEnabled && TradeMercenaryConnectionsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeMercenaryConnections,_trd_MercenaryConnections_s);
+      ref PerkObject _tradeVillagerConnections = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeVillagerConnections");
+      if (TradePerkModificationEnabled && TradeVillagerConnectionsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeVillagerConnections,_trd_VillagerConnections_p);
+      if (TradePerkModificationEnabled && TradeVillagerConnectionsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeVillagerConnections,_trd_VillagerConnections_s);
       ref PerkObject _tradeContentTrades = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeContentTrades");
       if (TradePerkModificationEnabled && TradeContentTradesPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeContentTrades,_trd_ContentTrades_p);
       if (TradePerkModificationEnabled && TradeContentTradesPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeContentTrades,_trd_ContentTrades_s);
@@ -10939,9 +10589,9 @@ namespace FountaTweaks
       ref PerkObject _stewardArenicosHorses = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardArenicosHorses");
       if (StewardPerkModificationEnabled && StewardArenicosHorsesPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardArenicosHorses,_st_ArenicosHorses_p);
       if (StewardPerkModificationEnabled && StewardArenicosHorsesPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardArenicosHorses,_st_ArenicosHorses_s);
-      ref PerkObject _stewardMasterOfPlanning = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardMasterOfPlanning");
-      if (StewardPerkModificationEnabled && StewardMasterOfPlanningPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardMasterOfPlanning,_st_MasterOfPlanning_p);
-      if (StewardPerkModificationEnabled && StewardMasterOfPlanningPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardMasterOfPlanning,_st_MasterOfPlanning_s);
+      ref PerkObject _stewardUrbanDeveloper = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardUrbanDeveloper");
+      if (StewardPerkModificationEnabled && StewardUrbanDeveloperPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardUrbanDeveloper,_st_UrbanDeveloper_p);
+      if (StewardPerkModificationEnabled && StewardUrbanDeveloperPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardUrbanDeveloper,_st_UrbanDeveloper_s);
       ref PerkObject _stewardMasterOfWarcraft = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardMasterOfWarcraft");
       if (StewardPerkModificationEnabled && StewardMasterOfWarcraftPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardMasterOfWarcraft,_st_MasterOfWarcraft_p);
       if (StewardPerkModificationEnabled && StewardMasterOfWarcraftPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardMasterOfWarcraft,_st_MasterOfWarcraft_s);
