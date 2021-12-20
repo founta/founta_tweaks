@@ -86,6 +86,7 @@ namespace FountaTweaks
     private float _twh_Berserker_p = 20.000000f;
     private float _twh_Berserker_s = -10.000000f;
     private float _twh_Confidence_p = 15.000000f;
+    private float _twh_Confidence_s = 30.000000f;
     private float _twh_ArrowDeflection_p = 0.000000f;
     private float _twh_ArrowDeflection_s = 10.000000f;
     private float _twh_Terror_p = 20.000000f;
@@ -210,6 +211,8 @@ namespace FountaTweaks
     private float _xbw_LooseAndMove_s = 5.000000f;
     private float _xbw_DeftHands_p = 100.000000f;
     private float _xbw_DeftHands_s = 100.000000f;
+    private float _xbw_CounterFire_p = -10.000000f;
+    private float _xbw_CounterFire_s = -3.000000f;
     private float _xbw_MountedCrossbowman_p = 0.000000f;
     private float _xbw_MountedCrossbowman_s = 5.000000f;
     private float _xbw_Steady_p = -50.000000f;
@@ -233,6 +236,7 @@ namespace FountaTweaks
     private float _thr_Hunter_p = 40.000000f;
     private float _thr_Hunter_s = 8.000000f;
     private float _thr_FlexibleFighter_p = 10.000000f;
+    private float _thr_FlexibleFighter_s = 15.000000f;
     private float _thr_MountedSkirmisher_p = -20.000000f;
     private float _thr_MountedSkirmisher_s = 10.000000f;
     private float _thr_PerfectTechnique_p = 25.000000f;
@@ -241,6 +245,8 @@ namespace FountaTweaks
     private float _thr_RunningThrow_s = 30.000000f;
     private float _thr_KnockOff_p = 50.000000f;
     private float _thr_KnockOff_s = 5.000000f;
+    private float _thr_Skirmisher_p = -10.000000f;
+    private float _thr_Skirmisher_s = -3.000000f;
     private float _thr_WellPrepared_p = 1.000000f;
     private float _thr_WellPrepared_s = 1.000000f;
     private float _thr_Focus_p = 25.000000f;
@@ -251,6 +257,8 @@ namespace FountaTweaks
     private float _thr_HeadHunter_s = -20.000000f;
     private float _thr_ThrowingCompetitions_p = -20.000000f;
     private float _thr_ThrowingCompetitions_s = 0.500000f;
+    private float _thr_Saddlebags_p = 2.000000f;
+    private float _thr_Saddlebags_s = 1.000000f;
     private float _thr_Splinters_p = 200.000000f;
     private float _thr_Splinters_s = 50.000000f;
     private float _thr_Resourceful_p = 2.000000f;
@@ -279,6 +287,8 @@ namespace FountaTweaks
     private float _rid_Sagittarius_s = -15.000000f;
     private float _rid_SweepingWind_p = 5.000000f;
     private float _rid_SweepingWind_s = 2.000000f;
+    private float _rid_ReliefForce_p = 10.000000f;
+    private float _rid_ReliefForce_s = 0.200000f;
     private float _rid_MountedWarrior_p = 5.000000f;
     private float _rid_MountedWarrior_s = 5.000000f;
     private float _rid_HorseArcher_p = 10.000000f;
@@ -305,12 +315,16 @@ namespace FountaTweaks
     private float _ath_MorningExercise_s = 5.000000f;
     private float _ath_WellBuilt_p = 5.000000f;
     private float _ath_WellBuilt_s = 5.000000f;
+    private float _ath_Fury_p = 10.000000f;
+    private float _ath_Fury_s = 10.000000f;
     private float _ath_FormFittingArmor_p = -15.000000f;
     private float _ath_FormFittingArmor_s = 4.000000f;
     private float _ath_HavingGoing_p = 0.300000f;
     private float _ath_HavingGoing_s = 5.000000f;
     private float _ath_Stamina_p = 0.500000f;
     private float _ath_Stamina_s = 5.000000f;
+    private float _ath_Sprint_p = 5.000000f;
+    private float _ath_Sprint_s = 3.000000f;
     private float _ath_Powerful_p = 4.000000f;
     private float _ath_Powerful_s = 2.000000f;
     private float _ath_SurgingBlow_p = 30.000000f;
@@ -326,8 +340,11 @@ namespace FountaTweaks
     private float _ath_Energetic_p = -20.000000f;
     private float _ath_Energetic_s = 20.000000f;
     private float _ath_Steady_p = 1.000000f;
+    private float _ath_Steady_s = 10.000000f;
     private float _ath_Strong_p = 1.000000f;
     private float _ath_Strong_s = 5.000000f;
+    private float _ath_StrongLegs_p = -50.000000f;
+    private float _ath_StrongLegs_s = -20.000000f;
     private float _ath_StrongArms_p = 1.000000f;
     private float _ath_StrongArms_s = 20.000000f;
     private float _ath_Spartan_p = 50.000000f;
@@ -336,12 +353,29 @@ namespace FountaTweaks
     private float _ath_IgnorePain_s = 5.000000f;
     private float _ath_MightyBlow_p = 0.050000f;
     private float _ath_MightyBlow_s = 250.000000f;
+    private float _cft_CuriousSmelter_p = 1.000000f;
+    private float _cft_CuriousSmith_p = 1.000000f;
+    private float _cft_ExperiencedSmith_p = 0.100000f;
+    private float _cft_PracticalRefiner_p = 1.000000f;
+    private float _cft_PracticalSmelter_p = 1.000000f;
+    private float _cft_VigorousSmith_p = 2.000000f;
+    private float _cft_StrongSmith_p = 2.000000f;
+    private float _cft_PracticalSmith_p = 1.000000f;
+    private float _cft_ArtisanSmith_p = 1.000000f;
+    private float _cft_MasterSmith_p = 0.100000f;
+    private float _cft_WeaponMasterSmith_p = 2.000000f;
+    private float _cft_EnduringSmith_p = 2.000000f;
     private float _cft_SharpenedEdge_p = 2.000000f;
     private float _cft_SharpenedTip_p = 2.000000f;
+    private float _cft_LegendarySmith_p = 0.050000f;
     private float _tct_TightFormations_p = 10.000000f;
+    private float _tct_TightFormations_s = -25.000000f;
     private float _tct_LooseFormations_p = -10.000000f;
+    private float _tct_LooseFormations_s = -25.000000f;
     private float _tct_AsymmetricalWarfare_p = 10.000000f;
     private float _tct_AsymmetricalWarfare_s = 2.000000f;
+    private float _tct_ProperEngagement_p = 5.000000f;
+    private float _tct_ProperEngagement_s = 2.000000f;
     private float _tct_SmallUnitTactics_p = 1.000000f;
     private float _tct_SmallUnitTactics_s = 5.000000f;
     private float _tct_HordeLeader_p = 10.000000f;
@@ -352,6 +386,8 @@ namespace FountaTweaks
     private float _tct_Coaching_s = 1.000000f;
     private float _tct_SwiftRegroup_p = -0.150000f;
     private float _tct_SwiftRegroup_s = -50.000000f;
+    private float _tct_Improviser_p = 0.000000f;
+    private float _tct_Improviser_s = -25.000000f;
     private float _tct_OnTheMarch_p = -20.000000f;
     private float _tct_OnTheMarch_s = 20.000000f;
     private float _tct_CallToArms_p = 0.100000f;
@@ -365,6 +401,7 @@ namespace FountaTweaks
     private float _tct_Encirclement_p = 5.000000f;
     private float _tct_Encirclement_s = -0.100000f;
     private float _tct_PreBattleManeuvers_p = 25.000000f;
+    private float _tct_PreBattleManeuvers_s = 0.000000f;
     private float _tct_Besieged_p = 10.000000f;
     private float _tct_Besieged_s = 50.000000f;
     private float _tct_Counteroffensive_p = 10.000000f;
@@ -377,7 +414,9 @@ namespace FountaTweaks
     private float _sct_NightRunner_p = 0.050000f;
     private float _sct_NightRunner_s = 30.000000f;
     private float _sct_Pathfinder_p = 0.020000f;
+    private float _sct_Pathfinder_s = 1.000000f;
     private float _sct_WaterDiviner_p = 10.000000f;
+    private float _sct_WaterDiviner_s = 1.000000f;
     private float _sct_ForestKin_p = 50.000000f;
     private float _sct_ForestKin_s = 10.000000f;
     private float _sct_DesertBorn_p = 0.050000f;
@@ -390,6 +429,8 @@ namespace FountaTweaks
     private float _sct_Tracker_s = 0.020000f;
     private float _sct_Ranger_p = 20.000000f;
     private float _sct_Ranger_s = 10.000000f;
+    private float _sct_MountedScouts_p = 10.000000f;
+    private float _sct_MountedScouts_s = 5.000000f;
     private float _sct_Patrols_p = 5.000000f;
     private float _sct_Patrols_s = 10.000000f;
     private float _sct_Foragers_p = -10.000000f;
@@ -404,6 +445,8 @@ namespace FountaTweaks
     private float _sct_VantagePoint_s = 10.000000f;
     private float _sct_KeenSight_p = -0.500000f;
     private float _sct_KeenSight_s = -50.000000f;
+    private float _sct_Vanguard_p = 0.050000f;
+    private float _sct_Vanguard_s = 0.100000f;
     private float _sct_Rearguard_p = 20.000000f;
     private float _sct_Rearguard_s = 10.000000f;
     private float _sct_UncannyInsight_p = 0.100000f;
@@ -424,6 +467,8 @@ namespace FountaTweaks
     private float _rog_Promises_s = 0.300000f;
     private float _rog_SlaveTrader_p = 0.200000f;
     private float _rog_SlaveTrader_s = 20.000000f;
+    private float _rog_Scarface_p = -30.000000f;
+    private float _rog_Scarface_s = 1.000000f;
     private float _rog_WhiteLies_p = 20.000000f;
     private float _rog_WhiteLies_s = 1.000000f;
     private float _rog_SmugglerConnections_p = 10.000000f;
@@ -432,6 +477,8 @@ namespace FountaTweaks
     private float _rog_PartnersInCrime_s = 2.000000f;
     private float _rog_OneOfTheFamily_p = 10.000000f;
     private float _rog_OneOfTheFamily_s = 1.000000f;
+    private float _rog_SaltTheEarth_p = 20.000000f;
+    private float _rog_SaltTheEarth_s = 5.000000f;
     private float _rog_Carver_p = 10.000000f;
     private float _rog_Carver_s = 2.000000f;
     private float _rog_RansomBroker_p = 0.250000f;
@@ -480,7 +527,10 @@ namespace FountaTweaks
     private float _ldr_LeadByExample_s = 10.000000f;
     private float _ldr_TrustedCommander_p = 50.000000f;
     private float _ldr_TrustedCommander_s = 20.000000f;
+    private float _ldr_GreatLeader_p = 5.000000f;
+    private float _ldr_GreatLeader_s = 5.000000f;
     private float _ldr_WePledgeOurSwords_p = 1.000000f;
+    private float _ldr_WePledgeOurSwords_s = 1.000000f;
     private float _ldr_TalentMagnet_p = 3.000000f;
     private float _ldr_TalentMagnet_s = 1.000000f;
     private float _ldr_UltimateLeader_p = 1.000000f;
@@ -505,8 +555,12 @@ namespace FountaTweaks
     private float _chm_Firebrand_s = 1.000000f;
     private float _chm_FlexibleEthics_p = -0.300000f;
     private float _chm_FlexibleEthics_s = 1.000000f;
+    private float _chm_EffortForThePeople_p = 3.000000f;
+    private float _chm_EffortForThePeople_s = -0.250000f;
     private float _chm_SlickNegotiator_p = -0.200000f;
     private float _chm_SlickNegotiator_s = -0.100000f;
+    private float _chm_GoodNatured_p = 0.300000f;
+    private float _chm_GoodNatured_s = 1.000000f;
     private float _chm_Tribute_p = 0.200000f;
     private float _chm_Tribute_s = 1.000000f;
     private float _chm_MoralLeader_p = -1.000000f;
@@ -514,8 +568,12 @@ namespace FountaTweaks
     private float _chm_NaturalLeader_p = -1.000000f;
     private float _chm_NaturalLeader_s = -0.100000f;
     private float _chm_PublicSpeaker_p = 0.300000f;
+    private float _chm_PublicSpeaker_s = 0.100000f;
+    private float _chm_Parade_p = 5.000000f;
+    private float _chm_Parade_s = 1.000000f;
     private float _chm_Camaraderie_p = 1.000000f;
     private float _chm_Camaraderie_s = 1.000000f;
+    private float _chm_ImmortalCharm_p = 1.000000f;
     private float _trd_Appraiser_p = -15.000000f;
     private float _trd_Appraiser_s = 0.000000f;
     private float _trd_WholeSeller_p = -15.000000f;
@@ -546,11 +604,16 @@ namespace FountaTweaks
     private float _trd_RapidDevelopment_s = -25.000000f;
     private float _trd_GranaryAccountant_p = -20.000000f;
     private float _trd_GranaryAccountant_s = 20.000000f;
+    private float _trd_TradeyardForeman_p = -20.000000f;
+    private float _trd_TradeyardForeman_s = 20.000000f;
     private float _trd_SwordForBarter_p = -0.200000f;
     private float _trd_SwordForBarter_s = -0.150000f;
     private float _trd_SelfMadeMan_p = -0.500000f;
+    private float _trd_SelfMadeMan_s = 30.000000f;
     private float _trd_SilverTongue_p = -0.500000f;
     private float _trd_SilverTongue_s = -0.150000f;
+    private float _trd_SpringOfGold_p = 0.001000f;
+    private float _trd_SpringOfGold_s = 20.000000f;
     private float _trd_ManOfMeans_p = -0.200000f;
     private float _trd_ManOfMeans_s = -0.300000f;
     private float _trd_TrickleDown_p = 1.000000f;
@@ -595,6 +658,8 @@ namespace FountaTweaks
     private float _st_MasterOfPlanning_s = 0.200000f;
     private float _st_MasterOfWarcraft_p = -25.000000f;
     private float _st_MasterOfWarcraft_s = -0.050000f;
+    private float _st_PriceOfLoyalty_p = -0.500000f;
+    private float _st_PriceOfLoyalty_s = 0.005000f;
     private float _med_SelfMedication_p = 30.000000f;
     private float _med_SelfMedication_s = 2.000000f;
     private float _med_PreventiveMedicine_p = 5.000000f;
@@ -652,14 +717,21 @@ namespace FountaTweaks
     private float _eng_DreadfulSieger_p = 0.100000f;
     private float _eng_DreadfulSieger_s = 5.000000f;
     private float _eng_Salvager_p = 0.200000f;
+    private float _eng_Salvager_s = 0.001000f;
     private float _eng_Foreman_p = 0.100000f;
     private float _eng_Foreman_s = 100.000000f;
+    private float _eng_Stonecutters_p = 0.300000f;
+    private float _eng_Stonecutters_s = 0.000000f;
     private float _eng_SiegeEngineer_p = 0.300000f;
     private float _eng_SiegeEngineer_s = 100.000000f;
+    private float _eng_CampBuilding_p = -0.500000f;
+    private float _eng_CampBuilding_s = -0.200000f;
     private float _eng_Battlements_p = 1.000000f;
     private float _eng_Battlements_s = 100.000000f;
     private float _eng_EngineeringGuilds_p = 1.000000f;
     private float _eng_EngineeringGuilds_s = 0.250000f;
+    private float _eng_Apprenticeship_p = 5.000000f;
+    private float _eng_Apprenticeship_s = 0.010000f;
     private float _eng_Metallurgy_p = 0.200000f;
     private float _eng_Metallurgy_s = 5.000000f;
     private float _eng_ImprovedTools_p = 0.200000f;
@@ -668,6 +740,7 @@ namespace FountaTweaks
     private float _eng_Clockwork_s = 0.200000f;
     private float _eng_ArchitecturalCommisions_p = -0.250000f;
     private float _eng_ArchitecturalCommisions_s = 20.000000f;
+    private float _eng_Masterwork_p = 0.010000f;
     [SettingPropertyBool("Enable Engineering perk modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Engineering", IsMainToggle=true)]
     public bool EngineeringPerkModificationEnabled {get; set;} = false;
@@ -1001,6 +1074,9 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable DeftHands modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Crossbow/Deft Hands", IsMainToggle=true)]
     public bool CrossbowDeftHandsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable CounterFire modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crossbow/Counter Fire", IsMainToggle=true)]
+    public bool CrossbowCounterFirePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable MountedCrossbowman modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Crossbow/Mounted Crossbowman", IsMainToggle=true)]
     public bool CrossbowMountedCrossbowmanPerkModificationEnabled {get; set;} = false;
@@ -1049,6 +1125,9 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable KnockOff modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Throwing/Knock Off", IsMainToggle=true)]
     public bool ThrowingKnockOffPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Skirmisher modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Throwing/Skirmisher", IsMainToggle=true)]
+    public bool ThrowingSkirmisherPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable WellPrepared modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Throwing/Well Prepared", IsMainToggle=true)]
     public bool ThrowingWellPreparedPerkModificationEnabled {get; set;} = false;
@@ -1064,6 +1143,9 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable ThrowingCompetitions modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Throwing/Throwing Competitions", IsMainToggle=true)]
     public bool ThrowingThrowingCompetitionsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Saddlebags modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Throwing/Saddlebags", IsMainToggle=true)]
+    public bool ThrowingSaddlebagsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Splinters modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Throwing/Splinters", IsMainToggle=true)]
     public bool ThrowingSplintersPerkModificationEnabled {get; set;} = false;
@@ -1106,6 +1188,9 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable SweepingWind modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Riding/Sweeping Wind", IsMainToggle=true)]
     public bool RidingSweepingWindPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ReliefForce modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Riding/Relief Force", IsMainToggle=true)]
+    public bool RidingReliefForcePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable MountedWarrior modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Riding/Mounted Warrior", IsMainToggle=true)]
     public bool RidingMountedWarriorPerkModificationEnabled {get; set;} = false;
@@ -1145,6 +1230,9 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable WellBuilt modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Athletics/Well Built", IsMainToggle=true)]
     public bool AthleticsWellBuiltPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Fury modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Athletics/Fury", IsMainToggle=true)]
+    public bool AthleticsFuryPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable FormFittingArmor modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Athletics/Form Fitting Armor", IsMainToggle=true)]
     public bool AthleticsFormFittingArmorPerkModificationEnabled {get; set;} = false;
@@ -1154,6 +1242,9 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable Stamina modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Athletics/Stamina", IsMainToggle=true)]
     public bool AthleticsStaminaPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Sprint modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Athletics/Sprint", IsMainToggle=true)]
+    public bool AthleticsSprintPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Powerful modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Athletics/Powerful", IsMainToggle=true)]
     public bool AthleticsPowerfulPerkModificationEnabled {get; set;} = false;
@@ -1181,6 +1272,9 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable Strong modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Athletics/Strong", IsMainToggle=true)]
     public bool AthleticsStrongPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable StrongLegs modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Athletics/Strong Legs", IsMainToggle=true)]
+    public bool AthleticsStrongLegsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable StrongArms modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Athletics/Strong Arms", IsMainToggle=true)]
     public bool AthleticsStrongArmsPerkModificationEnabled {get; set;} = false;
@@ -1193,12 +1287,51 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable MightyBlow modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Athletics/Mighty Blow ", IsMainToggle=true)]
     public bool AthleticsMightyBlowPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable CuriousSmelter modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crafting/Curious Smelter", IsMainToggle=true)]
+    public bool CraftingCuriousSmelterPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable CuriousSmith modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crafting/Curious Smith", IsMainToggle=true)]
+    public bool CraftingCuriousSmithPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ExperiencedSmith modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crafting/Experienced Smith", IsMainToggle=true)]
+    public bool CraftingExperiencedSmithPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable PracticalRefiner modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crafting/Practical Refiner", IsMainToggle=true)]
+    public bool CraftingPracticalRefinerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable PracticalSmelter modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crafting/Practical Smelter", IsMainToggle=true)]
+    public bool CraftingPracticalSmelterPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable VigorousSmith modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crafting/Vigorous Smith", IsMainToggle=true)]
+    public bool CraftingVigorousSmithPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable StrongSmith modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crafting/Controlled Smith", IsMainToggle=true)]
+    public bool CraftingStrongSmithPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable PracticalSmith modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crafting/Practical Smith", IsMainToggle=true)]
+    public bool CraftingPracticalSmithPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ArtisanSmith modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crafting/Artisan Smith", IsMainToggle=true)]
+    public bool CraftingArtisanSmithPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable MasterSmith modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crafting/Master Smith", IsMainToggle=true)]
+    public bool CraftingMasterSmithPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable WeaponMasterSmith modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crafting/Fencer Smith", IsMainToggle=true)]
+    public bool CraftingWeaponMasterSmithPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable EnduringSmith modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crafting/Enduring Smith", IsMainToggle=true)]
+    public bool CraftingEnduringSmithPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SharpenedEdge modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Crafting/Sharpened Edge", IsMainToggle=true)]
     public bool CraftingSharpenedEdgePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SharpenedTip modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Crafting/Sharpened Tip", IsMainToggle=true)]
     public bool CraftingSharpenedTipPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable LegendarySmith modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Crafting/Legendary Smith", IsMainToggle=true)]
+    public bool CraftingLegendarySmithPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable TightFormations modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Tactics/Tight Formations", IsMainToggle=true)]
     public bool TacticsTightFormationsPerkModificationEnabled {get; set;} = false;
@@ -1208,6 +1341,9 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable AsymmetricalWarfare modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Tactics/Asymmetrical Warfare", IsMainToggle=true)]
     public bool TacticsAsymmetricalWarfarePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ProperEngagement modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Tactics/Proper Engagement", IsMainToggle=true)]
+    public bool TacticsProperEngagementPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SmallUnitTactics modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Tactics/Small Unit Tactics", IsMainToggle=true)]
     public bool TacticsSmallUnitTacticsPerkModificationEnabled {get; set;} = false;
@@ -1223,6 +1359,9 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable SwiftRegroup modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Tactics/Swift Regroup", IsMainToggle=true)]
     public bool TacticsSwiftRegroupPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Improviser modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Tactics/Improviser", IsMainToggle=true)]
+    public bool TacticsImproviserPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable OnTheMarch modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Tactics/On The March", IsMainToggle=true)]
     public bool TacticsOnTheMarchPerkModificationEnabled {get; set;} = false;
@@ -1286,6 +1425,9 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable Ranger modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Scouting/Ranger", IsMainToggle=true)]
     public bool ScoutingRangerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable MountedScouts modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Scouting/Mounted Scouts", IsMainToggle=true)]
+    public bool ScoutingMountedScoutsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Patrols modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Scouting/Patrols", IsMainToggle=true)]
     public bool ScoutingPatrolsPerkModificationEnabled {get; set;} = false;
@@ -1307,6 +1449,9 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable KeenSight modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Scouting/Keen Sight", IsMainToggle=true)]
     public bool ScoutingKeenSightPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Vanguard modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Scouting/Vanguard", IsMainToggle=true)]
+    public bool ScoutingVanguardPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Rearguard modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Scouting/Rearguard", IsMainToggle=true)]
     public bool ScoutingRearguardPerkModificationEnabled {get; set;} = false;
@@ -1337,6 +1482,9 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable SlaveTrader modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Roguery/Slave Trader", IsMainToggle=true)]
     public bool RoguerySlaveTraderPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Scarface modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Roguery/Scarface", IsMainToggle=true)]
+    public bool RogueryScarfacePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable WhiteLies modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Roguery/White Lies", IsMainToggle=true)]
     public bool RogueryWhiteLiesPerkModificationEnabled {get; set;} = false;
@@ -1349,6 +1497,9 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable OneOfTheFamily modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Roguery/One of the Family", IsMainToggle=true)]
     public bool RogueryOneOfTheFamilyPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SaltTheEarth modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Roguery/Salt the Earth", IsMainToggle=true)]
+    public bool RoguerySaltTheEarthPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Carver modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Roguery/Carver", IsMainToggle=true)]
     public bool RogueryCarverPerkModificationEnabled {get; set;} = false;
@@ -1421,6 +1572,9 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable TrustedCommander modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Leadership/Trusted Commander", IsMainToggle=true)]
     public bool LeadershipTrustedCommanderPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable GreatLeader modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Leadership/Great Leader", IsMainToggle=true)]
+    public bool LeadershipGreatLeaderPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable WePledgeOurSwords modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Leadership/We Pledge our Swords", IsMainToggle=true)]
     public bool LeadershipWePledgeOurSwordsPerkModificationEnabled {get; set;} = false;
@@ -1460,9 +1614,15 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable FlexibleEthics modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Charm/Flexible Ethics", IsMainToggle=true)]
     public bool CharmFlexibleEthicsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable EffortForThePeople modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/Effort For The People", IsMainToggle=true)]
+    public bool CharmEffortForThePeoplePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SlickNegotiator modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Charm/Slick Negotiator", IsMainToggle=true)]
     public bool CharmSlickNegotiatorPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable GoodNatured modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/Good Natured", IsMainToggle=true)]
+    public bool CharmGoodNaturedPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Tribute modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Charm/Tribute", IsMainToggle=true)]
     public bool CharmTributePerkModificationEnabled {get; set;} = false;
@@ -1475,9 +1635,15 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable PublicSpeaker modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Charm/Public Speaker", IsMainToggle=true)]
     public bool CharmPublicSpeakerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Parade modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/Parade", IsMainToggle=true)]
+    public bool CharmParadePerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Camaraderie modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Charm/Camaraderie", IsMainToggle=true)]
     public bool CharmCamaraderiePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ImmortalCharm modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Charm/Immortal Charm", IsMainToggle=true)]
+    public bool CharmImmortalCharmPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Appraiser modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Trade/Appraiser", IsMainToggle=true)]
     public bool TradeAppraiserPerkModificationEnabled {get; set;} = false;
@@ -1523,6 +1689,9 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable GranaryAccountant modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Trade/Granary Accountant", IsMainToggle=true)]
     public bool TradeGranaryAccountantPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable TradeyardForeman modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/Tradeyard Foreman", IsMainToggle=true)]
+    public bool TradeTradeyardForemanPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SwordForBarter modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Trade/Sword For Barter", IsMainToggle=true)]
     public bool TradeSwordForBarterPerkModificationEnabled {get; set;} = false;
@@ -1532,6 +1701,9 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable SilverTongue modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Trade/Silver Tongue", IsMainToggle=true)]
     public bool TradeSilverTonguePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable SpringOfGold modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Trade/Spring of Gold", IsMainToggle=true)]
+    public bool TradeSpringOfGoldPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable ManOfMeans modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Trade/Man of Means", IsMainToggle=true)]
     public bool TradeManOfMeansPerkModificationEnabled {get; set;} = false;
@@ -1598,6 +1770,9 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable MasterOfWarcraft modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Steward/Master of Warcraft", IsMainToggle=true)]
     public bool StewardMasterOfWarcraftPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable PriceOfLoyalty modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Steward/Price of Loyalty", IsMainToggle=true)]
+    public bool StewardPriceOfLoyaltyPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SelfMedication modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Medicine/Self Medication", IsMainToggle=true)]
     public bool MedicineSelfMedicationPerkModificationEnabled {get; set;} = false;
@@ -1688,15 +1863,24 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable Foreman modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Engineering/Foreman", IsMainToggle=true)]
     public bool EngineeringForemanPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Stonecutters modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Engineering/Stonecutters", IsMainToggle=true)]
+    public bool EngineeringStonecuttersPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable SiegeEngineer modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Engineering/Siege Engineer", IsMainToggle=true)]
     public bool EngineeringSiegeEngineerPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable CampBuilding modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Engineering/Camp Building", IsMainToggle=true)]
+    public bool EngineeringCampBuildingPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Battlements modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Engineering/Battlements", IsMainToggle=true)]
     public bool EngineeringBattlementsPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable EngineeringGuilds modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Engineering/Engineering Guilds", IsMainToggle=true)]
     public bool EngineeringEngineeringGuildsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Apprenticeship modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Engineering/Apprenticeship", IsMainToggle=true)]
+    public bool EngineeringApprenticeshipPerkModificationEnabled {get; set;} = false;
     [SettingPropertyBool("Enable Metallurgy modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Engineering/Metallurgy", IsMainToggle=true)]
     public bool EngineeringMetallurgyPerkModificationEnabled {get; set;} = false;
@@ -1709,6 +1893,9 @@ namespace FountaTweaks
     [SettingPropertyBool("Enable ArchitecturalCommisions modifications", RequireRestart=false, HintText = "")]
     [SettingPropertyGroup("Perks/Engineering/Architectural Commissions", IsMainToggle=true)]
     public bool EngineeringArchitecturalCommisionsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Masterwork modifications", RequireRestart=false, HintText = "")]
+    [SettingPropertyGroup("Perks/Engineering/Masterwork", IsMainToggle=true)]
+    public bool EngineeringMasterworkPerkModificationEnabled {get; set;} = false;
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=JKqsYaBj}One handed weapons you wield have their handling increased by 20%.")]
     [SettingPropertyGroup("Perks/OneHanded/Deflect")]
     public float oh_Deflect_p {
@@ -2498,6 +2685,18 @@ namespace FountaTweaks
           _twh_Confidence_p = value;
           if (Game.Current != null)
             ExposeInternals.SetPrimaryBonus(DefaultPerks.TwoHanded.Confidence, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=cZ38hU37}Military projects (barracks, training fields, battlements, workshop etc.) are built 30% faster.")]
+    [SettingPropertyGroup("Perks/TwoHanded/Confidence")]
+    public float twh_Confidence_s {
+      get => _twh_Confidence_s;
+      set {
+        if (_twh_Confidence_s != value) {
+          _twh_Confidence_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.TwoHanded.Confidence, value);
         }
       }
     }
@@ -4115,6 +4314,32 @@ namespace FountaTweaks
     }
 
 
+    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=3GY5laNB}When you have a crossbow equipped, you take 10% less damage from projectiles.")]
+    [SettingPropertyGroup("Perks/Crossbow/Counter Fire")]
+    public float xbw_CounterFire_p {
+      get => _xbw_CounterFire_p;
+      set {
+        if (_xbw_CounterFire_p != value) {
+          _xbw_CounterFire_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Crossbow.CounterFire, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=BajgWS2n}Crossbow equipped troops in your formation take 3% less damage from projectiles.")]
+    [SettingPropertyGroup("Perks/Crossbow/Counter Fire")]
+    public float xbw_CounterFire_s {
+      get => _xbw_CounterFire_s;
+      set {
+        if (_xbw_CounterFire_s != value) {
+          _xbw_CounterFire_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Crossbow.CounterFire, value);
+        }
+      }
+    }
+
+
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=NhQrsc1A}You can reload any crossbow on horseback.")]
     [SettingPropertyGroup("Perks/Crossbow/Mounted Crossbowman")]
     public float xbw_MountedCrossbowman_p {
@@ -4413,6 +4638,18 @@ namespace FountaTweaks
         }
       }
     }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HVxvToRR}Infantry gains +15 to all Control skills, ranged troops gain +15 to all Vigor skills.")]
+    [SettingPropertyGroup("Perks/Throwing/Flexible Fighter")]
+    public float thr_FlexibleFighter_s {
+      get => _thr_FlexibleFighter_s;
+      set {
+        if (_thr_FlexibleFighter_s != value) {
+          _thr_FlexibleFighter_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Throwing.FlexibleFighter, value);
+        }
+      }
+    }
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=N8UfRVVH}Decreases mounted accuracy penalties by 20% while using a throwing weapon.")]
@@ -4514,6 +4751,32 @@ namespace FountaTweaks
           _thr_KnockOff_s = value;
           if (Game.Current != null)
             ExposeInternals.SetSecondaryBonus(DefaultPerks.Throwing.KnockOff, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=GAHAay6b}When you are holding a throwing weapon, you take 10% less damage from ranged attacks.")]
+    [SettingPropertyGroup("Perks/Throwing/Skirmisher")]
+    public float thr_Skirmisher_p {
+      get => _thr_Skirmisher_p;
+      set {
+        if (_thr_Skirmisher_p != value) {
+          _thr_Skirmisher_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Throwing.Skirmisher, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=7KgllquH}Troops under your command take 3% less damage by range attacks.")]
+    [SettingPropertyGroup("Perks/Throwing/Skirmisher")]
+    public float thr_Skirmisher_s {
+      get => _thr_Skirmisher_s;
+      set {
+        if (_thr_Skirmisher_s != value) {
+          _thr_Skirmisher_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Throwing.Skirmisher, value);
         }
       }
     }
@@ -4644,6 +4907,32 @@ namespace FountaTweaks
           _thr_ThrowingCompetitions_s = value;
           if (Game.Current != null)
             ExposeInternals.SetSecondaryBonus(DefaultPerks.Throwing.ThrowingCompetitions, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=zQ2Ir1yM}When you start a battle mounted, you have +2 ammunition for throwing weapons.")]
+    [SettingPropertyGroup("Perks/Throwing/Saddlebags")]
+    public float thr_Saddlebags_p {
+      get => _thr_Saddlebags_p;
+      set {
+        if (_thr_Saddlebags_p != value) {
+          _thr_Saddlebags_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Throwing.Saddlebags, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=AzdGEO33}Your infantry troops in your party gain +1 xp everyday.")]
+    [SettingPropertyGroup("Perks/Throwing/Saddlebags")]
+    public float thr_Saddlebags_s {
+      get => _thr_Saddlebags_s;
+      set {
+        if (_thr_Saddlebags_s != value) {
+          _thr_Saddlebags_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Throwing.Saddlebags, value);
         }
       }
     }
@@ -5013,6 +5302,32 @@ namespace FountaTweaks
     }
 
 
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=sMRAAZ2P}If you join an ongoing battle of your allies, your party starts with +10 battle morale.")]
+    [SettingPropertyGroup("Perks/Riding/Relief Force")]
+    public float rid_ReliefForce_p {
+      get => _rid_ReliefForce_p;
+      set {
+        if (_rid_ReliefForce_p != value) {
+          _rid_ReliefForce_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Riding.ReliefForce, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=jWDGbRic}Mounted troops in governed settlement's garrison provide 20% more security.")]
+    [SettingPropertyGroup("Perks/Riding/Relief Force")]
+    public float rid_ReliefForce_s {
+      get => _rid_ReliefForce_s;
+      set {
+        if (_rid_ReliefForce_s != value) {
+          _rid_ReliefForce_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Riding.ReliefForce, value);
+        }
+      }
+    }
+
+
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=sgpEjTkv}Increases your mounted melee damage by 5%.")]
     [SettingPropertyGroup("Perks/Riding/Mounted Warrior")]
     public float rid_MountedWarrior_p {
@@ -5351,6 +5666,32 @@ namespace FountaTweaks
     }
 
 
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=LpGt1ekS}While on foot, your weapon handling is increased by 10%.")]
+    [SettingPropertyGroup("Perks/Athletics/Fury")]
+    public float ath_Fury_p {
+      get => _ath_Fury_p;
+      set {
+        if (_ath_Fury_p != value) {
+          _ath_Fury_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Athletics.Fury, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=8ROAZwyZ}Foot troops in your formation gain 10% increased weapon handling.")]
+    [SettingPropertyGroup("Perks/Athletics/Fury")]
+    public float ath_Fury_s {
+      get => _ath_Fury_s;
+      set {
+        if (_ath_Fury_s != value) {
+          _ath_Fury_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Athletics.Fury, value);
+        }
+      }
+    }
+
+
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=D49gf45A}Decreases your armor weight by 15%.")]
     [SettingPropertyGroup("Perks/Athletics/Form Fitting Armor")]
     public float ath_FormFittingArmor_p {
@@ -5424,6 +5765,32 @@ namespace FountaTweaks
           _ath_Stamina_s = value;
           if (Game.Current != null)
             ExposeInternals.SetSecondaryBonus(DefaultPerks.Athletics.Stamina, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=C7BAafCR}When no shields and range weapons are wielded, you gain 5% movement speed.")]
+    [SettingPropertyGroup("Perks/Athletics/Sprint")]
+    public float ath_Sprint_p {
+      get => _ath_Sprint_p;
+      set {
+        if (_ath_Sprint_p != value) {
+          _ath_Sprint_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Athletics.Sprint, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=UP6rkdbg}Infantry troops in your formation gain 3% movement speed during battles.")]
+    [SettingPropertyGroup("Perks/Athletics/Sprint")]
+    public float ath_Sprint_s {
+      get => _ath_Sprint_s;
+      set {
+        if (_ath_Sprint_s != value) {
+          _ath_Sprint_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Athletics.Sprint, value);
         }
       }
     }
@@ -5623,6 +5990,18 @@ namespace FountaTweaks
         }
       }
     }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=8Q1W7vFo}Production is increased by 10% in governed farms, mines, lumber camps and clay pits.")]
+    [SettingPropertyGroup("Perks/Athletics/Steady")]
+    public float ath_Steady_s {
+      get => _ath_Steady_s;
+      set {
+        if (_ath_Steady_s != value) {
+          _ath_Steady_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Athletics.Steady, value);
+        }
+      }
+    }
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=xbal9bvg}Increases your Vigor Attribute by 1.")]
@@ -5646,6 +6025,32 @@ namespace FountaTweaks
           _ath_Strong_s = value;
           if (Game.Current != null)
             ExposeInternals.SetSecondaryBonus(DefaultPerks.Athletics.Strong, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=3aDfv5w8}Decreases fall damage taken by 50%, kick damage is doubled.")]
+    [SettingPropertyGroup("Perks/Athletics/Strong Legs")]
+    public float ath_StrongLegs_p {
+      get => _ath_StrongLegs_p;
+      set {
+        if (_ath_StrongLegs_p != value) {
+          _ath_StrongLegs_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Athletics.StrongLegs, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=ak8QloJg}While under siege, governed settlement consumes 20% less food.")]
+    [SettingPropertyGroup("Perks/Athletics/Strong Legs")]
+    public float ath_StrongLegs_s {
+      get => _ath_StrongLegs_s;
+      set {
+        if (_ath_StrongLegs_s != value) {
+          _ath_StrongLegs_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Athletics.StrongLegs, value);
         }
       }
     }
@@ -5755,6 +6160,174 @@ namespace FountaTweaks
     }
 
 
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=SNH3PagC}Increase the rate of learning new part designs when smelting by 100%.")]
+    [SettingPropertyGroup("Perks/Crafting/Curious Smelter")]
+    public float cft_CuriousSmelter_p {
+      get => _cft_CuriousSmelter_p;
+      set {
+        if (_cft_CuriousSmelter_p != value) {
+          _cft_CuriousSmelter_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Crafting.CuriousSmelter, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=nyN4Kwa9}Doubles the chance of learning new crafting parts through smithing.")]
+    [SettingPropertyGroup("Perks/Crafting/Curious Smith")]
+    public float cft_CuriousSmith_p {
+      get => _cft_CuriousSmith_p;
+      set {
+        if (_cft_CuriousSmith_p != value) {
+          _cft_CuriousSmith_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Crafting.CuriousSmith, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=DOD4AUPA}You have 10% chance to create a 'fine' weapon, if difficulty requirements are met.{newline}Successful crafting orders of notables increase your relation by +2 with them.")]
+    [SettingPropertyGroup("Perks/Crafting/Experienced Smith")]
+    public float cft_ExperiencedSmith_p {
+      get => _cft_ExperiencedSmith_p;
+      set {
+        if (_cft_ExperiencedSmith_p != value) {
+          _cft_ExperiencedSmith_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Crafting.ExperiencedSmith, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ffT8ISSb}Stamina spent for refining is halved.")]
+    [SettingPropertyGroup("Perks/Crafting/Practical Refiner")]
+    public float cft_PracticalRefiner_p {
+      get => _cft_PracticalRefiner_p;
+      set {
+        if (_cft_PracticalRefiner_p != value) {
+          _cft_PracticalRefiner_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Crafting.PracticalRefiner, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ZphBf7vf}Stamina spent for smelting is halved.")]
+    [SettingPropertyGroup("Perks/Crafting/Practical Smelter")]
+    public float cft_PracticalSmelter_p {
+      get => _cft_PracticalSmelter_p;
+      set {
+        if (_cft_PracticalSmelter_p != value) {
+          _cft_PracticalSmelter_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Crafting.PracticalSmelter, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=jkYNBr5p}Immediately increases Vigor (VIG) by 1.")]
+    [SettingPropertyGroup("Perks/Crafting/Vigorous Smith")]
+    public float cft_VigorousSmith_p {
+      get => _cft_VigorousSmith_p;
+      set {
+        if (_cft_VigorousSmith_p != value) {
+          _cft_VigorousSmith_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Crafting.VigorousSmith, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=g8a8a8KJ}Immediately increases Control (CTR) by 1.")]
+    [SettingPropertyGroup("Perks/Crafting/Controlled Smith")]
+    public float cft_StrongSmith_p {
+      get => _cft_StrongSmith_p;
+      set {
+        if (_cft_StrongSmith_p != value) {
+          _cft_StrongSmith_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Crafting.StrongSmith, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=vYasCMEi}Stamina spent for smithing is halved.")]
+    [SettingPropertyGroup("Perks/Crafting/Practical Smith")]
+    public float cft_PracticalSmith_p {
+      get => _cft_PracticalSmith_p;
+      set {
+        if (_cft_PracticalSmith_p != value) {
+          _cft_PracticalSmith_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Crafting.PracticalSmith, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=d0ubMkDV}Trade penalty is halved for selling smithed weapons.")]
+    [SettingPropertyGroup("Perks/Crafting/Artisan Smith")]
+    public float cft_ArtisanSmith_p {
+      get => _cft_ArtisanSmith_p;
+      set {
+        if (_cft_ArtisanSmith_p != value) {
+          _cft_ArtisanSmith_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Crafting.ArtisanSmith, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=jQWgYr6r}You have 10% chance to create a 'Masterwork' weapon, if difficulty requirements are met.")]
+    [SettingPropertyGroup("Perks/Crafting/Master Smith")]
+    public float cft_MasterSmith_p {
+      get => _cft_MasterSmith_p;
+      set {
+        if (_cft_MasterSmith_p != value) {
+          _cft_MasterSmith_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Crafting.MasterSmith, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=viBrI7T1}Immediately adds 1 focus point to one handed and two handed skills.")]
+    [SettingPropertyGroup("Perks/Crafting/Fencer Smith")]
+    public float cft_WeaponMasterSmith_p {
+      get => _cft_WeaponMasterSmith_p;
+      set {
+        if (_cft_WeaponMasterSmith_p != value) {
+          _cft_WeaponMasterSmith_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Crafting.WeaponMasterSmith, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=2Ekt9yKN}Immediately increases Endurance (END) by 1.")]
+    [SettingPropertyGroup("Perks/Crafting/Enduring Smith")]
+    public float cft_EnduringSmith_p {
+      get => _cft_EnduringSmith_p;
+      set {
+        if (_cft_EnduringSmith_p != value) {
+          _cft_EnduringSmith_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Crafting.EnduringSmith, value);
+        }
+      }
+    }
+
+
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=UNVAkOY4}Swing damage of crafted weapons is increased by 2%.")]
     [SettingPropertyGroup("Perks/Crafting/Sharpened Edge")]
     public float cft_SharpenedEdge_p {
@@ -5783,6 +6356,20 @@ namespace FountaTweaks
     }
 
 
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=a8tFTecO}Character has 5% chance to create a 'Legendary' weapon, if difficulty requirements are met. The chance is increased by 1% for each skill point above 300.")]
+    [SettingPropertyGroup("Perks/Crafting/Legendary Smith")]
+    public float cft_LegendarySmith_p {
+      get => _cft_LegendarySmith_p;
+      set {
+        if (_cft_LegendarySmith_p != value) {
+          _cft_LegendarySmith_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Crafting.LegendarySmith, value);
+        }
+      }
+    }
+
+
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=6YeKVvCE}Your infantrymen deal 10% more damage to cavalry in simulations.")]
     [SettingPropertyGroup("Perks/Tactics/Tight Formations")]
     public float tct_TightFormations_p {
@@ -5792,6 +6379,18 @@ namespace FountaTweaks
           _tct_TightFormations_p = value;
           if (Game.Current != null)
             ExposeInternals.SetPrimaryBonus(DefaultPerks.Tactics.TightFormations, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=ZZvdmmn4}Your troops receive 25% less morale penalty from casualties when using Shield Wall, Square, Skein or Column formations.")]
+    [SettingPropertyGroup("Perks/Tactics/Tight Formations")]
+    public float tct_TightFormations_s {
+      get => _tct_TightFormations_s;
+      set {
+        if (_tct_TightFormations_s != value) {
+          _tct_TightFormations_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Tactics.TightFormations, value);
         }
       }
     }
@@ -5806,6 +6405,18 @@ namespace FountaTweaks
           _tct_LooseFormations_p = value;
           if (Game.Current != null)
             ExposeInternals.SetPrimaryBonus(DefaultPerks.Tactics.LooseFormations, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=B2lVai6s}Your troops receive 25% less morale penalty from casualties when using Line, Loose, Circle or Scatter formations.")]
+    [SettingPropertyGroup("Perks/Tactics/Loose Formations")]
+    public float tct_LooseFormations_s {
+      get => _tct_LooseFormations_s;
+      set {
+        if (_tct_LooseFormations_s != value) {
+          _tct_LooseFormations_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Tactics.LooseFormations, value);
         }
       }
     }
@@ -5832,6 +6443,32 @@ namespace FountaTweaks
           _tct_AsymmetricalWarfare_s = value;
           if (Game.Current != null)
             ExposeInternals.SetSecondaryBonus(DefaultPerks.Tactics.AsymmetricalWarfare, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=kI7KsAYb}Troops deal 5% more damage in simulations in open ground like plains, steppes and desert terrains.")]
+    [SettingPropertyGroup("Perks/Tactics/Proper Engagement")]
+    public float tct_ProperEngagement_p {
+      get => _tct_ProperEngagement_p;
+      set {
+        if (_tct_ProperEngagement_p != value) {
+          _tct_ProperEngagement_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Tactics.ProperEngagement, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=0RxFIrut}Troops in your formation gain 2% increased movement speed in open ground like plains, steppes and desert terrain battlefields.")]
+    [SettingPropertyGroup("Perks/Tactics/Proper Engagement")]
+    public float tct_ProperEngagement_s {
+      get => _tct_ProperEngagement_s;
+      set {
+        if (_tct_ProperEngagement_s != value) {
+          _tct_ProperEngagement_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Tactics.ProperEngagement, value);
         }
       }
     }
@@ -5962,6 +6599,32 @@ namespace FountaTweaks
           _tct_SwiftRegroup_s = value;
           if (Game.Current != null)
             ExposeInternals.SetSecondaryBonus(DefaultPerks.Tactics.SwiftRegroup, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=pFSWDNaF}No morale penalty for disorganized state in battles, in sally out or when being attacked.")]
+    [SettingPropertyGroup("Perks/Tactics/Improviser")]
+    public float tct_Improviser_p {
+      get => _tct_Improviser_p;
+      set {
+        if (_tct_Improviser_p != value) {
+          _tct_Improviser_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Tactics.Improviser, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=CPBYZtAK}Lose 25% fewer man when breaking into and breaking out from a settlement under siege.")]
+    [SettingPropertyGroup("Perks/Tactics/Improviser")]
+    public float tct_Improviser_s {
+      get => _tct_Improviser_s;
+      set {
+        if (_tct_Improviser_s != value) {
+          _tct_Improviser_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Tactics.Improviser, value);
         }
       }
     }
@@ -6135,6 +6798,18 @@ namespace FountaTweaks
         }
       }
     }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=HPOft1E9}If your tactics skill is greater than the enemy, gain bonus in simulations proportional to the difference.")]
+    [SettingPropertyGroup("Perks/Tactics/Pre Battle Maneuvers")]
+    public float tct_PreBattleManeuvers_s {
+      get => _tct_PreBattleManeuvers_s;
+      set {
+        if (_tct_PreBattleManeuvers_s != value) {
+          _tct_PreBattleManeuvers_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Tactics.PreBattleManeuvers, value);
+        }
+      }
+    }
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=WrAFPs4H}When you are besieged 10% more damage in simulations.")]
@@ -6293,6 +6968,18 @@ namespace FountaTweaks
         }
       }
     }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=8je9rjeM}Once per day, when you enter a town you have a 50% chance to increase the clan's relation with a notable by 1.")]
+    [SettingPropertyGroup("Perks/Scouting/Pathfinder")]
+    public float sct_Pathfinder_s {
+      get => _sct_Pathfinder_s;
+      set {
+        if (_sct_Pathfinder_s != value) {
+          _sct_Pathfinder_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Scouting.Pathfinder, value);
+        }
+      }
+    }
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=z7b7s4cN}10% sight range bonus while on steppes and plains.")]
@@ -6304,6 +6991,18 @@ namespace FountaTweaks
           _sct_WaterDiviner_p = value;
           if (Game.Current != null)
             ExposeInternals.SetPrimaryBonus(DefaultPerks.Scouting.WaterDiviner, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=mcWYveN4}Once per day, when you enter a village you have a 50% chance to increase clan's relation with a notable by 1.")]
+    [SettingPropertyGroup("Perks/Scouting/Water Diviner")]
+    public float sct_WaterDiviner_s {
+      get => _sct_WaterDiviner_s;
+      set {
+        if (_sct_WaterDiviner_s != value) {
+          _sct_WaterDiviner_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Scouting.WaterDiviner, value);
         }
       }
     }
@@ -6460,6 +7159,32 @@ namespace FountaTweaks
           _sct_Ranger_s = value;
           if (Game.Current != null)
             ExposeInternals.SetSecondaryBonus(DefaultPerks.Scouting.Ranger, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=UtYpTloH}If your party has more than 50% cavalry, you gain 10% sight range bonus.")]
+    [SettingPropertyGroup("Perks/Scouting/Mounted Scouts")]
+    public float sct_MountedScouts_p {
+      get => _sct_MountedScouts_p;
+      set {
+        if (_sct_MountedScouts_p != value) {
+          _sct_MountedScouts_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Scouting.MountedScouts, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=EIaiIRTI}Increase the party size limit by +5.")]
+    [SettingPropertyGroup("Perks/Scouting/Mounted Scouts")]
+    public float sct_MountedScouts_s {
+      get => _sct_MountedScouts_s;
+      set {
+        if (_sct_MountedScouts_s != value) {
+          _sct_MountedScouts_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Scouting.MountedScouts, value);
         }
       }
     }
@@ -6642,6 +7367,32 @@ namespace FountaTweaks
           _sct_KeenSight_s = value;
           if (Game.Current != null)
             ExposeInternals.SetSecondaryBonus(DefaultPerks.Scouting.KeenSight, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=pEFDJNJ6}When attacking, your troops have 5% more damage in simulated battles.")]
+    [SettingPropertyGroup("Perks/Scouting/Vanguard")]
+    public float sct_Vanguard_p {
+      get => _sct_Vanguard_p;
+      set {
+        if (_sct_Vanguard_p != value) {
+          _sct_Vanguard_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Scouting.Vanguard, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=9ezoyFMm}10% more damage in simulated battles when sallying out.")]
+    [SettingPropertyGroup("Perks/Scouting/Vanguard")]
+    public float sct_Vanguard_s {
+      get => _sct_Vanguard_s;
+      set {
+        if (_sct_Vanguard_s != value) {
+          _sct_Vanguard_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Scouting.Vanguard, value);
         }
       }
     }
@@ -6907,6 +7658,32 @@ namespace FountaTweaks
     }
 
 
+    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=9bfAewoI}30% higher chance of enemy surrender (bandits, villagers, caravans).")]
+    [SettingPropertyGroup("Perks/Roguery/Scarface")]
+    public float rog_Scarface_p {
+      get => _rog_Scarface_p;
+      set {
+        if (_rog_Scarface_p != value) {
+          _rog_Scarface_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Roguery.Scarface, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=04F2ld9c}5% daily chance to improve relations by 1 with random gang leaders in the settlements you govern.")]
+    [SettingPropertyGroup("Perks/Roguery/Scarface")]
+    public float rog_Scarface_s {
+      get => _rog_Scarface_s;
+      set {
+        if (_rog_Scarface_s != value) {
+          _rog_Scarface_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Roguery.Scarface, value);
+        }
+      }
+    }
+
+
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=dfmrof9R}Your crime rating decreases 20% faster.")]
     [SettingPropertyGroup("Perks/Roguery/White Lies")]
     public float rog_WhiteLies_p {
@@ -7006,6 +7783,32 @@ namespace FountaTweaks
           _rog_OneOfTheFamily_s = value;
           if (Game.Current != null)
             ExposeInternals.SetSecondaryBonus(DefaultPerks.Roguery.OneOfTheFamily, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=kkyb7dr9}When villagers comply with hostile actions, you gain 20% more access to the available resources.")]
+    [SettingPropertyGroup("Perks/Roguery/Salt the Earth")]
+    public float rog_SaltTheEarth_p {
+      get => _rog_SaltTheEarth_p;
+      set {
+        if (_rog_SaltTheEarth_p != value) {
+          _rog_SaltTheEarth_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Roguery.SaltTheEarth, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=NIFRbl76}Increase tariff revenue 5%.")]
+    [SettingPropertyGroup("Perks/Roguery/Salt the Earth")]
+    public float rog_SaltTheEarth_s {
+      get => _rog_SaltTheEarth_s;
+      set {
+        if (_rog_SaltTheEarth_s != value) {
+          _rog_SaltTheEarth_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Roguery.SaltTheEarth, value);
         }
       }
     }
@@ -7635,6 +8438,32 @@ namespace FountaTweaks
     }
 
 
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=3QeRov0e}At the beginning of a battle, the morale of all your troops is increased by 5.")]
+    [SettingPropertyGroup("Perks/Leadership/Great Leader")]
+    public float ldr_GreatLeader_p {
+      get => _ldr_GreatLeader_p;
+      set {
+        if (_ldr_GreatLeader_p != value) {
+          _ldr_GreatLeader_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Leadership.GreatLeader, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=YblqUbdp}Troops with same culture as the party leader have their battle morale increased by 5 at the start of the battle.")]
+    [SettingPropertyGroup("Perks/Leadership/Great Leader")]
+    public float ldr_GreatLeader_s {
+      get => _ldr_GreatLeader_s;
+      set {
+        if (_ldr_GreatLeader_s != value) {
+          _ldr_GreatLeader_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Leadership.GreatLeader, value);
+        }
+      }
+    }
+
+
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=NNalp5mr}+1 companion.")]
     [SettingPropertyGroup("Perks/Leadership/We Pledge our Swords")]
     public float ldr_WePledgeOurSwords_p {
@@ -7644,6 +8473,18 @@ namespace FountaTweaks
           _ldr_WePledgeOurSwords_p = value;
           if (Game.Current != null)
             ExposeInternals.SetPrimaryBonus(DefaultPerks.Leadership.WePledgeOurSwords, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=1JYPGQ1e}Each tier 6 troop increases party battle morale by 1, up to 10 at the start of battle.")]
+    [SettingPropertyGroup("Perks/Leadership/We Pledge our Swords")]
+    public float ldr_WePledgeOurSwords_s {
+      get => _ldr_WePledgeOurSwords_s;
+      set {
+        if (_ldr_WePledgeOurSwords_s != value) {
+          _ldr_WePledgeOurSwords_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Leadership.WePledgeOurSwords, value);
         }
       }
     }
@@ -7961,6 +8802,32 @@ namespace FountaTweaks
     }
 
 
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=mjbD9zT2}When you clear a hideout you gain 3 relation with the nearest town owner clan. If it is you, increase town loyalty by 1.")]
+    [SettingPropertyGroup("Perks/Charm/Effort For The People")]
+    public float chm_EffortForThePeople_p {
+      get => _chm_EffortForThePeople_p;
+      set {
+        if (_chm_EffortForThePeople_p != value) {
+          _chm_EffortForThePeople_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.EffortForThePeople, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=w6V3eZxK}Reduce item barter penalty with the lords of the same culture with you by 25%.")]
+    [SettingPropertyGroup("Perks/Charm/Effort For The People")]
+    public float chm_EffortForThePeople_s {
+      get => _chm_EffortForThePeople_s;
+      set {
+        if (_chm_EffortForThePeople_s != value) {
+          _chm_EffortForThePeople_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.EffortForThePeople, value);
+        }
+      }
+    }
+
+
     [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=UbBnKVaI}Hiring mercenaries is 20% cheaper.")]
     [SettingPropertyGroup("Perks/Charm/Slick Negotiator")]
     public float chm_SlickNegotiator_p {
@@ -7982,6 +8849,32 @@ namespace FountaTweaks
           _chm_SlickNegotiator_s = value;
           if (Game.Current != null)
             ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.SlickNegotiator, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=bM2BHnaM}When voting for a proposal you support fails, recover 100% of the influence spent.")]
+    [SettingPropertyGroup("Perks/Charm/Good Natured")]
+    public float chm_GoodNatured_p {
+      get => _chm_GoodNatured_p;
+      set {
+        if (_chm_GoodNatured_p != value) {
+          _chm_GoodNatured_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.GoodNatured, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=80PXDIV9}Gain additional relation when you increase relationship with merciful lords.")]
+    [SettingPropertyGroup("Perks/Charm/Good Natured")]
+    public float chm_GoodNatured_s {
+      get => _chm_GoodNatured_s;
+      set {
+        if (_chm_GoodNatured_s != value) {
+          _chm_GoodNatured_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.GoodNatured, value);
         }
       }
     }
@@ -8077,6 +8970,44 @@ namespace FountaTweaks
         }
       }
     }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=M4riQP0g}10% more effective forum, marketplace, arena, temple, festival effects.")]
+    [SettingPropertyGroup("Perks/Charm/Public Speaker")]
+    public float chm_PublicSpeaker_s {
+      get => _chm_PublicSpeaker_s;
+      set {
+        if (_chm_PublicSpeaker_s != value) {
+          _chm_PublicSpeaker_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.PublicSpeaker, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=DTnaWgAv}When you are waiting in your settlements, they get +5 loyalty bonus.")]
+    [SettingPropertyGroup("Perks/Charm/Parade")]
+    public float chm_Parade_p {
+      get => _chm_Parade_p;
+      set {
+        if (_chm_Parade_p != value) {
+          _chm_Parade_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.Parade, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HnUzEUX3}5% chance per day to gain 1 relations with a random lord in the same army.")]
+    [SettingPropertyGroup("Perks/Charm/Parade")]
+    public float chm_Parade_s {
+      get => _chm_Parade_s;
+      set {
+        if (_chm_Parade_s != value) {
+          _chm_Parade_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.Parade, value);
+        }
+      }
+    }
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=IF7tcOY6}You gain double relations with a lord when you aid them in battle.")]
@@ -8100,6 +9031,20 @@ namespace FountaTweaks
           _chm_Camaraderie_s = value;
           if (Game.Current != null)
             ExposeInternals.SetSecondaryBonus(DefaultPerks.Charm.Camaraderie, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ra9VRabB}Every 5 skills after 250 gives you +1 influence point per day.")]
+    [SettingPropertyGroup("Perks/Charm/Immortal Charm")]
+    public float chm_ImmortalCharm_p {
+      get => _chm_ImmortalCharm_p;
+      set {
+        if (_chm_ImmortalCharm_p != value) {
+          _chm_ImmortalCharm_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Charm.ImmortalCharm, value);
         }
       }
     }
@@ -8495,6 +9440,32 @@ namespace FountaTweaks
     }
 
 
+    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=AONaIqXv}20% decrease in sell price penalty for pottery, tools, cotton and jewelery.")]
+    [SettingPropertyGroup("Perks/Trade/Tradeyard Foreman")]
+    public float trd_TradeyardForeman_p {
+      get => _trd_TradeyardForeman_p;
+      set {
+        if (_trd_TradeyardForeman_p != value) {
+          _trd_TradeyardForeman_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Trade.TradeyardForeman, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=sFqoxkwO}Your towns' bound villages' clay / iron / cotton / silver production is increased by 20%")]
+    [SettingPropertyGroup("Perks/Trade/Tradeyard Foreman")]
+    public float trd_TradeyardForeman_s {
+      get => _trd_TradeyardForeman_s;
+      set {
+        if (_trd_TradeyardForeman_s != value) {
+          _trd_TradeyardForeman_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Trade.TradeyardForeman, value);
+        }
+      }
+    }
+
+
     [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=UbBnKVaI}Hiring mercenaries is 20% cheaper.")]
     [SettingPropertyGroup("Perks/Trade/Sword For Barter")]
     public float trd_SwordForBarter_p {
@@ -8533,6 +9504,18 @@ namespace FountaTweaks
         }
       }
     }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=70K9Qxj3}Marketplace, kiln, and aquaduct project are built 30% faster.")]
+    [SettingPropertyGroup("Perks/Trade/Self-made Man")]
+    public float trd_SelfMadeMan_s {
+      get => _trd_SelfMadeMan_s;
+      set {
+        if (_trd_SelfMadeMan_s != value) {
+          _trd_SelfMadeMan_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Trade.SelfMadeMan, value);
+        }
+      }
+    }
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=0g4R557I}Negotiation for safe passage barter is 50% cheaper.")]
@@ -8556,6 +9539,32 @@ namespace FountaTweaks
           _trd_SilverTongue_s = value;
           if (Game.Current != null)
             ExposeInternals.SetSecondaryBonus(DefaultPerks.Trade.SilverTongue, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=PSmDvbGM}Gain 0.1% interest per day on gold you have. It's capped at maximum 1000 per day.")]
+    [SettingPropertyGroup("Perks/Trade/Spring of Gold")]
+    public float trd_SpringOfGold_p {
+      get => _trd_SpringOfGold_p;
+      set {
+        if (_trd_SpringOfGold_p != value) {
+          _trd_SpringOfGold_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Trade.SpringOfGold, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Q51nMDju}Gold boosts for town projects are 20% more effective.")]
+    [SettingPropertyGroup("Perks/Trade/Spring of Gold")]
+    public float trd_SpringOfGold_s {
+      get => _trd_SpringOfGold_s;
+      set {
+        if (_trd_SpringOfGold_s != value) {
+          _trd_SpringOfGold_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Trade.SpringOfGold, value);
         }
       }
     }
@@ -9128,6 +10137,32 @@ namespace FountaTweaks
           _st_MasterOfWarcraft_s = value;
           if (Game.Current != null)
             ExposeInternals.SetSecondaryBonus(DefaultPerks.Steward.MasterOfWarcraft, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=DfmWtNk7}Your party food consumption, wages and combat morale loss decrease by 0.5% per skill level above 200.")]
+    [SettingPropertyGroup("Perks/Steward/Price of Loyalty")]
+    public float st_PriceOfLoyalty_p {
+      get => _st_PriceOfLoyalty_p;
+      set {
+        if (_st_PriceOfLoyalty_p != value) {
+          _st_PriceOfLoyalty_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Steward.PriceOfLoyalty, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=4YQC0z0H}Governed towns' tax revenues increase by 0.5% per skill level above 200.")]
+    [SettingPropertyGroup("Perks/Steward/Price of Loyalty")]
+    public float st_PriceOfLoyalty_s {
+      get => _st_PriceOfLoyalty_s;
+      set {
+        if (_st_PriceOfLoyalty_s != value) {
+          _st_PriceOfLoyalty_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Steward.PriceOfLoyalty, value);
         }
       }
     }
@@ -9873,6 +10908,18 @@ namespace FountaTweaks
         }
       }
     }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=ea78JOZK}Each militia increase build speed of siege engines by 0.1%.")]
+    [SettingPropertyGroup("Perks/Engineering/Salvager")]
+    public float eng_Salvager_s {
+      get => _eng_Salvager_s;
+      set {
+        if (_eng_Salvager_s != value) {
+          _eng_Salvager_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Engineering.Salvager, value);
+        }
+      }
+    }
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=lLaIzlr4}Increase campaign map mangonel and trebuchet accuracy by 10%.")]
@@ -9901,6 +10948,32 @@ namespace FountaTweaks
     }
 
 
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=iz8m2Ct4}30% faster build rate for fortification, aquaduct and barracks projects.")]
+    [SettingPropertyGroup("Perks/Engineering/Stonecutters")]
+    public float eng_Stonecutters_p {
+      get => _eng_Stonecutters_p;
+      set {
+        if (_eng_Stonecutters_p != value) {
+          _eng_Stonecutters_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Engineering.Stonecutters, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=sTCBMmGl}Can craft Fire versions of siege engines.")]
+    [SettingPropertyGroup("Perks/Engineering/Stonecutters")]
+    public float eng_Stonecutters_s {
+      get => _eng_Stonecutters_s;
+      set {
+        if (_eng_Stonecutters_s != value) {
+          _eng_Stonecutters_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Engineering.Stonecutters, value);
+        }
+      }
+    }
+
+
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=eCkC7Grp}Defensive siege engines have 30% more hit points.")]
     [SettingPropertyGroup("Perks/Engineering/Siege Engineer")]
     public float eng_SiegeEngineer_p {
@@ -9922,6 +10995,32 @@ namespace FountaTweaks
           _eng_SiegeEngineer_s = value;
           if (Game.Current != null)
             ExposeInternals.SetSecondaryBonus(DefaultPerks.Engineering.SiegeEngineer, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=7NCG7w45}During besieging, army loses 50% less cohesion.")]
+    [SettingPropertyGroup("Perks/Engineering/Camp Building")]
+    public float eng_CampBuilding_p {
+      get => _eng_CampBuilding_p;
+      set {
+        if (_eng_CampBuilding_p != value) {
+          _eng_CampBuilding_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Engineering.CampBuilding, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=1Jt4hbaZ}Reduce casualty chance from bombardments by %20.")]
+    [SettingPropertyGroup("Perks/Engineering/Camp Building")]
+    public float eng_CampBuilding_s {
+      get => _eng_CampBuilding_s;
+      set {
+        if (_eng_CampBuilding_s != value) {
+          _eng_CampBuilding_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Engineering.CampBuilding, value);
         }
       }
     }
@@ -9974,6 +11073,32 @@ namespace FountaTweaks
           _eng_EngineeringGuilds_s = value;
           if (Game.Current != null)
             ExposeInternals.SetSecondaryBonus(DefaultPerks.Engineering.EngineeringGuilds, value);
+        }
+      }
+    }
+
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=BWafzwTr}Each time you build a siege machine, troops in your party gain 5 experience instead flat xp value to whole party.")]
+    [SettingPropertyGroup("Perks/Engineering/Apprenticeship")]
+    public float eng_Apprenticeship_p {
+      get => _eng_Apprenticeship_p;
+      set {
+        if (_eng_Apprenticeship_p != value) {
+          _eng_Apprenticeship_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Engineering.Apprenticeship, value);
+        }
+      }
+    }
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=pjCp7PlB}Every unique project in settlement provides a %1 bonus to prosperity gain.")]
+    [SettingPropertyGroup("Perks/Engineering/Apprenticeship")]
+    public float eng_Apprenticeship_s {
+      get => _eng_Apprenticeship_s;
+      set {
+        if (_eng_Apprenticeship_s != value) {
+          _eng_Apprenticeship_s = value;
+          if (Game.Current != null)
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Engineering.Apprenticeship, value);
         }
       }
     }
@@ -10082,6 +11207,20 @@ namespace FountaTweaks
       }
     }
 
+
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=hKP7E6lQ}Every 1 skill point over 250 increase siege engine campaign damage by 1%.")]
+    [SettingPropertyGroup("Perks/Engineering/Masterwork")]
+    public float eng_Masterwork_p {
+      get => _eng_Masterwork_p;
+      set {
+        if (_eng_Masterwork_p != value) {
+          _eng_Masterwork_p = value;
+          if (Game.Current != null)
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Engineering.Masterwork, value);
+        }
+      }
+    }
+
     public void SetAll(ref DefaultPerks perk) {
       ref PerkObject _oneHandedDeflect = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_oneHandedDeflect");
       if (OneHandedPerkModificationEnabled && OneHandedDeflectPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_oneHandedDeflect,_oh_Deflect_p);
@@ -10175,6 +11314,7 @@ namespace FountaTweaks
       if (TwoHandedPerkModificationEnabled && TwoHandedBerserkerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedBerserker,_twh_Berserker_s);
       ref PerkObject _twoHandedConfidence = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_twoHandedConfidence");
       if (TwoHandedPerkModificationEnabled && TwoHandedConfidencePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedConfidence,_twh_Confidence_p);
+      if (TwoHandedPerkModificationEnabled && TwoHandedConfidencePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedConfidence,_twh_Confidence_s);
       ref PerkObject _twoHandedArrowDeflection = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_twoHandedArrowDeflection");
       if (TwoHandedPerkModificationEnabled && TwoHandedArrowDeflectionPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_twoHandedArrowDeflection,_twh_ArrowDeflection_p);
       if (TwoHandedPerkModificationEnabled && TwoHandedArrowDeflectionPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_twoHandedArrowDeflection,_twh_ArrowDeflection_s);
@@ -10361,6 +11501,9 @@ namespace FountaTweaks
       ref PerkObject _crossbowDeftHands = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowDeftHands");
       if (CrossbowPerkModificationEnabled && CrossbowDeftHandsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowDeftHands,_xbw_DeftHands_p);
       if (CrossbowPerkModificationEnabled && CrossbowDeftHandsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowDeftHands,_xbw_DeftHands_s);
+      ref PerkObject _crossbowCounterFire = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowCounterFire");
+      if (CrossbowPerkModificationEnabled && CrossbowCounterFirePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowCounterFire,_xbw_CounterFire_p);
+      if (CrossbowPerkModificationEnabled && CrossbowCounterFirePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowCounterFire,_xbw_CounterFire_s);
       ref PerkObject _crossbowMountedCrossbowman = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_crossbowMountedCrossbowman");
       if (CrossbowPerkModificationEnabled && CrossbowMountedCrossbowmanPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_crossbowMountedCrossbowman,_xbw_MountedCrossbowman_p);
       if (CrossbowPerkModificationEnabled && CrossbowMountedCrossbowmanPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_crossbowMountedCrossbowman,_xbw_MountedCrossbowman_s);
@@ -10396,6 +11539,7 @@ namespace FountaTweaks
       if (ThrowingPerkModificationEnabled && ThrowingHunterPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingHunter,_thr_Hunter_s);
       ref PerkObject _throwingFlexibleFighter = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingFlexibleFighter");
       if (ThrowingPerkModificationEnabled && ThrowingFlexibleFighterPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingFlexibleFighter,_thr_FlexibleFighter_p);
+      if (ThrowingPerkModificationEnabled && ThrowingFlexibleFighterPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingFlexibleFighter,_thr_FlexibleFighter_s);
       ref PerkObject _throwingMountedSkirmisher = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingMountedSkirmisher");
       if (ThrowingPerkModificationEnabled && ThrowingMountedSkirmisherPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingMountedSkirmisher,_thr_MountedSkirmisher_p);
       if (ThrowingPerkModificationEnabled && ThrowingMountedSkirmisherPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingMountedSkirmisher,_thr_MountedSkirmisher_s);
@@ -10408,6 +11552,9 @@ namespace FountaTweaks
       ref PerkObject _throwingKnockOff = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingKnockOff");
       if (ThrowingPerkModificationEnabled && ThrowingKnockOffPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingKnockOff,_thr_KnockOff_p);
       if (ThrowingPerkModificationEnabled && ThrowingKnockOffPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingKnockOff,_thr_KnockOff_s);
+      ref PerkObject _throwingSkirmisher = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingSkirmisher");
+      if (ThrowingPerkModificationEnabled && ThrowingSkirmisherPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingSkirmisher,_thr_Skirmisher_p);
+      if (ThrowingPerkModificationEnabled && ThrowingSkirmisherPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingSkirmisher,_thr_Skirmisher_s);
       ref PerkObject _throwingWellPrepared = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingWellPrepared");
       if (ThrowingPerkModificationEnabled && ThrowingWellPreparedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingWellPrepared,_thr_WellPrepared_p);
       if (ThrowingPerkModificationEnabled && ThrowingWellPreparedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingWellPrepared,_thr_WellPrepared_s);
@@ -10423,6 +11570,9 @@ namespace FountaTweaks
       ref PerkObject _throwingThrowingCompetitions = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingThrowingCompetitions");
       if (ThrowingPerkModificationEnabled && ThrowingThrowingCompetitionsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingThrowingCompetitions,_thr_ThrowingCompetitions_p);
       if (ThrowingPerkModificationEnabled && ThrowingThrowingCompetitionsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingThrowingCompetitions,_thr_ThrowingCompetitions_s);
+      ref PerkObject _throwingSaddlebags = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingSaddlebags");
+      if (ThrowingPerkModificationEnabled && ThrowingSaddlebagsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingSaddlebags,_thr_Saddlebags_p);
+      if (ThrowingPerkModificationEnabled && ThrowingSaddlebagsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingSaddlebags,_thr_Saddlebags_s);
       ref PerkObject _throwingSplinters = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingSplinters");
       if (ThrowingPerkModificationEnabled && ThrowingSplintersPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingSplinters,_thr_Splinters_p);
       if (ThrowingPerkModificationEnabled && ThrowingSplintersPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingSplinters,_thr_Splinters_s);
@@ -10465,6 +11615,9 @@ namespace FountaTweaks
       ref PerkObject _ridingSweepingWind = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingSweepingWind");
       if (RidingPerkModificationEnabled && RidingSweepingWindPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingSweepingWind,_rid_SweepingWind_p);
       if (RidingPerkModificationEnabled && RidingSweepingWindPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingSweepingWind,_rid_SweepingWind_s);
+      ref PerkObject _ridingReliefForce = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingReliefForce");
+      if (RidingPerkModificationEnabled && RidingReliefForcePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingReliefForce,_rid_ReliefForce_p);
+      if (RidingPerkModificationEnabled && RidingReliefForcePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingReliefForce,_rid_ReliefForce_s);
       ref PerkObject _ridingMountedWarrior = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_ridingMountedWarrior");
       if (RidingPerkModificationEnabled && RidingMountedWarriorPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_ridingMountedWarrior,_rid_MountedWarrior_p);
       if (RidingPerkModificationEnabled && RidingMountedWarriorPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_ridingMountedWarrior,_rid_MountedWarrior_s);
@@ -10504,6 +11657,9 @@ namespace FountaTweaks
       ref PerkObject _athleticsWellBuilt = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsWellBuilt");
       if (AthleticsPerkModificationEnabled && AthleticsWellBuiltPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsWellBuilt,_ath_WellBuilt_p);
       if (AthleticsPerkModificationEnabled && AthleticsWellBuiltPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsWellBuilt,_ath_WellBuilt_s);
+      ref PerkObject _athleticsFury = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsFury");
+      if (AthleticsPerkModificationEnabled && AthleticsFuryPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsFury,_ath_Fury_p);
+      if (AthleticsPerkModificationEnabled && AthleticsFuryPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsFury,_ath_Fury_s);
       ref PerkObject _athleticsFormFittingArmor = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsFormFittingArmor");
       if (AthleticsPerkModificationEnabled && AthleticsFormFittingArmorPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsFormFittingArmor,_ath_FormFittingArmor_p);
       if (AthleticsPerkModificationEnabled && AthleticsFormFittingArmorPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsFormFittingArmor,_ath_FormFittingArmor_s);
@@ -10513,6 +11669,9 @@ namespace FountaTweaks
       ref PerkObject _athleticsStamina = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsStamina");
       if (AthleticsPerkModificationEnabled && AthleticsStaminaPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsStamina,_ath_Stamina_p);
       if (AthleticsPerkModificationEnabled && AthleticsStaminaPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsStamina,_ath_Stamina_s);
+      ref PerkObject _athleticsSprint = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsSprint");
+      if (AthleticsPerkModificationEnabled && AthleticsSprintPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsSprint,_ath_Sprint_p);
+      if (AthleticsPerkModificationEnabled && AthleticsSprintPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsSprint,_ath_Sprint_s);
       ref PerkObject _athleticsPowerful = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsPowerful");
       if (AthleticsPerkModificationEnabled && AthleticsPowerfulPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsPowerful,_ath_Powerful_p);
       if (AthleticsPerkModificationEnabled && AthleticsPowerfulPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsPowerful,_ath_Powerful_s);
@@ -10536,9 +11695,13 @@ namespace FountaTweaks
       if (AthleticsPerkModificationEnabled && AthleticsEnergeticPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsEnergetic,_ath_Energetic_s);
       ref PerkObject _athleticsSteady = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsSteady");
       if (AthleticsPerkModificationEnabled && AthleticsSteadyPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsSteady,_ath_Steady_p);
+      if (AthleticsPerkModificationEnabled && AthleticsSteadyPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsSteady,_ath_Steady_s);
       ref PerkObject _athleticsStrong = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsStrong");
       if (AthleticsPerkModificationEnabled && AthleticsStrongPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsStrong,_ath_Strong_p);
       if (AthleticsPerkModificationEnabled && AthleticsStrongPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsStrong,_ath_Strong_s);
+      ref PerkObject _athleticsStrongLegs = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsStrongLegs");
+      if (AthleticsPerkModificationEnabled && AthleticsStrongLegsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsStrongLegs,_ath_StrongLegs_p);
+      if (AthleticsPerkModificationEnabled && AthleticsStrongLegsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsStrongLegs,_ath_StrongLegs_s);
       ref PerkObject _athleticsStrongArms = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsStrongArms");
       if (AthleticsPerkModificationEnabled && AthleticsStrongArmsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsStrongArms,_ath_StrongArms_p);
       if (AthleticsPerkModificationEnabled && AthleticsStrongArmsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsStrongArms,_ath_StrongArms_s);
@@ -10551,17 +11714,48 @@ namespace FountaTweaks
       ref PerkObject _athleticsMightyBlow = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_athleticsMightyBlow");
       if (AthleticsPerkModificationEnabled && AthleticsMightyBlowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_athleticsMightyBlow,_ath_MightyBlow_p);
       if (AthleticsPerkModificationEnabled && AthleticsMightyBlowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_athleticsMightyBlow,_ath_MightyBlow_s);
+      ref PerkObject _craftingCuriousSmelter = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_craftingCuriousSmelter");
+      if (CraftingPerkModificationEnabled && CraftingCuriousSmelterPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_craftingCuriousSmelter,_cft_CuriousSmelter_p);
+      ref PerkObject _craftingCuriousSmith = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_craftingCuriousSmith");
+      if (CraftingPerkModificationEnabled && CraftingCuriousSmithPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_craftingCuriousSmith,_cft_CuriousSmith_p);
+      ref PerkObject _craftingExperiencedSmith = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_craftingExperiencedSmith");
+      if (CraftingPerkModificationEnabled && CraftingExperiencedSmithPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_craftingExperiencedSmith,_cft_ExperiencedSmith_p);
+      ref PerkObject _craftingPracticalRefiner = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_craftingPracticalRefiner");
+      if (CraftingPerkModificationEnabled && CraftingPracticalRefinerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_craftingPracticalRefiner,_cft_PracticalRefiner_p);
+      ref PerkObject _craftingPracticalSmelter = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_craftingPracticalSmelter");
+      if (CraftingPerkModificationEnabled && CraftingPracticalSmelterPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_craftingPracticalSmelter,_cft_PracticalSmelter_p);
+      ref PerkObject _craftingVigorousSmith = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_craftingVigorousSmith");
+      if (CraftingPerkModificationEnabled && CraftingVigorousSmithPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_craftingVigorousSmith,_cft_VigorousSmith_p);
+      ref PerkObject _craftingStrongSmith = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_craftingStrongSmith");
+      if (CraftingPerkModificationEnabled && CraftingStrongSmithPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_craftingStrongSmith,_cft_StrongSmith_p);
+      ref PerkObject _craftingPracticalSmith = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_craftingPracticalSmith");
+      if (CraftingPerkModificationEnabled && CraftingPracticalSmithPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_craftingPracticalSmith,_cft_PracticalSmith_p);
+      ref PerkObject _craftingArtisanSmith = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_craftingArtisanSmith");
+      if (CraftingPerkModificationEnabled && CraftingArtisanSmithPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_craftingArtisanSmith,_cft_ArtisanSmith_p);
+      ref PerkObject _craftingMasterSmith = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_craftingMasterSmith");
+      if (CraftingPerkModificationEnabled && CraftingMasterSmithPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_craftingMasterSmith,_cft_MasterSmith_p);
+      ref PerkObject _craftingFencerSmith = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_craftingFencerSmith");
+      if (CraftingPerkModificationEnabled && CraftingWeaponMasterSmithPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_craftingFencerSmith,_cft_WeaponMasterSmith_p);
+      ref PerkObject _craftingEnduringSmith = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_craftingEnduringSmith");
+      if (CraftingPerkModificationEnabled && CraftingEnduringSmithPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_craftingEnduringSmith,_cft_EnduringSmith_p);
       ref PerkObject _craftingSharpenedEdge = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_craftingSharpenedEdge");
       if (CraftingPerkModificationEnabled && CraftingSharpenedEdgePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_craftingSharpenedEdge,_cft_SharpenedEdge_p);
       ref PerkObject _craftingSharpenedTip = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_craftingSharpenedTip");
       if (CraftingPerkModificationEnabled && CraftingSharpenedTipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_craftingSharpenedTip,_cft_SharpenedTip_p);
+      ref PerkObject _craftingLegendarySmith = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_craftingLegendarySmith");
+      if (CraftingPerkModificationEnabled && CraftingLegendarySmithPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_craftingLegendarySmith,_cft_LegendarySmith_p);
       ref PerkObject _tacticsTightFormations = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsTightFormations");
       if (TacticsPerkModificationEnabled && TacticsTightFormationsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsTightFormations,_tct_TightFormations_p);
+      if (TacticsPerkModificationEnabled && TacticsTightFormationsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsTightFormations,_tct_TightFormations_s);
       ref PerkObject _tacticsLooseFormations = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsLooseFormations");
       if (TacticsPerkModificationEnabled && TacticsLooseFormationsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsLooseFormations,_tct_LooseFormations_p);
+      if (TacticsPerkModificationEnabled && TacticsLooseFormationsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsLooseFormations,_tct_LooseFormations_s);
       ref PerkObject _tacticsAsymmetricalWarfare = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsAsymmetricalWarfare");
       if (TacticsPerkModificationEnabled && TacticsAsymmetricalWarfarePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsAsymmetricalWarfare,_tct_AsymmetricalWarfare_p);
       if (TacticsPerkModificationEnabled && TacticsAsymmetricalWarfarePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsAsymmetricalWarfare,_tct_AsymmetricalWarfare_s);
+      ref PerkObject _tacticsProperEngagement = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsProperEngagement");
+      if (TacticsPerkModificationEnabled && TacticsProperEngagementPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsProperEngagement,_tct_ProperEngagement_p);
+      if (TacticsPerkModificationEnabled && TacticsProperEngagementPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsProperEngagement,_tct_ProperEngagement_s);
       ref PerkObject _tacticsSmallUnitTactics = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsSmallUnitTactics");
       if (TacticsPerkModificationEnabled && TacticsSmallUnitTacticsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsSmallUnitTactics,_tct_SmallUnitTactics_p);
       if (TacticsPerkModificationEnabled && TacticsSmallUnitTacticsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsSmallUnitTactics,_tct_SmallUnitTactics_s);
@@ -10577,6 +11771,9 @@ namespace FountaTweaks
       ref PerkObject _tacticsSwiftRegroup = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsSwiftRegroup");
       if (TacticsPerkModificationEnabled && TacticsSwiftRegroupPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsSwiftRegroup,_tct_SwiftRegroup_p);
       if (TacticsPerkModificationEnabled && TacticsSwiftRegroupPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsSwiftRegroup,_tct_SwiftRegroup_s);
+      ref PerkObject _tacticsImproviser = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsImproviser");
+      if (TacticsPerkModificationEnabled && TacticsImproviserPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsImproviser,_tct_Improviser_p);
+      if (TacticsPerkModificationEnabled && TacticsImproviserPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsImproviser,_tct_Improviser_s);
       ref PerkObject _tacticsOnTheMarch = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsOnTheMarch");
       if (TacticsPerkModificationEnabled && TacticsOnTheMarchPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsOnTheMarch,_tct_OnTheMarch_p);
       if (TacticsPerkModificationEnabled && TacticsOnTheMarchPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsOnTheMarch,_tct_OnTheMarch_s);
@@ -10597,6 +11794,7 @@ namespace FountaTweaks
       if (TacticsPerkModificationEnabled && TacticsEncirclementPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsEncirclement,_tct_Encirclement_s);
       ref PerkObject _tacticsPreBattleManeuvers = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsPreBattleManeuvers");
       if (TacticsPerkModificationEnabled && TacticsPreBattleManeuversPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsPreBattleManeuvers,_tct_PreBattleManeuvers_p);
+      if (TacticsPerkModificationEnabled && TacticsPreBattleManeuversPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsPreBattleManeuvers,_tct_PreBattleManeuvers_s);
       ref PerkObject _tacticsBesieged = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tacticsBesieged");
       if (TacticsPerkModificationEnabled && TacticsBesiegedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tacticsBesieged,_tct_Besieged_p);
       if (TacticsPerkModificationEnabled && TacticsBesiegedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tacticsBesieged,_tct_Besieged_s);
@@ -10616,8 +11814,10 @@ namespace FountaTweaks
       if (ScoutingPerkModificationEnabled && ScoutingNightRunnerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingNightRunner,_sct_NightRunner_s);
       ref PerkObject _scoutingPathfinder = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingPathfinder");
       if (ScoutingPerkModificationEnabled && ScoutingPathfinderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingPathfinder,_sct_Pathfinder_p);
+      if (ScoutingPerkModificationEnabled && ScoutingPathfinderPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingPathfinder,_sct_Pathfinder_s);
       ref PerkObject _scoutingWaterDiviner = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingWaterDiviner");
       if (ScoutingPerkModificationEnabled && ScoutingWaterDivinerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingWaterDiviner,_sct_WaterDiviner_p);
+      if (ScoutingPerkModificationEnabled && ScoutingWaterDivinerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingWaterDiviner,_sct_WaterDiviner_s);
       ref PerkObject _scoutingForestKin = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingForestKin");
       if (ScoutingPerkModificationEnabled && ScoutingForestKinPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingForestKin,_sct_ForestKin_p);
       if (ScoutingPerkModificationEnabled && ScoutingForestKinPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingForestKin,_sct_ForestKin_s);
@@ -10636,6 +11836,9 @@ namespace FountaTweaks
       ref PerkObject _scoutingRanger = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingRanger");
       if (ScoutingPerkModificationEnabled && ScoutingRangerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingRanger,_sct_Ranger_p);
       if (ScoutingPerkModificationEnabled && ScoutingRangerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingRanger,_sct_Ranger_s);
+      ref PerkObject _scoutingMountedScouts = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingMountedScouts");
+      if (ScoutingPerkModificationEnabled && ScoutingMountedScoutsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingMountedScouts,_sct_MountedScouts_p);
+      if (ScoutingPerkModificationEnabled && ScoutingMountedScoutsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingMountedScouts,_sct_MountedScouts_s);
       ref PerkObject _scoutingPatrols = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingPatrols");
       if (ScoutingPerkModificationEnabled && ScoutingPatrolsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingPatrols,_sct_Patrols_p);
       if (ScoutingPerkModificationEnabled && ScoutingPatrolsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingPatrols,_sct_Patrols_s);
@@ -10657,6 +11860,9 @@ namespace FountaTweaks
       ref PerkObject _scoutingKeenSight = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingKeenSight");
       if (ScoutingPerkModificationEnabled && ScoutingKeenSightPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingKeenSight,_sct_KeenSight_p);
       if (ScoutingPerkModificationEnabled && ScoutingKeenSightPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingKeenSight,_sct_KeenSight_s);
+      ref PerkObject _scoutingVanguard = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingVanguard");
+      if (ScoutingPerkModificationEnabled && ScoutingVanguardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingVanguard,_sct_Vanguard_p);
+      if (ScoutingPerkModificationEnabled && ScoutingVanguardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingVanguard,_sct_Vanguard_s);
       ref PerkObject _scoutingRearguard = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_scoutingRearguard");
       if (ScoutingPerkModificationEnabled && ScoutingRearguardPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_scoutingRearguard,_sct_Rearguard_p);
       if (ScoutingPerkModificationEnabled && ScoutingRearguardPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_scoutingRearguard,_sct_Rearguard_s);
@@ -10687,6 +11893,9 @@ namespace FountaTweaks
       ref PerkObject _roguerySlaveTrader = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_roguerySlaveTrader");
       if (RogueryPerkModificationEnabled && RoguerySlaveTraderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_roguerySlaveTrader,_rog_SlaveTrader_p);
       if (RogueryPerkModificationEnabled && RoguerySlaveTraderPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_roguerySlaveTrader,_rog_SlaveTrader_s);
+      ref PerkObject _rogueryScarface = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_rogueryScarface");
+      if (RogueryPerkModificationEnabled && RogueryScarfacePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryScarface,_rog_Scarface_p);
+      if (RogueryPerkModificationEnabled && RogueryScarfacePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryScarface,_rog_Scarface_s);
       ref PerkObject _rogueryWhiteLies = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_rogueryWhiteLies");
       if (RogueryPerkModificationEnabled && RogueryWhiteLiesPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryWhiteLies,_rog_WhiteLies_p);
       if (RogueryPerkModificationEnabled && RogueryWhiteLiesPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryWhiteLies,_rog_WhiteLies_s);
@@ -10699,6 +11908,9 @@ namespace FountaTweaks
       ref PerkObject _rogueryOneOfTheFamily = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_rogueryOneOfTheFamily");
       if (RogueryPerkModificationEnabled && RogueryOneOfTheFamilyPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryOneOfTheFamily,_rog_OneOfTheFamily_p);
       if (RogueryPerkModificationEnabled && RogueryOneOfTheFamilyPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryOneOfTheFamily,_rog_OneOfTheFamily_s);
+      ref PerkObject _roguerySaltTheEarth = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_roguerySaltTheEarth");
+      if (RogueryPerkModificationEnabled && RoguerySaltTheEarthPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_roguerySaltTheEarth,_rog_SaltTheEarth_p);
+      if (RogueryPerkModificationEnabled && RoguerySaltTheEarthPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_roguerySaltTheEarth,_rog_SaltTheEarth_s);
       ref PerkObject _rogueryCarver = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_rogueryCarver");
       if (RogueryPerkModificationEnabled && RogueryCarverPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_rogueryCarver,_rog_Carver_p);
       if (RogueryPerkModificationEnabled && RogueryCarverPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_rogueryCarver,_rog_Carver_s);
@@ -10771,8 +11983,12 @@ namespace FountaTweaks
       ref PerkObject _leadershipTrustedCommander = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipTrustedCommander");
       if (LeadershipPerkModificationEnabled && LeadershipTrustedCommanderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipTrustedCommander,_ldr_TrustedCommander_p);
       if (LeadershipPerkModificationEnabled && LeadershipTrustedCommanderPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipTrustedCommander,_ldr_TrustedCommander_s);
+      ref PerkObject _leadershipGreatLeader = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipGreatLeader");
+      if (LeadershipPerkModificationEnabled && LeadershipGreatLeaderPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipGreatLeader,_ldr_GreatLeader_p);
+      if (LeadershipPerkModificationEnabled && LeadershipGreatLeaderPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipGreatLeader,_ldr_GreatLeader_s);
       ref PerkObject _leadershipWePledgeOurSwords = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipWePledgeOurSwords");
       if (LeadershipPerkModificationEnabled && LeadershipWePledgeOurSwordsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipWePledgeOurSwords,_ldr_WePledgeOurSwords_p);
+      if (LeadershipPerkModificationEnabled && LeadershipWePledgeOurSwordsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipWePledgeOurSwords,_ldr_WePledgeOurSwords_s);
       ref PerkObject _leadershipTalentMagnet = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_leadershipTalentMagnet");
       if (LeadershipPerkModificationEnabled && LeadershipTalentMagnetPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_leadershipTalentMagnet,_ldr_TalentMagnet_p);
       if (LeadershipPerkModificationEnabled && LeadershipTalentMagnetPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_leadershipTalentMagnet,_ldr_TalentMagnet_s);
@@ -10809,9 +12025,15 @@ namespace FountaTweaks
       ref PerkObject _charmFlexibleEthics = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmFlexibleEthics");
       if (CharmPerkModificationEnabled && CharmFlexibleEthicsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmFlexibleEthics,_chm_FlexibleEthics_p);
       if (CharmPerkModificationEnabled && CharmFlexibleEthicsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmFlexibleEthics,_chm_FlexibleEthics_s);
+      ref PerkObject _charmEffortForThePeople = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmEffortForThePeople");
+      if (CharmPerkModificationEnabled && CharmEffortForThePeoplePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmEffortForThePeople,_chm_EffortForThePeople_p);
+      if (CharmPerkModificationEnabled && CharmEffortForThePeoplePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmEffortForThePeople,_chm_EffortForThePeople_s);
       ref PerkObject _charmSlickNegotiator = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmSlickNegotiator");
       if (CharmPerkModificationEnabled && CharmSlickNegotiatorPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmSlickNegotiator,_chm_SlickNegotiator_p);
       if (CharmPerkModificationEnabled && CharmSlickNegotiatorPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmSlickNegotiator,_chm_SlickNegotiator_s);
+      ref PerkObject _charmGoodNatured = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmGoodNatured");
+      if (CharmPerkModificationEnabled && CharmGoodNaturedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmGoodNatured,_chm_GoodNatured_p);
+      if (CharmPerkModificationEnabled && CharmGoodNaturedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmGoodNatured,_chm_GoodNatured_s);
       ref PerkObject _charmTribute = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmTribute");
       if (CharmPerkModificationEnabled && CharmTributePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmTribute,_chm_Tribute_p);
       if (CharmPerkModificationEnabled && CharmTributePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmTribute,_chm_Tribute_s);
@@ -10823,9 +12045,15 @@ namespace FountaTweaks
       if (CharmPerkModificationEnabled && CharmNaturalLeaderPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmNaturalLeader,_chm_NaturalLeader_s);
       ref PerkObject _charmPublicSpeaker = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmPublicSpeaker");
       if (CharmPerkModificationEnabled && CharmPublicSpeakerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmPublicSpeaker,_chm_PublicSpeaker_p);
+      if (CharmPerkModificationEnabled && CharmPublicSpeakerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmPublicSpeaker,_chm_PublicSpeaker_s);
+      ref PerkObject _charmParade = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmParade");
+      if (CharmPerkModificationEnabled && CharmParadePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmParade,_chm_Parade_p);
+      if (CharmPerkModificationEnabled && CharmParadePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmParade,_chm_Parade_s);
       ref PerkObject _charmCamaraderie = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmCamaraderie");
       if (CharmPerkModificationEnabled && CharmCamaraderiePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmCamaraderie,_chm_Camaraderie_p);
       if (CharmPerkModificationEnabled && CharmCamaraderiePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_charmCamaraderie,_chm_Camaraderie_s);
+      ref PerkObject _charmImmortalCharm = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_charmImmortalCharm");
+      if (CharmPerkModificationEnabled && CharmImmortalCharmPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_charmImmortalCharm,_chm_ImmortalCharm_p);
       ref PerkObject _tradeAppraiser = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeAppraiser");
       if (TradePerkModificationEnabled && TradeAppraiserPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeAppraiser,_trd_Appraiser_p);
       if (TradePerkModificationEnabled && TradeAppraiserPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeAppraiser,_trd_Appraiser_s);
@@ -10871,14 +12099,21 @@ namespace FountaTweaks
       ref PerkObject _tradeGranaryAccountant = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeGranaryAccountant");
       if (TradePerkModificationEnabled && TradeGranaryAccountantPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeGranaryAccountant,_trd_GranaryAccountant_p);
       if (TradePerkModificationEnabled && TradeGranaryAccountantPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeGranaryAccountant,_trd_GranaryAccountant_s);
+      ref PerkObject _tradeTradeyardForeman = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeTradeyardForeman");
+      if (TradePerkModificationEnabled && TradeTradeyardForemanPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeTradeyardForeman,_trd_TradeyardForeman_p);
+      if (TradePerkModificationEnabled && TradeTradeyardForemanPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeTradeyardForeman,_trd_TradeyardForeman_s);
       ref PerkObject _tradeSwordForBarter = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeSwordForBarter");
       if (TradePerkModificationEnabled && TradeSwordForBarterPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeSwordForBarter,_trd_SwordForBarter_p);
       if (TradePerkModificationEnabled && TradeSwordForBarterPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeSwordForBarter,_trd_SwordForBarter_s);
       ref PerkObject _tradeSelfMadeMan = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeSelfMadeMan");
       if (TradePerkModificationEnabled && TradeSelfMadeManPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeSelfMadeMan,_trd_SelfMadeMan_p);
+      if (TradePerkModificationEnabled && TradeSelfMadeManPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeSelfMadeMan,_trd_SelfMadeMan_s);
       ref PerkObject _tradeSilverTongue = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeSilverTongue");
       if (TradePerkModificationEnabled && TradeSilverTonguePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeSilverTongue,_trd_SilverTongue_p);
       if (TradePerkModificationEnabled && TradeSilverTonguePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeSilverTongue,_trd_SilverTongue_s);
+      ref PerkObject _tradeSpringOfGold = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeSpringOfGold");
+      if (TradePerkModificationEnabled && TradeSpringOfGoldPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeSpringOfGold,_trd_SpringOfGold_p);
+      if (TradePerkModificationEnabled && TradeSpringOfGoldPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeSpringOfGold,_trd_SpringOfGold_s);
       ref PerkObject _tradeManOfMeans = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_tradeManOfMeans");
       if (TradePerkModificationEnabled && TradeManOfMeansPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_tradeManOfMeans,_trd_ManOfMeans_p);
       if (TradePerkModificationEnabled && TradeManOfMeansPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_tradeManOfMeans,_trd_ManOfMeans_s);
@@ -10945,6 +12180,9 @@ namespace FountaTweaks
       ref PerkObject _stewardMasterOfWarcraft = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardMasterOfWarcraft");
       if (StewardPerkModificationEnabled && StewardMasterOfWarcraftPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardMasterOfWarcraft,_st_MasterOfWarcraft_p);
       if (StewardPerkModificationEnabled && StewardMasterOfWarcraftPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardMasterOfWarcraft,_st_MasterOfWarcraft_s);
+      ref PerkObject _stewardPriceOfLoyalty = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_stewardPriceOfLoyalty");
+      if (StewardPerkModificationEnabled && StewardPriceOfLoyaltyPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_stewardPriceOfLoyalty,_st_PriceOfLoyalty_p);
+      if (StewardPerkModificationEnabled && StewardPriceOfLoyaltyPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_stewardPriceOfLoyalty,_st_PriceOfLoyalty_s);
       ref PerkObject _medicineSelfMedication = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_medicineSelfMedication");
       if (MedicinePerkModificationEnabled && MedicineSelfMedicationPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_medicineSelfMedication,_med_SelfMedication_p);
       if (MedicinePerkModificationEnabled && MedicineSelfMedicationPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_medicineSelfMedication,_med_SelfMedication_s);
@@ -11031,18 +12269,28 @@ namespace FountaTweaks
       if (EngineeringPerkModificationEnabled && EngineeringDreadfulSiegerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringDreadfulSieger,_eng_DreadfulSieger_s);
       ref PerkObject _engineeringSalvager = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringSalvager");
       if (EngineeringPerkModificationEnabled && EngineeringSalvagerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringSalvager,_eng_Salvager_p);
+      if (EngineeringPerkModificationEnabled && EngineeringSalvagerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringSalvager,_eng_Salvager_s);
       ref PerkObject _engineeringForeman = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringForeman");
       if (EngineeringPerkModificationEnabled && EngineeringForemanPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringForeman,_eng_Foreman_p);
       if (EngineeringPerkModificationEnabled && EngineeringForemanPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringForeman,_eng_Foreman_s);
+      ref PerkObject _engineeringStonecutters = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringStonecutters");
+      if (EngineeringPerkModificationEnabled && EngineeringStonecuttersPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringStonecutters,_eng_Stonecutters_p);
+      if (EngineeringPerkModificationEnabled && EngineeringStonecuttersPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringStonecutters,_eng_Stonecutters_s);
       ref PerkObject _engineeringSiegeEngineer = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringSiegeEngineer");
       if (EngineeringPerkModificationEnabled && EngineeringSiegeEngineerPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringSiegeEngineer,_eng_SiegeEngineer_p);
       if (EngineeringPerkModificationEnabled && EngineeringSiegeEngineerPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringSiegeEngineer,_eng_SiegeEngineer_s);
+      ref PerkObject _engineeringCampBuilding = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringCampBuilding");
+      if (EngineeringPerkModificationEnabled && EngineeringCampBuildingPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringCampBuilding,_eng_CampBuilding_p);
+      if (EngineeringPerkModificationEnabled && EngineeringCampBuildingPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringCampBuilding,_eng_CampBuilding_s);
       ref PerkObject _engineeringBattlements = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringBattlements");
       if (EngineeringPerkModificationEnabled && EngineeringBattlementsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringBattlements,_eng_Battlements_p);
       if (EngineeringPerkModificationEnabled && EngineeringBattlementsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringBattlements,_eng_Battlements_s);
       ref PerkObject _engineeringEngineeringGuilds = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringEngineeringGuilds");
       if (EngineeringPerkModificationEnabled && EngineeringEngineeringGuildsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringEngineeringGuilds,_eng_EngineeringGuilds_p);
       if (EngineeringPerkModificationEnabled && EngineeringEngineeringGuildsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringEngineeringGuilds,_eng_EngineeringGuilds_s);
+      ref PerkObject _engineeringApprenticeship = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringApprenticeship");
+      if (EngineeringPerkModificationEnabled && EngineeringApprenticeshipPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringApprenticeship,_eng_Apprenticeship_p);
+      if (EngineeringPerkModificationEnabled && EngineeringApprenticeshipPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringApprenticeship,_eng_Apprenticeship_s);
       ref PerkObject _engineeringMetallurgy = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringMetallurgy");
       if (EngineeringPerkModificationEnabled && EngineeringMetallurgyPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringMetallurgy,_eng_Metallurgy_p);
       if (EngineeringPerkModificationEnabled && EngineeringMetallurgyPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringMetallurgy,_eng_Metallurgy_s);
@@ -11055,6 +12303,8 @@ namespace FountaTweaks
       ref PerkObject _engineeringArchitecturalCommisions = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringArchitecturalCommisions");
       if (EngineeringPerkModificationEnabled && EngineeringArchitecturalCommisionsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringArchitecturalCommisions,_eng_ArchitecturalCommisions_p);
       if (EngineeringPerkModificationEnabled && EngineeringArchitecturalCommisionsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_engineeringArchitecturalCommisions,_eng_ArchitecturalCommisions_s);
+      ref PerkObject _engineeringMasterwork = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_engineeringMasterwork");
+      if (EngineeringPerkModificationEnabled && EngineeringMasterworkPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_engineeringMasterwork,_eng_Masterwork_p);
     }
   }
 }

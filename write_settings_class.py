@@ -11,8 +11,20 @@ def get_bool_prop_str(sp, name, hint, groups, require_restart=False, ismaintoggl
            sp+'[SettingPropertyGroup("%s", IsMainToggle=%s)]' % ('/'.join(groups), main_toggle_str)]
   return lines
 
+def get_float_bonus(bonus_str):
+  b = bonus_str.replace("f", "") #remove the 'f's from the float strings
+  b = b.replace(");", "").replace(")", "") #remove other non-float characters
+  if "/" in b:
+    bonus_split = b.split("/")
+    bonus_float = float(bonus_split[0])/float(bonus_split[1])
+  else:
+    bonus_float = float(b)
+  return bonus_float
+  
+
 with open("decompiled_code.txt", "r") as f:
   default_perk_init_all_code = f.read()
+
 
 header = """using System;
 using System.Collections.Generic;
@@ -95,7 +107,8 @@ perk_tree_map = {
 perk_name_replacements = {
   "LeaderOfTheMasses":"LeaderOfMasses",
   "Counterweight":"CounterWeight",
-  "GoodLodging": "GoodLogdings"  
+  "GoodLodging": "GoodLogdings",
+  "FencerSmith": "WeaponMasterSmith"
 }
 
 desc_replacements = {
@@ -103,6 +116,9 @@ desc_replacements = {
 }
 
 dp = "DefaultPerks"
+skipped_perk_count = 0
+skipped_perk_names = []
+skipped_perk_trees = []
 
 #add options for disabling/enabling perk modifications for each skill
 enabled_suffix = "PerkModificationEnabled"
@@ -133,7 +149,19 @@ for line in default_perk_init_all_code.splitlines():
     perk_name = perk_name_replacements[perk_name]
   
   #try to extract the primary description, secondary description, primary bonus and secondary bonus
-  line_split = line.split(",")
+  line_split = line.split(",") #note this also splits strings by commas
+  #correct line split by merging adjacent strings that contain only one " character
+  done_correcting = False
+  while not done_correcting:
+    done_correcting = True
+    for i in range(len(line_split)):
+      s = line_split[i]
+      if s.count('"') == 1:
+        line_split[i+1] = ",".join([s,line_split[i+1]])
+        line_split.remove(s)
+        done_correcting = False
+        break
+      
   perk_disp_name = line_split[0].split('"')[1]
   perk_eng_disp_name = perk_disp_name.split("}")[1]
   primary_desc = None
@@ -147,27 +175,31 @@ for line in default_perk_init_all_code.splitlines():
   except:
     pass
   try:
-    primary_bonus = float(line_split[6].replace("f",""))
-  except:
-    pass
+    primary_bonus = get_float_bonus(line_split[6])
+  except Exception as e:
+    if perk_name == "Saddlebags":
+      print(str(e))
   if primary_bonus is None:
     for s in line_split:
       if "primaryBonus:" in s:
         try:
-          primary_bonus = float(s.replace("f","").replace("primaryBonus:",""))
-        except:
+          primary_bonus = get_float_bonus(s.replace("primaryBonus:",""))
+        except Exception as e:
           pass
-      
+
   try:
     secondary_desc = line_split[8]
   except:
     pass
   try:
-    secondary_bonus = float(line_split[10].replace("f",""))
+    secondary_bonus = get_float_bonus(line_split[10])
   except:
     pass
   
   if primary_bonus is None:
+    skipped_perk_count += 1
+    skipped_perk_trees.append(perk_tree)
+    skipped_perk_names.append(perk_name)
     print("perk %s:%s is abnormal, skipping" % (perk_tree, perk_name))
     continue
   
@@ -280,8 +312,14 @@ for line in default_perk_init_all_code.splitlines():
 
 class_contents = header + "\n".join(class_members) + "\n" + "\n".join(mod_enable_disable) + "\n" + "\n".join(class_member_funcs) +\
                  "\n".join(get_whole_func("SetAll(ref DefaultPerks perk)", "void",[], set_all_lines)) + footer
-with open("founta_tweaks/AutoFountaTweaksSettings.cs", "w") as f:
+
+fname = "founta_tweaks/AutoFountaTweaksSettings.cs"
+with open(fname, "w") as f:
   f.write(class_contents)
+print("wrote C# to " + fname)
+print("\nskipped writing %d perks:" % (skipped_perk_count))
+for tree,name in zip(skipped_perk_trees, skipped_perk_names):
+  print("%s's %s" % (tree,name))
     
     
     
