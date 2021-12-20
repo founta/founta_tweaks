@@ -413,17 +413,25 @@ namespace FountaTweaks
     /// /////////////////////////////////////////////////////////// Crafting modifications
     /// </summary>
 
-    [SettingPropertyBool("Enable smelting tweaks", RequireRestart = false)]
-    [SettingPropertyGroup("Smelting", IsMainToggle = true)]
+    [SettingPropertyBool("Enable crafting tweaks", RequireRestart = false)]
+    [SettingPropertyGroup("Crafting", IsMainToggle = true)]
     public bool CraftingTweaksEnabled { get; set; } = false;
 
     [SettingPropertyFloatingInteger("Crafting stamina usage modifier", 0,1, RequireRestart = false)]
-    [SettingPropertyGroup("Smelting")]
+    [SettingPropertyGroup("Crafting")]
     public float CraftingStaminaUsageMultiplier { get; set; } = 1.0f;
 
     [SettingPropertyBool("Smelting unlocks weapon parts", RequireRestart = false, HintText = "Smelting weapons with this enabled will unlock the weapon parts used in the smelted weapon")]
-    [SettingPropertyGroup("Smelting")]
+    [SettingPropertyGroup("Crafting")]
     public bool SmeltingUnlocksWeaponParts { get; set; } = false;
+
+    [SettingPropertyBool("Show all crafting pieces", RequireRestart = false, HintText = "Many default crafting pieces are disabled for use in crafting, this enables them")]
+    [SettingPropertyGroup("Crafting")]
+    public bool ShowAllCraftingPieces { get; set; } = false;
+
+    [SettingPropertyBool("Fix order failure condition", RequireRestart = false, HintText = "Some crafting orders fail if the request doesn't contain a damage type but the crafted weapon does (eg if they want high swing damage polearm and you meet the stats but also have thrust). This fixes that")]
+    [SettingPropertyGroup("Crafting")]
+    public bool OrderFailureCorrect { get; set; } = false;
   }
 
 

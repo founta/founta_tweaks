@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using TaleWorlds.Core;
+using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.GameMenus;
@@ -20,7 +21,7 @@ using TaleWorlds.CampaignSystem.ViewModelCollection.ClanManagement;
 using TaleWorlds.Core.ViewModelCollection;
 using SandBox.ViewModelCollection.MobilePartyTracker;
 using SandBox.ViewModelCollection.Nameplate;
-using TaleWorlds.Library;
+using TaleWorlds.Localization;
 using TaleWorlds.Engine;
 
 using TaleWorlds.CampaignSystem.SandBox.GameComponents.Party;
@@ -58,6 +59,25 @@ namespace FountaTweaks
     }
   }
 
+  //lower the amount of crafting stamina used if enabled
+  [HarmonyPatch(typeof(CraftingPiece), "IsHiddenOnDesigner")]
+  [HarmonyPatch(MethodType.Getter)]
+  public class CraftingPartDisplayPatch
+  {
+    static void Postfix(CraftingPiece __instance,
+      ref bool __result)
+    {
+      //InformationManager.DisplayMessage(new InformationMessage($"set stam patch"));
+
+      if (!FountaTweaksSettings.Instance.CraftingTweaksEnabled)
+        return;
+      if (!FountaTweaksSettings.Instance.ShowAllCraftingPieces)
+        return;
+
+      __result = false;
+    }
+  }
+
   //unlock all of the crafting parts in a weapon when smelting it, if enabled.
   [HarmonyPatch(typeof(CraftingCampaignBehavior), "DoSmelting")]
   public class SmeltingUnlocksPartsPatch
@@ -89,6 +109,35 @@ namespace FountaTweaks
           }
         }
       }
+    }//end postfix
+  }
+
+  //fix crafting order failure
+  [HarmonyPatch(typeof(CraftingOrder), "CheckForBonusesAndPenalties")]
+  public class CheckForBonusesAndPenaltiesPatch
+  {
+    static void Postfix(CraftingOrder __instance,
+      ItemObject craftedItem,
+      ref float craftedStats,
+      ref float requiredStats,
+      ref bool thrustDamageCheck,
+      ref bool swingDamageCheck)
+    {
+      if (!FountaTweaksSettings.Instance.CraftingTweaksEnabled)
+        return;
+      if (!FountaTweaksSettings.Instance.OrderFailureCorrect)
+        return;
+      WeaponComponentData statWeapon = __instance.GetStatWeapon();
+
+      if (!thrustDamageCheck)
+        if (statWeapon.ThrustDamageType == DamageTypes.Invalid)
+          thrustDamageCheck = true;
+
+      if (!swingDamageCheck)
+        if (statWeapon.SwingDamageType == DamageTypes.Invalid)
+          swingDamageCheck = true;
+
+
     }//end postfix
   }
 
