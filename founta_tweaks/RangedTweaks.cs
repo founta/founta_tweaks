@@ -54,7 +54,7 @@ namespace FountaTweaks
         {
           if (!agent.Equipment[idx].IsEmpty && allowed_types.Contains(agent.Equipment[idx].CurrentUsageItem.WeaponClass)) //then it is a throwing weapon
           {
-            __result =  ExposeInternals.BaseIsDisabledForAgent(__instance, agent);
+            __result = ExposeInternals.BaseIsDisabledForAgent(__instance, agent);
             return;
           }
         }
@@ -120,7 +120,7 @@ namespace FountaTweaks
         return;
 
       List<WeaponClass> allowed_types = new List<WeaponClass> { WeaponClass.Javelin, WeaponClass.ThrowingAxe, WeaponClass.ThrowingKnife };
-      
+
       for (EquipmentIndex index = EquipmentIndex.WeaponItemBeginSlot; index < EquipmentIndex.NumAllWeaponSlots; ++index)
       {
         MissionWeapon missionWeapon = agent.Equipment[index];
@@ -160,7 +160,7 @@ namespace FountaTweaks
           WeaponComponentData currentUsageItem = missionWeapon.CurrentUsageItem;
           if (currentUsageItem != null)
           {
-            switch(currentUsageItem.WeaponClass)
+            switch (currentUsageItem.WeaponClass)
             {
               case WeaponClass.Arrow:
                 extra_stack_count = s.ExtraArrowStackCount;
@@ -190,5 +190,68 @@ namespace FountaTweaks
 
     }
   }
+
+  public class rangedStorage
+  {
+    static public int numAgentsDamaged = 0;
+  }
+
+  [HarmonyPatch(typeof(Mission), "MissileHitCallback")]
+  public class DamagedAgentsPatch
+  {
+    static void Prefix(Mission __instance,
+      int extraHitParticleIndex,
+      AttackCollisionData collisionData,
+      Vec3 missileStartingPosition,
+      Vec3 missilePosition,
+      Vec3 missileAngularVelocity,
+      Vec3 movementVelocity,
+      MatrixFrame attachGlobalFrame,
+      MatrixFrame affectedShieldGlobalFrame,
+      int numDamagedAgents,
+      Agent attacker,
+      Agent victim,
+      GameEntity hitEntity,
+      ref bool __result)
+    {
+      if (!attacker.IsHuman)
+        return;
+      ref Dictionary<int, Mission.Missile> missiles = ref AccessTools.FieldRefAccess<Mission, Dictionary<int, Mission.Missile>>(__instance, "_missiles");
+      Mission.Missile missile = missiles[collisionData.AffectorWeaponSlotOrMissileIndex];
+      MissionWeapon attackerWeapon = missile.Weapon;
+      FountaTweaksSettings s = FountaTweaksSettings.Instance;
+      if (attackerWeapon.CurrentUsageItem.WeaponClass == WeaponClass.Javelin && Hero.MainHero.GetPerkValue(DefaultPerks.Throwing.Impale) && s.JavelinPeoplePenetration && s.JavelinPeopleFixedPenetration)
+        rangedStorage.numAgentsDamaged = numDamagedAgents;
+    }
+  }
+
+  [HarmonyPatch(typeof(SandboxAgentApplyDamageModel), "DecideMissileWeaponFlags")]
+  public class MultipleJavelinPenetrationPatch
+  {
+    static void Postfix(SandboxAgentApplyDamageModel __instance, Agent attackerAgent,
+      MissionWeapon missileWeapon,
+      ref WeaponFlags missileWeaponFlags)
+    {
+      if (!attackerAgent.IsHuman)
+        return;
+      FountaTweaksSettings s = FountaTweaksSettings.Instance;
+      if (missileWeapon.CurrentUsageItem.WeaponClass == WeaponClass.Javelin && Hero.MainHero.GetPerkValue(DefaultPerks.Throwing.Impale))
+      {
+        if (s.JavelinPeoplePenetration)
+        {
+          if (s.JavelinPeopleFixedPenetration)
+          {
+            if (rangedStorage.numAgentsDamaged < s.JavelinNumFixedPenetration)
+              missileWeaponFlags |= WeaponFlags.MultiplePenetration;
+          }
+          else
+          {
+            missileWeaponFlags |= WeaponFlags.MultiplePenetration;
+          }
+        }
+      }
+    }
+  }
+
 
 }

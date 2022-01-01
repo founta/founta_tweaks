@@ -83,6 +83,18 @@ namespace FountaTweaks
     [SettingPropertyGroup("Ranged/Stack count")]
     public int ExtraThrowingKnifeStackCount { get; set; } = 0;
 
+    [SettingPropertyBool("Javelins penetrate people", HintText = "Whether or not the impale perk allows for penetrating people like ballista bolts", RequireRestart = false)]
+    [SettingPropertyGroup("Perks/Throwing/Impale/Penetration", IsMainToggle = true)]
+    public bool JavelinPeoplePenetration { get; set; } = false;
+
+    [SettingPropertyBool("Fixed number of penetrations", HintText = "Whether or not to penetrate a fixed number of people or not (by default penetrates everyone just like ballista bolts)", RequireRestart = false)]
+    [SettingPropertyGroup("Perks/Throwing/Impale/Penetration")]
+    public bool JavelinPeopleFixedPenetration { get; set; } = false;
+
+    [SettingPropertyInteger("Number of penetrations", 0, 10, HintText = "If using a fixed number of people penetrations, how many people to penetrate", RequireRestart = false)]
+    [SettingPropertyGroup("Perks/Throwing/Impale/Penetration")]
+    public int JavelinNumFixedPenetration { get; set; } = 1;
+
     /// <summary>
     /// /////////////////////////////////////////////////////////// tournament and arena tweak settings
     /// </summary>

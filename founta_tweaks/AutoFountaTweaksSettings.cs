@@ -561,7 +561,7 @@ namespace FountaTweaks
     private float _chm_SlickNegotiator_s = -0.100000f;
     private float _chm_GoodNatured_p = 0.300000f;
     private float _chm_GoodNatured_s = 1.000000f;
-    private float _chm_Tribute_p = 0.200000f;
+    private float _chm_Tribute_p = 1.000000f;
     private float _chm_Tribute_s = 1.000000f;
     private float _chm_MoralLeader_p = -1.000000f;
     private float _chm_MoralLeader_s = 1.000000f;
@@ -8880,7 +8880,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=joDbjfWd}Increase relationship bonus by 20% chance when paying more than enough in barters.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=joDbjfWd}Increase relationship bonus by 20% chance when paying more than enough in barters.")]
     [SettingPropertyGroup("Perks/Charm/Tribute")]
     public float chm_Tribute_p {
       get => _chm_Tribute_p;
