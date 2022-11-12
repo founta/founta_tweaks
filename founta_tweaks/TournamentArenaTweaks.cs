@@ -7,26 +7,12 @@ using System.Threading.Tasks;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.CampaignSystem;
-using TaleWorlds.CampaignSystem.GameMenus;
-using TaleWorlds.CampaignSystem.Actions;
-using TaleWorlds.CampaignSystem.SandBox;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors.AiBehaviors;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors.BarterBehaviors;
-using TaleWorlds.CampaignSystem.Barterables;
-using SandBox.View.Map;
-using TaleWorlds.CampaignSystem.ViewModelCollection.ClanManagement.Categories;
-using TaleWorlds.CampaignSystem.ViewModelCollection.ClanManagement;
-using TaleWorlds.Core.ViewModelCollection;
-using SandBox.ViewModelCollection.MobilePartyTracker;
-using SandBox.ViewModelCollection.Nameplate;
-using TaleWorlds.Library;
-using TaleWorlds.Engine;
+using TaleWorlds.CampaignSystem.ComponentInterfaces;
+using TaleWorlds.CampaignSystem.Party;
+using TaleWorlds.CampaignSystem.CharacterDevelopment;
+using TaleWorlds.CampaignSystem.GameComponents;
 
-using TaleWorlds.CampaignSystem.SandBox.GameComponents.Map;
-using SandBox.TournamentMissions.Missions;
-
-using TaleWorlds.ObjectSystem;
+using SandBox.Tournaments.MissionLogics;
 
 using HarmonyLib;
 

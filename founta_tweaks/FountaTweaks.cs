@@ -9,8 +9,6 @@ using TaleWorlds.MountAndBlade;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.GameMenus;
 using TaleWorlds.CampaignSystem.Actions;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors.AiBehaviors;
 using SandBox.View.Map;
 
 using HarmonyLib;
@@ -25,14 +23,14 @@ namespace FountaTweaks
     protected override void OnSubModuleLoad()
     {
       base.OnSubModuleLoad();
-      Harmony.DEBUG = false;
+      Harmony.DEBUG = true;
     }
 
     protected override void OnBeforeInitialModuleScreenSetAsRoot()
     {
       base.OnBeforeInitialModuleScreenSetAsRoot();
 
-      InformationManager.DisplayMessage(new InformationMessage($"Founta's Tweaks {FountaTweaksSettings.Instance.version} for Bannerlord 1.7.0"));
+      //InformationManager.DisplayMessage(new InformationMessage($"Founta's Tweaks {FountaTweaksSettings.Instance.version} for Bannerlord 1.7.0"));
 
       if (harmony == null)
       {

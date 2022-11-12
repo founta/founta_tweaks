@@ -10,13 +10,13 @@ using TaleWorlds.MountAndBlade;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.GameMenus;
 using TaleWorlds.CampaignSystem.Actions;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors.AiBehaviors;
+using TaleWorlds.CampaignSystem.CharacterDevelopment;
 using SandBox.View.Map;
+
 
 using MCM.Abstractions.Attributes;
 using MCM.Abstractions.Attributes.v2;
-using MCM.Abstractions.Settings.Base.Global;
+using MCM.Abstractions.Base.Global;
 
 using HarmonyLib;
 
@@ -38,9 +38,12 @@ namespace FountaTweaks
     public override string Id => "FountaTweaks";
     public override string DisplayName => "Founta's Tweaks";
 
+    public override string FolderName => "FountaTweaks";
+    public override string FormatType => "json2";
+
     private string _version;
     public string version { get => _version; }
-    public FountaTweaksSettings()
+    public FountaTweaksSettings() : base()
     {
       //read version from xml
       XmlReader reader = XmlReader.Create("../../Modules/FountaTweaks/SubModule.xml");
@@ -55,16 +58,16 @@ namespace FountaTweaks
     /// /////////////////////////////////////////////////////////// ranged tweak settings
     /// </summary>
 
-    [SettingPropertyBool("Enable ranged tweaks", RequireRestart = false)]
-    [SettingPropertyGroup("Ranged", IsMainToggle = true)]
+    [SettingPropertyBool("Enable ranged tweaks", RequireRestart = false, IsToggle = true)]
+    [SettingPropertyGroup("Ranged")]
     public bool RangedTweaksEnabled { get; set; } = false;
 
     [SettingPropertyBool("Arrow barrels fill throwing weapons", RequireRestart = false)]
     [SettingPropertyGroup("Ranged")]
     public bool ArrowBarrelRefillThrowing { get; set; } = false;
 
-    [SettingPropertyBool("Ammunition stack count tweaks", RequireRestart = false)]
-    [SettingPropertyGroup("Ranged/Stack count", IsMainToggle = true)]
+    [SettingPropertyBool("Ammunition stack count tweaks", RequireRestart = false, IsToggle = true)]
+    [SettingPropertyGroup("Ranged/Stack count")]
     public bool StackCountTweaksEnabled { get; set; } = false;
 
     [SettingPropertyInteger("Additional arrow stack count",0,100, RequireRestart = false)]
@@ -83,66 +86,54 @@ namespace FountaTweaks
     [SettingPropertyGroup("Ranged/Stack count")]
     public int ExtraThrowingKnifeStackCount { get; set; } = 0;
 
-    [SettingPropertyBool("Javelins penetrate people", HintText = "Whether or not the impale perk allows for penetrating people like ballista bolts", RequireRestart = false)]
-    [SettingPropertyGroup("Perks/Throwing/Impale/Penetration", IsMainToggle = true)]
-    public bool JavelinPeoplePenetration { get; set; } = false;
-
-    [SettingPropertyBool("Fixed number of penetrations", HintText = "Whether or not to penetrate a fixed number of people or not (by default penetrates everyone just like ballista bolts)", RequireRestart = false)]
-    [SettingPropertyGroup("Perks/Throwing/Impale/Penetration")]
-    public bool JavelinPeopleFixedPenetration { get; set; } = false;
-
-    [SettingPropertyInteger("Number of penetrations", 0, 10, HintText = "If using a fixed number of people penetrations, how many people to penetrate", RequireRestart = false)]
-    [SettingPropertyGroup("Perks/Throwing/Impale/Penetration")]
-    public int JavelinNumFixedPenetration { get; set; } = 1;
-
     /// <summary>
     /// /////////////////////////////////////////////////////////// tournament and arena tweak settings
     /// </summary>
 
-    [SettingPropertyBool("Enable tournament tweaks", RequireRestart = false)]
-    [SettingPropertyGroup("Tournaments", IsMainToggle = true)]
+    [SettingPropertyBool("Enable tournament tweaks", RequireRestart = false, IsToggle = true)]
+    [SettingPropertyGroup("Tournaments")]
     public bool TournamentTweaksEnabled { get; set; } = false;
 
     [SettingPropertyInteger("Tournament max bet amount", 0,99999, valueFormat: "0 Denars", RequireRestart = false)]
-    [SettingPropertyGroup("Tournaments", IsMainToggle = false)]
+    [SettingPropertyGroup("Tournaments")]
     public int TournamentMaxBet { get; set; } = 150;
 
     [SettingPropertyFloatingInteger("Tournament combat xp multiplier", 0, 1, RequireRestart = false)]
-    [SettingPropertyGroup("Tournaments", IsMainToggle = false)]
+    [SettingPropertyGroup("Tournaments")]
     public float TournamentXpMultiplier { get; set; } = 0.33f;
 
-    [SettingPropertyBool("Enable arena tweaks", RequireRestart = false)]
-    [SettingPropertyGroup("Practice Arena", IsMainToggle = true)]
+    [SettingPropertyBool("Enable arena tweaks", RequireRestart = false, IsToggle = true)]
+    [SettingPropertyGroup("Practice Arena")]
     public bool ArenaTweaksEnabled { get; set; } = false;
 
     [SettingPropertyFloatingInteger("Practice fight combat xp multiplier", 0, 1, RequireRestart = false)]
-    [SettingPropertyGroup("Practice Arena", IsMainToggle = false)]
+    [SettingPropertyGroup("Practice Arena")]
     public float ArenaXpMultiplier { get; set; } = 1.0f/16.0f;
 
     /// <summary>
     /// /////////////////////////////////////////////////////////// skill tweak settings
     /// </summary>
-    [SettingPropertyBool("Enable skill tweaks", RequireRestart = false)]
-    [SettingPropertyGroup("Skills", IsMainToggle = true)]
+    [SettingPropertyBool("Enable skill tweaks", RequireRestart = false, IsToggle = true)]
+    [SettingPropertyGroup("Skills")]
     public bool SkillTweaksEnabled { get; set; } = false;
 
-    [SettingPropertyBool("Enable Roguery skill tweaks", RequireRestart = false)]
-    [SettingPropertyGroup("Skills/Roguery", IsMainToggle = true)]
+    [SettingPropertyBool("Enable Roguery skill tweaks", RequireRestart = false, IsToggle = true)]
+    [SettingPropertyGroup("Skills/Roguery")]
     public bool RogueryTweaksEnabled { get; set; } = false;
 
     [SettingPropertyFloatingInteger("Disguise renown penalty multiplier", 0.0f,1.0f, RequireRestart = false, HintText = "The default penalty (minimum of 15%) will be multiplied by this value before being applied")]
-    [SettingPropertyGroup("Skills/Roguery", IsMainToggle = false)]
+    [SettingPropertyGroup("Skills/Roguery")]
     public float RogueryRenownDisguisePenaltyMultiplier { get; set; } = 1.0f;
 
     /// <summary>
     /// /////////////////////////////////////////////////////////// Attribute gain settings
     /// </summary>
-    [SettingPropertyBool("Enable focus and attribute point gain modifications", RequireRestart = false)]
-    [SettingPropertyGroup("Levelling", IsMainToggle = true)]
+    [SettingPropertyBool("Enable focus and attribute point gain modifications", RequireRestart = false, IsToggle = true)]
+    [SettingPropertyGroup("Levelling")]
     public bool AttributeModificationEnabled { get; set; } = false;
     
-    [SettingPropertyBool("Player focus and attribute tweaks enabled", RequireRestart = false)]
-    [SettingPropertyGroup("Levelling/Player", IsMainToggle = true)]
+    [SettingPropertyBool("Player focus and attribute tweaks enabled", RequireRestart = false, IsToggle = true)]
+    [SettingPropertyGroup("Levelling/Player")]
     public bool PlayerAttributeModificationEnabled { get; set; } = false;
 
     [SettingPropertyInteger("Player focus point gain per level", 0, 10, RequireRestart = false)]
@@ -159,8 +150,8 @@ namespace FountaTweaks
     public int PlayerAttributePointsPerThreeLevels { get; set; } = 1;
 
 
-    [SettingPropertyBool("Player clan hero focus and attribute tweaks enabled", RequireRestart = false)]
-    [SettingPropertyGroup("Levelling/Player clan heroes", IsMainToggle = true)]
+    [SettingPropertyBool("Player clan hero focus and attribute tweaks enabled", RequireRestart = false, IsToggle = true)]
+    [SettingPropertyGroup("Levelling/Player clan heroes")]
     public bool PlayerClanHeroAttributeModificationEnabled { get; set; } = false;
 
     [SettingPropertyInteger("Player clan hero focus point gain per level", 0, 10, RequireRestart = false)]
@@ -177,8 +168,8 @@ namespace FountaTweaks
     public int PlayerClanHeroAttributePointsPerThreeLevels { get; set; } = 1;
 
 
-    [SettingPropertyBool("Other clan hero focus and attribute tweaks enabled", RequireRestart = false)]
-    [SettingPropertyGroup("Levelling/Other clan heroes", IsMainToggle = true)]
+    [SettingPropertyBool("Other clan hero focus and attribute tweaks enabled", RequireRestart = false, IsToggle = true)]
+    [SettingPropertyGroup("Levelling/Other clan heroes")]
     public bool OtherClanHeroAttributeModificationEnabled { get; set; } = false;
 
     [SettingPropertyInteger("Other clan hero focus point gain per level", 0, 10, RequireRestart = false)]
@@ -197,16 +188,48 @@ namespace FountaTweaks
     /// <summary>
     /// /////////////////////////////////////////////////////////// Global perk modification enable/disable
     /// </summary>
-    [SettingPropertyBool("Enable perk modification", RequireRestart = false)]
-    [SettingPropertyGroup("Perks", IsMainToggle = true)]
+    [SettingPropertyBool("Enable perk modification", RequireRestart = false, IsToggle = true)]
+    [SettingPropertyGroup("Perks")]
     public bool PerkModificationEnabled { get; set; } = false;
+
+    /// <summary>
+    ///  ////////////////////////////////////////////////// Extra perk effects
+    /// </summary>
+
+    [SettingPropertyBool("Extra perk effects", HintText = "Whether or not to enable additional perk effects", RequireRestart = false, IsToggle = true)]
+    [SettingPropertyGroup("Extra perk effects")]
+    public bool ExtraPerkEffectsEnabled { get; set; } = false;
+
+    [SettingPropertyBool("Extra Throwing", HintText = "Whether or not to enable additional throwing perk effects", RequireRestart = false, IsToggle = true)]
+    [SettingPropertyGroup("Extra perk effects/Throwing")]
+    public bool ExtraThrowingPerkEffectsEnabled { get; set; } = false;
+
+    [SettingPropertyBool("Extra Impale", HintText = "Whether or not to enable additional impale perk effects", RequireRestart = false, IsToggle = true)]
+    [SettingPropertyGroup("Extra perk effects/Throwing/Impale")]
+    public bool ExtraThrowingImpalePerkEffectsEnabled { get; set; } = false;
+
+    [SettingPropertyBool("Javelins penetrate people", HintText = "Whether or not the impale perk allows for penetrating people like ballista bolts", RequireRestart = false, IsToggle = true)]
+    [SettingPropertyGroup("Extra perk effects/Throwing/Impale/Penetration")]
+    public bool JavelinPeoplePenetration { get; set; } = false;
+
+    [SettingPropertyBool("Fixed number of penetrations", HintText = "Whether or not to penetrate a fixed number of people or not (by default penetrates everyone just like ballista bolts)", RequireRestart = false)]
+    [SettingPropertyGroup("Extra perk effects/Throwing/Impale/Penetration")]
+    public bool JavelinPeopleFixedPenetration { get; set; } = false;
+
+    [SettingPropertyInteger("Number of penetrations", 0, 10, HintText = "If using a fixed number of people penetrations, how many people to penetrate", RequireRestart = false)]
+    [SettingPropertyGroup("Extra perk effects/Throwing/Impale/Penetration")]
+    public int JavelinNumFixedPenetration { get; set; } = 1;
 
     /// <summary>
     /// /////////////////////////////////////////////////////////// PLAYER EXP MODIFIERS
     /// </summary>
 
-    [SettingPropertyBool("Enable player exp modification", RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player", IsMainToggle = true)]
+    [SettingPropertyBool("Enable exp modification", HintText = "Whether to enable experience point modifications or not", RequireRestart = false, IsToggle = true)]
+    [SettingPropertyGroup("Experience Modifiers")]
+    public bool ExpChangeEnabled { get; set; } = false;
+
+    [SettingPropertyBool("Enable player exp modification", RequireRestart=false, IsToggle = true)]
+    [SettingPropertyGroup("Experience Modifiers/Player")]
     public bool PlayerExpChangeEnabled { get; set; } = false;
 
     [SettingPropertyFloatingInteger("Overall player exp gain modifier",0,10, RequireRestart=false)]
@@ -278,8 +301,8 @@ namespace FountaTweaks
     /// /////////////////////////////////////////////////////////// PLAYER CLAN HERO EXP MODIFIERS
     /// </summary>
 
-    [SettingPropertyBool("Enable player clan hero exp modification", HintText = "This will impact all heroes in the player character's clan except the player character", RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Player clan heroes", IsMainToggle = true)]
+    [SettingPropertyBool("Enable player clan hero exp modification", HintText = "This will impact all heroes in the player character's clan except the player character", RequireRestart=false, IsToggle = true)]
+    [SettingPropertyGroup("Experience Modifiers/Player clan heroes")]
     public bool PlayerClanExpChangeEnabled { get; set; } = false;
 
     [SettingPropertyFloatingInteger("Overall player clan hero exp gain modifier", 0,10, RequireRestart=false)]
@@ -352,8 +375,8 @@ namespace FountaTweaks
     /// </summary>
 
 
-    [SettingPropertyBool("Enable hero exp modification for all other heroes", HintText = "This will impact all heroes other than the main player and the heroes in the main player's clan", RequireRestart=false)]
-    [SettingPropertyGroup("Experience Modifiers/Other heroes", IsMainToggle = true)]
+    [SettingPropertyBool("Enable hero exp modification for all other heroes", HintText = "This will impact all heroes other than the main player and the heroes in the main player's clan", RequireRestart=false, IsToggle = true)]
+    [SettingPropertyGroup("Experience Modifiers/Other heroes")]
     public bool OtherClanExpChangeEnabled { get; set; } = false;
 
     [SettingPropertyFloatingInteger("Overall outside clan hero exp gain modifier",0,10,RequireRestart=false)]
@@ -425,8 +448,8 @@ namespace FountaTweaks
     /// /////////////////////////////////////////////////////////// Crafting modifications
     /// </summary>
 
-    [SettingPropertyBool("Enable crafting tweaks", RequireRestart = false)]
-    [SettingPropertyGroup("Crafting", IsMainToggle = true)]
+    [SettingPropertyBool("Enable crafting tweaks", RequireRestart = false, IsToggle = true)]
+    [SettingPropertyGroup("Crafting")]
     public bool CraftingTweaksEnabled { get; set; } = false;
 
     [SettingPropertyFloatingInteger("Crafting stamina usage modifier", 0,1, RequireRestart = false)]

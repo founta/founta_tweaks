@@ -9,22 +9,17 @@ using TaleWorlds.MountAndBlade;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.GameMenus;
 using TaleWorlds.CampaignSystem.Actions;
-using TaleWorlds.CampaignSystem.SandBox;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors.AiBehaviors;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors.BarterBehaviors;
-using TaleWorlds.CampaignSystem.Barterables;
+using TaleWorlds.CampaignSystem.CharacterDevelopment;
 using SandBox.View.Map;
 using TaleWorlds.CampaignSystem.ViewModelCollection.ClanManagement.Categories;
 using TaleWorlds.CampaignSystem.ViewModelCollection.ClanManagement;
 using TaleWorlds.Core.ViewModelCollection;
-using SandBox.ViewModelCollection.MobilePartyTracker;
 using SandBox.ViewModelCollection.Nameplate;
 using TaleWorlds.Library;
 using TaleWorlds.Engine;
 
-using TaleWorlds.CampaignSystem.SandBox.GameComponents.Map;
-using SandBox.TournamentMissions.Missions;
+using SandBox.GameComponents;
+
 
 using SandBox;
 
@@ -214,13 +209,20 @@ namespace FountaTweaks
       GameEntity hitEntity,
       ref bool __result)
     {
+      FountaTweaksSettings s = FountaTweaksSettings.Instance;
+      if (!s.JavelinPeoplePenetration)
+        return;
+      if (!s.JavelinPeopleFixedPenetration)
+        return;
       if (!attacker.IsHuman)
         return;
+      if (!Hero.MainHero.GetPerkValue(DefaultPerks.Throwing.Impale))
+        return;
+
       ref Dictionary<int, Mission.Missile> missiles = ref AccessTools.FieldRefAccess<Mission, Dictionary<int, Mission.Missile>>(__instance, "_missiles");
       Mission.Missile missile = missiles[collisionData.AffectorWeaponSlotOrMissileIndex];
       MissionWeapon attackerWeapon = missile.Weapon;
-      FountaTweaksSettings s = FountaTweaksSettings.Instance;
-      if (attackerWeapon.CurrentUsageItem.WeaponClass == WeaponClass.Javelin && Hero.MainHero.GetPerkValue(DefaultPerks.Throwing.Impale) && s.JavelinPeoplePenetration && s.JavelinPeopleFixedPenetration)
+      if (attackerWeapon.CurrentUsageItem.WeaponClass == WeaponClass.Javelin)
         rangedStorage.numAgentsDamaged = numDamagedAgents;
     }
   }
@@ -250,6 +252,12 @@ namespace FountaTweaks
           }
         }
       }
+    }
+
+    static bool Prepare()
+    {
+      FountaTweaksSettings s = FountaTweaksSettings.Instance;
+      return (s.ExtraPerkEffectsEnabled && s.ExtraThrowingPerkEffectsEnabled && s.ExtraThrowingImpalePerkEffectsEnabled);
     }
   }
 

@@ -7,19 +7,24 @@ using System.Threading.Tasks;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.CampaignSystem;
+using TaleWorlds.CampaignSystem.Party;
+using TaleWorlds.CampaignSystem.Party.PartyComponents;
 using TaleWorlds.CampaignSystem.GameMenus;
 using TaleWorlds.CampaignSystem.Actions;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors.AiBehaviors;
+using TaleWorlds.CampaignSystem.Roster;
+using TaleWorlds.CampaignSystem.Settlements;
+using TaleWorlds.CampaignSystem.CharacterDevelopment;
+using TaleWorlds.CampaignSystem.CampaignBehaviors;
+using TaleWorlds.CampaignSystem.CampaignBehaviors.AiBehaviors;
 using SandBox.View.Map;
+
+using HarmonyLib;
 
 using MCM.Abstractions.Attributes;
 using MCM.Abstractions.Attributes.v2;
-using MCM.Abstractions.Settings.Base.Global;
+using MCM.Abstractions.Base.Global;
 
 using System.Xml;
-
-using HarmonyLib;
 
 namespace FountaTweaks
 {
@@ -75,7 +80,7 @@ namespace FountaTweaks
     private float _twh_OnTheEdge_s = 2.000000f;
     private float _twh_HeadBasher_p = 10.000000f;
     private float _twh_HeadBasher_s = 2.000000f;
-    private float _twh_ShowOfStrength_p = 30.000000f;
+    private float _twh_ShowOfStrength_p = 0.150000f;
     private float _twh_ShowOfStrength_s = -20.000000f;
     private float _twh_BaptisedInBlood_p = 5.000000f;
     private float _twh_BaptisedInBlood_s = 5.000000f;
@@ -107,9 +112,9 @@ namespace FountaTweaks
     private float _plm_Pikeman_s = 2.000000f;
     private float _plm_Cavalry_p = 2.000000f;
     private float _plm_Cavalry_s = 2.000000f;
-    private float _plm_Braced_p = 25.000000f;
+    private float _plm_Braced_p = 0.150000f;
     private float _plm_Braced_s = 10.000000f;
-    private float _plm_KeepAtBay_p = 30.000000f;
+    private float _plm_KeepAtBay_p = 0.250000f;
     private float _plm_KeepAtBay_s = 0.500000f;
     private float _plm_SwiftSwing_p = 5.000000f;
     private float _plm_SwiftSwing_s = 2.000000f;
@@ -117,7 +122,7 @@ namespace FountaTweaks
     private float _plm_CleanThrust_s = 30.000000f;
     private float _plm_Footwork_p = 2.000000f;
     private float _plm_Footwork_s = 2.000000f;
-    private float _plm_HardKnock_p = 25.000000f;
+    private float _plm_HardKnock_p = 0.150000f;
     private float _plm_HardKnock_s = 3.000000f;
     private float _plm_SteedKiller_p = 70.000000f;
     private float _plm_SteedKiller_s = 30.000000f;
@@ -219,7 +224,7 @@ namespace FountaTweaks
     private float _xbw_Steady_s = 5.000000f;
     private float _xbw_Sniper_p = 100.000000f;
     private float _xbw_Sniper_s = 1.000000f;
-    private float _xbw_HammerBolts_p = 100.000000f;
+    private float _xbw_HammerBolts_p = 0.500000f;
     private float _xbw_HammerBolts_s = 10.000000f;
     private float _xbw_Pavise_p = 75.000000f;
     private float _xbw_Pavise_s = 30.000000f;
@@ -239,16 +244,16 @@ namespace FountaTweaks
     private float _thr_FlexibleFighter_s = 15.000000f;
     private float _thr_MountedSkirmisher_p = -20.000000f;
     private float _thr_MountedSkirmisher_s = 10.000000f;
-    private float _thr_PerfectTechnique_p = 25.000000f;
-    private float _thr_PerfectTechnique_s = 10.000000f;
+    private float _thr_WellPrepared_p = 1.000000f;
+    private float _thr_WellPrepared_s = 1.000000f;
     private float _thr_RunningThrow_p = 0.250000f;
     private float _thr_RunningThrow_s = 30.000000f;
-    private float _thr_KnockOff_p = 50.000000f;
+    private float _thr_KnockOff_p = 0.250000f;
     private float _thr_KnockOff_s = 5.000000f;
     private float _thr_Skirmisher_p = -10.000000f;
     private float _thr_Skirmisher_s = -3.000000f;
-    private float _thr_WellPrepared_p = 1.000000f;
-    private float _thr_WellPrepared_s = 1.000000f;
+    private float _thr_Saddlebags_p = 2.000000f;
+    private float _thr_Saddlebags_s = 1.000000f;
     private float _thr_Focus_p = 25.000000f;
     private float _thr_Focus_s = 1.000000f;
     private float _thr_LastHit_p = 50.000000f;
@@ -257,12 +262,12 @@ namespace FountaTweaks
     private float _thr_HeadHunter_s = -20.000000f;
     private float _thr_ThrowingCompetitions_p = -20.000000f;
     private float _thr_ThrowingCompetitions_s = 0.500000f;
-    private float _thr_Saddlebags_p = 2.000000f;
-    private float _thr_Saddlebags_s = 1.000000f;
-    private float _thr_Splinters_p = 200.000000f;
-    private float _thr_Splinters_s = 50.000000f;
     private float _thr_Resourceful_p = 2.000000f;
     private float _thr_Resourceful_s = 10.000000f;
+    private float _thr_Splinters_p = 200.000000f;
+    private float _thr_Splinters_s = 50.000000f;
+    private float _thr_PerfectTechnique_p = 25.000000f;
+    private float _thr_PerfectTechnique_s = 10.000000f;
     private float _thr_LongReach_p = 0.000000f;
     private float _thr_LongReach_s = 20.000000f;
     private float _thr_WeakSpot_p = -30.000000f;
@@ -302,7 +307,7 @@ namespace FountaTweaks
     private float _rid_AnnoyingBuzz_p = 20.000000f;
     private float _rid_AnnoyingBuzz_s = 5.000000f;
     private float _rid_MountedPatrols_p = -50.000000f;
-    private float _rid_MountedPatrols_s = -50.000000f;
+    private float _rid_MountedPatrols_s = -0.500000f;
     private float _rid_CavalryTactics_p = 30.000000f;
     private float _rid_CavalryTactics_s = -50.000000f;
     private float _rid_DauntlessSteed_p = 50.000000f;
@@ -342,7 +347,7 @@ namespace FountaTweaks
     private float _ath_Steady_p = 1.000000f;
     private float _ath_Steady_s = 10.000000f;
     private float _ath_Strong_p = 1.000000f;
-    private float _ath_Strong_s = 5.000000f;
+    private float _ath_Strong_s = 0.050000f;
     private float _ath_StrongLegs_p = -50.000000f;
     private float _ath_StrongLegs_s = -20.000000f;
     private float _ath_StrongArms_p = 1.000000f;
@@ -454,7 +459,7 @@ namespace FountaTweaks
     private float _rog_NoRestForTheWicked_p = 20.000000f;
     private float _rog_NoRestForTheWicked_s = 0.050000f;
     private float _rog_SweetTalker_p = -0.200000f;
-    private float _rog_SweetTalker_s = -20.000000f;
+    private float _rog_SweetTalker_s = -0.200000f;
     private float _rog_TwoFaced_p = 50.000000f;
     private float _rog_TwoFaced_s = 0.000000f;
     private float _rog_DeepPockets_p = 2.000000f;
@@ -463,7 +468,7 @@ namespace FountaTweaks
     private float _rog_InBestLight_s = 0.200000f;
     private float _rog_KnowHow_p = 0.050000f;
     private float _rog_KnowHow_s = 1.000000f;
-    private float _rog_Promises_p = -50.000000f;
+    private float _rog_Promises_p = 0.500000f;
     private float _rog_Promises_s = 0.300000f;
     private float _rog_SlaveTrader_p = 0.200000f;
     private float _rog_SlaveTrader_s = 20.000000f;
@@ -531,7 +536,7 @@ namespace FountaTweaks
     private float _ldr_GreatLeader_s = 5.000000f;
     private float _ldr_WePledgeOurSwords_p = 1.000000f;
     private float _ldr_WePledgeOurSwords_s = 1.000000f;
-    private float _ldr_TalentMagnet_p = 3.000000f;
+    private float _ldr_TalentMagnet_p = 10.000000f;
     private float _ldr_TalentMagnet_s = 1.000000f;
     private float _ldr_UltimateLeader_p = 1.000000f;
     private float _ldr_UltimateLeader_s = 0.000000f;
@@ -569,7 +574,7 @@ namespace FountaTweaks
     private float _chm_NaturalLeader_s = -0.100000f;
     private float _chm_PublicSpeaker_p = 0.300000f;
     private float _chm_PublicSpeaker_s = 0.100000f;
-    private float _chm_Parade_p = 5.000000f;
+    private float _chm_Parade_p = 1.000000f;
     private float _chm_Parade_s = 1.000000f;
     private float _chm_Camaraderie_p = 1.000000f;
     private float _chm_Camaraderie_s = 1.000000f;
@@ -585,7 +590,7 @@ namespace FountaTweaks
     private float _trd_TravelingRumors_p = 0.000000f;
     private float _trd_TravelingRumors_s = -15.000000f;
     private float _trd_LocalConnection_p = 0.000000f;
-    private float _trd_LocalConnection_s = -15.000000f;
+    private float _trd_LocalConnection_s = -0.150000f;
     private float _trd_DistributedGoods_p = 2.000000f;
     private float _trd_DistributedGoods_s = 30.000000f;
     private float _trd_Tollgates_p = 2.000000f;
@@ -633,7 +638,7 @@ namespace FountaTweaks
     private float _st_PaidInPromise_p = -25.000000f;
     private float _st_PaidInPromise_s = 1.500000f;
     private float _st_EfficientCampaigner_p = 1.000000f;
-    private float _st_EfficientCampaigner_s = -25.000000f;
+    private float _st_EfficientCampaigner_s = -15.000000f;
     private float _st_GivingHands_p = 1.500000f;
     private float _st_GivingHands_s = 10.000000f;
     private float _st_Logistician_p = 4.000000f;
@@ -656,7 +661,7 @@ namespace FountaTweaks
     private float _st_ArenicosHorses_s = -20.000000f;
     private float _st_MasterOfPlanning_p = -0.400000f;
     private float _st_MasterOfPlanning_s = 0.200000f;
-    private float _st_MasterOfWarcraft_p = -25.000000f;
+    private float _st_MasterOfWarcraft_p = -15.000000f;
     private float _st_MasterOfWarcraft_s = -0.050000f;
     private float _st_PriceOfLoyalty_p = -0.500000f;
     private float _st_PriceOfLoyalty_s = 0.005000f;
@@ -696,7 +701,7 @@ namespace FountaTweaks
     private float _med_CheatDeath_s = -0.500000f;
     private float _med_FortitudeTonic_p = 10.000000f;
     private float _med_FortitudeTonic_s = 5.000000f;
-    private float _med_HelpingHands_p = 2.000000f;
+    private float _med_HelpingHands_p = 0.020000f;
     private float _med_HelpingHands_s = -50.000000f;
     private float _med_BattleHardened_p = 25.000000f;
     private float _med_BattleHardened_s = -0.250000f;
@@ -710,7 +715,7 @@ namespace FountaTweaks
     private float _eng_PrisonArchitect_s = -0.250000f;
     private float _eng_Carpenters_p = 0.330000f;
     private float _eng_Carpenters_s = 0.120000f;
-    private float _eng_MilitaryPlanner_p = 50.000000f;
+    private float _eng_MilitaryPlanner_p = 25.000000f;
     private float _eng_MilitaryPlanner_s = 0.250000f;
     private float _eng_WallBreaker_p = 0.250000f;
     private float _eng_WallBreaker_s = 10.000000f;
@@ -732,7 +737,7 @@ namespace FountaTweaks
     private float _eng_EngineeringGuilds_s = 0.250000f;
     private float _eng_Apprenticeship_p = 5.000000f;
     private float _eng_Apprenticeship_s = 0.010000f;
-    private float _eng_Metallurgy_p = 0.200000f;
+    private float _eng_Metallurgy_p = 0.800000f;
     private float _eng_Metallurgy_s = 5.000000f;
     private float _eng_ImprovedTools_p = 0.200000f;
     private float _eng_ImprovedTools_s = 5.000000f;
@@ -741,1160 +746,1160 @@ namespace FountaTweaks
     private float _eng_ArchitecturalCommisions_p = -0.250000f;
     private float _eng_ArchitecturalCommisions_s = 20.000000f;
     private float _eng_Masterwork_p = 0.010000f;
-    [SettingPropertyBool("Enable Engineering perk modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Engineering perk modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering")]
     public bool EngineeringPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Medicine perk modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Medicine perk modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine")]
     public bool MedicinePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Steward perk modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Steward perk modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward")]
     public bool StewardPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Trade perk modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Trade perk modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade")]
     public bool TradePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Charm perk modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Charm perk modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Charm")]
     public bool CharmPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Leadership perk modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Leadership perk modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership")]
     public bool LeadershipPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Roguery perk modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Roguery perk modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery")]
     public bool RogueryPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Scouting perk modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Scouting perk modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting")]
     public bool ScoutingPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Tactics perk modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Tactics perk modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics")]
     public bool TacticsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Crafting perk modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crafting", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Crafting perk modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crafting")]
     public bool CraftingPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Athletics perk modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Athletics perk modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics")]
     public bool AthleticsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Riding perk modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Riding perk modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Riding")]
     public bool RidingPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Throwing perk modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Throwing perk modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing")]
     public bool ThrowingPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Crossbow perk modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Crossbow perk modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow")]
     public bool CrossbowPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Bow perk modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Bow perk modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow")]
     public bool BowPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Polearm perk modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Polearm perk modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm")]
     public bool PolearmPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable TwoHanded perk modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded", IsMainToggle=true)]
+    [SettingPropertyBool("Enable TwoHanded perk modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded")]
     public bool TwoHandedPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable OneHanded perk modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded", IsMainToggle=true)]
+    [SettingPropertyBool("Enable OneHanded perk modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded")]
     public bool OneHandedPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Deflect modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/Deflect", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Deflect modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Deflect")]
     public bool OneHandedDeflectPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Basher modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/Basher", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Basher modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Basher")]
     public bool OneHandedBasherPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ToBeBlunt modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/To Be Blunt", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ToBeBlunt modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/To Be Blunt")]
     public bool OneHandedToBeBluntPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SwiftStrike modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/Swift Strike", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SwiftStrike modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Swift Strike")]
     public bool OneHandedSwiftStrikePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Cavalry modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/Cavalry", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Cavalry modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Cavalry")]
     public bool OneHandedCavalryPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ShieldBearer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/Shield Bearer", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ShieldBearer modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Shield Bearer")]
     public bool OneHandedShieldBearerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Trainer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/Trainer", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Trainer modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Trainer")]
     public bool OneHandedTrainerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Duelist modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/Duelist", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Duelist modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Duelist")]
     public bool OneHandedDuelistPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ShieldWall modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/Shieldwall", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ShieldWall modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Shieldwall")]
     public bool OneHandedShieldWallPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ArrowCatcher modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/Arrow Catcher", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ArrowCatcher modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Arrow Catcher")]
     public bool OneHandedArrowCatcherPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MilitaryTradition modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/Military Tradition", IsMainToggle=true)]
+    [SettingPropertyBool("Enable MilitaryTradition modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Military Tradition")]
     public bool OneHandedMilitaryTraditionPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable CorpsACorps modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/Corps-a-corps", IsMainToggle=true)]
+    [SettingPropertyBool("Enable CorpsACorps modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Corps-a-corps")]
     public bool OneHandedCorpsACorpsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable StandUnited modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/Stand United", IsMainToggle=true)]
+    [SettingPropertyBool("Enable StandUnited modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Stand United")]
     public bool OneHandedStandUnitedPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable LeadByExample modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/Lead by example", IsMainToggle=true)]
+    [SettingPropertyBool("Enable LeadByExample modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Lead by example")]
     public bool OneHandedLeadByExamplePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SteelCoreShields modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/Steel Core Shields", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SteelCoreShields modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Steel Core Shields")]
     public bool OneHandedSteelCoreShieldsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable FleetOfFoot modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/Fleet of Foot", IsMainToggle=true)]
+    [SettingPropertyBool("Enable FleetOfFoot modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Fleet of Foot")]
     public bool OneHandedFleetOfFootPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable DeadlyPurpose modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/Deadly Purpose", IsMainToggle=true)]
+    [SettingPropertyBool("Enable DeadlyPurpose modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Deadly Purpose")]
     public bool OneHandedDeadlyPurposePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable UnwaveringDefense modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/Unwavering Defense", IsMainToggle=true)]
+    [SettingPropertyBool("Enable UnwaveringDefense modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Unwavering Defense")]
     public bool OneHandedUnwaveringDefensePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Prestige modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/Prestige", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Prestige modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Prestige")]
     public bool OneHandedPrestigePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ChinkInTheArmor modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/Chink in the Armor", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ChinkInTheArmor modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Chink in the Armor")]
     public bool OneHandedChinkInTheArmorPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable WayOfTheSword modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/OneHanded/Way of the Sword", IsMainToggle=true)]
+    [SettingPropertyBool("Enable WayOfTheSword modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/OneHanded/Way of the Sword")]
     public bool OneHandedWayOfTheSwordPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable StrongGrip modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/Strong Grip", IsMainToggle=true)]
+    [SettingPropertyBool("Enable StrongGrip modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Strong Grip")]
     public bool TwoHandedStrongGripPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable WoodChopper modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/Wood Chopper", IsMainToggle=true)]
+    [SettingPropertyBool("Enable WoodChopper modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Wood Chopper")]
     public bool TwoHandedWoodChopperPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable OnTheEdge modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/On the Edge", IsMainToggle=true)]
+    [SettingPropertyBool("Enable OnTheEdge modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/On the Edge")]
     public bool TwoHandedOnTheEdgePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable HeadBasher modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/Head Basher", IsMainToggle=true)]
+    [SettingPropertyBool("Enable HeadBasher modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Head Basher")]
     public bool TwoHandedHeadBasherPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ShowOfStrength modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/Show of Strength", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ShowOfStrength modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Show of Strength")]
     public bool TwoHandedShowOfStrengthPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable BaptisedInBlood modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/Baptised in Blood", IsMainToggle=true)]
+    [SettingPropertyBool("Enable BaptisedInBlood modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Baptised in Blood")]
     public bool TwoHandedBaptisedInBloodPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable BeastSlayer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/Beast Slayer", IsMainToggle=true)]
+    [SettingPropertyBool("Enable BeastSlayer modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Beast Slayer")]
     public bool TwoHandedBeastSlayerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ShieldBreaker modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/Shield breaker", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ShieldBreaker modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Shield breaker")]
     public bool TwoHandedShieldBreakerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Berserker modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/Berserker", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Berserker modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Berserker")]
     public bool TwoHandedBerserkerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Confidence modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/Confidence", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Confidence modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Confidence")]
     public bool TwoHandedConfidencePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ArrowDeflection modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/Arrow Deflection", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ArrowDeflection modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Arrow Deflection")]
     public bool TwoHandedArrowDeflectionPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Terror modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/Terror", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Terror modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Terror")]
     public bool TwoHandedTerrorPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Hope modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/Hope", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Hope modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Hope")]
     public bool TwoHandedHopePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable RecklessCharge modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/Reckless Charge", IsMainToggle=true)]
+    [SettingPropertyBool("Enable RecklessCharge modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Reckless Charge")]
     public bool TwoHandedRecklessChargePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ThickHides modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/Thick Hides", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ThickHides modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Thick Hides")]
     public bool TwoHandedThickHidesPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable BladeMaster modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/Blade Master", IsMainToggle=true)]
+    [SettingPropertyBool("Enable BladeMaster modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Blade Master")]
     public bool TwoHandedBladeMasterPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Vandal modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/Vandal", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Vandal modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Vandal")]
     public bool TwoHandedVandalPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable WayOfTheGreatAxe modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/TwoHanded/Way Of The Great Axe", IsMainToggle=true)]
+    [SettingPropertyBool("Enable WayOfTheGreatAxe modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/TwoHanded/Way Of The Great Axe")]
     public bool TwoHandedWayOfTheGreatAxePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Pikeman modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/Pikeman", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Pikeman modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Pikeman")]
     public bool PolearmPikemanPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Cavalry modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/Cavalry", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Cavalry modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Cavalry")]
     public bool PolearmCavalryPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Braced modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/Braced", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Braced modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Braced")]
     public bool PolearmBracedPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable KeepAtBay modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/Keep at Bay", IsMainToggle=true)]
+    [SettingPropertyBool("Enable KeepAtBay modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Keep at Bay")]
     public bool PolearmKeepAtBayPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SwiftSwing modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/Swift Swing", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SwiftSwing modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Swift Swing")]
     public bool PolearmSwiftSwingPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable CleanThrust modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/Clean Thrust", IsMainToggle=true)]
+    [SettingPropertyBool("Enable CleanThrust modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Clean Thrust")]
     public bool PolearmCleanThrustPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Footwork modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/Footwork", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Footwork modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Footwork")]
     public bool PolearmFootworkPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable HardKnock modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/Hard Knock", IsMainToggle=true)]
+    [SettingPropertyBool("Enable HardKnock modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Hard Knock")]
     public bool PolearmHardKnockPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SteedKiller modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/Steed Killer", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SteedKiller modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Steed Killer")]
     public bool PolearmSteedKillerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Lancer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/Lancer", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Lancer modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Lancer")]
     public bool PolearmLancerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Skewer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/Skewer", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Skewer modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Skewer")]
     public bool PolearmSkewerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Guards modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/Guards", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Guards modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Guards")]
     public bool PolearmGuardsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable StandardBearer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/Standard Bearer", IsMainToggle=true)]
+    [SettingPropertyBool("Enable StandardBearer modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Standard Bearer")]
     public bool PolearmStandardBearerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Phalanx modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/Phalanx", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Phalanx modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Phalanx")]
     public bool PolearmPhalanxPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable GenerousRations modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/Generous Rations", IsMainToggle=true)]
+    [SettingPropertyBool("Enable GenerousRations modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Generous Rations")]
     public bool PolearmGenerousRationsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Drills modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/Drills", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Drills modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Drills")]
     public bool PolearmDrillsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SureFooted modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/Sure Footed", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SureFooted modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Sure Footed")]
     public bool PolearmSureFootedPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable UnstoppableForce modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/Unstoppable Force", IsMainToggle=true)]
+    [SettingPropertyBool("Enable UnstoppableForce modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Unstoppable Force")]
     public bool PolearmUnstoppableForcePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable CounterWeight modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/Counterweight", IsMainToggle=true)]
+    [SettingPropertyBool("Enable CounterWeight modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Counterweight")]
     public bool PolearmCounterWeightPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SharpenTheTip modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/Sharpen the Tip", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SharpenTheTip modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Sharpen the Tip")]
     public bool PolearmSharpenTheTipPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable WayOfTheSpear modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Polearm/Way of the Spear", IsMainToggle=true)]
+    [SettingPropertyBool("Enable WayOfTheSpear modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Polearm/Way of the Spear")]
     public bool PolearmWayOfTheSpearPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable BowControl modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/Bow Control", IsMainToggle=true)]
+    [SettingPropertyBool("Enable BowControl modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Bow Control")]
     public bool BowBowControlPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable DeadAim modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/Dead Aim", IsMainToggle=true)]
+    [SettingPropertyBool("Enable DeadAim modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Dead Aim")]
     public bool BowDeadAimPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Bodkin modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/Bodkin", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Bodkin modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Bodkin")]
     public bool BowBodkinPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable RangersSwiftness modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/Ranger's Swiftness", IsMainToggle=true)]
+    [SettingPropertyBool("Enable RangersSwiftness modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Ranger's Swiftness")]
     public bool BowRangersSwiftnessPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable RapidFire modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/Rapid Fire", IsMainToggle=true)]
+    [SettingPropertyBool("Enable RapidFire modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Rapid Fire")]
     public bool BowRapidFirePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable QuickAdjustments modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/Quick Adjustments", IsMainToggle=true)]
+    [SettingPropertyBool("Enable QuickAdjustments modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Quick Adjustments")]
     public bool BowQuickAdjustmentsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MerryMen modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/Merry Men", IsMainToggle=true)]
+    [SettingPropertyBool("Enable MerryMen modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Merry Men")]
     public bool BowMerryMenPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MountedArchery modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/Mounted Archery", IsMainToggle=true)]
+    [SettingPropertyBool("Enable MountedArchery modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Mounted Archery")]
     public bool BowMountedArcheryPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Trainer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/Trainer", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Trainer modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Trainer")]
     public bool BowTrainerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable StrongBows modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/Strong bows", IsMainToggle=true)]
+    [SettingPropertyBool("Enable StrongBows modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Strong bows")]
     public bool BowStrongBowsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Discipline modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/Discipline", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Discipline modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Discipline")]
     public bool BowDisciplinePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable HunterClan modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/Hunter Clan", IsMainToggle=true)]
+    [SettingPropertyBool("Enable HunterClan modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Hunter Clan")]
     public bool BowHunterClanPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SkirmishPhaseMaster modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/Skirmish Phase Master", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SkirmishPhaseMaster modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Skirmish Phase Master")]
     public bool BowSkirmishPhaseMasterPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable EagleEye modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/Eagle Eye", IsMainToggle=true)]
+    [SettingPropertyBool("Enable EagleEye modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Eagle Eye")]
     public bool BowEagleEyePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable BullsEye modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/Bulls Eye", IsMainToggle=true)]
+    [SettingPropertyBool("Enable BullsEye modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Bulls Eye")]
     public bool BowBullsEyePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable RenownedArcher modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/Renowned Archer", IsMainToggle=true)]
+    [SettingPropertyBool("Enable RenownedArcher modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Renowned Archer")]
     public bool BowRenownedArcherPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable HorseMaster modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/Horse Master", IsMainToggle=true)]
+    [SettingPropertyBool("Enable HorseMaster modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Horse Master")]
     public bool BowHorseMasterPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable DeepQuivers modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/Deep Quivers", IsMainToggle=true)]
+    [SettingPropertyBool("Enable DeepQuivers modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Deep Quivers")]
     public bool BowDeepQuiversPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable QuickDraw modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/Quick Draw", IsMainToggle=true)]
+    [SettingPropertyBool("Enable QuickDraw modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Quick Draw")]
     public bool BowQuickDrawPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Salvo modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/Salvo", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Salvo modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Salvo")]
     public bool BowSalvoPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Deadshot modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Bow/Deadshot", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Deadshot modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Bow/Deadshot")]
     public bool BowDeadshotPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Piercer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/Piercer", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Piercer modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Piercer")]
     public bool CrossbowPiercerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Marksmen modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/Marksmen", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Marksmen modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Marksmen")]
     public bool CrossbowMarksmenPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Unhorser modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/Unhorser", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Unhorser modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Unhorser")]
     public bool CrossbowUnhorserPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable WindWinder modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/Wind Winder", IsMainToggle=true)]
+    [SettingPropertyBool("Enable WindWinder modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Wind Winder")]
     public bool CrossbowWindWinderPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable DonkeysSwiftness modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/Donkeys Swiftness", IsMainToggle=true)]
+    [SettingPropertyBool("Enable DonkeysSwiftness modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Donkey's Swiftness")]
     public bool CrossbowDonkeysSwiftnessPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Sheriff modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/Sheriff", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Sheriff modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Sheriff")]
     public bool CrossbowSheriffPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable PeasantLeader modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/Peasant Leader", IsMainToggle=true)]
+    [SettingPropertyBool("Enable PeasantLeader modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Peasant Leader")]
     public bool CrossbowPeasantLeaderPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable RenownMarksmen modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/Renown Marksmen", IsMainToggle=true)]
+    [SettingPropertyBool("Enable RenownMarksmen modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Renowned Marksmen")]
     public bool CrossbowRenownMarksmenPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Fletcher modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/Fletcher", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Fletcher modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Fletcher")]
     public bool CrossbowFletcherPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Puncture modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/Puncture", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Puncture modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Puncture")]
     public bool CrossbowPuncturePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable LooseAndMove modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/Loose and Move", IsMainToggle=true)]
+    [SettingPropertyBool("Enable LooseAndMove modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Loose and Move")]
     public bool CrossbowLooseAndMovePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable DeftHands modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/Deft Hands", IsMainToggle=true)]
+    [SettingPropertyBool("Enable DeftHands modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Deft Hands")]
     public bool CrossbowDeftHandsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable CounterFire modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/Counter Fire", IsMainToggle=true)]
+    [SettingPropertyBool("Enable CounterFire modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Counter Fire")]
     public bool CrossbowCounterFirePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MountedCrossbowman modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/Mounted Crossbowman", IsMainToggle=true)]
+    [SettingPropertyBool("Enable MountedCrossbowman modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Mounted Crossbowman")]
     public bool CrossbowMountedCrossbowmanPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Steady modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/Steady", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Steady modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Steady")]
     public bool CrossbowSteadyPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Sniper modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/Sniper", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Sniper modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Sniper")]
     public bool CrossbowSniperPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable HammerBolts modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/Hammer Bolts", IsMainToggle=true)]
+    [SettingPropertyBool("Enable HammerBolts modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Hammer Bolts")]
     public bool CrossbowHammerBoltsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Pavise modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/Pavise", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Pavise modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Pavise")]
     public bool CrossbowPavisePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Terror modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/Terror", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Terror modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Terror")]
     public bool CrossbowTerrorPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable PickedShots modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/Picked Shots", IsMainToggle=true)]
+    [SettingPropertyBool("Enable PickedShots modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Picked Shots")]
     public bool CrossbowPickedShotsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MightyPull modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crossbow/Mighty Pull", IsMainToggle=true)]
+    [SettingPropertyBool("Enable MightyPull modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crossbow/Mighty Pull")]
     public bool CrossbowMightyPullPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable QuickDraw modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/Quick Draw", IsMainToggle=true)]
+    [SettingPropertyBool("Enable QuickDraw modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Quick Draw")]
     public bool ThrowingQuickDrawPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ShieldBreaker modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/Shield Breaker", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ShieldBreaker modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Shield Breaker")]
     public bool ThrowingShieldBreakerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Hunter modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/Hunter", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Hunter modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Hunter")]
     public bool ThrowingHunterPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable FlexibleFighter modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/Flexible Fighter", IsMainToggle=true)]
+    [SettingPropertyBool("Enable FlexibleFighter modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Flexible Fighter")]
     public bool ThrowingFlexibleFighterPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MountedSkirmisher modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/Mounted Skirmisher", IsMainToggle=true)]
+    [SettingPropertyBool("Enable MountedSkirmisher modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Mounted Skirmisher")]
     public bool ThrowingMountedSkirmisherPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable PerfectTechnique modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/Perfect Technique", IsMainToggle=true)]
-    public bool ThrowingPerfectTechniquePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable RunningThrow modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/Running Throw", IsMainToggle=true)]
-    public bool ThrowingRunningThrowPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable KnockOff modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/Knock Off", IsMainToggle=true)]
-    public bool ThrowingKnockOffPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Skirmisher modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/Skirmisher", IsMainToggle=true)]
-    public bool ThrowingSkirmisherPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable WellPrepared modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/Well Prepared", IsMainToggle=true)]
+    [SettingPropertyBool("Enable WellPrepared modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Well Prepared")]
     public bool ThrowingWellPreparedPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Focus modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/Focus", IsMainToggle=true)]
-    public bool ThrowingFocusPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable LastHit modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/Last Hit", IsMainToggle=true)]
-    public bool ThrowingLastHitPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable HeadHunter modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/Head Hunter", IsMainToggle=true)]
-    public bool ThrowingHeadHunterPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ThrowingCompetitions modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/Throwing Competitions", IsMainToggle=true)]
-    public bool ThrowingThrowingCompetitionsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Saddlebags modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/Saddlebags", IsMainToggle=true)]
+    [SettingPropertyBool("Enable RunningThrow modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Running Throw")]
+    public bool ThrowingRunningThrowPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable KnockOff modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Knock Off")]
+    public bool ThrowingKnockOffPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Skirmisher modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Skirmisher")]
+    public bool ThrowingSkirmisherPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Saddlebags modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Saddlebags")]
     public bool ThrowingSaddlebagsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Splinters modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/Splinters", IsMainToggle=true)]
-    public bool ThrowingSplintersPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Resourceful modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/Resourceful", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Focus modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Focus")]
+    public bool ThrowingFocusPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable LastHit modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Last Hit")]
+    public bool ThrowingLastHitPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable HeadHunter modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Head Hunter")]
+    public bool ThrowingHeadHunterPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable ThrowingCompetitions modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Throwing Competitions")]
+    public bool ThrowingThrowingCompetitionsPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable Resourceful modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Resourceful")]
     public bool ThrowingResourcefulPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable LongReach modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/Long Reach", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Splinters modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Splinters")]
+    public bool ThrowingSplintersPerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable PerfectTechnique modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Perfect Technique")]
+    public bool ThrowingPerfectTechniquePerkModificationEnabled {get; set;} = false;
+    [SettingPropertyBool("Enable LongReach modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Long Reach")]
     public bool ThrowingLongReachPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable WeakSpot modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/Weak Spot", IsMainToggle=true)]
+    [SettingPropertyBool("Enable WeakSpot modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Weak Spot")]
     public bool ThrowingWeakSpotPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Impale modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/Impale", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Impale modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Impale")]
     public bool ThrowingImpalePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable UnstoppableForce modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Throwing/Unstoppable Force", IsMainToggle=true)]
+    [SettingPropertyBool("Enable UnstoppableForce modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Throwing/Unstoppable Force")]
     public bool ThrowingUnstoppableForcePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable FullSpeed modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/Full Speed", IsMainToggle=true)]
+    [SettingPropertyBool("Enable FullSpeed modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Full Speed")]
     public bool RidingFullSpeedPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable NimbleSteed modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/Nimble Steed", IsMainToggle=true)]
+    [SettingPropertyBool("Enable NimbleSteed modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Nimble Steed")]
     public bool RidingNimbleSteedPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable WellStraped modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/Well Strapped", IsMainToggle=true)]
+    [SettingPropertyBool("Enable WellStraped modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Well Strapped")]
     public bool RidingWellStrapedPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Veterinary modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/Veterinary", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Veterinary modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Veterinary")]
     public bool RidingVeterinaryPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable NomadicTraditions modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/Nomadic Traditions", IsMainToggle=true)]
+    [SettingPropertyBool("Enable NomadicTraditions modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Nomadic Traditions")]
     public bool RidingNomadicTraditionsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable FilledToBrim modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/Filled To Brim", IsMainToggle=true)]
+    [SettingPropertyBool("Enable FilledToBrim modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Filled To Brim")]
     public bool RidingFilledToBrimPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Sagittarius modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/Sagittarius", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Sagittarius modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Sagittarius")]
     public bool RidingSagittariusPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SweepingWind modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/Sweeping Wind", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SweepingWind modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Sweeping Wind")]
     public bool RidingSweepingWindPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ReliefForce modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/Relief Force", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ReliefForce modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Relief Force")]
     public bool RidingReliefForcePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MountedWarrior modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/Mounted Warrior", IsMainToggle=true)]
+    [SettingPropertyBool("Enable MountedWarrior modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Mounted Warrior")]
     public bool RidingMountedWarriorPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable HorseArcher modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/Horse Archer", IsMainToggle=true)]
+    [SettingPropertyBool("Enable HorseArcher modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Horse Archer")]
     public bool RidingHorseArcherPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Horde modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/Riding Horde", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Horde modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Riding Horde")]
     public bool RidingHordePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Breeder modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/Breeder", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Breeder modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Breeder")]
     public bool RidingBreederPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ThunderousCharge modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/Thunderous Charge", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ThunderousCharge modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Thunderous Charge")]
     public bool RidingThunderousChargePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable AnnoyingBuzz modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/Annoying Buzz", IsMainToggle=true)]
+    [SettingPropertyBool("Enable AnnoyingBuzz modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Annoying Buzz")]
     public bool RidingAnnoyingBuzzPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MountedPatrols modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/Mounted Patrols", IsMainToggle=true)]
+    [SettingPropertyBool("Enable MountedPatrols modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Mounted Patrols")]
     public bool RidingMountedPatrolsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable CavalryTactics modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/Cavalry Tactics", IsMainToggle=true)]
+    [SettingPropertyBool("Enable CavalryTactics modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Cavalry Tactics")]
     public bool RidingCavalryTacticsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable DauntlessSteed modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/Dauntless Steed", IsMainToggle=true)]
+    [SettingPropertyBool("Enable DauntlessSteed modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Dauntless Steed")]
     public bool RidingDauntlessSteedPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ToughSteed modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/Tough Steed", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ToughSteed modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/Tough Steed")]
     public bool RidingToughSteedPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable TheWayOfTheSaddle modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Riding/The Way Of The Saddle", IsMainToggle=true)]
+    [SettingPropertyBool("Enable TheWayOfTheSaddle modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Riding/The Way Of The Saddle")]
     public bool RidingTheWayOfTheSaddlePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MorningExercise modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/Morning Exercise", IsMainToggle=true)]
+    [SettingPropertyBool("Enable MorningExercise modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Morning Exercise")]
     public bool AthleticsMorningExercisePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable WellBuilt modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/Well Built", IsMainToggle=true)]
+    [SettingPropertyBool("Enable WellBuilt modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Well Built")]
     public bool AthleticsWellBuiltPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Fury modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/Fury", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Fury modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Fury")]
     public bool AthleticsFuryPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable FormFittingArmor modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/Form Fitting Armor", IsMainToggle=true)]
+    [SettingPropertyBool("Enable FormFittingArmor modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Form Fitting Armor")]
     public bool AthleticsFormFittingArmorPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable HavingGoing modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/Having Going", IsMainToggle=true)]
+    [SettingPropertyBool("Enable HavingGoing modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Having Going")]
     public bool AthleticsHavingGoingPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Stamina modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/Stamina", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Stamina modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Stamina")]
     public bool AthleticsStaminaPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Sprint modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/Sprint", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Sprint modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Sprint")]
     public bool AthleticsSprintPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Powerful modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/Powerful", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Powerful modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Powerful")]
     public bool AthleticsPowerfulPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SurgingBlow modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/Surging Blow", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SurgingBlow modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Surging Blow")]
     public bool AthleticsSurgingBlowPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Braced modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/Braced", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Braced modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Braced")]
     public bool AthleticsBracedPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable WalkItOff modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/Walk It Off", IsMainToggle=true)]
+    [SettingPropertyBool("Enable WalkItOff modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Walk It Off")]
     public bool AthleticsWalkItOffPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable AGoodDaysRest modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/A Good Days Rest", IsMainToggle=true)]
+    [SettingPropertyBool("Enable AGoodDaysRest modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/A Good Days Rest")]
     public bool AthleticsAGoodDaysRestPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable HealthyCitizens modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/Healthy Citizens", IsMainToggle=true)]
+    [SettingPropertyBool("Enable HealthyCitizens modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Healthy Citizens")]
     public bool AthleticsHealthyCitizensPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Energetic modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/Energetic", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Energetic modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Energetic")]
     public bool AthleticsEnergeticPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Steady modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/Steady", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Steady modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Steady")]
     public bool AthleticsSteadyPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Strong modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/Strong", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Strong modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Strong")]
     public bool AthleticsStrongPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable StrongLegs modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/Strong Legs", IsMainToggle=true)]
+    [SettingPropertyBool("Enable StrongLegs modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Strong Legs")]
     public bool AthleticsStrongLegsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable StrongArms modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/Strong Arms", IsMainToggle=true)]
+    [SettingPropertyBool("Enable StrongArms modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Strong Arms")]
     public bool AthleticsStrongArmsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Spartan modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/Spartan", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Spartan modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Spartan")]
     public bool AthleticsSpartanPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable IgnorePain modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/Ignore Pain", IsMainToggle=true)]
+    [SettingPropertyBool("Enable IgnorePain modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Ignore Pain")]
     public bool AthleticsIgnorePainPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MightyBlow modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Athletics/Mighty Blow ", IsMainToggle=true)]
+    [SettingPropertyBool("Enable MightyBlow modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Athletics/Mighty Blow ")]
     public bool AthleticsMightyBlowPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable CuriousSmelter modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crafting/Curious Smelter", IsMainToggle=true)]
+    [SettingPropertyBool("Enable CuriousSmelter modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crafting/Curious Smelter")]
     public bool CraftingCuriousSmelterPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable CuriousSmith modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crafting/Curious Smith", IsMainToggle=true)]
+    [SettingPropertyBool("Enable CuriousSmith modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crafting/Curious Smith")]
     public bool CraftingCuriousSmithPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ExperiencedSmith modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crafting/Experienced Smith", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ExperiencedSmith modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crafting/Experienced Smith")]
     public bool CraftingExperiencedSmithPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable PracticalRefiner modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crafting/Practical Refiner", IsMainToggle=true)]
+    [SettingPropertyBool("Enable PracticalRefiner modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crafting/Practical Refiner")]
     public bool CraftingPracticalRefinerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable PracticalSmelter modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crafting/Practical Smelter", IsMainToggle=true)]
+    [SettingPropertyBool("Enable PracticalSmelter modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crafting/Practical Smelter")]
     public bool CraftingPracticalSmelterPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable VigorousSmith modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crafting/Vigorous Smith", IsMainToggle=true)]
+    [SettingPropertyBool("Enable VigorousSmith modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crafting/Vigorous Smith")]
     public bool CraftingVigorousSmithPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable StrongSmith modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crafting/Controlled Smith", IsMainToggle=true)]
+    [SettingPropertyBool("Enable StrongSmith modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crafting/Controlled Smith")]
     public bool CraftingStrongSmithPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable PracticalSmith modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crafting/Practical Smith", IsMainToggle=true)]
+    [SettingPropertyBool("Enable PracticalSmith modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crafting/Practical Smith")]
     public bool CraftingPracticalSmithPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ArtisanSmith modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crafting/Artisan Smith", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ArtisanSmith modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crafting/Artisan Smith")]
     public bool CraftingArtisanSmithPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MasterSmith modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crafting/Master Smith", IsMainToggle=true)]
+    [SettingPropertyBool("Enable MasterSmith modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crafting/Master Smith")]
     public bool CraftingMasterSmithPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable WeaponMasterSmith modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crafting/Fencer Smith", IsMainToggle=true)]
+    [SettingPropertyBool("Enable WeaponMasterSmith modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crafting/Fencer Smith")]
     public bool CraftingWeaponMasterSmithPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable EnduringSmith modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crafting/Enduring Smith", IsMainToggle=true)]
+    [SettingPropertyBool("Enable EnduringSmith modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crafting/Enduring Smith")]
     public bool CraftingEnduringSmithPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SharpenedEdge modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crafting/Sharpened Edge", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SharpenedEdge modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crafting/Sharpened Edge")]
     public bool CraftingSharpenedEdgePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SharpenedTip modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crafting/Sharpened Tip", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SharpenedTip modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crafting/Sharpened Tip")]
     public bool CraftingSharpenedTipPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable LegendarySmith modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Crafting/Legendary Smith", IsMainToggle=true)]
+    [SettingPropertyBool("Enable LegendarySmith modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Crafting/Legendary Smith")]
     public bool CraftingLegendarySmithPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable TightFormations modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/Tight Formations", IsMainToggle=true)]
+    [SettingPropertyBool("Enable TightFormations modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Tight Formations")]
     public bool TacticsTightFormationsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable LooseFormations modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/Loose Formations", IsMainToggle=true)]
+    [SettingPropertyBool("Enable LooseFormations modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Loose Formations")]
     public bool TacticsLooseFormationsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable AsymmetricalWarfare modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/Asymmetrical Warfare", IsMainToggle=true)]
+    [SettingPropertyBool("Enable AsymmetricalWarfare modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Asymmetrical Warfare")]
     public bool TacticsAsymmetricalWarfarePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ProperEngagement modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/Proper Engagement", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ProperEngagement modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Proper Engagement")]
     public bool TacticsProperEngagementPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SmallUnitTactics modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/Small Unit Tactics", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SmallUnitTactics modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Small Unit Tactics")]
     public bool TacticsSmallUnitTacticsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable HordeLeader modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/Horde Leader", IsMainToggle=true)]
+    [SettingPropertyBool("Enable HordeLeader modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Horde Leader")]
     public bool TacticsHordeLeaderPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable LawKeeper modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/Law Keeper", IsMainToggle=true)]
+    [SettingPropertyBool("Enable LawKeeper modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Law Keeper")]
     public bool TacticsLawKeeperPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Coaching modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/Coaching", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Coaching modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Coaching")]
     public bool TacticsCoachingPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SwiftRegroup modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/Swift Regroup", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SwiftRegroup modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Swift Regroup")]
     public bool TacticsSwiftRegroupPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Improviser modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/Improviser", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Improviser modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Improviser")]
     public bool TacticsImproviserPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable OnTheMarch modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/On The March", IsMainToggle=true)]
+    [SettingPropertyBool("Enable OnTheMarch modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/On The March")]
     public bool TacticsOnTheMarchPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable CallToArms modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/Call To Arms", IsMainToggle=true)]
+    [SettingPropertyBool("Enable CallToArms modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Call To Arms")]
     public bool TacticsCallToArmsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable PickThemOfTheWalls modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/Pick Them Of The Walls", IsMainToggle=true)]
+    [SettingPropertyBool("Enable PickThemOfTheWalls modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Pick Them Off The Walls")]
     public bool TacticsPickThemOfTheWallsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MakeThemPay modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/Make Them Pay", IsMainToggle=true)]
+    [SettingPropertyBool("Enable MakeThemPay modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Make Them Pay")]
     public bool TacticsMakeThemPayPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable EliteReserves modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/Elite Reserves", IsMainToggle=true)]
+    [SettingPropertyBool("Enable EliteReserves modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Elite Reserves")]
     public bool TacticsEliteReservesPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Encirclement modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/Encirclement", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Encirclement modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Encirclement")]
     public bool TacticsEncirclementPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable PreBattleManeuvers modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/Pre Battle Maneuvers", IsMainToggle=true)]
+    [SettingPropertyBool("Enable PreBattleManeuvers modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Pre Battle Maneuvers")]
     public bool TacticsPreBattleManeuversPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Besieged modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/Besieged", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Besieged modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Besieged")]
     public bool TacticsBesiegedPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Counteroffensive modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/Counter Offensive", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Counteroffensive modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Counter Offensive")]
     public bool TacticsCounteroffensivePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Gensdarmes modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/Gens d'armes", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Gensdarmes modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Gens d'armes")]
     public bool TacticsGensdarmesPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable TacticalMastery modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Tactics/Tactical Mastery", IsMainToggle=true)]
+    [SettingPropertyBool("Enable TacticalMastery modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Tactics/Tactical Mastery")]
     public bool TacticsTacticalMasteryPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable DayTraveler modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/Day Traveler", IsMainToggle=true)]
+    [SettingPropertyBool("Enable DayTraveler modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Day Traveler")]
     public bool ScoutingDayTravelerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable NightRunner modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/Night Runner", IsMainToggle=true)]
+    [SettingPropertyBool("Enable NightRunner modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Night Runner")]
     public bool ScoutingNightRunnerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Pathfinder modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/Pathfinder", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Pathfinder modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Pathfinder")]
     public bool ScoutingPathfinderPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable WaterDiviner modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/Water Diviner", IsMainToggle=true)]
+    [SettingPropertyBool("Enable WaterDiviner modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Water Diviner")]
     public bool ScoutingWaterDivinerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ForestKin modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/Forest Kin", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ForestKin modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Forest Kin")]
     public bool ScoutingForestKinPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable DesertBorn modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/Desert Born", IsMainToggle=true)]
+    [SettingPropertyBool("Enable DesertBorn modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Desert Born")]
     public bool ScoutingDesertBornPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ForcedMarch modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/Forced March", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ForcedMarch modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Forced March")]
     public bool ScoutingForcedMarchPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Unburdened modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/Unburdened", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Unburdened modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Unburdened")]
     public bool ScoutingUnburdenedPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Tracker modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/Tracker", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Tracker modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Tracker")]
     public bool ScoutingTrackerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Ranger modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/Ranger", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Ranger modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Ranger")]
     public bool ScoutingRangerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MountedScouts modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/Mounted Scouts", IsMainToggle=true)]
+    [SettingPropertyBool("Enable MountedScouts modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Mounted Scouts")]
     public bool ScoutingMountedScoutsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Patrols modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/Patrols", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Patrols modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Patrols")]
     public bool ScoutingPatrolsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Foragers modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/Foragers", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Foragers modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Foragers")]
     public bool ScoutingForagersPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable BeastWhisperer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/Beast Whisperer", IsMainToggle=true)]
+    [SettingPropertyBool("Enable BeastWhisperer modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Beast Whisperer")]
     public bool ScoutingBeastWhispererPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable VillageNetwork modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/Village Network", IsMainToggle=true)]
+    [SettingPropertyBool("Enable VillageNetwork modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Village Network")]
     public bool ScoutingVillageNetworkPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable RumourNetwork modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/Rumour Network", IsMainToggle=true)]
+    [SettingPropertyBool("Enable RumourNetwork modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Rumour Network")]
     public bool ScoutingRumourNetworkPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable VantagePoint modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/Vantage Point", IsMainToggle=true)]
+    [SettingPropertyBool("Enable VantagePoint modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Vantage Point")]
     public bool ScoutingVantagePointPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable KeenSight modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/Keen Sight", IsMainToggle=true)]
+    [SettingPropertyBool("Enable KeenSight modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Keen Sight")]
     public bool ScoutingKeenSightPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Vanguard modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/Vanguard", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Vanguard modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Vanguard")]
     public bool ScoutingVanguardPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Rearguard modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/Rearguard", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Rearguard modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Rearguard")]
     public bool ScoutingRearguardPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable UncannyInsight modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Scouting/Uncanny Insight", IsMainToggle=true)]
+    [SettingPropertyBool("Enable UncannyInsight modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Scouting/Uncanny Insight")]
     public bool ScoutingUncannyInsightPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable NoRestForTheWicked modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/No Rest for the Wicked", IsMainToggle=true)]
+    [SettingPropertyBool("Enable NoRestForTheWicked modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/No Rest for the Wicked")]
     public bool RogueryNoRestForTheWickedPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SweetTalker modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/Sweet Talker", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SweetTalker modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Sweet Talker")]
     public bool RoguerySweetTalkerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable TwoFaced modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/Two Faced", IsMainToggle=true)]
+    [SettingPropertyBool("Enable TwoFaced modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Two Faced")]
     public bool RogueryTwoFacedPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable DeepPockets modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/Deep Pockets", IsMainToggle=true)]
+    [SettingPropertyBool("Enable DeepPockets modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Deep Pockets")]
     public bool RogueryDeepPocketsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable InBestLight modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/In Best Light", IsMainToggle=true)]
+    [SettingPropertyBool("Enable InBestLight modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/In Best Light")]
     public bool RogueryInBestLightPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable KnowHow modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/Know-How", IsMainToggle=true)]
+    [SettingPropertyBool("Enable KnowHow modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Know-How")]
     public bool RogueryKnowHowPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Promises modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/Promises", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Promises modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Promises")]
     public bool RogueryPromisesPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SlaveTrader modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/Slave Trader", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SlaveTrader modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Slave Trader")]
     public bool RoguerySlaveTraderPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Scarface modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/Scarface", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Scarface modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Scarface")]
     public bool RogueryScarfacePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable WhiteLies modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/White Lies", IsMainToggle=true)]
+    [SettingPropertyBool("Enable WhiteLies modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/White Lies")]
     public bool RogueryWhiteLiesPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SmugglerConnections modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/Smuggler Connections", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SmugglerConnections modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Smuggler Connections")]
     public bool RoguerySmugglerConnectionsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable PartnersInCrime modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/Partners in Crime", IsMainToggle=true)]
+    [SettingPropertyBool("Enable PartnersInCrime modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Partners in Crime")]
     public bool RogueryPartnersInCrimePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable OneOfTheFamily modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/One of the Family", IsMainToggle=true)]
+    [SettingPropertyBool("Enable OneOfTheFamily modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/One of the Family")]
     public bool RogueryOneOfTheFamilyPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SaltTheEarth modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/Salt the Earth", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SaltTheEarth modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Salt the Earth")]
     public bool RoguerySaltTheEarthPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Carver modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/Carver", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Carver modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Carver")]
     public bool RogueryCarverPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable RansomBroker modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/Ransom Broker", IsMainToggle=true)]
+    [SettingPropertyBool("Enable RansomBroker modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Ransom Broker")]
     public bool RogueryRansomBrokerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ArmsDealer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/Arms Dealer", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ArmsDealer modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Arms Dealer")]
     public bool RogueryArmsDealerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable DirtyFighting modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/Dirty Fighting", IsMainToggle=true)]
+    [SettingPropertyBool("Enable DirtyFighting modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Dirty Fighting")]
     public bool RogueryDirtyFightingPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable DashAndSlash modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/Dash and Slash", IsMainToggle=true)]
+    [SettingPropertyBool("Enable DashAndSlash modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Dash and Slash")]
     public bool RogueryDashAndSlashPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable FleetFooted modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/Fleet Footed", IsMainToggle=true)]
+    [SettingPropertyBool("Enable FleetFooted modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Fleet Footed")]
     public bool RogueryFleetFootedPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable RogueExtraordinaire modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Roguery/Rogue Extraordinaire", IsMainToggle=true)]
+    [SettingPropertyBool("Enable RogueExtraordinaire modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Roguery/Rogue Extraordinaire")]
     public bool RogueryRogueExtraordinairePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable CombatTips modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/Combat Tips", IsMainToggle=true)]
+    [SettingPropertyBool("Enable CombatTips modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Combat Tips")]
     public bool LeadershipCombatTipsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable RaiseTheMeek modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/Raise The Meek", IsMainToggle=true)]
+    [SettingPropertyBool("Enable RaiseTheMeek modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Raise The Meek")]
     public bool LeadershipRaiseTheMeekPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable FerventAttacker modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/Fervent Attacker", IsMainToggle=true)]
+    [SettingPropertyBool("Enable FerventAttacker modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Fervent Attacker")]
     public bool LeadershipFerventAttackerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable StoutDefender modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/Stout Defender", IsMainToggle=true)]
+    [SettingPropertyBool("Enable StoutDefender modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Stout Defender")]
     public bool LeadershipStoutDefenderPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Authority modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/Authority", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Authority modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Authority")]
     public bool LeadershipAuthorityPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable HeroicLeader modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/Heroic Leader", IsMainToggle=true)]
+    [SettingPropertyBool("Enable HeroicLeader modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Heroic Leader")]
     public bool LeadershipHeroicLeaderPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable LoyaltyAndHonor modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/Loyalty and Honor", IsMainToggle=true)]
+    [SettingPropertyBool("Enable LoyaltyAndHonor modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Loyalty and Honor")]
     public bool LeadershipLoyaltyAndHonorPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable FamousCommander modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/Famous Commander", IsMainToggle=true)]
+    [SettingPropertyBool("Enable FamousCommander modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Famous Commander")]
     public bool LeadershipFamousCommanderPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Presence modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/Presence", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Presence modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Presence")]
     public bool LeadershipPresencePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable LeaderOfMasses modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/Leader of the Masses", IsMainToggle=true)]
+    [SettingPropertyBool("Enable LeaderOfMasses modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Leader of the Masses")]
     public bool LeadershipLeaderOfMassesPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable VeteransRespect modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/Veteran's Respect", IsMainToggle=true)]
+    [SettingPropertyBool("Enable VeteransRespect modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Veteran's Respect")]
     public bool LeadershipVeteransRespectPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable CitizenMilitia modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/Citizen Militia", IsMainToggle=true)]
+    [SettingPropertyBool("Enable CitizenMilitia modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Citizen Militia")]
     public bool LeadershipCitizenMilitiaPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable InspiringLeader modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/Inspiring Leader", IsMainToggle=true)]
+    [SettingPropertyBool("Enable InspiringLeader modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Inspiring Leader")]
     public bool LeadershipInspiringLeaderPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable UpliftingSpirit modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/Uplifting Spirit", IsMainToggle=true)]
+    [SettingPropertyBool("Enable UpliftingSpirit modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Uplifting Spirit")]
     public bool LeadershipUpliftingSpiritPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MakeADifference modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/Make a Difference", IsMainToggle=true)]
+    [SettingPropertyBool("Enable MakeADifference modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Make a Difference")]
     public bool LeadershipMakeADifferencePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable LeadByExample modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/Lead by Example", IsMainToggle=true)]
+    [SettingPropertyBool("Enable LeadByExample modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Lead by Example")]
     public bool LeadershipLeadByExamplePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable TrustedCommander modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/Trusted Commander", IsMainToggle=true)]
+    [SettingPropertyBool("Enable TrustedCommander modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Trusted Commander")]
     public bool LeadershipTrustedCommanderPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable GreatLeader modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/Great Leader", IsMainToggle=true)]
+    [SettingPropertyBool("Enable GreatLeader modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Great Leader")]
     public bool LeadershipGreatLeaderPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable WePledgeOurSwords modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/We Pledge our Swords", IsMainToggle=true)]
+    [SettingPropertyBool("Enable WePledgeOurSwords modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/We Pledge our Swords")]
     public bool LeadershipWePledgeOurSwordsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable TalentMagnet modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/Talent Magnet", IsMainToggle=true)]
+    [SettingPropertyBool("Enable TalentMagnet modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Talent Magnet")]
     public bool LeadershipTalentMagnetPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable UltimateLeader modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Leadership/Ultimate Leader", IsMainToggle=true)]
+    [SettingPropertyBool("Enable UltimateLeader modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Leadership/Ultimate Leader")]
     public bool LeadershipUltimateLeaderPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Virile modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/Virile", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Virile modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Virile")]
     public bool CharmVirilePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SelfPromoter modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/Self Promoter", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SelfPromoter modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Self Promoter")]
     public bool CharmSelfPromoterPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Oratory modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/Oratory", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Oratory modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Oratory")]
     public bool CharmOratoryPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Warlord modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/Warlord", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Warlord modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Warlord")]
     public bool CharmWarlordPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ForgivableGrievances modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/Forgivable Grievances", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ForgivableGrievances modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Forgivable Grievances")]
     public bool CharmForgivableGrievancesPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MeaningfulFavors modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/Meaningful Favors", IsMainToggle=true)]
+    [SettingPropertyBool("Enable MeaningfulFavors modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Meaningful Favors")]
     public bool CharmMeaningfulFavorsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable InBloom modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/In Bloom", IsMainToggle=true)]
+    [SettingPropertyBool("Enable InBloom modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/In Bloom")]
     public bool CharmInBloomPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable YoungAndRespectful modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/Young And Respectful", IsMainToggle=true)]
+    [SettingPropertyBool("Enable YoungAndRespectful modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Young And Respectful")]
     public bool CharmYoungAndRespectfulPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Firebrand modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/Firebrand", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Firebrand modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Firebrand")]
     public bool CharmFirebrandPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable FlexibleEthics modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/Flexible Ethics", IsMainToggle=true)]
+    [SettingPropertyBool("Enable FlexibleEthics modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Flexible Ethics")]
     public bool CharmFlexibleEthicsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable EffortForThePeople modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/Effort For The People", IsMainToggle=true)]
+    [SettingPropertyBool("Enable EffortForThePeople modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Effort For The People")]
     public bool CharmEffortForThePeoplePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SlickNegotiator modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/Slick Negotiator", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SlickNegotiator modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Slick Negotiator")]
     public bool CharmSlickNegotiatorPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable GoodNatured modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/Good Natured", IsMainToggle=true)]
+    [SettingPropertyBool("Enable GoodNatured modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Good Natured")]
     public bool CharmGoodNaturedPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Tribute modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/Tribute", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Tribute modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Tribute")]
     public bool CharmTributePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MoralLeader modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/Morale Leader", IsMainToggle=true)]
+    [SettingPropertyBool("Enable MoralLeader modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Morale Leader")]
     public bool CharmMoralLeaderPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable NaturalLeader modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/Natural Leader", IsMainToggle=true)]
+    [SettingPropertyBool("Enable NaturalLeader modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Natural Leader")]
     public bool CharmNaturalLeaderPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable PublicSpeaker modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/Public Speaker", IsMainToggle=true)]
+    [SettingPropertyBool("Enable PublicSpeaker modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Public Speaker")]
     public bool CharmPublicSpeakerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Parade modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/Parade", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Parade modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Parade")]
     public bool CharmParadePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Camaraderie modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/Camaraderie", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Camaraderie modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Camaraderie")]
     public bool CharmCamaraderiePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ImmortalCharm modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Charm/Immortal Charm", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ImmortalCharm modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Charm/Immortal Charm")]
     public bool CharmImmortalCharmPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Appraiser modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Appraiser", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Appraiser modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Appraiser")]
     public bool TradeAppraiserPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable WholeSeller modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Whole Seller", IsMainToggle=true)]
+    [SettingPropertyBool("Enable WholeSeller modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Whole Seller")]
     public bool TradeWholeSellerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable CaravanMaster modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Caravan Master", IsMainToggle=true)]
+    [SettingPropertyBool("Enable CaravanMaster modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Caravan Master")]
     public bool TradeCaravanMasterPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MarketDealer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Market Dealer", IsMainToggle=true)]
+    [SettingPropertyBool("Enable MarketDealer modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Market Dealer")]
     public bool TradeMarketDealerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable TravelingRumors modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Traveling Rumors", IsMainToggle=true)]
+    [SettingPropertyBool("Enable TravelingRumors modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Traveling Rumors")]
     public bool TradeTravelingRumorsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable LocalConnection modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Local Connection", IsMainToggle=true)]
+    [SettingPropertyBool("Enable LocalConnection modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Local Connection")]
     public bool TradeLocalConnectionPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable DistributedGoods modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Distributed Goods", IsMainToggle=true)]
+    [SettingPropertyBool("Enable DistributedGoods modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Distributed Goods")]
     public bool TradeDistributedGoodsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Tollgates modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Toll Gates", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Tollgates modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Toll Gates")]
     public bool TradeTollgatesPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ArtisanCommunity modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Artisan Community", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ArtisanCommunity modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Artisan Community")]
     public bool TradeArtisanCommunityPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable GreatInvestor modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Great Investor", IsMainToggle=true)]
+    [SettingPropertyBool("Enable GreatInvestor modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Great Investor")]
     public bool TradeGreatInvestorPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MercenaryConnections modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Mercenary Connections", IsMainToggle=true)]
+    [SettingPropertyBool("Enable MercenaryConnections modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Mercenary Connections")]
     public bool TradeMercenaryConnectionsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ContentTrades modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Content Trades", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ContentTrades modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Content Trades")]
     public bool TradeContentTradesPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable InsurancePlans modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Insurance Plans", IsMainToggle=true)]
+    [SettingPropertyBool("Enable InsurancePlans modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Insurance Plans")]
     public bool TradeInsurancePlansPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable RapidDevelopment modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Rapid Development", IsMainToggle=true)]
+    [SettingPropertyBool("Enable RapidDevelopment modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Rapid Development")]
     public bool TradeRapidDevelopmentPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable GranaryAccountant modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Granary Accountant", IsMainToggle=true)]
+    [SettingPropertyBool("Enable GranaryAccountant modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Granary Accountant")]
     public bool TradeGranaryAccountantPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable TradeyardForeman modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Tradeyard Foreman", IsMainToggle=true)]
+    [SettingPropertyBool("Enable TradeyardForeman modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Tradeyard Foreman")]
     public bool TradeTradeyardForemanPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SwordForBarter modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Sword For Barter", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SwordForBarter modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Sword For Barter")]
     public bool TradeSwordForBarterPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SelfMadeMan modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Self-made Man", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SelfMadeMan modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Self-made Man")]
     public bool TradeSelfMadeManPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SilverTongue modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Silver Tongue", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SilverTongue modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Silver Tongue")]
     public bool TradeSilverTonguePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SpringOfGold modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Spring of Gold", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SpringOfGold modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Spring of Gold")]
     public bool TradeSpringOfGoldPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ManOfMeans modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Man of Means", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ManOfMeans modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Man of Means")]
     public bool TradeManOfMeansPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable TrickleDown modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Trade/Trickle Down", IsMainToggle=true)]
+    [SettingPropertyBool("Enable TrickleDown modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Trade/Trickle Down")]
     public bool TradeTrickleDownPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Spartan modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/Spartan", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Spartan modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Spartan")]
     public bool StewardSpartanPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Frugal modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/Frugal", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Frugal modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Frugal")]
     public bool StewardFrugalPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SevenVeterans modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/Seven Veterans", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SevenVeterans modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Seven Veterans")]
     public bool StewardSevenVeteransPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable DrillSergant modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/Drill Sergeant", IsMainToggle=true)]
+    [SettingPropertyBool("Enable DrillSergant modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Drill Sergeant")]
     public bool StewardDrillSergantPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Sweatshops modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/Sweatshops", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Sweatshops modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Sweatshops")]
     public bool StewardSweatshopsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable StiffUpperLip modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/Stiff Upper Lip", IsMainToggle=true)]
+    [SettingPropertyBool("Enable StiffUpperLip modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Stiff Upper Lip")]
     public bool StewardStiffUpperLipPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable PaidInPromise modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/Paid in Promise", IsMainToggle=true)]
+    [SettingPropertyBool("Enable PaidInPromise modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Paid in Promise")]
     public bool StewardPaidInPromisePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable EfficientCampaigner modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/Efficient Campaigner", IsMainToggle=true)]
+    [SettingPropertyBool("Enable EfficientCampaigner modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Efficient Campaigner")]
     public bool StewardEfficientCampaignerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable GivingHands modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/Giving Hands", IsMainToggle=true)]
+    [SettingPropertyBool("Enable GivingHands modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Giving Hands")]
     public bool StewardGivingHandsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Logistician modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/Logistician", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Logistician modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Logistician")]
     public bool StewardLogisticianPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Relocation modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/Relocation", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Relocation modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Relocation")]
     public bool StewardRelocationPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable AidCorps modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/Aid Corps", IsMainToggle=true)]
+    [SettingPropertyBool("Enable AidCorps modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Aid Corps")]
     public bool StewardAidCorpsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Gourmet modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/Gourmet", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Gourmet modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Gourmet")]
     public bool StewardGourmetPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SoundReserves modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/Sound Reserves", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SoundReserves modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Sound Reserves")]
     public bool StewardSoundReservesPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ForcedLabor modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/Forced Labor", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ForcedLabor modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Forced Labor")]
     public bool StewardForcedLaborPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Contractors modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/Contractors", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Contractors modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Contractors")]
     public bool StewardContractorsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ArenicosMules modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/Arenicos' Mules", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ArenicosMules modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Arenicos' Mules")]
     public bool StewardArenicosMulesPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ArenicosHorses modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/Arenicos' Horses", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ArenicosHorses modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Arenicos' Horses")]
     public bool StewardArenicosHorsesPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MasterOfPlanning modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/Master of Planning", IsMainToggle=true)]
+    [SettingPropertyBool("Enable MasterOfPlanning modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Master of Planning")]
     public bool StewardMasterOfPlanningPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MasterOfWarcraft modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/Master of Warcraft", IsMainToggle=true)]
+    [SettingPropertyBool("Enable MasterOfWarcraft modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Master of Warcraft")]
     public bool StewardMasterOfWarcraftPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable PriceOfLoyalty modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Steward/Price of Loyalty", IsMainToggle=true)]
+    [SettingPropertyBool("Enable PriceOfLoyalty modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Steward/Price of Loyalty")]
     public bool StewardPriceOfLoyaltyPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SelfMedication modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/Self Medication", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SelfMedication modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Self Medication")]
     public bool MedicineSelfMedicationPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable PreventiveMedicine modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/Preventive Medicine", IsMainToggle=true)]
+    [SettingPropertyBool("Enable PreventiveMedicine modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Preventive Medicine")]
     public bool MedicinePreventiveMedicinePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable TriageTent modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/Triage Tent", IsMainToggle=true)]
+    [SettingPropertyBool("Enable TriageTent modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Triage Tent")]
     public bool MedicineTriageTentPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable WalkItOff modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/Walk It Off", IsMainToggle=true)]
+    [SettingPropertyBool("Enable WalkItOff modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Walk It Off")]
     public bool MedicineWalkItOffPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Sledges modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/Sledges", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Sledges modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Sledges")]
     public bool MedicineSledgesPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable DoctorsOath modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/Doctors Oath", IsMainToggle=true)]
+    [SettingPropertyBool("Enable DoctorsOath modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Doctor's Oath")]
     public bool MedicineDoctorsOathPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable BestMedicine modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/Best Medicine", IsMainToggle=true)]
+    [SettingPropertyBool("Enable BestMedicine modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Best Medicine")]
     public bool MedicineBestMedicinePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable GoodLogdings modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/Good Lodging", IsMainToggle=true)]
+    [SettingPropertyBool("Enable GoodLogdings modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Good Lodging")]
     public bool MedicineGoodLogdingsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SiegeMedic modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/Siege Medic", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SiegeMedic modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Siege Medic")]
     public bool MedicineSiegeMedicPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Veterinarian modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/Veterinarian", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Veterinarian modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Veterinarian")]
     public bool MedicineVeterinarianPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable PristineStreets modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/Pristine Streets", IsMainToggle=true)]
+    [SettingPropertyBool("Enable PristineStreets modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Pristine Streets")]
     public bool MedicinePristineStreetsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable BushDoctor modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/Bush Doctor", IsMainToggle=true)]
+    [SettingPropertyBool("Enable BushDoctor modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Bush Doctor")]
     public bool MedicineBushDoctorPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable PerfectHealth modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/Perfect Health", IsMainToggle=true)]
+    [SettingPropertyBool("Enable PerfectHealth modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Perfect Health")]
     public bool MedicinePerfectHealthPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable HealthAdvise modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/Health Advice", IsMainToggle=true)]
+    [SettingPropertyBool("Enable HealthAdvise modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Health Advice")]
     public bool MedicineHealthAdvisePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable PhysicianOfPeople modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/Physician of People", IsMainToggle=true)]
+    [SettingPropertyBool("Enable PhysicianOfPeople modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Physician of People")]
     public bool MedicinePhysicianOfPeoplePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable CleanInfrastructure modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/Clean Infrastructure", IsMainToggle=true)]
+    [SettingPropertyBool("Enable CleanInfrastructure modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Clean Infrastructure")]
     public bool MedicineCleanInfrastructurePerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable CheatDeath modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/Cheat Death", IsMainToggle=true)]
+    [SettingPropertyBool("Enable CheatDeath modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Cheat Death")]
     public bool MedicineCheatDeathPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable FortitudeTonic modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/Fortitude Tonic", IsMainToggle=true)]
+    [SettingPropertyBool("Enable FortitudeTonic modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Fortitude Tonic")]
     public bool MedicineFortitudeTonicPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable HelpingHands modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/Helping Hands", IsMainToggle=true)]
+    [SettingPropertyBool("Enable HelpingHands modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Helping Hands")]
     public bool MedicineHelpingHandsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable BattleHardened modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Medicine/Battle Hardened", IsMainToggle=true)]
+    [SettingPropertyBool("Enable BattleHardened modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Medicine/Battle Hardened")]
     public bool MedicineBattleHardenedPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Scaffolds modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/Scaffolds", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Scaffolds modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Scaffolds")]
     public bool EngineeringScaffoldsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable TorsionEngines modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/Torsion Engines", IsMainToggle=true)]
+    [SettingPropertyBool("Enable TorsionEngines modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Torsion Engines")]
     public bool EngineeringTorsionEnginesPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SiegeWorks modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/Siegeworks", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SiegeWorks modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Siegeworks")]
     public bool EngineeringSiegeWorksPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable PrisonArchitect modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/Prison Architect", IsMainToggle=true)]
+    [SettingPropertyBool("Enable PrisonArchitect modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Prison Architect")]
     public bool EngineeringPrisonArchitectPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Carpenters modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/Carpenters", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Carpenters modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Carpenters")]
     public bool EngineeringCarpentersPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable MilitaryPlanner modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/Military Planner", IsMainToggle=true)]
+    [SettingPropertyBool("Enable MilitaryPlanner modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Military Planner")]
     public bool EngineeringMilitaryPlannerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable WallBreaker modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/Wall Breaker", IsMainToggle=true)]
+    [SettingPropertyBool("Enable WallBreaker modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Wall Breaker")]
     public bool EngineeringWallBreakerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable DreadfulSieger modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/Dreadful Besieger", IsMainToggle=true)]
+    [SettingPropertyBool("Enable DreadfulSieger modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Dreadful Besieger")]
     public bool EngineeringDreadfulSiegerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Salvager modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/Salvager", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Salvager modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Salvager")]
     public bool EngineeringSalvagerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Foreman modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/Foreman", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Foreman modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Foreman")]
     public bool EngineeringForemanPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Stonecutters modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/Stonecutters", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Stonecutters modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Stonecutters")]
     public bool EngineeringStonecuttersPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable SiegeEngineer modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/Siege Engineer", IsMainToggle=true)]
+    [SettingPropertyBool("Enable SiegeEngineer modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Siege Engineer")]
     public bool EngineeringSiegeEngineerPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable CampBuilding modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/Camp Building", IsMainToggle=true)]
+    [SettingPropertyBool("Enable CampBuilding modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Camp Building")]
     public bool EngineeringCampBuildingPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Battlements modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/Battlements", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Battlements modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Battlements")]
     public bool EngineeringBattlementsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable EngineeringGuilds modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/Engineering Guilds", IsMainToggle=true)]
+    [SettingPropertyBool("Enable EngineeringGuilds modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Engineering Guilds")]
     public bool EngineeringEngineeringGuildsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Apprenticeship modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/Apprenticeship", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Apprenticeship modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Apprenticeship")]
     public bool EngineeringApprenticeshipPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Metallurgy modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/Metallurgy", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Metallurgy modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Metallurgy")]
     public bool EngineeringMetallurgyPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ImprovedTools modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/Improved Tools", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ImprovedTools modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Improved Tools")]
     public bool EngineeringImprovedToolsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Clockwork modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/Clockwork", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Clockwork modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Clockwork")]
     public bool EngineeringClockworkPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable ArchitecturalCommisions modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/Architectural Commissions", IsMainToggle=true)]
+    [SettingPropertyBool("Enable ArchitecturalCommisions modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Architectural Commissions")]
     public bool EngineeringArchitecturalCommisionsPerkModificationEnabled {get; set;} = false;
-    [SettingPropertyBool("Enable Masterwork modifications", RequireRestart=false, HintText = "")]
-    [SettingPropertyGroup("Perks/Engineering/Masterwork", IsMainToggle=true)]
+    [SettingPropertyBool("Enable Masterwork modifications", RequireRestart=false, HintText = "", IsToggle=true)]
+    [SettingPropertyGroup("Perks/Engineering/Masterwork")]
     public bool EngineeringMasterworkPerkModificationEnabled {get; set;} = false;
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=JKqsYaBj}One handed weapons you wield have their handling increased by 20%.")]
     [SettingPropertyGroup("Perks/OneHanded/Deflect")]
@@ -1960,7 +1965,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=oxqZJ0s9}Governed settlements gain 0.5 security per day.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=oxqZJ0s9}Governed settlements gain +0.5 security per day.")]
     [SettingPropertyGroup("Perks/OneHanded/To Be Blunt")]
     public float oh_ToBeBlunt_s {
       get => _oh_ToBeBlunt_s;
@@ -1986,7 +1991,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=oYJz4V0s}Governed settlements have increased militia recruitment by 0.5 per day.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=oYJz4V0s}Governed settlements have increased militia recruitment by +0.5 per day.")]
     [SettingPropertyGroup("Perks/OneHanded/Swift Strike")]
     public float oh_SwiftStrike_s {
       get => _oh_SwiftStrike_s;
@@ -2052,7 +2057,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=daJkC7ZG}Increases your hit points by 2.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=daJkC7ZG}Increases your hit points by +2.")]
     [SettingPropertyGroup("Perks/OneHanded/Trainer")]
     public float oh_Trainer_p {
       get => _oh_Trainer_p;
@@ -2350,7 +2355,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=GzNVqogG}Infantry troops in the the party you are leading have their hit points increased by 10.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=GzNVqogG}Infantry troops in the the party you are leading have their hit points increased by +10.")]
     [SettingPropertyGroup("Perks/OneHanded/Unwavering Defense")]
     public float oh_UnwaveringDefense_s {
       get => _oh_UnwaveringDefense_s;
@@ -2376,7 +2381,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=4oxnmb5B}Increases your party limit by 15.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=4oxnmb5B}Increases your party limit by +15.")]
     [SettingPropertyGroup("Perks/OneHanded/Prestige")]
     public float oh_Prestige_s {
       get => _oh_Prestige_s;
@@ -2546,7 +2551,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=WAbqnair}Two handed weapon attacks that deal damage over 25% of your opponent's hit points have 30% chance to knock them down.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=Tt3AWmmL}Two handed weapons that can knock down ignore 15% knock down resistance.")]
     [SettingPropertyGroup("Perks/TwoHanded/Show of Strength")]
     public float twh_ShowOfStrength_p {
       get => _twh_ShowOfStrength_p;
@@ -2624,7 +2629,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Ge9RMuRi}40% more damage to shields with 2 handed weapons.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Ge9RMuRi}40% more damage to shields with two handed weapons.")]
     [SettingPropertyGroup("Perks/TwoHanded/Shield breaker")]
     public float twh_ShieldBreaker_p {
       get => _twh_ShieldBreaker_p;
@@ -2740,7 +2745,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=PMSSAVgi}Increases your prisoner limit by 10.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=PMSSAVgi}Increases your prisoner limit by +10.")]
     [SettingPropertyGroup("Perks/TwoHanded/Terror")]
     public float twh_Terror_s {
       get => _twh_Terror_s;
@@ -2766,7 +2771,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=2Ott7Iq1}Your party limit is increased by 5.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=2Ott7Iq1}Your party limit is increased by +5.")]
     [SettingPropertyGroup("Perks/TwoHanded/Hope")]
     public float twh_Hope_s {
       get => _twh_Hope_s;
@@ -2806,7 +2811,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=kKSSJD84}You gain 5 hit points.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=kKSSJD84}You gain +5 hit points.")]
     [SettingPropertyGroup("Perks/TwoHanded/Thick Hides")]
     public float twh_ThickHides_p {
       get => _twh_ThickHides_p;
@@ -2962,7 +2967,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=taTbOAte}Polearm attacks that deal damage over 25% of enemy cavalry's hit points has 25% chance to dismount them.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=R0aUXL2h}Polearm attacks that can dismount ignore 15% dismount resistance.")]
     [SettingPropertyGroup("Perks/Polearm/Braced")]
     public float plm_Braced_p {
       get => _plm_Braced_p;
@@ -2988,7 +2993,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=gW4Qmn73}Thrust attacks with polearms have 30% more chance to knock opponents back.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=gW4Qmn73}Polearm thrust attacks ignore 25% knock back resistance.")]
     [SettingPropertyGroup("Perks/Polearm/Keep at Bay")]
     public float plm_KeepAtBay_p {
       get => _plm_KeepAtBay_p;
@@ -3000,7 +3005,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=WXDcmG0f}Increases militia recruitment in governed settlements by 0.5.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=WXDcmG0f}Increases militia recruitment in governed settlements by +0.5.")]
     [SettingPropertyGroup("Perks/Polearm/Keep at Bay")]
     public float plm_KeepAtBay_s {
       get => _plm_KeepAtBay_s;
@@ -3092,7 +3097,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ft6k4Fav}Polearm attacks that deal damage over 25% of your opponent's hit points have 25% chance to knock them down.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=aAaZr39k}Polearms that can knock down ignore %15 knock down resistance.")]
     [SettingPropertyGroup("Perks/Polearm/Hard Knock")]
     public float plm_HardKnock_p {
       get => _plm_HardKnock_p;
@@ -3104,7 +3109,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=gTuRHrjO}Infantry troops in the party you are leading gain 3 hit points.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=gTuRHrjO}Infantry troops in the party you are leading gain +3 hit points.")]
     [SettingPropertyGroup("Perks/Polearm/Hard Knock")]
     public float plm_HardKnock_s {
       get => _plm_HardKnock_s;
@@ -3182,7 +3187,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=lB12FYqb}Governed settlements gain 1 security per day.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=lB12FYqb}Governed settlements gain +1 security per day.")]
     [SettingPropertyGroup("Perks/Polearm/Skewer")]
     public float plm_Skewer_s {
       get => _plm_Skewer_s;
@@ -3248,7 +3253,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=xWbSbNqy}Infantry in your party have their melee weapon skills increased by 30 while in shield wall formation.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=xWbSbNqy}Infantry in your party have their melee weapon skills increased by +30 while in shield wall formation.")]
     [SettingPropertyGroup("Perks/Polearm/Phalanx")]
     public float plm_Phalanx_p {
       get => _plm_Phalanx_p;
@@ -3274,7 +3279,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=g7a7vk3S}Troops in your party gain 5 hit points.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=g7a7vk3S}Troops in your party gain +5 hit points.")]
     [SettingPropertyGroup("Perks/Polearm/Generous Rations")]
     public float plm_GenerousRations_p {
       get => _plm_GenerousRations_p;
@@ -3300,7 +3305,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=IYyuc1fz}Governed settlements gain 0.5 militia per day.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=IYyuc1fz}Governed settlements gain +0.5 militia per day.")]
     [SettingPropertyGroup("Perks/Polearm/Drills")]
     public float plm_Drills_p {
       get => _plm_Drills_p;
@@ -3312,7 +3317,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=BC1vxpPb}All troops in your party gain additional 1 xp per day.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=BC1vxpPb}All troops in your party gain additional +1 xp per day.")]
     [SettingPropertyGroup("Perks/Polearm/Drills")]
     public float plm_Drills_s {
       get => _plm_Drills_s;
@@ -3612,7 +3617,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=920FKjJk}Increases your party size by 5.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=920FKjJk}Increases your party size by +5.")]
     [SettingPropertyGroup("Perks/Bow/Merry Men")]
     public float bow_MerryMen_p {
       get => _bow_MerryMen_p;
@@ -3624,7 +3629,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=b4BX9Fr5}Governed settlement gains 0.5 militia per day.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=b4BX9Fr5}Governed settlement gains +0.5 militia per day.")]
     [SettingPropertyGroup("Perks/Bow/Merry Men")]
     public float bow_MerryMen_s {
       get => _bow_MerryMen_s;
@@ -3806,7 +3811,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=h7zHLPX5}Increases your visual range in campaign map by 10%.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=h7zHLPX5}Increases your seeing range in campaign map by 10%.")]
     [SettingPropertyGroup("Perks/Bow/Eagle Eye")]
     public float bow_EagleEye_s {
       get => _bow_EagleEye_s;
@@ -3898,7 +3903,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ll4s461C}You get 3 extra arrows per quiver.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ll4s461C}You get +3 extra arrows per quiver.")]
     [SettingPropertyGroup("Perks/Bow/Deep Quivers")]
     public float bow_DeepQuivers_p {
       get => _bow_DeepQuivers_p;
@@ -4107,7 +4112,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=aq4NI3Ao}Decreases your crossbow accuracy loss due to movement by 30%.")]
-    [SettingPropertyGroup("Perks/Crossbow/Donkeys Swiftness")]
+    [SettingPropertyGroup("Perks/Crossbow/Donkey's Swiftness")]
     public float xbw_DonkeysSwiftness_p {
       get => _xbw_DonkeysSwiftness_p;
       set {
@@ -4119,7 +4124,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=6nm9biYR}Crossbow equipped troops in your formation have +30 crossbow skill.")]
-    [SettingPropertyGroup("Perks/Crossbow/Donkeys Swiftness")]
+    [SettingPropertyGroup("Perks/Crossbow/Donkey's Swiftness")]
     public float xbw_DonkeysSwiftness_s {
       get => _xbw_DonkeysSwiftness_s;
       set {
@@ -4184,8 +4189,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HM60zpIf}Your ranged troops gain 2 xp everyday.")]
-    [SettingPropertyGroup("Perks/Crossbow/Renown Marksmen")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HM60zpIf}Your ranged troops gain +2 xp everyday.")]
+    [SettingPropertyGroup("Perks/Crossbow/Renowned Marksmen")]
     public float xbw_RenownMarksmen_p {
       get => _xbw_RenownMarksmen_p;
       set {
@@ -4197,7 +4202,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=BaYbaMU2}Ranged troops in governed settlement's garrison provide 30% more security.")]
-    [SettingPropertyGroup("Perks/Crossbow/Renown Marksmen")]
+    [SettingPropertyGroup("Perks/Crossbow/Renowned Marksmen")]
     public float xbw_RenownMarksmen_s {
       get => _xbw_RenownMarksmen_s;
       set {
@@ -4210,7 +4215,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=CiSkFsfa}Increases stack size for quivers by 4.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=CiSkFsfa}Increases stack size for quivers by +4.")]
     [SettingPropertyGroup("Perks/Crossbow/Fletcher")]
     public float xbw_Fletcher_p {
       get => _xbw_Fletcher_p;
@@ -4418,7 +4423,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=3hcbkk2i}Crossbow hits dismount enemy cavalry when they deal damage over 25% of their hit points.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=kqBmUk99}Crossbow hits can now dismount and ignore %50 dismount resistance.")]
     [SettingPropertyGroup("Perks/Crossbow/Hammer Bolts")]
     public float xbw_HammerBolts_p {
       get => _xbw_HammerBolts_p;
@@ -4678,33 +4683,33 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=bRdjTD7Q}Projectile speed of your throwing weapons is increased by 25%.")]
-    [SettingPropertyGroup("Perks/Throwing/Perfect Technique")]
-    public float thr_PerfectTechnique_p {
-      get => _thr_PerfectTechnique_p;
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=5zkewF8C}You have +1 ammunition for throwing weapons.")]
+    [SettingPropertyGroup("Perks/Throwing/Well Prepared")]
+    public float thr_WellPrepared_p {
+      get => _thr_WellPrepared_p;
       set {
-        if (_thr_PerfectTechnique_p != value) {
-          _thr_PerfectTechnique_p = value;
+        if (_thr_WellPrepared_p != value) {
+          _thr_WellPrepared_p = value;
           if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Throwing.PerfectTechnique, value);
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Throwing.WellPrepared, value);
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=xPt71fIC}Troops under your command have their projectile speed increased by 10%.")]
-    [SettingPropertyGroup("Perks/Throwing/Perfect Technique")]
-    public float thr_PerfectTechnique_s {
-      get => _thr_PerfectTechnique_s;
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=WiJZC36N}Ranged troops in your party have +1 ammunition for throwing weapons.")]
+    [SettingPropertyGroup("Perks/Throwing/Well Prepared")]
+    public float thr_WellPrepared_s {
+      get => _thr_WellPrepared_s;
       set {
-        if (_thr_PerfectTechnique_s != value) {
-          _thr_PerfectTechnique_s = value;
+        if (_thr_WellPrepared_s != value) {
+          _thr_WellPrepared_s = value;
           if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Throwing.PerfectTechnique, value);
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Throwing.WellPrepared, value);
         }
       }
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=6fMGZbXD}Your throwing weapons gain 25% additional speed from your movement.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=eQGqCNmJ}Your throwing weapons deal damage with additional 25% movement bonus.")]
     [SettingPropertyGroup("Perks/Throwing/Running Throw")]
     public float thr_RunningThrow_p {
       get => _thr_RunningThrow_p;
@@ -4730,7 +4735,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=dEItpQvn}Thrown weapon hits that deal damage over 25% of enemy cavalry's hit points have 50% chance to dismount them.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=Gz1cI1Lq}Thrown weapons can now dismount and ignore 25% dismount resistance.")]
     [SettingPropertyGroup("Perks/Throwing/Knock Off")]
     public float thr_KnockOff_p {
       get => _thr_KnockOff_p;
@@ -4782,27 +4787,27 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=5zkewF8C}You have +1 ammunition for throwing weapons.")]
-    [SettingPropertyGroup("Perks/Throwing/Well Prepared")]
-    public float thr_WellPrepared_p {
-      get => _thr_WellPrepared_p;
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=zQ2Ir1yM}If you start battle mounted you have +2 ammunition for throwing weapons.")]
+    [SettingPropertyGroup("Perks/Throwing/Saddlebags")]
+    public float thr_Saddlebags_p {
+      get => _thr_Saddlebags_p;
       set {
-        if (_thr_WellPrepared_p != value) {
-          _thr_WellPrepared_p = value;
+        if (_thr_Saddlebags_p != value) {
+          _thr_Saddlebags_p = value;
           if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Throwing.WellPrepared, value);
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Throwing.Saddlebags, value);
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=WiJZC36N}Ranged troops in your party have 25% chance of having +1 ammunition for throwing weapons.")]
-    [SettingPropertyGroup("Perks/Throwing/Well Prepared")]
-    public float thr_WellPrepared_s {
-      get => _thr_WellPrepared_s;
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=AzdGEO33}Your infantry troops in your party gain +1 xp everyday.")]
+    [SettingPropertyGroup("Perks/Throwing/Saddlebags")]
+    public float thr_Saddlebags_s {
+      get => _thr_Saddlebags_s;
       set {
-        if (_thr_WellPrepared_s != value) {
-          _thr_WellPrepared_s = value;
+        if (_thr_Saddlebags_s != value) {
+          _thr_Saddlebags_s = value;
           if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Throwing.WellPrepared, value);
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Throwing.Saddlebags, value);
         }
       }
     }
@@ -4820,7 +4825,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=8coU5Ff5}Increases security of governed settlement by 1.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=8coU5Ff5}Increases security of governed settlement by +1.")]
     [SettingPropertyGroup("Perks/Throwing/Focus")]
     public float thr_Focus_s {
       get => _thr_Focus_s;
@@ -4846,7 +4851,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ZMYTashc}Increases the morale of your party at the start of the battle by 5.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ZMYTashc}Increases the morale of your party at the start of the battle by +5.")]
     [SettingPropertyGroup("Perks/Throwing/Last Hit")]
     public float thr_LastHit_s {
       get => _thr_LastHit_s;
@@ -4898,7 +4903,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=b4BX9Fr5}Governed settlement gains 0.5 militia per day.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=b4BX9Fr5}Governed settlement gains +0.5 militia per day.")]
     [SettingPropertyGroup("Perks/Throwing/Throwing Competitions")]
     public float thr_ThrowingCompetitions_s {
       get => _thr_ThrowingCompetitions_s;
@@ -4912,27 +4917,27 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=zQ2Ir1yM}When you start a battle mounted, you have +2 ammunition for throwing weapons.")]
-    [SettingPropertyGroup("Perks/Throwing/Saddlebags")]
-    public float thr_Saddlebags_p {
-      get => _thr_Saddlebags_p;
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=FaJa4YD5}You have +2 ammunition for throwing weapons.")]
+    [SettingPropertyGroup("Perks/Throwing/Resourceful")]
+    public float thr_Resourceful_p {
+      get => _thr_Resourceful_p;
       set {
-        if (_thr_Saddlebags_p != value) {
-          _thr_Saddlebags_p = value;
+        if (_thr_Resourceful_p != value) {
+          _thr_Resourceful_p = value;
           if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Throwing.Saddlebags, value);
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Throwing.Resourceful, value);
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=AzdGEO33}Your infantry troops in your party gain +1 xp everyday.")]
-    [SettingPropertyGroup("Perks/Throwing/Saddlebags")]
-    public float thr_Saddlebags_s {
-      get => _thr_Saddlebags_s;
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=IiMfnxMC}Troops with throwing weapons equipped gain 10% more xp after battles.")]
+    [SettingPropertyGroup("Perks/Throwing/Resourceful")]
+    public float thr_Resourceful_s {
+      get => _thr_Resourceful_s;
       set {
-        if (_thr_Saddlebags_s != value) {
-          _thr_Saddlebags_s = value;
+        if (_thr_Resourceful_s != value) {
+          _thr_Resourceful_s = value;
           if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Throwing.Saddlebags, value);
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Throwing.Resourceful, value);
         }
       }
     }
@@ -4964,27 +4969,27 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=FaJa4YD5}You have +2 ammunition for throwing weapons.")]
-    [SettingPropertyGroup("Perks/Throwing/Resourceful")]
-    public float thr_Resourceful_p {
-      get => _thr_Resourceful_p;
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=bRdjTD7Q}Projectile speed of your throwing weapons is increased by 25%.")]
+    [SettingPropertyGroup("Perks/Throwing/Perfect Technique")]
+    public float thr_PerfectTechnique_p {
+      get => _thr_PerfectTechnique_p;
       set {
-        if (_thr_Resourceful_p != value) {
-          _thr_Resourceful_p = value;
+        if (_thr_PerfectTechnique_p != value) {
+          _thr_PerfectTechnique_p = value;
           if (Game.Current != null)
-            ExposeInternals.SetPrimaryBonus(DefaultPerks.Throwing.Resourceful, value);
+            ExposeInternals.SetPrimaryBonus(DefaultPerks.Throwing.PerfectTechnique, value);
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=IiMfnxMC}Throwing weapon equipped troops gain 10% more xp after battles.")]
-    [SettingPropertyGroup("Perks/Throwing/Resourceful")]
-    public float thr_Resourceful_s {
-      get => _thr_Resourceful_s;
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=xPt71fIC}Troops under your command have their projectile speed increased by 10%.")]
+    [SettingPropertyGroup("Perks/Throwing/Perfect Technique")]
+    public float thr_PerfectTechnique_s {
+      get => _thr_PerfectTechnique_s;
       set {
-        if (_thr_Resourceful_s != value) {
-          _thr_Resourceful_s = value;
+        if (_thr_PerfectTechnique_s != value) {
+          _thr_PerfectTechnique_s = value;
           if (Game.Current != null)
-            ExposeInternals.SetSecondaryBonus(DefaultPerks.Throwing.Resourceful, value);
+            ExposeInternals.SetSecondaryBonus(DefaultPerks.Throwing.PerfectTechnique, value);
         }
       }
     }
@@ -5496,7 +5501,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=LrDbwars}Prisoners in governed town are 50% less likely to escape.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=LrDbwars}Prisoners in governed town are 50% less likely to escape.")]
     [SettingPropertyGroup("Perks/Riding/Mounted Patrols")]
     public float rid_MountedPatrols_s {
       get => _rid_MountedPatrols_s;
@@ -5588,7 +5593,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=IsuynJ2f}Increases your charge damage and maneuver by 1 for each 10 riding skill above 200.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=IsuynJ2f}Increases your charge damage and maneuver by +1 for each 10 riding skill above 200.")]
     [SettingPropertyGroup("Perks/Riding/The Way Of The Saddle")]
     public float rid_TheWayOfTheSaddle_p {
       get => _rid_TheWayOfTheSaddle_p;
@@ -5640,7 +5645,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=vixwTVbE}Increases your maximum hit points by 5.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=vixwTVbE}Increases your maximum hit points by +5.")]
     [SettingPropertyGroup("Perks/Athletics/Well Built")]
     public float ath_WellBuilt_p {
       get => _ath_WellBuilt_p;
@@ -5652,7 +5657,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HKNtU2NI}Foot troops in your party gain 5 hit points.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HKNtU2NI}Foot troops in your party gain +5 hit points.")]
     [SettingPropertyGroup("Perks/Athletics/Well Built")]
     public float ath_WellBuilt_s {
       get => _ath_WellBuilt_s;
@@ -5730,7 +5735,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=920FKjJk}Increases your party size by 5.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=920FKjJk}Increases your party size by +5.")]
     [SettingPropertyGroup("Perks/Athletics/Having Going")]
     public float ath_HavingGoing_s {
       get => _ath_HavingGoing_s;
@@ -5756,7 +5761,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=6fFFbQS6}Increases your prisoner size limit by 5 and decreases prisoner escape chance by 10%.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=6fFFbQS6}Increases your prisoner size limit by +5 and decreases prisoner escape chance by 10%.")]
     [SettingPropertyGroup("Perks/Athletics/Stamina")]
     public float ath_Stamina_s {
       get => _ath_Stamina_s;
@@ -5874,7 +5879,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=I0OtUEDb}Increases your hit point regeneration by 10% while traveling.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=I0OtUEDb}Increases your hit point regeneration by 10% while moving.")]
     [SettingPropertyGroup("Perks/Athletics/Walk It Off")]
     public float ath_WalkItOff_p {
       get => _ath_WalkItOff_p;
@@ -5886,7 +5891,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=aMHPsSe4}Foot troops in your party gain 3 xp everyday while traveling.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=aMHPsSe4}Foot troops in your party gain +3 xp everyday while traveling.")]
     [SettingPropertyGroup("Perks/Athletics/Walk It Off")]
     public float ath_WalkItOff_s {
       get => _ath_WalkItOff_s;
@@ -5900,7 +5905,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=QR80Vhdk}Increases your hit point regeneration by 10% while waiting in settlements.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=QR80Vhdk}Increases your hit point regeneration by 10% while stationary.")]
     [SettingPropertyGroup("Perks/Athletics/A Good Days Rest")]
     public float ath_AGoodDaysRest_p {
       get => _ath_AGoodDaysRest_p;
@@ -5912,7 +5917,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=b38NeEp2}Foot troops in your party gain 10 xp everyday while waiting in settlements.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=b38NeEp2}Foot troops in your party gain +10 xp everyday while waiting in settlements.")]
     [SettingPropertyGroup("Perks/Athletics/A Good Days Rest")]
     public float ath_AGoodDaysRest_s {
       get => _ath_AGoodDaysRest_s;
@@ -5938,7 +5943,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=AlY8Edde}Governed settlement gains 1 loyalty per day.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=AlY8Edde}Governed settlement gains +1 loyalty per day.")]
     [SettingPropertyGroup("Perks/Athletics/Healthy Citizens")]
     public float ath_HealthyCitizens_s {
       get => _ath_HealthyCitizens_s;
@@ -5978,7 +5983,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=4anAdME9}Increases your Control Attribute by 1.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=4anAdME9}Increases your Control Attribute by +1.")]
     [SettingPropertyGroup("Perks/Athletics/Steady")]
     public float ath_Steady_p {
       get => _ath_Steady_p;
@@ -6004,7 +6009,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=xbal9bvg}Increases your Vigor Attribute by 1.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=xbal9bvg}Increases your Vigor Attribute by +1.")]
     [SettingPropertyGroup("Perks/Athletics/Strong")]
     public float ath_Strong_p {
       get => _ath_Strong_p;
@@ -6016,7 +6021,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=9gaXSO0T}Foot troops in your party give +5% party speed.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=9gaXSO0T}Foot troops in your party give +5% party speed.")]
     [SettingPropertyGroup("Perks/Athletics/Strong")]
     public float ath_Strong_s {
       get => _ath_Strong_s;
@@ -6120,7 +6125,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=kbs0D9wc}Foot troops in your formation gain 5 armor.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=kbs0D9wc}Foot troops in your formation gain +5 armor.")]
     [SettingPropertyGroup("Perks/Athletics/Ignore Pain")]
     public float ath_IgnorePain_s {
       get => _ath_IgnorePain_s;
@@ -6300,7 +6305,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=viBrI7T1}Immediately adds 1 focus point to one handed and two handed skills.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=viBrI7T1}Immediately adds +1 focus point to one handed and two handed skills.")]
     [SettingPropertyGroup("Perks/Crafting/Fencer Smith")]
     public float cft_WeaponMasterSmith_p {
       get => _cft_WeaponMasterSmith_p;
@@ -6683,7 +6688,7 @@ namespace FountaTweaks
 
 
     [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=YNK17aGp}Double damage to siege defender personnel with %25 chance.")]
-    [SettingPropertyGroup("Perks/Tactics/Pick Them Of The Walls")]
+    [SettingPropertyGroup("Perks/Tactics/Pick Them Off The Walls")]
     public float tct_PickThemOfTheWalls_p {
       get => _tct_PickThemOfTheWalls_p;
       set {
@@ -6695,7 +6700,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=0LTL5qGP}Double damage to besieging personnel with %25 chance.")]
-    [SettingPropertyGroup("Perks/Tactics/Pick Them Of The Walls")]
+    [SettingPropertyGroup("Perks/Tactics/Pick Them Off The Walls")]
     public float tct_PickThemOfTheWalls_s {
       get => _tct_PickThemOfTheWalls_s;
       set {
@@ -7072,7 +7077,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=886Q6KjF}Moving while party morale is higher than 75 gives +2 passive xp to all troops daily.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=886Q6KjF}Moving while party morale is higher than 75 gives +2 xp to all troops daily.")]
     [SettingPropertyGroup("Perks/Scouting/Forced March")]
     public float sct_ForcedMarch_s {
       get => _sct_ForcedMarch_s;
@@ -7346,7 +7351,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=*}Reduce sight difficulty penalty of parties in forests by 50%.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=v44jmZve}Reduce sight difficulty penalty of parties in forests by 50%.")]
     [SettingPropertyGroup("Perks/Scouting/Keen Sight")]
     public float sct_KeenSight_p {
       get => _sct_KeenSight_p;
@@ -7424,7 +7429,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=6XxRQ38k}Increase Party Speed by 0.1% for every skill level over 200.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=6XxRQ38k}Increase base party speed by 0.1% for every skill level over 200.")]
     [SettingPropertyGroup("Perks/Scouting/Uncanny Insight")]
     public float sct_UncannyInsight_p {
       get => _sct_UncannyInsight_p;
@@ -7488,7 +7493,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=M4Q32HvX}Prisoners are 20% less likely to escape from towns.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=M4Q32HvX}Prisoners are 20% less likely to escape from towns.")]
     [SettingPropertyGroup("Perks/Roguery/Sweet Talker")]
     public float rog_SweetTalker_s {
       get => _rog_SweetTalker_s;
@@ -7554,7 +7559,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=*}Notables of villages give +1 extra troop when successfuly forced for volunteers.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=jBPV6gQz}Notables of villages give +1 extra troop when successfuly forced for volunteers.")]
     [SettingPropertyGroup("Perks/Roguery/In Best Light")]
     public float rog_InBestLight_p {
       get => _rog_InBestLight_p;
@@ -7606,7 +7611,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=ljKoJX9P}Bandit units in your party consume 50% less food.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ljKoJX9P}Bandit units in your party consume 50% less food.")]
     [SettingPropertyGroup("Perks/Roguery/Promises")]
     public float rog_Promises_p {
       get => _rog_Promises_p;
@@ -7696,7 +7701,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=vzYyJpmu}2% daily chance to improve relations by 1 with random notable in the settlement you govern.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=vzYyJpmu}2% daily chance to improve relations by +1 with random notable in the settlement you govern.")]
     [SettingPropertyGroup("Perks/Roguery/White Lies")]
     public float rog_WhiteLies_s {
       get => _rog_WhiteLies_s;
@@ -7710,7 +7715,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=TAlERbfz}Increase the armor provided by civillian body armors by 10.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=TAlERbfz}Increase the armor provided by civilian body armors by +10.")]
     [SettingPropertyGroup("Perks/Roguery/Smuggler Connections")]
     public float rog_SmugglerConnections_p {
       get => _rog_SmugglerConnections_p;
@@ -7736,7 +7741,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=*}Bandit parties always offer to join you.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=sTwZwnOi}Bandit parties always offer to join you.")]
     [SettingPropertyGroup("Perks/Roguery/Partners in Crime")]
     public float rog_PartnersInCrime_p {
       get => _rog_PartnersInCrime_p;
@@ -7774,7 +7779,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=f0abqIAz}Gang leaders in your settlement offer you 1 more recruitment slot.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=f0abqIAz}Gang leaders in your settlement offer you +1 more recruitment slot.")]
     [SettingPropertyGroup("Perks/Roguery/One of the Family")]
     public float rog_OneOfTheFamily_s {
       get => _rog_OneOfTheFamily_s;
@@ -8216,7 +8221,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=rCzzYL7U}Remove morale penalty for recruiting prisoners of your faction.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=rCzzYL7U}Remove morale penalty for recruiting prisoners of your culture.")]
     [SettingPropertyGroup("Perks/Leadership/Presence")]
     public float ldr_Presence_s {
       get => _ldr_Presence_s;
@@ -8334,7 +8339,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=t4kOTpwY}Increase battle morale by 10 during siege assaults and defense.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=t4kOTpwY}Increase battle morale by +10 during siege assaults and defense.")]
     [SettingPropertyGroup("Perks/Leadership/Uplifting Spirit")]
     public float ldr_UpliftingSpirit_p {
       get => _ldr_UpliftingSpirit_p;
@@ -8346,7 +8351,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HLoivET9}Party size limit increased by 10.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HLoivET9}Party size limit increased by +10.")]
     [SettingPropertyGroup("Perks/Leadership/Uplifting Spirit")]
     public float ldr_UpliftingSpirit_s {
       get => _ldr_UpliftingSpirit_s;
@@ -8490,7 +8495,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Dl4PUYNO}Add 3 focus points to 3 random clan members when you get this perk.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HLoivET9}Party size limit increased by +10.")]
     [SettingPropertyGroup("Perks/Leadership/Talent Magnet")]
     public float ldr_TalentMagnet_p {
       get => _ldr_TalentMagnet_p;
@@ -8502,7 +8507,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=swggGckO}+1 party.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=swggGckO}+1 clan party.")]
     [SettingPropertyGroup("Perks/Leadership/Talent Magnet")]
     public float ldr_TalentMagnet_s {
       get => _ldr_TalentMagnet_s;
@@ -8554,7 +8559,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=8F1JaR4I}10% chance to get 1 relation with a random notable in governed settlement per day while continuous projects are active.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=8F1JaR4I}10% chance to get +1 relation with a random notable in governed settlement per day while continuous projects are active.")]
     [SettingPropertyGroup("Perks/Charm/Virile")]
     public float chm_Virile_s {
       get => _chm_Virile_s;
@@ -8568,7 +8573,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=TbIub0u8}Gain 5 influence by winning a tournament.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=TbIub0u8}Gain +5 influence by winning a tournament.")]
     [SettingPropertyGroup("Perks/Charm/Self Promoter")]
     public float chm_SelfPromoter_p {
       get => _chm_SelfPromoter_p;
@@ -8580,7 +8585,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ikNAXaNx}Gain 1 morale while in a besieged settlement.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=ikNAXaNx}Gain +1 morale while in a besieged settlement.")]
     [SettingPropertyGroup("Perks/Charm/Self Promoter")]
     public float chm_SelfPromoter_s {
       get => _chm_SelfPromoter_s;
@@ -8594,7 +8599,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=JBLwQVNT}You gain 1 renown and influence for each issue resolved.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=JBLwQVNT}You gain +1 renown and influence for each issue resolved.")]
     [SettingPropertyGroup("Perks/Charm/Oratory")]
     public float chm_Oratory_p {
       get => _chm_Oratory_p;
@@ -8606,7 +8611,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=IYYv49rg}Everytime you defeat an enemy lord party you gain 1 relationship with a random notable of your faction.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=IYYv49rg}Everytime you defeat an enemy lord party you gain +1 relationship with a random notable of your faction.")]
     [SettingPropertyGroup("Perks/Charm/Oratory")]
     public float chm_Oratory_s {
       get => _chm_Oratory_s;
@@ -8802,7 +8807,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=mjbD9zT2}When you clear a hideout you gain 3 relation with the nearest town owner clan. If it is you, increase town loyalty by 1.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=mjbD9zT2}When you clear a hideout you gain +3 relation with the nearest town owner clan. If it is you, increase town loyalty by 1.")]
     [SettingPropertyGroup("Perks/Charm/Effort For The People")]
     public float chm_EffortForThePeople_p {
       get => _chm_EffortForThePeople_p;
@@ -8970,7 +8975,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=M4riQP0g}10% more effective forum, marketplace, arena, temple, festival effects.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=r9OzbreK}10% more effective forum, marketplace, arena, temple, festival effects.")]
     [SettingPropertyGroup("Perks/Charm/Public Speaker")]
     public float chm_PublicSpeaker_s {
       get => _chm_PublicSpeaker_s;
@@ -8984,7 +8989,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=DTnaWgAv}When you are waiting in your settlements, they get +5 loyalty bonus.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=21jEbYDb}Increase loyalty +1 per day while you're in your own settlements.")]
     [SettingPropertyGroup("Perks/Charm/Parade")]
     public float chm_Parade_p {
       get => _chm_Parade_p;
@@ -8996,7 +9001,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HnUzEUX3}5% chance per day to gain 1 relations with a random lord in the same army.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HnUzEUX3}5% chance per day to gain +1 relation with a random lord in the same army.")]
     [SettingPropertyGroup("Perks/Charm/Parade")]
     public float chm_Parade_s {
       get => _chm_Parade_s;
@@ -9192,7 +9197,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=TbXWCRa0}15% decrease in sell price penalty for Animals.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=TbXWCRa0}15% decrease in sell price penalty for animals.")]
     [SettingPropertyGroup("Perks/Trade/Local Connection")]
     public float trd_LocalConnection_s {
       get => _trd_LocalConnection_s;
@@ -9258,7 +9263,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=81qgJ7fW}Every profitable workshop you own gives you 1 renown per day.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=81qgJ7fW}Every profitable workshop you own gives you +1 renown per day.")]
     [SettingPropertyGroup("Perks/Trade/Artisan Community")]
     public float trd_ArtisanCommunity_p {
       get => _trd_ArtisanCommunity_p;
@@ -9270,7 +9275,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=tJqWNH2H}Increase recruitment slot by 1 when recruiting from merchant notables.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=tJqWNH2H}Increase recruitment slot by +1 when recruiting from merchant notables.")]
     [SettingPropertyGroup("Perks/Trade/Artisan Community")]
     public float trd_ArtisanCommunity_s {
       get => _trd_ArtisanCommunity_s;
@@ -9284,7 +9289,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=NVnuAwuU}Every profitable caravan you own gives you 1 renown per day.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=NVnuAwuU}Every profitable caravan you own gives you +1 renown per day.")]
     [SettingPropertyGroup("Perks/Trade/Great Investor")]
     public float trd_GreatInvestor_p {
       get => _trd_GreatInvestor_p;
@@ -9322,7 +9327,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=*}Mercenary troops' wages are decreased by 25%.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=O9p0xyNg}Mercenary troops' wages are decreased by 25%.")]
     [SettingPropertyGroup("Perks/Trade/Mercenary Connections")]
     public float trd_MercenaryConnections_s {
       get => _trd_MercenaryConnections_s;
@@ -9440,7 +9445,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=AONaIqXv}20% decrease in sell price penalty for pottery, tools, cotton and jewelery.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=AONaIqXv}20% decrease in sell price penalty for pottery, tools, cotton and jewelry.")]
     [SettingPropertyGroup("Perks/Trade/Tradeyard Foreman")]
     public float trd_TradeyardForeman_p {
       get => _trd_TradeyardForeman_p;
@@ -9492,7 +9497,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=*}Decrease barter penalty for items by 50%.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=SbgZk3MO}Decrease barter penalty for items by 50%.")]
     [SettingPropertyGroup("Perks/Trade/Self-made Man")]
     public float trd_SelfMadeMan_p {
       get => _trd_SelfMadeMan_p;
@@ -9596,7 +9601,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=gT9QF6ML}Gain relationship 1 with merchant notables if you buy more than 10000 gold worth of trade goods in a town.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=gT9QF6ML}Gain +1 relation with merchant notables if you buy more than 10000 gold worth of trade goods in a town.")]
     [SettingPropertyGroup("Perks/Trade/Trickle Down")]
     public float trd_TrickleDown_p {
       get => _trd_TrickleDown_p;
@@ -9804,7 +9809,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=*}During village raids you gain an additional food item for each one you loot.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=6UP6DysX}During village raids you gain an additional food item for each one you loot.")]
     [SettingPropertyGroup("Perks/Steward/Efficient Campaigner")]
     public float st_EfficientCampaigner_p {
       get => _st_EfficientCampaigner_p;
@@ -9816,7 +9821,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=TCtGVTTk}Troop wages are decreased by 25% while in an army.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=TCtGVTTk}Troop wages are decreased by 15% while in an army.")]
     [SettingPropertyGroup("Perks/Steward/Efficient Campaigner")]
     public float st_EfficientCampaigner_s {
       get => _st_EfficientCampaigner_s;
@@ -9856,7 +9861,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=mchBqAXt}Increase party morale by 4 if number of mounts is greater than non-cavalry troops.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=mchBqAXt}Increase party morale by +4 if number of mounts is greater than non-cavalry troops.")]
     [SettingPropertyGroup("Perks/Steward/Logistician")]
     public float st_Logistician_p {
       get => _st_Logistician_p;
@@ -10090,7 +10095,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=*}Reduce food consumption by 40% while in a siege camp.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=OXlsEh3H}Reduce food consumption by 40% while in a siege camp.")]
     [SettingPropertyGroup("Perks/Steward/Master of Planning")]
     public float st_MasterOfPlanning_p {
       get => _st_MasterOfPlanning_p;
@@ -10116,7 +10121,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=noXFy09m}Troops wages are decreased by 25% while in a siege camp.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", -100.000000f, 0.000000f, RequireRestart=false, HintText="{=noXFy09m}Troops wages are decreased by 15% while in a siege camp.")]
     [SettingPropertyGroup("Perks/Steward/Master of Warcraft")]
     public float st_MasterOfWarcraft_p {
       get => _st_MasterOfWarcraft_p;
@@ -10142,7 +10147,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=DfmWtNk7}Your party food consumption, wages and combat morale loss decrease by 0.5% per skill level above 200.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=DfmWtNk7}Your party food consumption, wages and combat morale loss decrease by 0.5% per skill level above 250.")]
     [SettingPropertyGroup("Perks/Steward/Price of Loyalty")]
     public float st_PriceOfLoyalty_p {
       get => _st_PriceOfLoyalty_p;
@@ -10194,7 +10199,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HIVRbq8l}Increase character's hit points by 5.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=HIVRbq8l}Increase character's hit points by +5.")]
     [SettingPropertyGroup("Perks/Medicine/Preventive Medicine")]
     public float med_PreventiveMedicine_p {
       get => _med_PreventiveMedicine_p;
@@ -10298,8 +10303,8 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=tzbXy8Nb}Medicine recovery chance applies to enemies too.")]
-    [SettingPropertyGroup("Perks/Medicine/Doctors Oath")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 99999.000000f, RequireRestart=false, HintText="{=XPB1iBkh}Your medicine skill also applies to enemy casualties, increasing potential prisoners.")]
+    [SettingPropertyGroup("Perks/Medicine/Doctor's Oath")]
     public float med_DoctorsOath_p {
       get => _med_DoctorsOath_p;
       set {
@@ -10311,7 +10316,7 @@ namespace FountaTweaks
       }
     }
     [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=4pCODkNn}Increase your max health by 5.")]
-    [SettingPropertyGroup("Perks/Medicine/Doctors Oath")]
+    [SettingPropertyGroup("Perks/Medicine/Doctor's Oath")]
     public float med_DoctorsOath_s {
       get => _med_DoctorsOath_s;
       set {
@@ -10336,7 +10341,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=336rXArq}Increase relationship by 1 with a random notable over age 50 while in a town.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=336rXArq}Increase relationship by +1 with a random notable over age 50 while in a town.")]
     [SettingPropertyGroup("Perks/Medicine/Best Medicine")]
     public float med_BestMedicine_s {
       get => _med_BestMedicine_s;
@@ -10532,7 +10537,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=xpRKA34Q}Increases loyalty of settlement by 1 per day.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=xpRKA34Q}Increases loyalty of settlement by +1 per day.")]
     [SettingPropertyGroup("Perks/Medicine/Physician of People")]
     public float med_PhysicianOfPeople_p {
       get => _med_PhysicianOfPeople_p;
@@ -10636,7 +10641,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=EJyQ186a}Every 10 troop in your party increase troop recovery rate by 2%.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=EJyQ186a}Every 10 troops in your party increase troop recovery rate by 2%.")]
     [SettingPropertyGroup("Perks/Medicine/Helping Hands")]
     public float med_HelpingHands_p {
       get => _med_HelpingHands_p;
@@ -10674,7 +10679,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=*}Siege attrition loss chance is reduced by 25%.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", -1.000000f, 0.000000f, RequireRestart=false, HintText="{=q6hdTFgg}Siege attrition loss chance is reduced by 25%.")]
     [SettingPropertyGroup("Perks/Medicine/Battle Hardened")]
     public float med_BattleHardened_s {
       get => _med_BattleHardened_s;
@@ -10700,7 +10705,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=7vZcwCqA}Increase equipped shield hitpoints by 30%.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=7vZcwCqA}Increase equipped shield hit points by 30%.")]
     [SettingPropertyGroup("Perks/Engineering/Scaffolds")]
     public float eng_Scaffolds_s {
       get => _eng_Scaffolds_s;
@@ -10726,7 +10731,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=tw5y78XY}Increase equipped crossbow damage by 3.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=tw5y78XY}Increase equipped crossbow damage by +3.")]
     [SettingPropertyGroup("Perks/Engineering/Torsion Engines")]
     public float eng_TorsionEngines_s {
       get => _eng_TorsionEngines_s;
@@ -10792,7 +10797,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=A16GZubg}Rams and siege-towers have 33% more hitpoints.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=A16GZubg}Rams and siege-towers have 33% more hit points.")]
     [SettingPropertyGroup("Perks/Engineering/Carpenters")]
     public float eng_Carpenters_p {
       get => _eng_Carpenters_p;
@@ -10818,7 +10823,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=r4uMbbKN}Ranged troops have 50% more ammunition when besieging.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=r4uMbbKN}Ranged troops have 25% more ammunition when besieging.")]
     [SettingPropertyGroup("Perks/Engineering/Military Planner")]
     public float eng_MilitaryPlanner_p {
       get => _eng_MilitaryPlanner_p;
@@ -11026,7 +11031,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=*}Start siege camps with +1 pre-built ballista.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=Y7a3ZeYI}Start siege camps with +1 pre-built ballista.")]
     [SettingPropertyGroup("Perks/Engineering/Battlements")]
     public float eng_Battlements_p {
       get => _eng_Battlements_p;
@@ -11052,7 +11057,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=YkAV0SgY}Increase recuitment slot by 1 when recuiting from artisan notables.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=YkAV0SgY}Increase recruitment slots by +1 when recruiting from artisan notables.")]
     [SettingPropertyGroup("Perks/Engineering/Engineering Guilds")]
     public float eng_EngineeringGuilds_p {
       get => _eng_EngineeringGuilds_p;
@@ -11090,7 +11095,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=pjCp7PlB}Every unique project in settlement provides a %1 bonus to prosperity gain.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=pjCp7PlB}Every unique project in settlement provides a 1% bonus to prosperity gain.")]
     [SettingPropertyGroup("Perks/Engineering/Apprenticeship")]
     public float eng_Apprenticeship_s {
       get => _eng_Apprenticeship_s;
@@ -11104,7 +11109,7 @@ namespace FountaTweaks
     }
 
 
-    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 1.000000f, RequireRestart=false, HintText="{=*}Looted items are very unlikely to get negative modifiers.")]
+    [SettingPropertyFloatingInteger("Primary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=dqvQXEkn}Looted items are very unlikely to get negative modifiers.")]
     [SettingPropertyGroup("Perks/Engineering/Metallurgy")]
     public float eng_Metallurgy_p {
       get => _eng_Metallurgy_p;
@@ -11116,7 +11121,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=eSNa0skd}Troops under the formation you control have their armor values increased by 5.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=eSNa0skd}Troops under the formation you control have their armor values increased by +5.")]
     [SettingPropertyGroup("Perks/Engineering/Metallurgy")]
     public float eng_Metallurgy_s {
       get => _eng_Metallurgy_s;
@@ -11194,7 +11199,7 @@ namespace FountaTweaks
         }
       }
     }
-    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=6nSusCkE}Continuous projects provides 20 gold per day.")]
+    [SettingPropertyFloatingInteger("Secondary Bonus", 0.000000f, 100.000000f, RequireRestart=false, HintText="{=6nSusCkE}Continuous projects provides +20 gold per day.")]
     [SettingPropertyGroup("Perks/Engineering/Architectural Commissions")]
     public float eng_ArchitecturalCommisions_s {
       get => _eng_ArchitecturalCommisions_s;
@@ -11543,9 +11548,9 @@ namespace FountaTweaks
       ref PerkObject _throwingMountedSkirmisher = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingMountedSkirmisher");
       if (ThrowingPerkModificationEnabled && ThrowingMountedSkirmisherPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingMountedSkirmisher,_thr_MountedSkirmisher_p);
       if (ThrowingPerkModificationEnabled && ThrowingMountedSkirmisherPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingMountedSkirmisher,_thr_MountedSkirmisher_s);
-      ref PerkObject _throwingPerfectTechnique = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingPerfectTechnique");
-      if (ThrowingPerkModificationEnabled && ThrowingPerfectTechniquePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingPerfectTechnique,_thr_PerfectTechnique_p);
-      if (ThrowingPerkModificationEnabled && ThrowingPerfectTechniquePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingPerfectTechnique,_thr_PerfectTechnique_s);
+      ref PerkObject _throwingWellPrepared = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingWellPrepared");
+      if (ThrowingPerkModificationEnabled && ThrowingWellPreparedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingWellPrepared,_thr_WellPrepared_p);
+      if (ThrowingPerkModificationEnabled && ThrowingWellPreparedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingWellPrepared,_thr_WellPrepared_s);
       ref PerkObject _throwingRunningThrow = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingRunningThrow");
       if (ThrowingPerkModificationEnabled && ThrowingRunningThrowPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingRunningThrow,_thr_RunningThrow_p);
       if (ThrowingPerkModificationEnabled && ThrowingRunningThrowPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingRunningThrow,_thr_RunningThrow_s);
@@ -11555,9 +11560,9 @@ namespace FountaTweaks
       ref PerkObject _throwingSkirmisher = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingSkirmisher");
       if (ThrowingPerkModificationEnabled && ThrowingSkirmisherPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingSkirmisher,_thr_Skirmisher_p);
       if (ThrowingPerkModificationEnabled && ThrowingSkirmisherPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingSkirmisher,_thr_Skirmisher_s);
-      ref PerkObject _throwingWellPrepared = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingWellPrepared");
-      if (ThrowingPerkModificationEnabled && ThrowingWellPreparedPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingWellPrepared,_thr_WellPrepared_p);
-      if (ThrowingPerkModificationEnabled && ThrowingWellPreparedPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingWellPrepared,_thr_WellPrepared_s);
+      ref PerkObject _throwingSaddlebags = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingSaddlebags");
+      if (ThrowingPerkModificationEnabled && ThrowingSaddlebagsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingSaddlebags,_thr_Saddlebags_p);
+      if (ThrowingPerkModificationEnabled && ThrowingSaddlebagsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingSaddlebags,_thr_Saddlebags_s);
       ref PerkObject _throwingFocus = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingFocus");
       if (ThrowingPerkModificationEnabled && ThrowingFocusPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingFocus,_thr_Focus_p);
       if (ThrowingPerkModificationEnabled && ThrowingFocusPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingFocus,_thr_Focus_s);
@@ -11570,15 +11575,15 @@ namespace FountaTweaks
       ref PerkObject _throwingThrowingCompetitions = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingThrowingCompetitions");
       if (ThrowingPerkModificationEnabled && ThrowingThrowingCompetitionsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingThrowingCompetitions,_thr_ThrowingCompetitions_p);
       if (ThrowingPerkModificationEnabled && ThrowingThrowingCompetitionsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingThrowingCompetitions,_thr_ThrowingCompetitions_s);
-      ref PerkObject _throwingSaddlebags = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingSaddlebags");
-      if (ThrowingPerkModificationEnabled && ThrowingSaddlebagsPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingSaddlebags,_thr_Saddlebags_p);
-      if (ThrowingPerkModificationEnabled && ThrowingSaddlebagsPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingSaddlebags,_thr_Saddlebags_s);
-      ref PerkObject _throwingSplinters = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingSplinters");
-      if (ThrowingPerkModificationEnabled && ThrowingSplintersPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingSplinters,_thr_Splinters_p);
-      if (ThrowingPerkModificationEnabled && ThrowingSplintersPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingSplinters,_thr_Splinters_s);
       ref PerkObject _throwingResourceful = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingResourceful");
       if (ThrowingPerkModificationEnabled && ThrowingResourcefulPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingResourceful,_thr_Resourceful_p);
       if (ThrowingPerkModificationEnabled && ThrowingResourcefulPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingResourceful,_thr_Resourceful_s);
+      ref PerkObject _throwingSplinters = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingSplinters");
+      if (ThrowingPerkModificationEnabled && ThrowingSplintersPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingSplinters,_thr_Splinters_p);
+      if (ThrowingPerkModificationEnabled && ThrowingSplintersPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingSplinters,_thr_Splinters_s);
+      ref PerkObject _throwingPerfectTechnique = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingPerfectTechnique");
+      if (ThrowingPerkModificationEnabled && ThrowingPerfectTechniquePerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingPerfectTechnique,_thr_PerfectTechnique_p);
+      if (ThrowingPerkModificationEnabled && ThrowingPerfectTechniquePerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingPerfectTechnique,_thr_PerfectTechnique_s);
       ref PerkObject _throwingLongReach = ref AccessTools.FieldRefAccess<DefaultPerks,PerkObject>(perk, "_throwingLongReach");
       if (ThrowingPerkModificationEnabled && ThrowingLongReachPerkModificationEnabled) ExposeInternals.SetPrimaryBonus(_throwingLongReach,_thr_LongReach_p);
       if (ThrowingPerkModificationEnabled && ThrowingLongReachPerkModificationEnabled) ExposeInternals.SetSecondaryBonus(_throwingLongReach,_thr_LongReach_s);

@@ -5,15 +5,21 @@ using System.Text;
 using System.Threading.Tasks;
 
 using TaleWorlds.Core;
+using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.GameMenus;
 using TaleWorlds.CampaignSystem.Actions;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors.AiBehaviors;
-using SandBox.View.Map;
+using TaleWorlds.CampaignSystem.Party;
+using TaleWorlds.CampaignSystem.CampaignBehaviors;
+using TaleWorlds.CampaignSystem.CharacterDevelopment;
+using SandBox.Source.Missions;
+
+using TaleWorlds.ObjectSystem;
 
 using HarmonyLib;
+
+using System.Xml;
 
 namespace FountaTweaks
 {
@@ -28,30 +34,22 @@ namespace FountaTweaks
     }
 
     [HarmonyReversePatch]
-    [HarmonyPatch(typeof(PerkObject), "PrimaryBonus")]
-    [HarmonyPatch(MethodType.Setter)]
+    [HarmonyPatch(typeof(PerkObject), "PrimaryBonus", MethodType.Setter)]
     public static void SetPrimaryBonus(PerkObject instance, float value)
     {
       return;
     }
 
     [HarmonyReversePatch]
-    [HarmonyPatch(typeof(PerkObject), "SecondaryBonus")]
-    [HarmonyPatch(MethodType.Setter)]
+    [HarmonyPatch(typeof(PerkObject), "SecondaryBonus", MethodType.Setter)]
     public static void SetSecondaryBonus(PerkObject instance, float value)
     {
       return;
     }
 
     [HarmonyReversePatch]
-    [HarmonyPatch(typeof(CraftingCampaignBehavior), "EnsureParts")]
-    public static void EnsureParts(CraftingCampaignBehavior instance)
-    {
-      return;
-    }
-    [HarmonyReversePatch]
     [HarmonyPatch(typeof(CraftingCampaignBehavior), "OpenPart")]
-    public static void OpenPart(CraftingCampaignBehavior instance, CraftingPiece selectedPiece, bool showNotification)
+    public static void OpenPart(CraftingCampaignBehavior instance, CraftingPiece selectedPiece, CraftingTemplate craftingTemplate, bool showNotification)
     {
       return;
     }

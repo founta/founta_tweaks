@@ -5,25 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 
 using TaleWorlds.Core;
+using TaleWorlds.Library;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.GameMenus;
 using TaleWorlds.CampaignSystem.Actions;
-using TaleWorlds.CampaignSystem.SandBox;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors.AiBehaviors;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors.BarterBehaviors;
-using TaleWorlds.CampaignSystem.Barterables;
-using SandBox.View.Map;
-using TaleWorlds.CampaignSystem.ViewModelCollection.ClanManagement.Categories;
-using TaleWorlds.CampaignSystem.ViewModelCollection.ClanManagement;
-using TaleWorlds.Core.ViewModelCollection;
-using SandBox.ViewModelCollection.MobilePartyTracker;
-using SandBox.ViewModelCollection.Nameplate;
-using TaleWorlds.Library;
-using TaleWorlds.Engine;
-
-using TaleWorlds.CampaignSystem.SandBox.GameComponents.Party;
+using TaleWorlds.CampaignSystem.Party;
+using TaleWorlds.CampaignSystem.CampaignBehaviors;
+using TaleWorlds.CampaignSystem.CharacterDevelopment;
 using SandBox.Source.Missions;
 
 using TaleWorlds.ObjectSystem;
@@ -31,6 +20,7 @@ using TaleWorlds.ObjectSystem;
 using HarmonyLib;
 
 using System.Xml;
+
 
 
 namespace FountaTweaks
@@ -166,6 +156,12 @@ namespace FountaTweaks
         rawXp *= multiplier;
       }
     }//end prefix
+
+    static bool Prepare()
+    {
+      FountaTweaksSettings s = FountaTweaksSettings.Instance;
+      return s.ExpChangeEnabled;
+    }
   }//end harmony patch class
 
 

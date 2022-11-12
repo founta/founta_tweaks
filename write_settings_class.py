@@ -7,8 +7,8 @@ def get_bool_prop_str(sp, name, hint, groups, require_restart=False, ismaintoggl
   restart_str = "true" if require_restart else "false"
   main_toggle_str = "true" if ismaintoggle else "false"
 
-  lines = [sp+'[SettingPropertyBool("%s", RequireRestart=%s, HintText = %s)]' % (name, restart_str, hint),
-           sp+'[SettingPropertyGroup("%s", IsMainToggle=%s)]' % ('/'.join(groups), main_toggle_str)]
+  lines = [sp+'[SettingPropertyBool("%s", RequireRestart=%s, HintText = %s, IsToggle=%s)]' % (name, restart_str, hint, main_toggle_str),
+           sp+'[SettingPropertyGroup("%s")]' % ('/'.join(groups))]
   return lines
 
 def get_float_bonus(bonus_str):
@@ -21,7 +21,7 @@ def get_float_bonus(bonus_str):
     bonus_float = float(b)
   return bonus_float
   
-
+#contents of the decompiled DefaultPerks InitializeAll method
 with open("decompiled_code.txt", "r") as f:
   default_perk_init_all_code = f.read()
 
@@ -35,19 +35,24 @@ using System.Threading.Tasks;
 using TaleWorlds.Core;
 using TaleWorlds.MountAndBlade;
 using TaleWorlds.CampaignSystem;
+using TaleWorlds.CampaignSystem.Party;
+using TaleWorlds.CampaignSystem.Party.PartyComponents;
 using TaleWorlds.CampaignSystem.GameMenus;
 using TaleWorlds.CampaignSystem.Actions;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors.AiBehaviors;
+using TaleWorlds.CampaignSystem.Roster;
+using TaleWorlds.CampaignSystem.Settlements;
+using TaleWorlds.CampaignSystem.CharacterDevelopment;
+using TaleWorlds.CampaignSystem.CampaignBehaviors;
+using TaleWorlds.CampaignSystem.CampaignBehaviors.AiBehaviors;
 using SandBox.View.Map;
+
+using HarmonyLib;
 
 using MCM.Abstractions.Attributes;
 using MCM.Abstractions.Attributes.v2;
-using MCM.Abstractions.Settings.Base.Global;
+using MCM.Abstractions.Base.Global;
 
 using System.Xml;
-
-using HarmonyLib;
 
 namespace FountaTweaks
 {

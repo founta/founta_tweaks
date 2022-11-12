@@ -3,7 +3,7 @@ from zipfile import ZipFile, ZIP_DEFLATED
 from shutil import copyfile
 
 bin_targets = ['FountaTweaks.dll']
-base_targets = ['SubModule.xml', 'Harmony_LICENSE.txt', 'MCM_LICENSE.txt']
+base_targets = ['SubModule.xml']
 
 modules_dir_str = "Modules/"
 basedir_str = "FountaTweaks/"

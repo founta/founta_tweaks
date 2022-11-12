@@ -10,22 +10,9 @@ using TaleWorlds.MountAndBlade;
 using TaleWorlds.CampaignSystem;
 using TaleWorlds.CampaignSystem.GameMenus;
 using TaleWorlds.CampaignSystem.Actions;
-using TaleWorlds.CampaignSystem.SandBox;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors.AiBehaviors;
-using TaleWorlds.CampaignSystem.SandBox.CampaignBehaviors.BarterBehaviors;
-using TaleWorlds.CampaignSystem.Barterables;
-using SandBox.View.Map;
-using TaleWorlds.CampaignSystem.ViewModelCollection.ClanManagement.Categories;
-using TaleWorlds.CampaignSystem.ViewModelCollection.ClanManagement;
-using TaleWorlds.Core.ViewModelCollection;
-using SandBox.ViewModelCollection.MobilePartyTracker;
-using SandBox.ViewModelCollection.Nameplate;
-using TaleWorlds.Localization;
-using TaleWorlds.Engine;
-
-using TaleWorlds.CampaignSystem.SandBox.GameComponents.Party;
-using SandBox.Source.Missions;
+using TaleWorlds.CampaignSystem.Party;
+using TaleWorlds.CampaignSystem.CampaignBehaviors;
+using TaleWorlds.CampaignSystem.CraftingSystem;
 
 using TaleWorlds.ObjectSystem;
 
@@ -92,7 +79,6 @@ namespace FountaTweaks
       if (!FountaTweaksSettings.Instance.SmeltingUnlocksWeaponParts)
         return;
 
-      ExposeInternals.EnsureParts(__instance);
       ref List<CraftingPiece> _openedParts = ref AccessTools.FieldRefAccess<CraftingCampaignBehavior, List<CraftingPiece>>(__instance, "_openedParts");
 
       //InformationManager.DisplayMessage(new InformationMessage($"has weapon comp {equipmentElement.Item.HasWeaponComponent}"));
@@ -105,7 +91,7 @@ namespace FountaTweaks
           if (!_openedParts.Contains(p))
           {
             //InformationManager.DisplayMessage(new InformationMessage($"opened part!"));
-            ExposeInternals.OpenPart(__instance, p, true);
+            ExposeInternals.OpenPart(__instance, p, equipmentElement.Item.WeaponDesign.Template, true);
           }
         }
       }
@@ -113,7 +99,7 @@ namespace FountaTweaks
   }
 
   //fix crafting order failure
-  [HarmonyPatch(typeof(CraftingOrder), "CheckForBonusesAndPenalties")]
+  /*[HarmonyPatch(typeof(CraftingOrder), "CheckForBonusesAndPenalties")]
   public class CheckForBonusesAndPenaltiesPatch
   {
     static void Postfix(CraftingOrder __instance,
@@ -139,6 +125,6 @@ namespace FountaTweaks
 
 
     }//end postfix
-  }
+  }*/
 
 }
