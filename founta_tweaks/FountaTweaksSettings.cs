@@ -212,6 +212,18 @@ namespace FountaTweaks
     [SettingPropertyGroup("Extra perk effects/Throwing/Impale/Penetration")]
     public bool JavelinPeoplePenetration { get; set; } = false;
 
+    [SettingPropertyBool("Skill-based penetration", HintText = "Whether or not to penetrate a number of people or not based on your throwing skill level", RequireRestart = false)]
+    [SettingPropertyGroup("Extra perk effects/Throwing/Impale/Penetration")]
+    public bool JavelinSkillBasedPeoplePenetration { get; set; } = false;
+
+    [SettingPropertyFloatingInteger("Skill-based penetration throwing start", 0,350, HintText = "If using a skill-based number of people penetrated, the max. number of people penetrated = ( (throwing skill level) - (throwing skill start) ) * (people penetrated per throwing level)", RequireRestart = false)]
+    [SettingPropertyGroup("Extra perk effects/Throwing/Impale/Penetration")]
+    public float JavelinSkillBasedPenetrationStart { get; set; } = 270;
+
+    [SettingPropertyFloatingInteger("People penetrated per throwing skill level", 0, 1, HintText = "If using a skill-based number of people penetrated, the max. number of people penetrated = ( (throwing skill level) - (throwing skill start) ) * (people penetrated per throwing level)", RequireRestart = false)]
+    [SettingPropertyGroup("Extra perk effects/Throwing/Impale/Penetration")]
+    public float JavelinSkillBasedPenetrationPeoplePerLevel { get; set; } = 0.2f;
+
     [SettingPropertyBool("Fixed number of penetrations", HintText = "Whether or not to penetrate a fixed number of people or not (by default penetrates everyone just like ballista bolts)", RequireRestart = false)]
     [SettingPropertyGroup("Extra perk effects/Throwing/Impale/Penetration")]
     public bool JavelinPeopleFixedPenetration { get; set; } = false;

@@ -212,7 +212,7 @@ namespace FountaTweaks
       FountaTweaksSettings s = FountaTweaksSettings.Instance;
       if (!s.JavelinPeoplePenetration)
         return;
-      if (!s.JavelinPeopleFixedPenetration)
+      if (!(s.JavelinPeopleFixedPenetration || s.JavelinSkillBasedPeoplePenetration))
         return;
       if (!attacker.IsHuman)
         return;
@@ -244,11 +244,24 @@ namespace FountaTweaks
           if (s.JavelinPeopleFixedPenetration)
           {
             if (rangedStorage.numAgentsDamaged < s.JavelinNumFixedPenetration)
+            {
               missileWeaponFlags |= WeaponFlags.MultiplePenetration;
+              missileWeaponFlags &= ~WeaponFlags.AmmoSticksWhenShot;
+            }
+          }
+          else if (s.JavelinSkillBasedPeoplePenetration)
+          {
+            float num_people_to_penetrate = (Hero.MainHero.GetSkillValue(DefaultSkills.Throwing) - s.JavelinSkillBasedPenetrationStart) * s.JavelinSkillBasedPenetrationPeoplePerLevel;
+            if (rangedStorage.numAgentsDamaged < num_people_to_penetrate)
+            {
+              missileWeaponFlags |= WeaponFlags.MultiplePenetration;
+              missileWeaponFlags &= ~WeaponFlags.AmmoSticksWhenShot;
+            }
           }
           else
           {
             missileWeaponFlags |= WeaponFlags.MultiplePenetration;
+            missileWeaponFlags &= ~WeaponFlags.AmmoSticksWhenShot;
           }
         }
       }

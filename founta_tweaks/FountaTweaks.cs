@@ -23,7 +23,7 @@ namespace FountaTweaks
     protected override void OnSubModuleLoad()
     {
       base.OnSubModuleLoad();
-      Harmony.DEBUG = true;
+      Harmony.DEBUG = false;
     }
 
     protected override void OnBeforeInitialModuleScreenSetAsRoot()
