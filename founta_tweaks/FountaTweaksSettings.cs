@@ -476,9 +476,6 @@ namespace FountaTweaks
     [SettingPropertyGroup("Crafting")]
     public bool ShowAllCraftingPieces { get; set; } = false;
 
-    [SettingPropertyBool("Fix order failure condition", RequireRestart = false, HintText = "Some crafting orders fail if the request doesn't contain a damage type but the crafted weapon does (eg if they want high swing damage polearm and you meet the stats but also have thrust). This fixes that")]
-    [SettingPropertyGroup("Crafting")]
-    public bool OrderFailureCorrect { get; set; } = false;
   }
 
 

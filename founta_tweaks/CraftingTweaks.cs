@@ -79,19 +79,28 @@ namespace FountaTweaks
       if (!FountaTweaksSettings.Instance.SmeltingUnlocksWeaponParts)
         return;
 
-      ref List<CraftingPiece> _openedParts = ref AccessTools.FieldRefAccess<CraftingCampaignBehavior, List<CraftingPiece>>(__instance, "_openedParts");
+      ref Dictionary<CraftingTemplate, List<CraftingPiece>> _openedParts = ref AccessTools.FieldRefAccess<CraftingCampaignBehavior, Dictionary<CraftingTemplate,List<CraftingPiece>>>(__instance, "_openedPartsDictionary");
+      ref Dictionary<CraftingTemplate, float> _openedPartXp = ref AccessTools.FieldRefAccess<CraftingCampaignBehavior, Dictionary<CraftingTemplate, float>>(__instance, "_openNewPartXpDictionary");
 
       //InformationManager.DisplayMessage(new InformationMessage($"has weapon comp {equipmentElement.Item.HasWeaponComponent}"));
       if (equipmentElement.Item.HasWeaponComponent)
       {
+        CraftingTemplate template = equipmentElement.Item.WeaponDesign.Template;
+        if (!_openedParts.ContainsKey(template))
+        {
+          _openedParts.Add(template, new List<CraftingPiece>());
+          _openedPartXp.Add(template, 0.0f);
+        }
+
         //InformationManager.DisplayMessage(new InformationMessage($"{equipmentElement.Item.WeaponDesign.UsedPieces.Length} weapon comps"));
         foreach (WeaponDesignElement elem in equipmentElement.Item.WeaponDesign.UsedPieces)
         {
           CraftingPiece p = elem.CraftingPiece;
-          if (!_openedParts.Contains(p))
+
+          if (!_openedParts[template].Contains(p))
           {
             //InformationManager.DisplayMessage(new InformationMessage($"opened part!"));
-            ExposeInternals.OpenPart(__instance, p, equipmentElement.Item.WeaponDesign.Template, true);
+            ExposeInternals.OpenPart(__instance, p, template, true);
           }
         }
       }
