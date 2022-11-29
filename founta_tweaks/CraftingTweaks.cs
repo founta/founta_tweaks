@@ -13,6 +13,7 @@ using TaleWorlds.CampaignSystem.Actions;
 using TaleWorlds.CampaignSystem.Party;
 using TaleWorlds.CampaignSystem.CampaignBehaviors;
 using TaleWorlds.CampaignSystem.CraftingSystem;
+using TaleWorlds.CampaignSystem.GameComponents;
 
 using TaleWorlds.ObjectSystem;
 
@@ -107,33 +108,30 @@ namespace FountaTweaks
     }//end postfix
   }
 
-  //fix crafting order failure
-  /*[HarmonyPatch(typeof(CraftingOrder), "CheckForBonusesAndPenalties")]
-  public class CheckForBonusesAndPenaltiesPatch
+  //allow changing the number of modifier points added for fine, legendary or masterwork weapons if enabled
+  [HarmonyPatch(typeof(DefaultSmithingModel), "GetPointsToModify")]
+  public class WeaponTierPointPatch
   {
-    static void Postfix(CraftingOrder __instance,
-      ItemObject craftedItem,
-      ref float craftedStats,
-      ref float requiredStats,
-      ref bool thrustDamageCheck,
-      ref bool swingDamageCheck)
+    static void Postfix(DefaultSmithingModel __instance, int modifierTier, ref int __result)
     {
-      if (!FountaTweaksSettings.Instance.CraftingTweaksEnabled)
-        return;
-      if (!FountaTweaksSettings.Instance.OrderFailureCorrect)
-        return;
-      WeaponComponentData statWeapon = __instance.GetStatWeapon();
+      FountaTweaksSettings s = FountaTweaksSettings.Instance;
+      if (s.WeaponTierTweaksEnabled)
+      {
+        switch(modifierTier)
+        {
+          case 1:
+            __result += s.FineWeaponBonusPoints;
+            break;
+          case 2:
+            __result += s.MasterworkWeaponBonusPoints;
+            break;
+          case 3:
+            __result += s.LegendaryWeaponBonusPoints;
+            break;
+        }
+      }
+    }
+  }
 
-      if (!thrustDamageCheck)
-        if (statWeapon.ThrustDamageType == DamageTypes.Invalid)
-          thrustDamageCheck = true;
-
-      if (!swingDamageCheck)
-        if (statWeapon.SwingDamageType == DamageTypes.Invalid)
-          swingDamageCheck = true;
-
-
-    }//end postfix
-  }*/
 
 }

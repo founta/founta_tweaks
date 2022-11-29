@@ -476,6 +476,23 @@ namespace FountaTweaks
     [SettingPropertyGroup("Crafting")]
     public bool ShowAllCraftingPieces { get; set; } = false;
 
+    [SettingPropertyBool("Enable crafted weapon tier modifications", RequireRestart = false, IsToggle = true)]
+    [SettingPropertyGroup("Crafting/Weapon tier")]
+    public bool WeaponTierTweaksEnabled { get; set; } = false;
+
+    [SettingPropertyInteger("Fine weapon bonus points", 0, 20, RequireRestart = false, HintText = "The number of additional bonus stats to give Fine weapons, in addition to the 2 distributed in vanilla Bannerlord" )]
+    [SettingPropertyGroup("Crafting/Weapon tier")]
+    public int FineWeaponBonusPoints { get; set; } = 0;
+
+    [SettingPropertyInteger("Masterwork weapon bonus points", 0, 50, RequireRestart = false, HintText = "The number of additional bonus stats to give Masterwork weapons, in addition to the 5 distributed in vanilla Bannerlord")]
+    [SettingPropertyGroup("Crafting/Weapon tier")]
+    public int MasterworkWeaponBonusPoints { get; set; } = 0;
+
+    [SettingPropertyInteger("Legendary weapon bonus points", 0, 100, RequireRestart = false, HintText = "The number of additional bonus stats to give Legendary weapons, in addition to the 10 distributed in vanilla Bannerlord")]
+    [SettingPropertyGroup("Crafting/Weapon tier")]
+    public int LegendaryWeaponBonusPoints { get; set; } = 0;
+
+
   }
 
 
