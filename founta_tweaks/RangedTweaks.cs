@@ -172,6 +172,9 @@ namespace FountaTweaks
               case WeaponClass.Javelin:
                 extra_stack_count = s.ExtraJavelinStackCount;
                 break;
+              case WeaponClass.Stone:
+                extra_stack_count = s.ExtraStoneStackCount;
+                break;
               default:
                 break;
             }

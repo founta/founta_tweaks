@@ -70,6 +70,9 @@ namespace FountaTweaks
     [SettingPropertyGroup("Ranged/Stack count")]
     public bool StackCountTweaksEnabled { get; set; } = false;
 
+    [SettingPropertyInteger("Additional throwing stone stack count", 0, 100, RequireRestart = false)]
+    [SettingPropertyGroup("Ranged/Stack count")]
+    public int ExtraStoneStackCount { get; set; } = 0;
     [SettingPropertyInteger("Additional arrow stack count",0,100, RequireRestart = false)]
     [SettingPropertyGroup("Ranged/Stack count")]
     public int ExtraArrowStackCount { get; set; } = 0;
